@@ -52,18 +52,49 @@ use yii\easyii\modules\page\api\Page;
 
 
         <div class="row margin-top20">
-            <?php if(count($items)) : ?>
-                <?php foreach($items as $item) : ?>
+            <?php
 
-                    <?= $this->render('_item', ['item' => $item]) ?>
+            echo Yii::t('easyii','Please Use the filter to find the nearest store')."<br/>";
 
-                <?php endforeach ;?>
-            <?php endif ; ?>
+            if($filters['product_id']== ''){
+                echo   Yii::t('easyii','Please choose the product  first')."<br/>";
+            }else if($filters['country']== ''){
+                echo   Yii::t('easyii','Please Enter the country')."<br/>";
+            }else if($filters['government']== ''){
+                echo "<br/>".Yii::t('easyii','Please Enter the government');
+
+            }
+
+            if(count($items)) :
+
+                if($filters['product_id'] != "" && $filters['country'] != "" &&$filters['government'] != "" ){
+                    foreach($items as $item) :
+                        echo $this->render('_item', ['item' => $item]);
+                    endforeach ;
+
+                    echo $cat->pages() ;
+
+
+                }else{
+                    foreach($items as $item) :
+                        if($item->data->featured){
+                            echo $this->render('_item', ['item' => $item]);
+
+                        }
+                    endforeach ;
+
+                }
+
+
+
+          endif
+
+            ?>
 
         </div>
 
 
-         <?= $cat->pages() ?>
+
 
 
         <div class="row">

@@ -28,7 +28,7 @@ class StoresController extends FrontController
 
             $filters = $filterForm->parse();
         }
-       // var_dump($filters);
+       //var_dump($filters);
         return $this->render('index', [
             //'sliderFilters'=>$sliderFilters,
             'cat' => $cat,
@@ -37,6 +37,7 @@ class StoresController extends FrontController
                 'filters' => $filters
             ]),
             'filterForm' => $filterForm,
+            'filters'=>$filters
         ]);
     }
 
