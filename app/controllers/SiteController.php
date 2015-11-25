@@ -1,6 +1,8 @@
 <?php
 
 namespace app\controllers;
+use app\modules\newtestmonials\models\Page as PageModel;
+
 
 use app\models\CsvForm;
 use Yii;
@@ -26,7 +28,9 @@ class SiteController extends FrontController
     public function actionIndex()
     {
         $items = Carousel::itemlist(1306,460);
-        $testmonials= Text::find()->all();
+        $testmonials= PageModel::find()
+                       ->where("homepage=1")
+                       ->all();
         return $this->render('index',array('items'=>$items,'testmonials'=>$testmonials));
     }
 

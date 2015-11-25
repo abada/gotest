@@ -70,7 +70,7 @@ $this->title = $page->seo('title', $page->model->title);
                 <div class="title">testimonials</div>
             </div>
             <?php
-              $testmonials= PageModel::find()->all();
+              $testmonials= PageModel::find()->where("homepage=0")->all();
                     $num = 0;
                 foreach($testmonials as $item){
                     $num++;
