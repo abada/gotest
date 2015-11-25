@@ -259,15 +259,22 @@ $this->title = $page->seo('title', $page->model->title);
     <div class="container-fluid">
         <div class="row">
             <ul class="col-md-12 col-centered features-group">
+                <?php
+
+                $adv1 = \app\modules\advertise\models\Page::find(2)->one();
+                $adv2 = \app\modules\advertise\models\Page::find(3)->one();
+                $adv3 = \app\modules\advertise\models\Page::find(4)->one();
+                ?>
+
                 <li>
-                    <img src="<?php echo Yii::$app->getUrlManager()->getBaseUrl()?>/theme/images/cooming-soon.jpg" class="img-responsive center-block"/>
+                    <img src="<?=Yii::$app->language =='en' ? $adv1->image :$adv1->image_ar ?>" class="img-responsive center-block"/>
                 </li>
                 <li>
-                    <img src="<?php echo Yii::$app->getUrlManager()->getBaseUrl()?>/theme/images/awarness-featsure.jpg" class="img-responsive center-block"/>
+                    <img src="<?=Yii::$app->language =='en' ? $adv2->image :$adv2->image_ar ?>" class="img-responsive center-block"/>
                     <button class="btn pink-btn btn-block">Sign Up Now!</button>
                 </li>
                 <li>
-                    <img src="<?php echo Yii::$app->getUrlManager()->getBaseUrl()?>/theme/images/product-img-featsure.jpg" class="img-responsive center-block"/>
+                    <img src="<?=Yii::$app->language =='en' ? $adv3->image :$adv3->image_ar ?>" class="img-responsive center-block"/>
                     <button class="btn pink-btn btn-block">Try it now!</button>
                 </li>
             </ul>

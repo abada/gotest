@@ -10,6 +10,7 @@ use yii\helpers\Html;
 use  \yii\easyii\models\Setting;
 use \app\modules\awarness\api\Feedback as Awarness;
 
+
 $page = Page::get('about');
 
 $this->title = $page->seo('title', $page->model->title);
@@ -19,15 +20,13 @@ use yii\widgets\ActiveForm;
 
 <div class="content">
     <?php
-    foreach(Gallery::last(1,['item_id'=>Gallery::cat('awarness-gallery')->model->category_id]) as $photo) :
 
-        ?>
-          <img class="img-responsive" src="<?= $photo->image ;?>">
-
-        <?
-    endforeach;
+    $banner = \app\modules\advertise\models\Page::find(1)->one();
+        Yii::$app->language =='en' ? $image=$banner->image :$image=$banner->image_ar
 
     ?>
+          <img class="img-responsive" src="<?= $image ;?>">
+
 
     <div class="container">
         <div class="row">
