@@ -261,9 +261,9 @@ $this->title = $page->seo('title', $page->model->title);
             <ul class="col-md-12 col-centered features-group">
                 <?php
 
-                $adv1 = \app\modules\advertise\models\Page::find(2)->one();
-                $adv2 = \app\modules\advertise\models\Page::find(3)->one();
-                $adv3 = \app\modules\advertise\models\Page::find(4)->one();
+                $adv1 = \app\modules\advertise\models\Page::findOne(2);
+                $adv2 = \app\modules\advertise\models\Page::findOne(3);
+                $adv3 = \app\modules\advertise\models\Page::findOne(4);
                 ?>
 
                 <li>
