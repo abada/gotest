@@ -11,8 +11,12 @@ use yii\easyii\widgets\SeoForm;
     'options' => ['class' => 'model-form']
 ]); ?>
 
+<?= $form->field($model, 'homepage')->checkBox()?>
+
 <?= $form->field($model, 'owner')->widget(input_widget\MultiLanguageActiveField::className()) ?>
 <?= $form->field($model, 'title')->widget(input_widget\MultiLanguageActiveField::className()) ?>
+
+
 
 
 <?= $form->field($model, 'text')->widget(Redactor::className(),[

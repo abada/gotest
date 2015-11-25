@@ -16,6 +16,7 @@ class Page extends \yii\easyii\components\ActiveRecord
         return [
             ['title', 'required'],
             ['owner', 'required'],
+            ['homepage','safe'],
             [['title', 'text'], 'trim'],
             ['title', 'string', 'max' => 400],
             ['slug', 'match', 'pattern' => self::$SLUG_PATTERN, 'message' => Yii::t('easyii', 'Slug can contain only 0-9, a-z and "-" characters (max: 128).')],
@@ -31,6 +32,7 @@ class Page extends \yii\easyii\components\ActiveRecord
             'owner' => Yii::t('easyii', 'By'),
             'text' => Yii::t('easyii', 'Text'),
             'slug' => Yii::t('easyii', 'Slug'),
+            'homepage' => Yii::t('easyii', 'Show on home page'),
         ];
     }
 
