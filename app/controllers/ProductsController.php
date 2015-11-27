@@ -67,11 +67,16 @@ class ProductsController extends \yii\web\Controller
 
     public function actionView($slug=null)
     {
-        //echo $slug.'dddddddd';die;
         $item = Catalog::get($slug);
         if(!$item){
             throw new NotFoundHttpException('Item not found.');
         }
+
+            $this->view->params['metatitle'] = $item->title;
+            $this->view->params['metaimage'] = "http://".$_SERVER['SERVER_NAME'].'/'.$item->image;
+            $this->view->params['metadesc'] = $item->description;
+
+
 //        $reviews= News::find()
 //            ->where("product_id = ".$item->id." and status=1")
 //            ->all();
