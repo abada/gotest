@@ -157,7 +157,7 @@ $totalreviews=  Products::reviews($item->id,1);
                         <h4><i class="fa fa-thumbs-up fa-lg"></i> Yes, I recommend this product.</h4>
                         <ul class="product-details">
                            <li>Share
-                                <?php $reviewUrl=Url::to(['product/review'], true).'/?slug='.$item->slug .'&review='.$review->slug;?>
+                                <?php $reviewUrl=Url::to(['products/review'], true).'/?slug='.$item->slug .'&review='.$review->slug;?>
                                <span class='st_facebook_large' displayText='' st_url="<?= $reviewUrl ;?>" st_title="<?= $review->title?>" ></span>
                                <span class='st_twitter_large' displayText='' st_url="<?= $reviewUrl ;?>" st_title="<?= $review->title?>"></span>
                                <span class='st_googleplus_large' displayText='' st_url="<?= $reviewUrl ;?>" st_title="<?= $review->title?>"></span>
