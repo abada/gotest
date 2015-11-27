@@ -75,7 +75,6 @@ class ProductsController extends \yii\web\Controller
 //        $reviews= News::find()
 //            ->where("product_id = ".$item->id." and status=1")
 //            ->all();
-
            $reviews= News::items(['tags' => '','pagination' => ['pageSize' => 5]],"product_id = ".$item->id);
            $count=0;
            foreach($reviews as $review){
@@ -104,7 +103,7 @@ class ProductsController extends \yii\web\Controller
         $Creview=\app\modules\reviews\models\News::find('slug='.$review)->one();
         if($Creview){
             $this->view->params['metatitle'] = $Creview->title;
-            $this->view->params['metaimage'] = '/'.$item->image;
+            $this->view->params['metaimage'] = $_SERVER['SERVER_NAME'].'/'.$item->image;
             $this->view->params['metadesc'] = $Creview->short;
         }
 
