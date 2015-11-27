@@ -1,6 +1,7 @@
 <script type="text/javascript">var switchTo5x=true;</script>
 <script type="text/javascript" src="http://w.sharethis.com/button/buttons.js"></script>
 <script type="text/javascript">stLight.options({publisher: "2222d12e-5607-475a-b5d7-2ba1c0a2c5c0", doNotHash: false, doNotCopy: false, hashAddressBar: false});</script>
+
 <?php
 use app\models\AddToCartForm;
 use yii\easyii\modules\catalog\api\Catalog;
@@ -12,9 +13,7 @@ use  \app\models\Products;
 
 $this->title = $item->seo('title', $item->model->title);
 $totalreviews=  Products::reviews($item->id,1);
-
 ?>
-
 <div class="content single-product">
     <div class="container-fluid bg">
         <div class="container">
@@ -155,11 +154,18 @@ $totalreviews=  Products::reviews($item->id,1);
                         </p>
                         <h3><?= $review->title?></h3>
                         <p><?= $review->text?></p>
-                        <!-- <h4><i class="fa fa-thumbs-up fa-lg"></i> Yes, I recommend this product.</h4> -->
-<!--                        <ul class="product-details">-->
-<!--                            <li>Share <a href="#"><img width="30" height="30" src="--><?php //echo Yii::$app->getUrlManager()->getBaseUrl()?><!--/theme/images/facebook.png"></a><a href="#"><img width="30" height="30" src="--><?php //echo Yii::$app->getUrlManager()->getBaseUrl()?><!--/theme/images/twitter.png"></a><a href="#"><img width="30" height="30" src="--><?php //echo Yii::$app->getUrlManager()->getBaseUrl()?><!--/theme/images/instagram.png"></a><a href="#"><img width="30" height="30" src="--><?php //echo Yii::$app->getUrlManager()->getBaseUrl()?><!--/theme/images/googleplus.png"></a></li>-->
-<!--                        </ul>-->
-                    </div>
+                        <h4><i class="fa fa-thumbs-up fa-lg"></i> Yes, I recommend this product.</h4>
+                        <ul class="product-details">
+                           <li>Share
+                                <?php $reviewUrl=Url::to(['product/review'], true).'/?slug='.$item->slug .'&review='.$review->slug;?>
+                               <span class='st_facebook_large' displayText='' st_url="<?= $reviewUrl ;?>" st_title="<?= $review->title?>" ></span>
+                               <span class='st_twitter_large' displayText='' st_url="<?= $reviewUrl ;?>" st_title="<?= $review->title?>"></span>
+                               <span class='st_googleplus_large' displayText='' st_url="<?= $reviewUrl ;?>" st_title="<?= $review->title?>"></span>
+                               <span class='st_instagram_large' displayText='' st_url="<?= $reviewUrl ;?>   " st_title="<?= $review->title?>"></span>
+
+
+                           </li>
+                        </ul>                    </div>
                     <hr>
 
                 <?

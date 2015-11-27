@@ -18,6 +18,9 @@ $module = $this->context->module->id;
     'options' => ['enctype' => 'multipart/form-data', 'class' => 'model-form']
 ]); ?>
 <?= $form->field($model, 'title'); // ->widget(\webvimark\behaviors\multilanguage\input_widget\MultiLanguageActiveField::className()) ?>
+<?= $dataForm ?>
+
+
 
 <?= $form->field($model, 'address') ?>
 <?= $form->field($model, 'phone') ?>
@@ -56,7 +59,6 @@ echo Select2::widget([
     <?//= $form->field($model, 'image')->fileInput() ?>
 <?php endif; ?>
 
-<?= $dataForm ?>
 <?php if($settings['itemDescription']) : ?>
     <?= $form->field($model, 'description')->widget(Redactor::className(),[
         'options' => [

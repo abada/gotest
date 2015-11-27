@@ -13,6 +13,13 @@ use yii\helpers\Html;
         <title><?= Html::encode($this->title) ?></title>
 
 
+        <?php if(isset($this->params['metatitle'])){?>
+        <meta property="og:title"  content="<?php echo $this->params['metatitle']; ?>" />
+        <meta property="og:image" content="<?php echo $this->params['metaimage'] ; ?>" />
+        <meta property="og:description" content="<?php echo $this->params['metadesc']; ?>" />
+        <?php } ?>
+
+
         <link href="<?php echo Yii::$app->getUrlManager()->getBaseUrl()?>/theme/css/bootstrap.min.css" rel="stylesheet" type="text/css">
         <link rel="stylesheet" href="<?php echo Yii::$app->getUrlManager()->getBaseUrl()?>/theme/css/font-awesome.min.css" />
         <link type="text/css" href="<?php echo Yii::$app->getUrlManager()->getBaseUrl()?>/theme/css/ihover.css" rel="stylesheet">

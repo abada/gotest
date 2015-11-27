@@ -11,6 +11,11 @@ use yii\web\NotFoundHttpException;
 
 class ProductsController extends \yii\web\Controller
 {
+
+    public $metaTags=array();
+
+
+
     public function init()
     {
         MultiLanguageHelper::catchLanguage();
@@ -85,6 +90,45 @@ class ProductsController extends \yii\web\Controller
             'reviews'=>$reviews
         ]);
     }
+
+
+
+
+    public function actionReview($slug=null,$review)
+    {
+         $item = Catalog::get($slug);
+        if(!$item){
+            throw new NotFoundHttpException('Item not found.');
+        }
+
+        $Creview=\app\modules\reviews\models\News::find('slug='.$review)->one();
+        if($Creview){
+            $this->view->params['metatitle'] = $Creview->title;
+            $this->view->params['metaimage'] = '/'.$item->image;
+            $this->view->params['metadesc'] = $Creview->short;
+        }
+
+
+
+        $reviews= News::items(['tags' => '','pagination' => ['pageSize' => 5]],"product_id = ".$item->id);
+        $count=0;
+        foreach($reviews as $review){
+            $count +=$review->no_of_review;
+        }
+
+
+        $avg_rate = count($reviews) / $count;
+        $avg_rate = round($avg_rate);
+        //var_dump($reviews);die;
+        return $this->render('view', [
+            'item' => $item,
+            'addToCartForm' => new \app\models\AddToCartForm(),
+            'reviews'=>$reviews,
+            'Creviews'=>$Creview
+        ]);
+    }
+
+
 
 
 
