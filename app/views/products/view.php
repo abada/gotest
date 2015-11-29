@@ -121,7 +121,54 @@ $totalreviews=  Products::reviews($item->id,1);
 
         <?php echo Products::reviews($item->id);?>
         </p>
-        <button class="btn dry-btn center-block"><i class="fa fa-pencil fa-lg"></i> Write a review</button>
+        <button class="btn dry-btn center-block" data-toggle="modal" data-target="#writeReview"><i class="fa fa-pencil fa-lg"></i> Write a review</button>
+        <!-- Modal -->
+<div class="modal fade" id="writeReview" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">Add Your Review <i class="fa fa-pencil fa-lg"></i></h4>
+      </div>
+      <div class="modal-body">
+        <form>
+  <div class="form-group">
+    <label>Your Name/Nick Name</label>
+    <input type="text" class="form-control" placeholder="Name">
+  </div>
+  <div class="form-group">
+    <label>Please Rate Our Product</label>
+    <label class="radio-inline">
+  <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1"> 1
+</label>
+<label class="radio-inline">
+  <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"> 2
+</label>
+<label class="radio-inline">
+  <input type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3"> 3
+</label>
+
+    <label class="radio-inline">
+  <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1"> 4
+</label>
+<label class="radio-inline">
+  <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"> 5
+</label>
+  </div>
+  <div class="form-group">
+    <label>Your Review</label>
+    <textarea class="form-control" rows="3"></textarea>
+        <p class="help-block">We Appreciate Your Review, Thanks For Your Time</p>
+  </div>
+</form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Add Review</button>
+      </div>
+    </div>
+  </div>
+</div>
     </div>
     <div class="container margin-top20">
         <div class="row">
@@ -179,7 +226,7 @@ $totalreviews=  Products::reviews($item->id,1);
             </div>
             <div class="col-sm-4">
                 <img src="<?php echo Yii::$app->getUrlManager()->getBaseUrl() ?>/theme/images/banner-1.jpg" class="img-responsive center-block"/>
-                <img src="<?php echo Yii::$app->getUrlManager()->getBaseUrl() ?>/theme/images/banner-2.jpg" class="margin-top10 img-responsive center-block"/>
+                <img src="<?php echo Yii::$app->getUrlManager()->getBaseUrl() ?>/theme/images/banner-2.jpg" class="margin-bottom10 img-responsive center-block"/>
             </div>
         </div></div>
 

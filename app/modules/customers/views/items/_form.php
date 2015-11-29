@@ -59,16 +59,7 @@ echo Select2::widget([
     <?//= $form->field($model, 'image')->fileInput() ?>
 <?php endif; ?>
 
-<?php if($settings['itemDescription']) : ?>
-    <?= $form->field($model, 'description')->widget(Redactor::className(),[
-        'options' => [
-            'minHeight' => 400,
-            'imageUpload' => Url::to(['/admin/redactor/upload', 'dir' => 'customers'], true),
-            'fileUpload' => Url::to(['/admin/redactor/upload', 'dir' => 'customers'], true),
-            'plugins' => ['fullscreen']
-        ]
-    ])->widget(\webvimark\behaviors\multilanguage\input_widget\MultiLanguageActiveField::className()) ?>
-<?php endif; ?>
+
 
 <?//= $form->field($model, 'available') ?>
 <?//= $form->field($model, 'price') ?>

@@ -67,29 +67,13 @@ $this->title = $page->seo('title', $page->model->title);
     <div class="container">
         <div class="row">
             <div class="col-md-offset-1 col-md-10"><p class="text-center text-justify"><?= $page->text ;?></p></div>
-            <div class="col-md-12">
-                <div class="col-md-3">
-                    <div class="circle-container">
-                        <div class="circlestat center-block absorption-bg" data-dimension="200" data-text="<?= Setting::get('absorption')?>%" data-width="15" data-fontsize="30" data-percent="<?= Setting::get('absorption')?>" data-fgcolor="#fc8abe" data-bgcolor="#f0eeef"></div>
-                        <div class="title"><?= Yii::t('easyii', 'absorption');?></div>
-                    </div>
-                </div><div class="col-md-3">
-                    <div class="circle-container">
-                        <div class="circlestat center-block cotton-bg" data-dimension="200" data-text="<?= Setting::get('cotton')?>%" data-width="15" data-fontsize="30" data-percent="<?= Setting::get('cotton')?>" data-fgcolor="#fc8abe" data-bgcolor="#f0eeef"></div>
-                        <div class="title"><?= Yii::t('easyii', 'cotton');?></div>
-                    </div>
-                </div><div class="col-md-3">
-                    <div class="circle-container">
-                        <div class="circlestat center-block stickiness-bg" data-dimension="200" data-text="<?= Setting::get('stickiness')?>%" data-width="15" data-fontsize="30" data-percent="<?= Setting::get('stickiness')?>" data-fgcolor="#fc8abe" data-bgcolor="#f0eeef"></div>
-                        <div class="title"><?= Yii::t('easyii', 'stickiness');?></div>
-                    </div>
-                </div><div class="col-md-3">
-                    <div class="circle-container">
-                        <div class="circlestat center-block fitting-bg" data-dimension="200" data-text="<?= Setting::get('fittingclothes')?>%" data-width="15" data-fontsize="30" data-percent="<?= Setting::get('fittingclothes')?>" data-fgcolor="#fc8abe" data-bgcolor="#f0eeef"></div>
-                        <div class="title"><?= Yii::t('easyii', 'fitting clothes');?></div>
-                    </div>
-                </div>
-            </div>
+            <div class="row">
+                            <div class="circleGraphic1 col-md-3 col-sm-6 circle circle-1"><?= Setting::get('absorption')?></div>
+                            <div class="circleGraphic2 col-md-3 col-sm-6 circle circle-2"><?= Setting::get('cotton')?></div>
+                            <div class="circleGraphic3 col-md-3 col-sm-6 circle circle-3"><?= Setting::get('stickiness')?></div>
+                            <div class="circleGraphic4 col-md-3 col-sm-6 circle circle-4"><?= Setting::get('fittingclothes')?></div>
+                        </div>
+      
             <div class="col-md-12">
                 <h2 class=" lined-heading"><span><?= Yii::t('easyii', 'keep moving');?></span></h2>
             </div>
@@ -267,15 +251,21 @@ $this->title = $page->seo('title', $page->model->title);
                 ?>
 
                 <li>
+                <a href="<?= $adv1->url?>">
                     <img src="<?=Yii::$app->language =='en' ? $adv1->image :$adv1->image_ar ?>" class="img-responsive center-block"/>
+                    </a>
                 </li>
                 <li>
+                  <a href="<?= $adv2->url?>">
                     <img src="<?=Yii::$app->language =='en' ? $adv2->image :$adv2->image_ar ?>" class="img-responsive center-block"/>
                     <button class="btn pink-btn btn-block">Sign Up Now!</button>
+                    </a>
                 </li>
                 <li>
+               <a href="<?= $adv3->url?>">
                     <img src="<?=Yii::$app->language =='en' ? $adv3->image :$adv3->image_ar ?>" class="img-responsive center-block"/>
                     <button class="btn pink-btn btn-block">Try it now!</button>
+                    </a>
                 </li>
             </ul>
         </div>
@@ -306,7 +296,7 @@ $this->title = $page->seo('title', $page->model->title);
 
                                ?>
                                <div class="item <?= ($i == 0) ? 'active' : ''; ?>">
-                                  <p><?= $item->text?></p>
+                                  <p><?= $item->text?></p>By: <?=$item->owner?>
                                </div>
                                <?
                                $i++;
