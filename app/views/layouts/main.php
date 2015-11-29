@@ -5,6 +5,7 @@ use yii\helpers\Url;
 use yii\widgets\Breadcrumbs;
 use yii\widgets\Menu;
 use  \yii\easyii\models\Setting;
+use yii\helpers\Html;
 
 $goodsCount = count(Shopcart::goods());
 ?>
@@ -63,12 +64,17 @@ $goodsCount = count(Shopcart::goods());
 
 
                             <ul class="dropdown-menu">
-                                <form class="navbar-form navbar-left" role="search">
-                                    <div class="form-group">
-                                        <input type="text" class="form-control" placeholder="Search">
-                                    </div>
-                                    <button type="submit" class="btn btn-default margin-top10 center-block">Search</button>
-                                </form>
+                                <?= Html::beginForm(Url::to(['/site/search']), 'get', ['class' => 'navbar-form navbar-left']) ?>
+                                <div class="form-group">
+                                    <?= Html::textInput('text', $text, ['class' => 'form-control', 'placeholder' => 'Search']) ?>
+                                </div>
+                                <?= Html::submitButton('Search', ['class' => 'btn btn-default margin-top10 center-block']) ?>
+                                <?= Html::endForm() ?>
+
+
+
+
+
                             </ul>
                         </li>
                     </ul>

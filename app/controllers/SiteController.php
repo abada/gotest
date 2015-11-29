@@ -1,6 +1,7 @@
 <?php
 
 namespace app\controllers;
+use app\modules\customers\api\Catalog;
 use app\modules\newtestmonials\models\Page as PageModel;
 
 
@@ -71,6 +72,20 @@ class SiteController extends FrontController
     public function actionSiteMap(){
 
         return $this->render("sitemap");
+
+    }
+
+
+    public  function actionSearch(){
+
+
+        $text = filter_var($_REQUEST['text'], FILTER_SANITIZE_STRING);
+        return $this->render('search', [
+            'text' => $text,
+            'items' => Catalog::items([
+                'where' => ['or', ['like', 'title', $text], ['like', 'description', $text]],
+            ])
+        ]);
 
     }
 

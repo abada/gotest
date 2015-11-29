@@ -56,6 +56,7 @@ class ShopcartController extends \yii\web\Controller
                 $url=$url.'?';
             }
 
+        $url='/shopcart?';
         return $this->redirect($url.AddToCartForm::SUCCESS_VAR.'='.$success .'&id='.$id);
     }
 

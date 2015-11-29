@@ -44,6 +44,7 @@ $delivery= Setting::get('deliver_cost');
 
 
 
+                    <?= Html::beginForm(['/shopcart/update'])?>
 
                 <div class="col-md-5 col-md-offset-1">
                     <div class="your-order">
@@ -59,12 +60,12 @@ $delivery= Setting::get('deliver_cost');
                                 </div>
                                 <div class="media-body">
                                     <h3 class="media-heading"><?= $good->item->title ?></h3>
-                                    <form class="form-inline">
+                                    <div class="form-inline">
                                         <div class="form-group">
                                             <label for="exampleInputName2"><?= Yii::t('easyii','Quantity')?></label>
                                             <?= Html::textInput("Good[$good->id]", $good->count, ['class' => 'form-control']) ?>
                                         </div>
-                                    </form>
+                                    </div>
                                     <p>   <span><?= Html::a('<i class="glyphicon glyphicon-trash "></i>', ['/shopcart/remove', 'id' => $good->id], ['title' => 'Remove item']) ?></span>
 
                                         <?= Yii::t('easyii','Price')?><span class="pull-right">$<?= $good->price * $good->count ?></span>
@@ -76,16 +77,18 @@ $delivery= Setting::get('deliver_cost');
 
                   <?php endforeach; ?>
 
+                        <?= Html::submitButton('<i class="glyphicon glyphicon-refresh"></i> Update', ['class' => 'btn btn-default pull-right']) ?>
 
 
                     </div>
+
                     <div class="price">
                         <p><?= Yii::t('easyii','total price')?> <span class="pull-right"> $<?= Shopcart::cost() ?></span></p>
                         <p> <?= Yii::t('easyii','delivery price')?> <span class="pull-right">$<?= $delivery ;?></span></p>
                         <p> <?= Yii::t('easyii','final total Price')?> <span class="pull-right">$<?= Shopcart::cost()+$delivery ?> </span></p>
                     </div>
                 </div>
-
+                    <?= Html::endForm()?>
                 <?php else : ?>
                 <div class="col-md-6 order-online">
                     <br/><br/><br/><br/>
