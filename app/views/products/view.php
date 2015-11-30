@@ -173,7 +173,7 @@ $totalreviews=  Products::reviews($item->id,1);
   </div>
   <div class="form-group">
     <label>Your Review</label>
-      <?= $form->field($oReview, 'text')->textarea([ 'class' => 'form-control','rows'=>3])->label(false); ?>
+      <?//= $form->field($oReview, 'text')->textarea([ 'class' => 'form-control','rows'=>3])->label(false); ?>
 
 
       <p class="help-block">We Appreciate Your Review, Thanks For Your Time</p>
