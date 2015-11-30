@@ -264,7 +264,6 @@ $this->title = $page->seo('title', $page->model->title);
                 <li>
                <a href="<?= $adv3->url?>">
                     <img src="<?=Yii::$app->language =='en' ? $adv3->image :$adv3->image_ar ?>" class="img-responsive center-block"/>
-                    <button class="btn pink-btn btn-block">Try it now!</button>
                     </a>
                 </li>
             </ul>
