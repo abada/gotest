@@ -34,7 +34,10 @@ $totalreviews=  Products::reviews($item->id,1);
                         $i=0;
                         foreach($item->photos as $photo) : ?>
                            <?//= $photo->box(110, 100) ?>
-                           <a data-slide-index="<?= $i?>" href=""><img src="<?= $photo->image?>" width="50" height="50"></a>
+                           <a data-slide-index="<?= $i?>" href="">
+                               <img src="<?= $photo->image?>" width="50" height="50">
+
+                           </a>
                         <?php
                         $i++;
                         endforeach;?>
@@ -71,19 +74,25 @@ $totalreviews=  Products::reviews($item->id,1);
             </div>
             <div class="row pink-border">
                 <div class="col-md-4 feature">
-                    <img src="<?php echo Yii::$app->getUrlManager()->getBaseUrl()?>/theme/images/absorb-loc.png"/>
-                    <?php $page = Page::get('ppagesec1')?>
-                    <?= $page->text ;?>
+
+<!--                    <img src="--><?php //echo Yii::$app->getUrlManager()->getBaseUrl()?><!--/theme/images/absorb-loc.png"/>-->
+                    <img src="<?php echo(Yii::$app->language =='en') ? $item->slider_img_1 : $item->slider_img_1_ar ;?>"">
+                    <?php echo $item->slider_text_1 ;?>
+
                 </div>
                 <div class="col-md-4 feature">
-                    <img src="<?php echo Yii::$app->getUrlManager()->getBaseUrl()?>/theme/images/dry-touch.png"/>
-                    <?php $page = Page::get('ppagesec2')?>
-                    <?= $page->text ;?>
+<!--                    <img src="--><?php //echo Yii::$app->getUrlManager()->getBaseUrl()?><!--/theme/images/dry-touch.png"/>-->
+                    <img src="<?php echo(Yii::$app->language =='en') ? $item->slider_img_2 : $item->slider_img_2_ar ;?>"">
+
+                    <?php echo $item->slider_text_2 ;?>
+
                 </div>
                 <div class="col-md-4 feature">
-                    <img src="<?php echo Yii::$app->getUrlManager()->getBaseUrl()?>/theme/images/thin-flex.png"/>
-                    <?php $page = Page::get('ppagesec3')?>
-                    <?= $page->text ;?>
+<!--                    <img src="--><?php //echo Yii::$app->getUrlManager()->getBaseUrl()?><!--/theme/images/thin-flex.png"/>-->
+                    <img src="<?php echo(Yii::$app->language =='en') ? $item->slider_img_3 : $item->slider_img_3_ar ;?>"">
+
+                    <?php echo $item->slider_text_3 ;?>
+
 
                 </div>
             </div>
@@ -93,14 +102,13 @@ $totalreviews=  Products::reviews($item->id,1);
         <div class="row margin-top30">
             <div class="col-sm-4">
                 <div class="embed-responsive embed-responsive-4by3">
-                    <?php $page = Page::get('productpage')?>
-                    <?= $page->text ;?>
+                    <?php echo $item->video?>
+
                 </div>
             </div>
             <div class="col-sm-8">
-                <?php $page= Page::get('rightchoice');?>
-                <div class="title"> <?= $page->title?> </div>
-                <p><?= $page->text  ?></p>
+               <?php echo $item->video_text?>
+
             </div>
         </div>
     </div>
