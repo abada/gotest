@@ -85,13 +85,17 @@ class ProductsController extends \yii\web\Controller
            foreach($reviews as $review){
                $count +=$review->no_of_review;
            }
-          $avg_rate = count($reviews) / $count;
+        if($count >0){$avg_rate = count($reviews) / $count;}else{$avg_rate =0;}
+
         $avg_rate = round($avg_rate);
+
+        $oReview = new \yii\easyii\modules\news\models\News();
         //var_dump($reviews);die;
         return $this->render('view', [
             'item' => $item,
             'addToCartForm' => new \app\models\AddToCartForm(),
-            'reviews'=>$reviews
+            'reviews'=>$reviews,
+            'oReview'=>$oReview,
         ]);
     }
 

@@ -123,6 +123,7 @@ $totalreviews=  Products::reviews($item->id,1);
         </p>
         <button class="btn dry-btn center-block" data-toggle="modal" data-target="#writeReview"><i class="fa fa-pencil fa-lg"></i> Write a review</button>
         <!-- Modal -->
+
 <div class="modal fade" id="writeReview" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
@@ -130,8 +131,15 @@ $totalreviews=  Products::reviews($item->id,1);
         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
         <h4 class="modal-title" id="myModalLabel">Add Your Review <i class="fa fa-pencil fa-lg"></i></h4>
       </div>
-      <div class="modal-body">
-        <form>
+
+        <div class="modal-body">
+
+     <?php $form = ActiveForm::begin([
+                'enableAjaxValidation' => true,
+                'options' => ['enctype' => 'multipart/form-data', 'class' => 'model-form']
+            ]); ?>
+
+
   <div class="form-group">
     <label>Your Name/Nick Name</label>
     <input type="text" class="form-control" placeholder="Name">
@@ -157,19 +165,30 @@ $totalreviews=  Products::reviews($item->id,1);
   </div>
   <div class="form-group">
     <label>Your Review</label>
-    <textarea class="form-control" rows="3"></textarea>
-        <p class="help-block">We Appreciate Your Review, Thanks For Your Time</p>
+      <?= $form->field($oReview, 'text')->textarea([ 'class' => 'form-control','rows'=>3])->label(false); ?>
+
+
+      <p class="help-block">We Appreciate Your Review, Thanks For Your Time</p>
   </div>
-</form>
+
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                <button type="submit" class="btn btn-primary">Add Review</button>
+            </div>
+            <?php ActiveForm::end(); ?>
       </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Add Review</button>
-      </div>
+
     </div>
   </div>
 </div>
+
+
+
     </div>
+
+
+
+
     <div class="container margin-top20">
         <div class="row">
             <div class="col-sm-8">
