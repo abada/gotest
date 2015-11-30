@@ -225,8 +225,8 @@ $totalreviews=  Products::reviews($item->id,1);
 <!--                <a class="readMore">read more</a>-->
             </div>
             <div class="col-sm-4">
-                <img src="<?php echo Yii::$app->getUrlManager()->getBaseUrl() ?>/theme/images/banner-1.jpg" class="img-responsive center-block"/>
-                <img src="<?php echo Yii::$app->getUrlManager()->getBaseUrl() ?>/theme/images/banner-2.jpg" class="margin-bottom10 img-responsive center-block"/>
+                <img src="<?php echo Yii::$app->getUrlManager()->getBaseUrl() ?>/theme/images/banner-1.jpg" class="margin-bottom30 img-responsive center-block"/>
+                <img src="<?php echo Yii::$app->getUrlManager()->getBaseUrl() ?>/theme/images/banner-2.jpg" class="margin-bottom30 img-responsive center-block"/>
             </div>
         </div></div>
 
