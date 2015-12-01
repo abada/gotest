@@ -144,36 +144,40 @@ $totalreviews=  Products::reviews($item->id,1);
 
      <?php $form = ActiveForm::begin([
                 'enableAjaxValidation' => true,
+                'action' => '/products/view/'.$item->slug,
                 'options' => ['enctype' => 'multipart/form-data', 'class' => 'model-form']
             ]); ?>
 
 
   <div class="form-group">
     <label>Your Name/Nick Name</label>
-    <input type="text" class="form-control" placeholder="Name">
+      <?php echo $form->field($oReview, 'owner')->textInput(['class' => 'form-control',' placeholder'=>Yii::t('easyii', 'Name') ])->label(false);  ?>
+      <label>Title</label>
+      <?php echo $form->field($oReview, 'title')->textInput(['class' => 'form-control',' placeholder'=>Yii::t('easyii', 'Title') ])->label(false);  ?>
+
   </div>
   <div class="form-group">
     <label>Please Rate Our Product</label>
     <label class="radio-inline">
-  <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1"> 1
+  <input type="radio" name="News[no_of_review]" id="inlineRadio1" value="1"> 1
 </label>
 <label class="radio-inline">
-  <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"> 2
+  <input type="radio" name="News[no_of_review]" id="inlineRadio2" value="2"> 2
 </label>
 <label class="radio-inline">
-  <input type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3"> 3
+  <input type="radio" name="News[no_of_review]" id="inlineRadio3" value="3"> 3
 </label>
 
     <label class="radio-inline">
-  <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1"> 4
+  <input type="radio" name="News[no_of_review]" id="inlineRadio1" value="4"> 4
 </label>
 <label class="radio-inline">
-  <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"> 5
+  <input type="radio" name="News[no_of_review]" id="inlineRadio2" value="5"> 5
 </label>
   </div>
   <div class="form-group">
     <label>Your Review</label>
-      <?//= $form->field($oReview, 'text')->textarea([ 'class' => 'form-control','rows'=>3])->label(false); ?>
+      <?= $form->field($oReview, 'text')->textarea([ 'class' => 'form-control','rows'=>3])->label(false); ?>
 
 
       <p class="help-block">We Appreciate Your Review, Thanks For Your Time</p>
