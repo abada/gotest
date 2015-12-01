@@ -67,6 +67,9 @@ class ProductsController extends \yii\web\Controller
 
     public function actionView($slug=null)
     {
+        $oReview = new \app\modules\reviews\models\News();
+        $oReview->time = time();
+
         $item = Catalog::get($slug);
         if(!$item){
             throw new NotFoundHttpException('Item not found.');
@@ -75,6 +78,29 @@ class ProductsController extends \yii\web\Controller
             $this->view->params['metatitle'] = $item->title;
             $this->view->params['metaimage'] = "http://".$_SERVER['SERVER_NAME'].'/'.$item->image;
             $this->view->params['metadesc'] = $item->description;
+
+
+        if ($oReview->load(Yii::$app->request->post())) {
+            $oReview->product_id=$item->id;
+
+            if(Yii::$app->request->isAjax){
+                Yii::$app->response->format = \yii\web\Response::FORMAT_JSON;
+                return ActiveForm::validate($oReview);
+            }
+            else{
+                if($oReview->save()){
+                   // $this->flash('success', Yii::t('easyii', 'Your Review has been created'));
+                   
+                }
+                else{
+                    var_dump($oReview->formatErrors());
+                    return $this->refresh();
+                }
+            }
+
+
+        }
+
 
 
 //        $reviews= News::find()
@@ -89,7 +115,6 @@ class ProductsController extends \yii\web\Controller
 
         $avg_rate = round($avg_rate);
 
-        $oReview = new \yii\easyii\modules\news\models\News();
         //var_dump($reviews);die;
         return $this->render('view', [
             'item' => $item,
