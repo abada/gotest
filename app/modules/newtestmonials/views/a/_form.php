@@ -28,8 +28,8 @@ use yii\easyii\widgets\SeoForm;
     ]
 ])->widget(input_widget\MultiLanguageActiveField::className(),['inputType'=>'textArea', 'inputOptions'=>[
     'rows'=>3,
-    'class'=>'form-control',
-]])
+    'class'=>'redactor',
+]]);
 ?>
 
 <?php if(IS_ROOT) : ?>
@@ -39,3 +39,11 @@ use yii\easyii\widgets\SeoForm;
 
 <?= Html::submitButton(Yii::t('easyii','Save'), ['class' => 'btn btn-primary']) ?>
 <?php ActiveForm::end(); ?>
+
+<script>
+    $(function()
+    {
+        $('.redactor').redactor();
+    });
+
+</script>

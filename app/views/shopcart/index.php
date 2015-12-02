@@ -15,14 +15,15 @@ $this->params['breadcrumbs'][] = $page->model->title;
 $delivery= Setting::get('deliver_cost');
 ?>
 
-
-
+<?php
+$page = Page::get('shopcartpage');
+?>
 
 
     <div class="content">
         <div class="container">
-            <h2 class="title"><?= Yii::t('easyii','order online');?></h2>
-            <div class="sub-title"><?= Yii::t('easyii','Choose from any of the special offers below to enjoy valuable savings on Poise&reg; protection.');?></div>
+            <h2 class="title"><?= $page->title ?></h2>
+            <div class="sub-title"><?= $page->text ?></div>
             <div class="row">
 
                 <?php if(count($goods)) : ?>
