@@ -65,7 +65,6 @@ $totalreviews=  Products::reviews($item->id,1);
                             <span class='st_facebook_large' displayText=''></span>
                             <span class='st_twitter_large' displayText=''></span>
                             <span class='st_googleplus_large' displayText=''></span>
-                            <span class='st_instagram_large' displayText=''></span>
                             <span class='st_sharethis_large' displayText=''></span>
                             <span class='st__large' displayText=''></span>
                        </li>
@@ -239,7 +238,6 @@ $totalreviews=  Products::reviews($item->id,1);
                                <span class='st_facebook_large' displayText='' st_url="<?= $reviewUrl ;?>" st_title="<?= $review->title?>" ></span>
                                <span class='st_twitter_large' displayText='' st_url="<?= $reviewUrl ;?>" st_title="<?= $review->title?>"></span>
                                <span class='st_googleplus_large' displayText='' st_url="<?= $reviewUrl ;?>" st_title="<?= $review->title?>"></span>
-                               <span class='st_instagram_large' displayText='' st_url="<?= $reviewUrl ;?>   " st_title="<?= $review->title?>"></span>
 
 
                            </li>
