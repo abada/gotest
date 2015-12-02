@@ -34,30 +34,50 @@ $this->params['breadcrumbs'][] = $cat->model->title;
                             <div class="col-md-3">
                                 <div class="speed center-block">
                                     <h4><?= Yii::t('easyii', 'Speed');?>  </h4>
+                                    <ul class="absorpation-filter">
+                                    	<li><a href="#">1</a></li>
+                                    	<li><a href="#">2</a></li>
+                                    	<li><a href="#" class="active">3</a></li>
+                                    	<li><a href="#">4</a></li>
+                                    	<li><a href="#">5</a></li>
+                                    </ul>
+                                    <!--
                                     <p>
                                         <input type="text" readonly  name="GadgetsFilterForm[speed]" id="gadgetsfilterform-speed" value="5" >
                                     </p>
                                     <div id="slider-range-max2"></div>
-
+-->
                                 </div>
                             </div>
                             <div class="col-md-3">
                                 <div class="clothes center-block">
                                     <h4><?= Yii::t('easyii', 'Clothes');?>  </h4>
+                                    <ul class="absorpation-filter">
+                                    	<li><a href="#">filter</a></li>
+                                    	<li><a href="#" class="active">clothes</a></li>
+                                    </ul>
+                                    <!--
                                     <p>
                                         <input type="text"  readonly  name="GadgetsFilterForm[clothes]" id="gadgetsfilterform-clothes" >
                                     </p>
                                     <div id="slider-range-max3"></div>
-
+-->
                                 </div>
                             </div>
                             <div class="col-md-3">
                                 <div class="activity center-block">
                                     <h4><?= Yii::t('easyii', 'Activity');?>  </h4>
+                                    <ul class="absorpation-filter">
+                                    	<li><a href="#" class="active">Activity</a></li>
+                                    	<li><a href="#">center</a></li>
+                                    	<li><a href="#">filter</a></li>
+                                    </ul>
+                                    <!--
                                     <p>
                                         <input type="text"  readonly  name="GadgetsFilterForm[activity]" id="gadgetsfilterform-activity">
                                     </p>
                                     <div id="slider-range-max4"></div>
+-->
                                 </div>
                             </div>
                         </div>
