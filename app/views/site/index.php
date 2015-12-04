@@ -258,7 +258,7 @@ $this->title = $page->seo('title', $page->model->title);
                 <li>
                   <a href="<?= $adv2->url?>">
                     <img src="<?=Yii::$app->language =='en' ? $adv2->image :$adv2->image_ar ?>" class="img-responsive center-block"/>
-                    <button class="btn pink-btn btn-block">Sign Up Now!</button>
+                    <button class="btn pink-btn btn-block"> <?= Yii::t('easyii', 'Sign Up Now!');?></button>
                     </a>
                 </li>
                 <li>
@@ -295,7 +295,7 @@ $this->title = $page->seo('title', $page->model->title);
 
                                ?>
                                <div class="item <?= ($i == 0) ? 'active' : ''; ?>">
-                                  <p><?= $item->text?></p><?= Yii::t('easyii','By:');?> <?=$item->owner?>
+                                  <p><?= $item->text?></p> <?=$item->owner?>
                                </div>
                                <?
                                $i++;
