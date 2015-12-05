@@ -106,7 +106,7 @@ $totalreviews=  Products::reviews($item->id,1);
 
                             <a href="/products/view-online?slug=<?=$product->slug   ?>" >
                             <button class="btn dry-btn"><?= Yii::t('easyii','view more')?>
-                                <img src="<?php echo Yii::$app->getUrlManager()->getBaseUrl()?>/theme/images/view-arrow.jpg"/>
+<!--                                <img src="--><?php //echo Yii::$app->getUrlManager()->getBaseUrl()?><!--/theme/images/view-arrow.jpg"/>-->
                             </button>
                                 </a>
                         </div>

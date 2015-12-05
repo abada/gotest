@@ -15,7 +15,7 @@ class AController extends Controller
     public function actionIndex()
     {
         $data = new ActiveDataProvider([
-            'query' => Page::find()->desc()
+            'query' => Page::find()->ascTest()
         ]);
         return $this->render('index', [
             'data' => $data
