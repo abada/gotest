@@ -77,7 +77,7 @@ class ProductsController extends \yii\web\Controller
 
             $this->view->params['metatitle'] = $item->title;
             $this->view->params['metaimage'] = "http://".$_SERVER['SERVER_NAME'].'/'.$item->image;
-            $this->view->params['metadesc'] = $item->description;
+            $this->view->params['metadesc'] =strip_tags($item->description);
 
 
         if ($oReview->load(Yii::$app->request->post())) {
