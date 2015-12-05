@@ -11,4 +11,11 @@ class FrontController extends Controller
         MultiLanguageHelper::catchLanguage();
         parent::init();
     }
+
+    public function flash($type, $message)
+    {
+        Yii::$app->getSession()->setFlash($type=='error'?'danger':$type, $message);
+    }
+
+
 }

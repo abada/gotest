@@ -82,6 +82,9 @@ class ProductsController extends \yii\web\Controller
 
         if ($oReview->load(Yii::$app->request->post())) {
             $oReview->product_id=$item->id;
+            $oReview->status=0;
+            if(Yii::$app->language =='en'){$oReview->flag_en=1;}else{$oReview->flag_en=0;}
+
 
             if(Yii::$app->request->isAjax){
                 Yii::$app->response->format = \yii\web\Response::FORMAT_JSON;
@@ -89,8 +92,9 @@ class ProductsController extends \yii\web\Controller
             }
             else{
                 if($oReview->save()){
-                   // $this->flash('success', Yii::t('easyii', 'Your Review has been created'));
-                   
+                        \Yii::$app->getSession()->setFlash('success', Yii::t('easyii', 'Your Review has been added successfully'));
+
+
                 }
                 else{
                     var_dump($oReview->formatErrors());
