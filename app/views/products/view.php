@@ -51,6 +51,9 @@ $totalreviews=  Products::reviews($item->id,1);
                         <?
                         }
                         ?>
+
+
+
                         <?php echo Products::reviews($item->id);?>
                     </p>
                 </div>
@@ -126,7 +129,10 @@ $totalreviews=  Products::reviews($item->id,1);
             }
             ?>
 
-        <?php echo Products::reviews($item->id);?>
+        <?php
+
+
+            echo Products::reviews($item->id);?>
         </p>
         <button class="btn dry-btn center-block" data-toggle="modal" data-target="#writeReview"><i class="fa fa-pencil fa-lg"></i> Write a review</button>
         <!-- Modal -->
@@ -197,10 +203,11 @@ $totalreviews=  Products::reviews($item->id,1);
 
     </div>
 
-
-
+<div style="al">
+    <?php    echo Yii::$app->session->getFlash('success');   ?>
 
     <div class="container margin-top20">
+
         <div class="row">
             <div class="col-sm-8">
 

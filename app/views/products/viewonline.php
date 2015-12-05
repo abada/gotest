@@ -75,7 +75,16 @@ $totalreviews=  Products::reviews($item->id,1);
                     <footer>
                         <a class="btn dry-btn-2 shopping" href="/products/online">
                             <?= Yii::t('easyii','Continue Shopping'); ?></a>
-                        <a class="btn dry-btn-2 pull-right" href="/shopcart">
+
+                        <?php
+                        if(\yii\easyii\modules\shopcart\api\Shopcart::goods()){
+
+                            $url='href="/shopcart"';
+                        }else{
+                            $url='  href="javascript:void(0)"  onclick="alert(\''.Yii::t('easyii','please add item to cart first').'\')"';
+                        }
+                        ?>
+                        <a class="btn dry-btn-2 pull-right" <?= $url?>>
                             <?= Yii::t('easyii','Check Out'); ?></a>
                     </footer>
                 </div>
@@ -85,7 +94,7 @@ $totalreviews=  Products::reviews($item->id,1);
 
 
 
-        <div class="title">you may like also </div>
+        <div class="title"><?= Yii::t('easyii','you may like also');?> </div>
         <div class="col-md-12">
             <div id="owl-example" class="owl-carousel">
 
