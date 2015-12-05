@@ -77,20 +77,21 @@ $totalreviews=  Products::reviews($item->id,1);
             <div class="row pink-border">
                 <div class="col-md-4 feature">
 
-<!--                    <img src="--><?php //echo Yii::$app->getUrlManager()->getBaseUrl()?><!--/theme/images/absorb-loc.png"/>-->
+<!--                    <img src="--><?php //echo Yii::$app->getUrlManager()->getBaseUrl()?><!--/theme/images/absorb-loc.png"/> -->
                     <img src="<?php echo(Yii::$app->language =='en') ? $item->slider_img_1 : $item->slider_img_1_ar ;?>"">
                     <?php echo $item->slider_text_1 ;?>
 
                 </div>
                 <div class="col-md-4 feature">
-<!--                    <img src="--><?php //echo Yii::$app->getUrlManager()->getBaseUrl()?><!--/theme/images/dry-touch.png"/>-->
+<!--                    <img src="--><?php //echo Yii::$app->getUrlManager()->getBaseUrl()?><!--/theme/images/dry-touch.png"/> -->
                     <img src="<?php echo(Yii::$app->language =='en') ? $item->slider_img_2 : $item->slider_img_2_ar ;?>"">
 
                     <?php echo $item->slider_text_2 ;?>
 
                 </div>
                 <div class="col-md-4 feature">
-<!--                    <img src="--><?php //echo Yii::$app->getUrlManager()->getBaseUrl()?><!--/theme/images/thin-flex.png"/>-->
+<!--                    <img src=" --> <?php //echo Yii::$app->getUrlManager()->getBaseUrl()?>
+                    <!-- /theme/images/thin-flex.png"/>   -->
                     <img src="<?php echo(Yii::$app->language =='en') ? $item->slider_img_3 : $item->slider_img_3_ar ;?>"">
 
                     <?php echo $item->slider_text_3 ;?>
@@ -258,7 +259,7 @@ $totalreviews=  Products::reviews($item->id,1);
 
                 <?= \app\modules\reviews\api\News::pages() ?>
 
-<!--                <a class="readMore">read more</a>-->
+<!--                <a class="readMore">read more</a> -->
             </div>
             <div class="col-sm-4">
 
