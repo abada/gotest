@@ -262,15 +262,13 @@ $totalreviews=  Products::reviews($item->id,1);
             </div>
             <div class="col-sm-4">
 
-                <?php  $adv1 = \app\modules\advertise\models\Page::findOne(5);
-                        $adv2 = \app\modules\advertise\models\Page::findOne(6);
-                ?>
-                <a href="<?= $adv1->url?>">
-                    <img src="<?=Yii::$app->language =='en' ? $adv1->image :$adv1->image_ar ?>" class="margin-bottom30 img-responsive center-block"/>
+
+                <a href="<?= $item->adv1_url?>">
+                    <img src="<?=Yii::$app->language =='en' ? $item->adv_1 :$adv1->adv_1_ar ?>" class="margin-bottom30 img-responsive center-block"/>
                 </a>
 
-                <a href="<?= $adv2->url?>">
-                    <img src="<?=Yii::$app->language =='en' ? $adv2->image :$adv2->image_ar ?>" class="margin-bottom30 img-responsive center-block"/>
+                <a href="<?= $item->adv2_url?>">
+                    <img src="<?=Yii::$app->language =='en' ? $item->adv_2 :$adv1->adv_2_ar ?>" class="margin-bottom30 img-responsive center-block"/>
                 </a>
 
 
