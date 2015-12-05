@@ -16,6 +16,7 @@ $module = $this->context->module->id;
                     <th width="50">#</th>
                 <?php endif; ?>
                 <th><?= Yii::t('easyii', 'Title')?></th>
+                <th><?= Yii::t('easyii', 'Appear in home page')?></th>
                 <?php if(IS_ROOT) : ?>
                     <th><?= Yii::t('easyii', 'Slug')?></th>
                     <th width="30"></th>
@@ -28,11 +29,15 @@ $module = $this->context->module->id;
                 <?php if(IS_ROOT) : ?>
                     <td><?= $item->primaryKey ?></td>
                 <?php endif; ?>
+
                 <td><a href="<?= Url::to(['/admin/'.$module.'/a/edit', 'id' => $item->primaryKey]) ?>"><?= $item->title ?></a></td>
+                <td><?= ($item->homepage)? 'yes':'No' ?></td>
+
                 <?php if(IS_ROOT) : ?>
                     <td><?= $item->slug ?></td>
                                     <?php endif; ?>
-                    <td><a href="<?= Url::to(['/admin/'.$module.'/a/delete', 'id' => $item->primaryKey]) ?>" class="glyphicon glyphicon-remove confirm-delete" title="<?= Yii::t('easyii', 'Delete item')?>"></a></td>
+
+                <td><a href="<?= Url::to(['/admin/'.$module.'/a/delete', 'id' => $item->primaryKey]) ?>" class="glyphicon glyphicon-remove confirm-delete" title="<?= Yii::t('easyii', 'Delete item')?>"></a></td>
 
             </tr>
     <?php endforeach; ?>
