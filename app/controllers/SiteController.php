@@ -31,7 +31,8 @@ class SiteController extends FrontController
         $items = Carousel::itemlist(1306,460);
         $testmonials= PageModel::find()
                        ->where("homepage=1")
-                       ->all();
+                        ->desc()
+                        ->all();
         return $this->render('index',array('items'=>$items,'testmonials'=>$testmonials));
     }
 

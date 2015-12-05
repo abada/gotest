@@ -16,7 +16,7 @@ $module = $this->context->module->id;
                     <th width="50">#</th>
                 <?php endif; ?>
                 <th><?= Yii::t('easyii', 'Title')?></th>
-                <th><?= Yii::t('easyii', 'Appear in home page')?></th>
+                <th><?= Yii::t('easyii', 'Appears in home page')?></th>
                 <?php if(IS_ROOT) : ?>
                     <th><?= Yii::t('easyii', 'Slug')?></th>
                     <th width="30"></th>
