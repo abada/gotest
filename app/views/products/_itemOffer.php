@@ -37,7 +37,16 @@ use yii\easyii\modules\catalog\api\Catalog;
         </div>
         <footer>
             <button class="btn dry-btn-2 shopping"> <?= Yii::t('easyii','Continue Shopping'); ?></button>
-            <a href="/shopcart"><button class="btn dry-btn-2 pull-right"> <?= Yii::t('easyii','Check Out'); ?> </button></a>
+
+            <?php
+            if(\yii\easyii\modules\shopcart\api\Shopcart::goods()){
+
+                $url='href="/shopcart"';
+            }else{
+                $url='  href="javascript:void(0)"  onclick="alert(\''.Yii::t('easyii','please add item to cart first').'\')"';
+            }
+            ?>
+            <a <?= $url?> ><button class="btn dry-btn-2 pull-right"> <?= Yii::t('easyii','Check Out'); ?> </button></a>
         </footer>
     </div>
 </div>
