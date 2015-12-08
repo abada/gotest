@@ -65,14 +65,25 @@ $this->title = $page->seo('title', $page->model->title);
             <div class="row">
             
             
-            <div id="myStat" data-dimension="250" data-text="35%" data-info="New Clients" data-width="30" data-fontsize="38" data-percent="35" data-fgcolor="#61a9dc" data-bgcolor="#eee" data-fill="#ddd" data-total="200" data-part="35" data-icon="long-arrow-up" data-icon-size="28" data-icon-color="#fff"></div>
             
             
             
-                <div class="circleGraphic1 col-md-3 col-sm-6 circle circle-1"><?= Setting::get('absorption')?></div>
-                <div class="circleGraphic2 col-md-3 col-sm-6 circle circle-2"><?= Setting::get('cotton')?></div>
-                <div class="circleGraphic3 col-md-3 col-sm-6 circle circle-3"><?= Setting::get('stickiness')?></div>
-                <div class="circleGraphic4 col-md-3 col-sm-6 circle circle-4"><?= Setting::get('fittingclothes')?></div>
+            	<div class="col-md-3 col-sm-6">
+                	<div class="circleGraphic1 circle circle-1"><?= Setting::get('absorption')?></div>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                <div class="circleGraphic2 circle circle-2"><?= Setting::get('cotton')?></div>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                <div class="circleGraphic3 circle circle-3"><?= Setting::get('stickiness')?></div>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                <div class="circleGraphic4 circle circle-4"><?= Setting::get('fittingclothes')?></div>
+                </div>
+                 <div class="col-md-3 col-sm-6 circletitle">absorption</div>
+                 <div class="col-md-3 col-sm-6 circletitle">cotton</div>
+                 <div class="col-md-3 col-sm-6 circletitle">stickiness</div>
+                 <div class="col-md-3 col-sm-6 circletitle">fittingclothes</div>
             </div>
       
             <div class="col-md-12">

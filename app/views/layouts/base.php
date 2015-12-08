@@ -71,15 +71,15 @@ use yii\helpers\Html;
     <script type="text/javascript">
         $(document).ready(function(){
             $().UItoTop({ easingType: 'easeOutQuart' });
-$('#myStat').circliful();
-/*window.onload=function(){
+
+window.onload=function(){
 	
 	
 	$('.circleGraphic1').circleGraphic();
 	$('.circleGraphic2').circleGraphic({'color':'#fc8abe', 'width':'300px', 'height':'200'});
 	$('.circleGraphic3').circleGraphic({'color':'#fc8abe'});
 	$('.circleGraphic4').circleGraphic({'color':'#fc8abe'});
-    }*/
+    }
 $("#owl-example").owlCarousel();
 
     function myFunction() {

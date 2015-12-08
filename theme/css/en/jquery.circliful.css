@@ -1,7 +1,7 @@
-.circliful {
+/*.circliful {
     position: relative; 
+	color:#6a52b4;
 }
-
 .circle-text, .circle-info, .circle-text-half, .circle-info-half {
     width: 100%;
     position: absolute;
@@ -17,4 +17,30 @@
 	margin: -10px 3px 0 3px;
 	position: relative;
 	bottom: 4px;
+}
+*/
+.circle{
+    background-repeat: no-repeat;
+    height: 225px !important;
+     width: 200px;
+    margin:0 auto;
+    text-indent: 273px;
+    overflow: hidden;
+    text-align: center;
+}
+.circle-1{
+	background-image:  url("../../images/absorption-bg.jpg");
+    background-position: 50% 75%;
+}
+.circle-2{
+	background-image:  url("../../images/cotton-bg.jpg");
+    background-position: 50% 75%;
+}
+.circle-3{
+	background-image:  url("../../images/stickiness-bg.jpg");
+    background-position: 50% 75%;
+}
+.circle-4{
+	background-image:  url("../../images/fitting-bg.jpg");
+    background-position: 50% 75%;
 }
