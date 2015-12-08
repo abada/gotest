@@ -1,0 +1,43 @@
+/*.circliful {
+    position: relative; 
+	color:#6a52b4;
+}
+.circle-text, .circle-info, .circle-text-half, .circle-info-half {
+    width: 100%;
+    position: absolute;
+    text-align: center;
+    display: inline-block;
+}
+
+.circle-info, .circle-info-half {
+	color: #999;
+}
+
+.circliful .fa {
+	margin: -10px 3px 0 3px;
+	position: relative;
+	bottom: 4px;
+}
+*/
+.circle{
+    background-repeat: no-repeat;
+    height:240px;
+    width:240px;
+	margin-left:4%;
+}
+.circle-1{
+	background-image:  url("../images/absorption-bg.jpg");
+    background-position: 52% 80%;
+}
+.circle-2{
+	background-image:  url("../images/cotton-bg.jpg");
+    background-position: 52% 89%;
+}
+.circle-3{
+	background-image:  url("../images/stickiness-bg.jpg");
+    background-position: 52% 89%;
+}
+.circle-4{
+	background-image:  url("../images/fitting-bg.jpg");
+    background-position: 52% 89%;
+}

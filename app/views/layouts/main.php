@@ -11,80 +11,77 @@ $goodsCount = count(Shopcart::goods());
 ?>
 <?php $this->beginContent('@app/views/layouts/base.php'); ?>
 
-<div class="container-fluid">
-    <div class="row">
-
-        <header>
-            <nav class="navbar navbar-fixed-top ">
-                <div class="navbar-header">
-                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-                        <span class="sr-only">Toggle navigation</span>
-                        <i class="fa fa-align-justify  pink-color fa-3x"></i>
-                    </button>
-                    <a class="navbar-brand" href="<?= Url::home() ?>"><img src="<?php echo Yii::$app->getUrlManager()->getBaseUrl()?>/theme/images/logo.png"></a>
-                </div>
-                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                    <ul class="nav navbar-nav">
-                        <li class="active"><a href="<?= Url::home() ?>">
-                                <span class="sr-only">(current)</span><?= Yii::t('easyii', 'home');?></a>
-                        </li>
-                        <li><a href="/products"><?= Yii::t('easyii', 'Products');?></a></li>
-                        <li><a href="/products/offers"><?= Yii::t('easyii', 'Offers');?></a></li>
-                        <li><a href="/stores"><?= Yii::t('easyii', 'Find a store');?></a></li>
-                        <li class="dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
-                                <?= Yii::t('easyii', 'About Dry');?>  <span class="caret"></span></a>
-                            <ul class="dropdown-menu">
-                                <li><a href="/site/about-dry"><?= Yii::t('easyii', 'whose dry');?></a></li>
-                                <li><a href="/site/awarness"><?= Yii::t('easyii', 'awareness program');?></a></li>          </ul>
-                        </li>
-                    </ul>
-                    <ul class="social">
-
-                        <li><a href=" <?= Setting::get('facebook')?>"><i class="fa fa-facebook  fb"></i></a></li>
-                        <li><a href=" <?= Setting::get('twitter')?>"><i class="fa fa-tumblr  twe"></i></a></li>
-                        <li><a href=" <?= Setting::get('instagram')?>"><i class="fa fa-instagram  in"></i></a></li>
-                        <li><a href=" <?= Setting::get('youtube')?>"><i class="fa fa-youtube uTube"></i></a></li>
-                    </ul>
-                    <ul class="heder-r">
-                        <li>
-
-                            <?php echo \webvimark\behaviors\multilanguage\language_selector_widget\LanguageSelector::widget();?>
-
-                        </li>
 
 
-
-                        <li class="dropdown">
-
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
-                                <img src="<?php echo Yii::$app->getUrlManager()->getBaseUrl()?>/theme/images/search-purple-icon.png" class="search"/>
-                            </a>
-
-
-
-                            <ul class="dropdown-menu">
-                                <?= Html::beginForm(Url::to(['/site/search']), 'get', ['class' => 'navbar-form navbar-left']) ?>
-                                <div class="form-group">
-                                    <?= Html::textInput('text', $text, ['class' => 'form-control', 'placeholder' => 'Search']) ?>
-                                </div>
-                                <?= Html::submitButton('Search', ['class' => 'btn btn-default margin-top10 center-block']) ?>
-                                <?= Html::endForm() ?>
-
-
-
-
-
-                            </ul>
-                        </li>
-                    </ul>
-                </div><!-- /.navbar-collapse -->
-            </nav>
-        </header>
-
-
+<header class="navbar navbar-fixed-top bs-docs-nav" id="top" role="banner">
+  <div class="container">
+    <div class="navbar-header">
+      <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target="#bs-navbar" aria-controls="bs-navbar" aria-expanded="false"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
+      
+      
+      <a class="navbar-brand" href="<?= Url::home() ?>"><img src="<?php echo Yii::$app->getUrlManager()->getBaseUrl()?>/theme/images/logo.png"></a>
     </div>
-</div>
+    <nav id="bs-navbar" class="collapse navbar-collapse">
+      <ul class="nav navbar-nav cl-effect-21">
+                <li class="active"><a href="<?= Url::home() ?>">
+                        <span class="sr-only">(current)</span><?= Yii::t('easyii', 'home');?></a>
+                </li>
+                <li><a href="/products"><?= Yii::t('easyii', 'Products');?></a></li>
+                <li><a href="/products/offers"><?= Yii::t('easyii', 'Offers');?></a></li>
+                <li><a href="/stores"><?= Yii::t('easyii', 'Find a store');?></a></li>
+                
+                
+                <li class="dropdown">
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><?= Yii::t('easyii', 'About Dry');?>  <span class="caret"></span></a>
+                  <ul class="dropdown-menu" role="menu">
+                    <li><a href="/site/about-dry"><?= Yii::t('easyii', 'whose dry');?></a></li>
+                    <li><a href="/site/awarness"><?= Yii::t('easyii', 'awareness program');?></a></li>
+                  </ul>
+                </li>
+            </ul>
+            
+      <ul class="social">
+
+        <li><a href=" <?= Setting::get('facebook')?>"><i class="fa fa-facebook  fb"></i></a></li>
+        <li><a href=" <?= Setting::get('twitter')?>"><i class="fa fa-tumblr  twe"></i></a></li>
+        <li><a href=" <?= Setting::get('instagram')?>"><i class="fa fa-instagram  in"></i></a></li>
+        <li><a href=" <?= Setting::get('youtube')?>"><i class="fa fa-youtube uTube"></i></a></li>
+      </ul>   
+      <ul class="heder-r">
+        <li>
+            <?php echo \webvimark\behaviors\multilanguage\language_selector_widget\LanguageSelector::widget();?>
+        </li>
+        
+        
+        
+        
+       <li class="dropdown">
+             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                  <img src="<?php echo Yii::$app->getUrlManager()->getBaseUrl()?>/theme/images/search-purple-icon.png" class="search"/></a>
+			 <ul class="dropdown-menu">
+                        <?= Html::beginForm(Url::to(['/site/search']), 'get') ?>
+                        <?= Html::textInput('text', $text, ['class' => 'form-control', 'placeholder' => '']) ?>
+                        
+                        <?= Html::endForm() ?>
+             </ul>
+         </li>
+      </ul>  
+          
+      
+    </nav>
+  </div>
+</header>
+
+
+
+
+
+
+
+
+
+
+
 
 
 

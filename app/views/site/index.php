@@ -17,12 +17,7 @@ $this->title = $page->seo('title', $page->model->title);
 
 
 <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
-    <!-- Indicators -->
-    <ol class="carousel-indicators">
-        <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
-        <li data-target="#carousel-example-generic" data-slide-to="multi lang"></li>
-    </ol>
-
+   
     <!-- Wrapper for slides -->
     <div class="carousel-inner" role="listbox">
 
@@ -68,11 +63,17 @@ $this->title = $page->seo('title', $page->model->title);
         <div class="row">
             <div class="col-md-offset-1 col-md-10"><p class="text-center text-justify"><?= $page->text ;?></p></div>
             <div class="row">
-                            <div class="circleGraphic1 col-md-3 col-sm-6 circle circle-1"><?= Setting::get('absorption')?></div>
-                            <div class="circleGraphic2 col-md-3 col-sm-6 circle circle-2"><?= Setting::get('cotton')?></div>
-                            <div class="circleGraphic3 col-md-3 col-sm-6 circle circle-3"><?= Setting::get('stickiness')?></div>
-                            <div class="circleGraphic4 col-md-3 col-sm-6 circle circle-4"><?= Setting::get('fittingclothes')?></div>
-                        </div>
+            
+            
+            <div id="myStat" data-dimension="250" data-text="35%" data-info="New Clients" data-width="30" data-fontsize="38" data-percent="35" data-fgcolor="#61a9dc" data-bgcolor="#eee" data-fill="#ddd" data-total="200" data-part="35" data-icon="long-arrow-up" data-icon-size="28" data-icon-color="#fff"></div>
+            
+            
+            
+                <div class="circleGraphic1 col-md-3 col-sm-6 circle circle-1"><?= Setting::get('absorption')?></div>
+                <div class="circleGraphic2 col-md-3 col-sm-6 circle circle-2"><?= Setting::get('cotton')?></div>
+                <div class="circleGraphic3 col-md-3 col-sm-6 circle circle-3"><?= Setting::get('stickiness')?></div>
+                <div class="circleGraphic4 col-md-3 col-sm-6 circle circle-4"><?= Setting::get('fittingclothes')?></div>
+            </div>
       
             <div class="col-md-12">
                 <h2 class=" lined-heading"><span><?= Yii::t('easyii', 'keep moving');?></span></h2>
