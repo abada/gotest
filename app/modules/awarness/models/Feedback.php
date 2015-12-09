@@ -27,11 +27,16 @@ class Feedback extends \yii\easyii\components\ActiveRecord
     public function rules()
     {
         return [
-            [['name',  'text'], 'required'], //'email',
+            [['name'], 'required', 'message'=>Yii::t('easyii', 'Enter your name') ], //'email',
+            [[ 'text'], 'required', 'message'=>Yii::t('easyii', 'Enter your message ') ], //'email',
+            [[ 'email'], 'required', 'message'=>Yii::t('easyii', 'Enter Avalid Email') ], //'email',
+            [[ 'phone'], 'required', 'message'=>Yii::t('easyii', 'Enter your Phone') ], //'email',
+             ['email', 'email' , 'message'=>Yii::t('easyii', 'Enter Avalid Email') ],
+
             [['name', 'email', 'phone', 'title', 'text'], 'trim'],
             [['name','title', 'text'], EscapeValidator::className()],
             ['title', 'string', 'max' => 128],
-            ['email', 'email'],
+            ['phone','number','message'=>Yii::t('easyii', 'Phone should be number')],
           //  ['phone', 'match', 'pattern' => '/^[\d\s-\+\(\)]+$/'],
             ['reCaptcha', ReCaptchaValidator::className(), 'when' => function($model){
                 return $model->isNewRecord && Yii::$app->getModule('admin')->activeModules['awarness']->settings['enableCaptcha'];

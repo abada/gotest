@@ -16,7 +16,7 @@ $delivery= Setting::get('deliver_cost');
 ?>
 
 <?php
-$page = Page::get('shopcartpage');
+    $page = Page::get('shopcartpage');
 ?>
 
 

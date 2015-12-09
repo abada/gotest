@@ -57,7 +57,7 @@ use yii\widgets\ActiveForm;
         <div class="form-group center-block col-md-6">
 
             <?php echo $form->field($model, 'name')->textInput(['class' => 'form-control',' placeholder'=>Yii::t('easyii', 'Name') ])->label(false);  ?>
-            <?php echo $form->field($model, 'title')->textInput(['class' => 'form-control',' placeholder'=>Yii::t('easyii', 'Phone') ])->label(false);  ?>
+            <?php echo $form->field($model, 'phone')->textInput(['class' => 'form-control',' placeholder'=>Yii::t('easyii', 'Phone') ])->label(false);  ?>
             <?php echo $form->field($model, 'email')->textInput(['class' => 'form-control',' placeholder'=>Yii::t('easyii', 'Your Mail') ])->label(false);  ?>
             <?php echo $form->field($model, 'text')->textarea(['class' => 'form-control msg',' placeholder'=>Yii::t('easyii', 'your message') ])->label(false);  ?>
 
