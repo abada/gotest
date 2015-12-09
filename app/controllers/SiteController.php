@@ -81,11 +81,28 @@ class SiteController extends FrontController
 
 
         $text = filter_var($_REQUEST['text'], FILTER_SANITIZE_STRING);
+
+        if(Yii::$app->language =='en' ){
+            $items= \yii\easyii\modules\catalog\api\Catalog::items([
+                'where' => ['or', ['like', 'title', $text], ['like', 'description', $text]],
+            ]);
+        }else{
+            $slug='products';
+            $cat = \yii\easyii\modules\catalog\api\Catalog::cat($slug);
+            $itemsData= $cat->items();
+           foreach($itemsData as $item){
+                if((strpos($item->title ,$text) !== false)  or  (strpos($item->description ,$text) !== false)){
+                    $items[]=$item;
+
+                }
+
+            }
+
+        }
+
         return $this->render('search', [
             'text' => $text,
-            'items' => Catalog::items([
-                'where' => ['or', ['like', 'title', $text], ['like', 'description', $text]],
-            ])
+            'items' => $items
         ]);
 
     }

@@ -1,15 +1,30 @@
+<?php use yii\helpers\Html; ?>
 
 <div class="content">
     <div class="container">
         <div class="row">
             <div class="col-md-12">
-                <h2 class="title">search result for <span class="search-result"><?=$text?></span></h2>
+                <h2 class="title"><?= Yii::t('easyii',' search result for')?> <span class="search-result"><?=$text?></span></h2>
             </div>
-            <div class="sub-title">8 results found on the site</div>
-            <p class="search-result">
-                Print your coupon now to help stop your leaks before they happen. Always start with the Poise* Impressa* Bladder Supports Sizing Kit to find your perfect fit.</p>
-            <p class="search-result">
-                Print your coupon now to help stop your leaks before they happen. Always start with the Poise* Impressa* Bladder Supports Sizing Kit to find your perfect fit.</p>
+            <div class="sub-title"><?= count($items)?> <?= Yii::t('easyii','results found on the site')?> </div>
+
+            <?php if(count($items)) : ?>
+                <?php foreach($items as $item) : ?>
+                    <p class="search-result">
+             <?= Html::a($item->title, ['products/view', 'slug' => $item->slug],['class' => '']) ?>
+                    <br/>
+                        <?= $item->description?>
+                        .</p>
+                <?php endforeach; ?>
+
+
+            <?php else : ?>
+                <p> <?= Yii::t('easyii','No items found')?> </p>
+            <?php endif; ?>
+
+
+
+
         </div>
         <div class="row">
             <div class="col-md-12">
