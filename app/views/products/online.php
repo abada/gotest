@@ -8,7 +8,12 @@
 
                      <?php if(count($Postpartum)) : ?>
                          <?php foreach($Postpartum as $item) : ?>
-                             <?= $this->render('_itemonline', ['item' => $item]) ?>
+
+                             <?php
+                             if($item->data->maxipads==null){
+                             echo $this->render('_itemonline', ['item' => $item]) ;
+                             }
+                             ?>
                          <?php endforeach; ?>
                      <?php else : ?>
                          <p><?= Yii::t('easyii', 'No products Found');?>  </p>
@@ -25,7 +30,13 @@
 
                     <?php if(count($Postpartum)) : ?>
                         <?php foreach($Postpartum as $item) : ?>
-                            <?= $this->render('_itemonline', ['item' => $item]) ?>
+
+                            <?php
+                            if($item->data->maxipads==1){
+                                echo $this->render('_itemonline', ['item' => $item]) ;
+                            }
+                            ?>
+
                         <?php endforeach; ?>
                     <?php else : ?>
                         <p><?= Yii::t('easyii', 'No products Found');?>  </p>
