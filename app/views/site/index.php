@@ -70,20 +70,21 @@ $this->title = $page->seo('title', $page->model->title);
             
             	<div class="col-md-3 col-sm-6">
                 	<div class="circleGraphic1 circle circle-1"><?= Setting::get('absorption')?></div>
+                    <div class="circletitle">absorption</div>
                 </div>
                 <div class="col-md-3 col-sm-6">
-                <div class="circleGraphic2 circle circle-2"><?= Setting::get('cotton')?></div>
+                    <div class="circleGraphic2 circle circle-2"><?= Setting::get('cotton')?></div>
+                    <div class="circletitle">cotton</div>
                 </div>
                 <div class="col-md-3 col-sm-6">
-                <div class="circleGraphic3 circle circle-3"><?= Setting::get('stickiness')?></div>
+                    <div class="circleGraphic3 circle circle-3"><?= Setting::get('stickiness')?></div>
+                    <div class="circletitle">stickiness</div>
                 </div>
                 <div class="col-md-3 col-sm-6">
-                <div class="circleGraphic4 circle circle-4"><?= Setting::get('fittingclothes')?></div>
+                    <div class="circleGraphic4 circle circle-4"><?= Setting::get('fittingclothes')?></div>
+                    <div class="circletitle">fittingclothes</div>
                 </div>
-                 <div class="col-md-3 col-sm-6 circletitle">absorption</div>
-                 <div class="col-md-3 col-sm-6 circletitle">cotton</div>
-                 <div class="col-md-3 col-sm-6 circletitle">stickiness</div>
-                 <div class="col-md-3 col-sm-6 circletitle">fittingclothes</div>
+                 
             </div>
       
             <div class="col-md-12">
@@ -262,20 +263,22 @@ $this->title = $page->seo('title', $page->model->title);
                 $adv3 = \app\modules\advertise\models\Page::findOne(4);
                 ?>
 
-                <li>
+                <li class="wow slideInLeft" data-wow-duration="1s" data-wow-delay="0s">
                 <a href="<?= $adv1->url?>">
                     <img src="<?=Yii::$app->language =='en' ? $adv1->image :$adv1->image_ar ?>" class="img-responsive center-block"/>
                     </a>
                 </li>
-                <li>
+                <li class="wow slideInLeft" data-wow-duration="1.5s" data-wow-delay=".5s">
                   <a href="<?= $adv2->url?>">
                     <img src="<?=Yii::$app->language =='en' ? $adv2->image :$adv2->image_ar ?>" class="img-responsive center-block"/>
                     <button class="btn pink-btn btn-block"> <?= Yii::t('easyii', 'Sign Up Now!');?></button>
                     </a>
                 </li>
-                <li>
+                <li class="wow slideInLeft" data-wow-duration="1.5s" data-wow-delay="1s">
                <a href="<?= $adv3->url?>">
                     <img src="<?=Yii::$app->language =='en' ? $adv3->image :$adv3->image_ar ?>" class="img-responsive center-block"/>
+                    <button class="btn pink-btn btn-block"> <?= Yii::t('easyii', 'Try it now!');?></button>
+                    
                     </a>
                 </li>
             </ul>
@@ -298,7 +301,7 @@ $this->title = $page->seo('title', $page->model->title);
             </div>
             <div class="row">
                 <div class="col-md-12">
-                    <div id="carousel-example-generic-testimonials" class="carousel slide" data-ride="carousel">
+                    <div id="carousel-example-generic-testimonials" class="carousel slide wow flipInY" data-wow-duration="2s" data-ride="carousel">
                         <div class="carousel-inner testimonial" role="listbox">
 
                            <?php

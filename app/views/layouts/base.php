@@ -30,6 +30,7 @@ use yii\helpers\Html;
         <link href="<?php echo Yii::$app->getUrlManager()->getBaseUrl()?>/theme/css/en/jquery.bxslider.css" rel="stylesheet" type="text/css" />
         <link href="<?php echo Yii::$app->getUrlManager()->getBaseUrl()?>/theme/css/en/owl.theme.css" rel="stylesheet">
         <link href="<?php echo Yii::$app->getUrlManager()->getBaseUrl()?>/theme/css/en/owl.carousel.css" rel="stylesheet">
+        <link href="<?php echo Yii::$app->getUrlManager()->getBaseUrl()?>/theme/css/en/animate.css" rel="stylesheet">
         <link rel="shortcut icon" href="<?php echo Yii::$app->getUrlManager()->getBaseUrl()?>/theme/images/favicon.ico" type="image/x-icon">
         <link rel="icon" href="<?php echo Yii::$app->getUrlManager()->getBaseUrl()?>/theme/images/favicon.ico" type="image/x-icon">
         <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
@@ -58,7 +59,7 @@ use yii\helpers\Html;
     <script src="<?php echo Yii::$app->getUrlManager()->getBaseUrl()?>/theme/js/jquery.bxslider.min.js"></script>
     <script type="text/javascript" src="<?php echo Yii::$app->getUrlManager()->getBaseUrl()?>/theme/js/jquery.circliful.min.js"></script>
     <script src="<?php echo Yii::$app->getUrlManager()->getBaseUrl()?>/theme/js/owl.carousel.js"></script>
-
+	<script src="<?php echo Yii::$app->getUrlManager()->getBaseUrl()?>/theme/js/wow.js"></script>
 
     <?php
     //var_dump( $data['sliderFilters'] );
@@ -75,8 +76,8 @@ use yii\helpers\Html;
 window.onload=function(){
 	
 	
-	$('.circleGraphic1').circleGraphic();
-	$('.circleGraphic2').circleGraphic({'color':'#fc8abe', 'width':'300px', 'height':'200'});
+	$('.circleGraphic1').circleGraphic({'color':'#fc8abe'});
+	$('.circleGraphic2').circleGraphic({'color':'#fc8abe'});
 	$('.circleGraphic3').circleGraphic({'color':'#fc8abe'});
 	$('.circleGraphic4').circleGraphic({'color':'#fc8abe'});
     }
@@ -144,7 +145,13 @@ $("#owl-example").owlCarousel();
 		
 		
 		
+		new WOW().init();
 		
+		$(".searchclick").on('click', function() {
+  $(this).toggleClass("on");
+  $('.navbar-fixed-top').toggleClass("on");
+ 
+});
 </script>
 
 

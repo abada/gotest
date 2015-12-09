@@ -14,6 +14,14 @@ $goodsCount = count(Shopcart::goods());
 
 
 <header class="navbar navbar-fixed-top bs-docs-nav" id="top" role="banner">
+<div class="search">
+  <div class="container">
+ <?= Html::beginForm(Url::to(['/site/search']), 'get') ?>
+                        <?= Html::textInput('text', $text, ['class' => 'form-control', 'placeholder' => '']) ?>
+                        
+<?= Html::endForm() ?>
+</div>
+</div>
   <div class="container">
     <div class="navbar-header">
       <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target="#bs-navbar" aria-controls="bs-navbar" aria-expanded="false"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
@@ -55,15 +63,10 @@ $goodsCount = count(Shopcart::goods());
         
         
         
-       <li class="dropdown">
-             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
-                  <img src="<?php echo Yii::$app->getUrlManager()->getBaseUrl()?>/theme/images/search-purple-icon.png" class="search"/></a>
-			 <ul class="dropdown-menu">
-                        <?= Html::beginForm(Url::to(['/site/search']), 'get') ?>
-                        <?= Html::textInput('text', $text, ['class' => 'form-control', 'placeholder' => '']) ?>
-                        
-                        <?= Html::endForm() ?>
-             </ul>
+       <li>
+             <span class="searchclick">
+                  <img src="<?php echo Yii::$app->getUrlManager()->getBaseUrl()?>/theme/images/search-purple-icon.png" class="search"/></span>
+			 
          </li>
       </ul>  
           
