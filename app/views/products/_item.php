@@ -3,8 +3,8 @@
 
 
 <li data-tag='postpartum'>
-    <img class="center-block img-responsive thumb" src="<?php echo Yii::$app->getUrlManager()->getBaseUrl()?>/theme/images/product-img.jpg">
-    <!--<?= Html::img($item->thumb(125, 169)) ?>-->
+<!--    <img class="center-block img-responsive thumb" src="--><?php //echo Yii::$app->getUrlManager()->getBaseUrl()?><!--/theme/images/product-img.jpg">-->
+    <?= Html::img($item->thumb(125, 125),['class'=>'center-block img-responsive thumb']) ?>
     <div class="product-name"><?= $item->title ?></div>
     <?php if($item->no_of_drops == ''){$no=1;}else{$no=$item->no_of_drops ;}?>
 
