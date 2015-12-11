@@ -52,3 +52,12 @@
 [05-Dec-2015 17:35:55 UTC] PHP Fatal error:  Call to a member function formName() on a non-object in /home/dryarabia/public_html/demo/vendor/yiisoft/yii2/helpers/BaseHtml.php on line 2074
 [05-Dec-2015 17:36:02 UTC] PHP Fatal error:  Call to a member function formName() on a non-object in /home/dryarabia/public_html/demo/vendor/yiisoft/yii2/helpers/BaseHtml.php on line 2074
 [05-Dec-2015 17:36:20 UTC] PHP Fatal error:  Call to a member function formName() on a non-object in /home/dryarabia/public_html/demo/vendor/yiisoft/yii2/helpers/BaseHtml.php on line 2074
+[10-Dec-2015 09:57:14 UTC] PHP Fatal error:  Allowed memory size of 67108864 bytes exhausted (tried to allocate 21700 bytes) in /home/dryarabia/public_html/demo/vendor/noumo/easyii/helpers/GD.php on line 24
+[10-Dec-2015 09:57:31 UTC] PHP Fatal error:  Allowed memory size of 67108864 bytes exhausted (tried to allocate 5425 bytes) in /home/dryarabia/public_html/demo/vendor/noumo/easyii/helpers/GD.php on line 24
+[10-Dec-2015 09:58:03 UTC] PHP Fatal error:  Allowed memory size of 67108864 bytes exhausted (tried to allocate 21700 bytes) in /home/dryarabia/public_html/demo/vendor/noumo/easyii/helpers/GD.php on line 24
+[10-Dec-2015 09:59:24 UTC] PHP Fatal error:  Allowed memory size of 67108864 bytes exhausted (tried to allocate 5425 bytes) in /home/dryarabia/public_html/demo/vendor/noumo/easyii/helpers/GD.php on line 24
+[10-Dec-2015 10:00:33 UTC] PHP Fatal error:  Allowed memory size of 67108864 bytes exhausted (tried to allocate 5425 bytes) in /home/dryarabia/public_html/demo/vendor/noumo/easyii/helpers/GD.php on line 24
+[10-Dec-2015 10:01:19 UTC] PHP Fatal error:  Allowed memory size of 67108864 bytes exhausted (tried to allocate 5425 bytes) in /home/dryarabia/public_html/demo/vendor/noumo/easyii/helpers/GD.php on line 24
+[10-Dec-2015 10:04:49 UTC] PHP Fatal error:  Allowed memory size of 67108864 bytes exhausted (tried to allocate 21700 bytes) in /home/dryarabia/public_html/demo/vendor/noumo/easyii/helpers/GD.php on line 24
+[10-Dec-2015 13:00:00 UTC] PHP Fatal error:  Call to a member function formName() on a non-object in /home/dryarabia/public_html/demo/vendor/yiisoft/yii2/helpers/BaseHtml.php on line 2074
+[10-Dec-2015 13:00:03 UTC] PHP Fatal error:  Call to a member function formName() on a non-object in /home/dryarabia/public_html/demo/vendor/yiisoft/yii2/helpers/BaseHtml.php on line 2074

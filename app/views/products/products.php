@@ -11,7 +11,7 @@ $this->params['breadcrumbs'][] = $cat->model->title;
 //echo $sliderFilters['absorptionrate'].'dd';die;
 ?>
 
-    <div class="content">
+   
         <div class="container-fluid">
             <div class="row">
                 <div class="product-filter">
@@ -23,40 +23,68 @@ $this->params['breadcrumbs'][] = $cat->model->title;
 
                         <div class="row">
                             <div class="col-md-3">
-                                <div class="absorpation center-block">
+                                <div class="absorpation center-block filters">
                                     <h4><?= Yii::t('easyii', 'Absorption Rate');?>  </h4>
-                                    <p>
-                                        <input type="text"   readonly name="GadgetsFilterForm[absorptionrate]" id="gadgetsfilterform-absorptionrate" >
-                                    </p>
+                                   
+                                    <div class="popoverdiv">
+                                    <div class="m-popover l-popover l-popover-arrow-bottom l-popover-small">
+                                    <div class="m-popover-inner">
+                                      <div class="m-popover-content">
+                                         <input type="text" readonly="readonly" name="GadgetsFilterForm[absorptionrate]" id="gadgetsfilterform-absorptionrate" >
+                                      </div>
+                                    </div>
+                                  </div>
+                                  </div>
                                     <div id="slider-range-max"></div>
                                 </div>
                             </div>
                             <div class="col-md-3">
-                                <div class="speed center-block">
+                                <div class="speed center-block filters">
                                     <h4><?= Yii::t('easyii', 'Speed');?>  </h4>
-                                    <p>
-                                        <input type="text" readonly  name="GadgetsFilterForm[speed]" id="gadgetsfilterform-speed" value="5" >
-                                    </p>
+                                    
+                                    <div class="popoverdiv">
+                                    <div class="m-popover l-popover l-popover-arrow-bottom l-popover-small">
+                                    <div class="m-popover-inner">
+                                      <div class="m-popover-content">
+                                         <input type="text" readonly="readonly" name="GadgetsFilterForm[speed]" id="gadgetsfilterform-speed" value="5" >
+                                      </div>
+                                    </div>
+                                  </div>
+                                  </div>
                                     <div id="slider-range-max2"></div>
 
                                 </div>
                             </div>
                             <div class="col-md-3">
-                                <div class="clothes center-block">
+                                <div class="clothes center-block filters">
                                     <h4><?= Yii::t('easyii', 'Clothes');?>  </h4>
-                                    <p>
-                                        <input type="text"  readonly  name="GadgetsFilterForm[clothes]" id="gadgetsfilterform-clothes" >
-                                    </p>
+                                    
+                                    <div class="popoverdiv">
+                                    <div class="m-popover l-popover l-popover-arrow-bottom l-popover-small">
+                                    <div class="m-popover-inner">
+                                      <div class="m-popover-content">
+                                         <input type="text"  readonly="readonly" name="GadgetsFilterForm[clothes]" id="gadgetsfilterform-clothes" >
+                                      </div>
+                                    </div>
+                                  </div>
+                                  </div>
                                     <div id="slider-range-max3"></div>
 
                                 </div>
                             </div>
                             <div class="col-md-3">
-                                <div class="activity center-block">
+                                <div class="activity center-block filters">
                                     <h4><?= Yii::t('easyii', 'Activity');?>  </h4>
-                                    <p>
-                                        <input type="text"  readonly  name="GadgetsFilterForm[activity]" id="gadgetsfilterform-activity">
-                                    </p>
+                                    <div class="popoverdiv">
+                                    <div class="m-popover l-popover l-popover-arrow-bottom l-popover-small">
+                                    <div class="m-popover-inner">
+                                      <div class="m-popover-content">
+                                         <input type="text" readonly="readonly" name="GadgetsFilterForm[activity]" id="gadgetsfilterform-activity">
+                                      </div>
+                                    </div>
+                                  </div>
+                                  </div>
+                                        
                                     <div id="slider-range-max4"></div>
                                 </div>
                             </div>
@@ -117,7 +145,7 @@ $this->params['breadcrumbs'][] = $cat->model->title;
                 <?= $cat->pages() ?>
             </div>
         </div>
-    </div>
+ 
 
 
 <script>
