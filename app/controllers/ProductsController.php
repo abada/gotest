@@ -110,7 +110,7 @@ class ProductsController extends \yii\web\Controller
 //        $reviews= News::find()
 //            ->where("product_id = ".$item->id." and status=1")
 //            ->all();
-           $reviews= News::items(['tags' => '','pagination' => ['pageSize' => 5]],"product_id = ".$item->id);
+           $reviews= News::items(['tags' => '','pagination' => ['pageSize' => 5]],$item->id);
            $count=0;
            foreach($reviews as $review){
                $count +=$review->no_of_review;

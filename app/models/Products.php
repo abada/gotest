@@ -24,7 +24,8 @@ class Products extends \yii\easyii\components\ActiveRecord
 
     public static  function reviews($id ,$flag=""){
 
-        $reviews= News::items('',"product_id =".$id);
+      $reviews= News::items('',$id);
+
         $count=0;
         foreach($reviews as $review){
             $count +=$review->no_of_review;

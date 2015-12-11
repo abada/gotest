@@ -28,8 +28,9 @@ class News extends \yii\easyii\components\API
     private $_items;
     private $_item = [];
 
-    public function api_items($options = [],$product_id=null)
+    public function api_items($options = [],$product_id=0)
     {
+
         if(!$this->_items){
             $this->_items = [];
 
@@ -37,11 +38,14 @@ class News extends \yii\easyii\components\API
             if(Yii::$app->getModule('admin')->activeModules['reviews']->settings['enableTags']){
                 $with[] = 'tags';
             }
-            $query = NewsModel::find('product_id='.$product_id)->with($with)->status(NewsModel::STATUS_ON);
+            $query = NewsModel::find()->with($with)->status(NewsModel::STATUS_ON);
 
             if(!empty($options['where'])){
                 $query->andFilterWhere($options['where']);
             }
+            $query->andFilterWhere(['product_id'=>$product_id]);
+
+
             if(!empty($options['tags'])){
                 $query
                     ->innerJoinWith('tags', false)
