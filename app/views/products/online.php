@@ -10,7 +10,7 @@
                          <?php foreach($Postpartum as $item) : ?>
 
                              <?php
-                             if($item->data->maxipads==null){
+                            if(!isset($item->data->maxipads) or $item->data->maxipads==0  ){
                              echo $this->render('_itemonline', ['item' => $item]) ;
                              }
                              ?>
