@@ -23,7 +23,7 @@ $totalreviews=  Products::reviews($item->id,1);
                         <div class="col-md-8"  style="padding-left:0"><div class="media">
                                 <div class="media-left">
 <!--                                    <img class="img-responsive center-block" src="--><?php //echo Yii::$app->getUrlManager()->getBaseUrl()?><!--/theme/images/offer-1.jpg">-->
-                                    <?= Html::img($item->thumb(125, 169)) ?>
+                                    <?= Html::img($item->thumb(300, 370)) ?>
 
 
                                 </div>

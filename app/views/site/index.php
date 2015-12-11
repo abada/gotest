@@ -70,19 +70,19 @@ $this->title = $page->seo('title', $page->model->title);
             
             	<div class="col-md-3 col-sm-6">
                 	<div class="circleGraphic1 circle circle-1"><?= Setting::get('absorption')?></div>
-                    <div class="circletitle">absorption</div>
+                    <div class="circletitle"><?= Yii::t('easyii', 'absorption');?></div>
                 </div>
                 <div class="col-md-3 col-sm-6">
                     <div class="circleGraphic2 circle circle-2"><?= Setting::get('cotton')?></div>
-                    <div class="circletitle">cotton</div>
+                    <div class="circletitle"><?= Yii::t('easyii', 'cotton');?></div>
                 </div>
                 <div class="col-md-3 col-sm-6">
                     <div class="circleGraphic3 circle circle-3"><?= Setting::get('stickiness')?></div>
-                    <div class="circletitle">stickiness</div>
+                    <div class="circletitle"><?= Yii::t('easyii', 'stickiness');?></div>
                 </div>
                 <div class="col-md-3 col-sm-6">
                     <div class="circleGraphic4 circle circle-4"><?= Setting::get('fittingclothes')?></div>
-                    <div class="circletitle">fittingclothes</div>
+                    <div class="circletitle"><?= Yii::t('easyii', 'fitting clothes');?></div>
                 </div>
                  
             </div>
