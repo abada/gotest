@@ -1,7 +1,17 @@
 <?php use yii\helpers\Html; ?>
 
 <li>
-    <?= Html::img($item->thumb(125, 169),['class'=>'center-block img-responsive']) ?>
+
+    <?php
+    if(Yii::$app->language =='en' ){
+        $image= $item->image;
+    }else{
+        $image=$item->image_ar;
+    }
+    ?>
+    <img class="center-block img-responsive thumb" src="<?php echo $image?>">
+
+    <?//= Html::img($item->thumb(125, 169),['class'=>'center-block img-responsive']) ?>
 	<div class="product-name"><?= $item->title ?></div>
     <?= Html::a(Yii::t('easyii', 'order online').'', ['products/view-online', 'slug' => $item->slug],['class' => 'btn dry-btn']) ?>
 
