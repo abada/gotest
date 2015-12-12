@@ -268,7 +268,7 @@ $totalreviews=  Products::reviews($item->id,1);
                 </a>
 
                 <a href="<?= $item->adv2_url?>">
-                    <img src="<?=Yii::$app->language =='en' ? $item->adv_2 :$adv1->adv_2_ar ?>" class="margin-bottom30 img-responsive center-block"/>
+                    <img src="<?=Yii::$app->language =='en' ? $item->adv_2 : $adv1->adv_2_ar ?>"  class="margin-bottom30 img-responsive center-block"/>
                 </a>
 
 

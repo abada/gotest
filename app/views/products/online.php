@@ -28,13 +28,13 @@
                 <h2 class="title">maxi pads</h2>
                 <ul class="col-md-12 col-centered product">
 
-                    <?php if(count($MaxiPAds)) : ?>
-                        <?php foreach($MaxiPAds as $item) : ?>
+                    <?php if(count($PeriodPads)) : ?>
+                        <?php foreach($PeriodPads as $item) : ?>
 
                             <?php
-                            //if($item->data->maxipads==1){
+                            if($item->data->maxipads==1){
                                 echo $this->render('_itemonline', ['item' => $item]) ;
-                           // }
+                            }
                             ?>
 
                         <?php endforeach; ?>
@@ -51,9 +51,14 @@
                 <ul class="col-md-12 col-centered product">
 
                     <?php if(count($PeriodPads)) : ?>
-                        <?php foreach($PeriodPads as $item) : ?>
-                            <?= $this->render('_itemonline', ['item' => $item]) ?>
-                        <?php endforeach; ?>
+                        <?php foreach($PeriodPads as $item) :
+
+                            if(!isset($item->data->maxipads) or $item->data->maxipads==0  ) {
+
+                               echo  $this->render('_itemonline', ['item' => $item]);
+                            }
+
+                        endforeach; ?>
                     <?php else : ?>
                         <p><?= Yii::t('easyii', 'No products Found');?>  </p>
                     <?php endif; ?>

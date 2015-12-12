@@ -262,10 +262,6 @@ class ProductsController extends \yii\web\Controller
                 'filters' => $filterForm->FilerByCat(4)
             ]),
 
-            'MaxiPAds' => $cat->itemsGo([
-                'pagination' => ['pageSize' => 1000],
-                'filters' => $filterForm->FilerByCat(5)
-            ]),
 
 
         ]);
