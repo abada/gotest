@@ -10,9 +10,9 @@
                          <?php foreach($Postpartum as $item) : ?>
 
                              <?php
-                            if(!isset($item->data->maxipads) or $item->data->maxipads==0  ){
+                           // if(!isset($item->data->maxipads) or $item->data->maxipads==0  ){
                              echo $this->render('_itemonline', ['item' => $item]) ;
-                             }
+                             //}
                              ?>
                          <?php endforeach; ?>
                      <?php else : ?>
@@ -28,13 +28,13 @@
                 <h2 class="title">maxi pads</h2>
                 <ul class="col-md-12 col-centered product">
 
-                    <?php if(count($Postpartum)) : ?>
-                        <?php foreach($Postpartum as $item) : ?>
+                    <?php if(count($MaxiPAds)) : ?>
+                        <?php foreach($MaxiPAds as $item) : ?>
 
                             <?php
-                            if($item->data->maxipads==1){
+                            //if($item->data->maxipads==1){
                                 echo $this->render('_itemonline', ['item' => $item]) ;
-                            }
+                           // }
                             ?>
 
                         <?php endforeach; ?>
