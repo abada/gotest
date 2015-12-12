@@ -61,3 +61,9 @@
 [10-Dec-2015 10:04:49 UTC] PHP Fatal error:  Allowed memory size of 67108864 bytes exhausted (tried to allocate 21700 bytes) in /home/dryarabia/public_html/demo/vendor/noumo/easyii/helpers/GD.php on line 24
 [10-Dec-2015 13:00:00 UTC] PHP Fatal error:  Call to a member function formName() on a non-object in /home/dryarabia/public_html/demo/vendor/yiisoft/yii2/helpers/BaseHtml.php on line 2074
 [10-Dec-2015 13:00:03 UTC] PHP Fatal error:  Call to a member function formName() on a non-object in /home/dryarabia/public_html/demo/vendor/yiisoft/yii2/helpers/BaseHtml.php on line 2074
+[12-Dec-2015 07:29:25 UTC] PHP Fatal error:  Allowed memory size of 67108864 bytes exhausted (tried to allocate 21700 bytes) in /home/dryarabia/public_html/demo/vendor/noumo/easyii/helpers/GD.php on line 24
+[12-Dec-2015 07:31:56 UTC] PHP Fatal error:  Allowed memory size of 67108864 bytes exhausted (tried to allocate 21700 bytes) in /home/dryarabia/public_html/demo/vendor/noumo/easyii/helpers/GD.php on line 24
+[12-Dec-2015 08:41:28 UTC] PHP Fatal error:  Allowed memory size of 67108864 bytes exhausted (tried to allocate 21700 bytes) in /home/dryarabia/public_html/demo/vendor/noumo/easyii/helpers/GD.php on line 24
+[12-Dec-2015 08:41:36 UTC] PHP Fatal error:  Allowed memory size of 67108864 bytes exhausted (tried to allocate 21700 bytes) in /home/dryarabia/public_html/demo/vendor/noumo/easyii/helpers/GD.php on line 24
+[12-Dec-2015 08:42:19 UTC] PHP Fatal error:  Allowed memory size of 67108864 bytes exhausted (tried to allocate 21700 bytes) in /home/dryarabia/public_html/demo/vendor/noumo/easyii/helpers/GD.php on line 24
+[12-Dec-2015 08:43:49 UTC] PHP Fatal error:  Allowed memory size of 67108864 bytes exhausted (tried to allocate 21700 bytes) in /home/dryarabia/public_html/demo/vendor/noumo/easyii/helpers/GD.php on line 24
