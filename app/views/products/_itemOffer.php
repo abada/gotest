@@ -10,7 +10,16 @@ use yii\easyii\modules\catalog\api\Catalog;
     <div class="inner-offer">
         <div class="media">
             <div class="media-left">
-                <?= Html::img($item->thumb(302, 241),['class'=>'img-responsive']) ?>
+                <?//= Html::img($item->thumb(302, 241),['class'=>'img-responsive']) ?>
+
+    <?php
+    if(Yii::$app->language =='en' ){
+        $image= $item->image;
+    }else{
+        $image=$item->image_ar;
+    }
+    ?>
+        <img class="img-responsive" src="<?php echo $image?>">
 
             </div>
             <div class="media-body">
