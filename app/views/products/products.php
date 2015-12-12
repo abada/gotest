@@ -7,17 +7,22 @@ $this->title = $cat->seo('title', $cat->model->title);
 $this->params['breadcrumbs'][] = ['label' => 'Shop', 'url' => ['shop/index']];
 $this->params['breadcrumbs'][] = $cat->model->title;
 
+$sliderFilters=$this->params['sliderFilters'];
+$ListCloth =['1'=>'Wide','2'=>'Tight',''=>'Wide'];
+$ListActive =['1'=>'Sleep','2'=>'Normal','3'=>'Active',''=>'Sleep'];
+
+if(isset($sliderFilters)){
+}
+
 //var_dump($this->params['sliderFilters']);
 //echo $sliderFilters['absorptionrate'].'dd';die;
 ?>
-
-   
         <div class="container-fluid">
             <div class="row">
                 <div class="product-filter">
                     <div class="title"><?= Yii::t('easyii', 'products filter');?> </div>
                     <div class="container">
-                        <?php $form = ActiveForm::begin(['method' => 'get','id'=>'FilterForm', 'action' => Url::to(['/products/index', 'slug' => 'products'])]); ?>
+                        <?php $form = ActiveForm::begin(['method' => 'get','id'=>'FilterForm', 'action' => Url::to(['/products/index#SeResult', 'slug' => 'products'])]); ?>
                         <input type="hidden"   value="<?= $this->params['sliderFilters']['product_cat']?>"  name="GadgetsFilterForm[product_cat]" id="gadgetsfilterform-product_cat" >
 
 
@@ -63,7 +68,8 @@ $this->params['breadcrumbs'][] = $cat->model->title;
                                     <div class="m-popover l-popover l-popover-arrow-bottom l-popover-small">
                                     <div class="m-popover-inner">
                                       <div class="m-popover-content">
-                                         <input type="text"  readonly="readonly" name="GadgetsFilterForm[clothes]" id="gadgetsfilterform-clothes" >
+                                         <input type="hidden"  name="GadgetsFilterForm[clothes]" id="gadgetsfilterform-clothes" >
+                                         <input type="text"  readonly="readonly"  id="gadgetsfilterform-clothes-text"  value="<?= $ListCloth [$sliderFilters['clothes']] ?>">
                                       </div>
                                     </div>
                                   </div>
@@ -72,14 +78,15 @@ $this->params['breadcrumbs'][] = $cat->model->title;
 
                                 </div>
                             </div>
-                            <div class="col-md-3">
+                            <div class="col-md-3" id="SeResult">
                                 <div class="activity center-block filters">
                                     <h4><?= Yii::t('easyii', 'Activity');?>  </h4>
                                     <div class="popoverdiv">
                                     <div class="m-popover l-popover l-popover-arrow-bottom l-popover-small">
                                     <div class="m-popover-inner">
                                       <div class="m-popover-content">
-                                         <input type="text" readonly="readonly" name="GadgetsFilterForm[activity]" id="gadgetsfilterform-activity">
+                                         <input type="hidden"   name="GadgetsFilterForm[activity]" id="gadgetsfilterform-activity">
+                                         <input  id="gadgetsfilterform-activity-text" value="<?= $ListActive [$sliderFilters['activity']] ?>">
                                       </div>
                                     </div>
                                   </div>
@@ -98,7 +105,7 @@ $this->params['breadcrumbs'][] = $cat->model->title;
             </div>
         </div>
         <div class="container">
-            <div class="row">
+            <div class="row" >
                 <ul class="products-filter">
                     <li role="presentation" data-toggle="portfilter" data-target="all" class="hvr-bounce-to-right">
                         <a href="javascript:void(0)"  onclick="SubmitCat('0')" class="<?php if($this->params['sliderFilters']['product_cat']==0)echo 'current'; ?>" ><?= Yii::t('easyii', 'All Products');?> </a></li>
@@ -128,7 +135,7 @@ $this->params['breadcrumbs'][] = $cat->model->title;
 <!--                </div>-->
 
 
-                <ul class="col-md-12 col-centered products-page">
+                <ul class="col-md-12 col-centered products-page" >
 
                     <?php if(count($items)) : ?>
                         <br/>

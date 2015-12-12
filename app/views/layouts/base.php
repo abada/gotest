@@ -68,6 +68,11 @@ use yii\helpers\Html;
     }else{
         unset($sliderFilters);
     }
+    $ListCloth =['1'=>'Wide','2'=>'Tight',''=>'choose'];
+    $ListActive =['1'=>'Sleep','2'=>'Normal','3'=>'Active',''=>'choose'];
+
+
+
     ?>
     <script type="text/javascript">
         $(document).ready(function(){
@@ -106,7 +111,7 @@ $("#owl-example").owlCarousel();
         $( "#slider-range-max2" ).slider({
             range: "max",
             min: 1,
-            max: 10,
+            max: 5,
             value: <?php echo (isset($sliderFilters)) ? $sliderFilters['speed']:1 ;?>,
             slide: function( event, ui ) {
                 $( "#gadgetsfilterform-speed" ).val( ui.value );
@@ -117,7 +122,7 @@ $("#owl-example").owlCarousel();
         $( "#slider-range-max3" ).slider({
             range: "max",
             min: 1,
-            max: 10,
+            max: 2,
             value: <?php  echo (isset($sliderFilters)) ? $sliderFilters['clothes'] :1 ;?>,
             slide: function( event, ui ) {
                 $( "#gadgetsfilterform-clothes" ).val( ui.value );
@@ -128,7 +133,7 @@ $("#owl-example").owlCarousel();
         $( "#slider-range-max4" ).slider({
             range: "max",
             min: 1,
-            max: 10,
+            max: 3,
            value: <?php echo (isset($sliderFilters)) ? $sliderFilters['activity'] : 1;?>,
             slide: function( event, ui ) {
                 $( "#gadgetsfilterform-activity" ).val( ui.value );
