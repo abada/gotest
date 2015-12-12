@@ -573,6 +573,7 @@ nav .dropdown-menu{
    background-image: url(../../images/left-text.jpg), url(../../images/right-text.jpg);
 	background-position: left top, right bottom;
 	background-repeat: no-repeat;
+	    box-shadow: 0 0 6px 0px #ccc;
 	}
 .testimonial .item{
 text-align: center;
@@ -583,7 +584,11 @@ text-align: center;
     height: 60px;
     font-style: italic;
     font-size: 17px;
+	font-weight:bold;
 	}
+.testimonial .item p{
+	font-weight:normal;
+}
 						/*-------------------- carousel fade ------------------------- */
 .carousel-fade .carousel-inner .item {
   -webkit-transition-property: opacity;
