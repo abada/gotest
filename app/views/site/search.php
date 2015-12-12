@@ -82,8 +82,48 @@ if(strpos($pageAwarness->title ,$text) !== false or strpos($pageAwarness->text ,
             <?  }  ?>
 
 
+            <?php
+            $pageAbout = Page::get('offerpage');
+            if(strpos($pageAbout->title ,$text) !== false or strpos($pageAbout->text ,$text) !== false){
+                $i=1;
+                ?>
+                <p class="search-result">
+                    <?= Html::a($pageAbout->title, ['products/offers'],['class' => '']) ?>
+                    <br/>
+                    <?= $pageAbout->text?>
+                    .</p>
+            <?  }  ?>
 
 
+            <?php
+            $pageAbout = Page::get('page-contact');
+            if(strpos($pageAbout->title ,$text) !== false or strpos($pageAbout->text ,$text) !== false){
+                $i=1;
+                ?>
+                <p class="search-result">
+                    <?= Html::a($pageAbout->title, ['contact'],['class' => '']) ?>
+                    <br/>
+                    <?= $pageAbout->text?>
+                    .</p>
+            <?  }  ?>
+
+
+
+
+            <?php
+            $pageAbout = Page::get('find-store');
+            if(strpos($pageAbout->title ,$text) !== false or strpos($pageAbout->text ,$text) !== false){
+                $i=1;
+                ?>
+                <p class="search-result">
+                    <?= Html::a($pageAbout->title, ['stores'],['class' => '']) ?>
+                    <br/>
+                    <?= $pageAbout->text?>
+                    .</p>
+            <?  }  ?>
+
+
+            
 
 
             <p> <?php
