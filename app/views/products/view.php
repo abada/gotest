@@ -104,9 +104,8 @@ $totalreviews=  Products::reviews($item->id,1);
     <div class="container">
         <div class="row margin-top30">
             <div class="col-sm-4">
-                <div class="embed-responsive embed-responsive-4by3">
-                    <?php echo $item->video?>
-
+                <div class="embed-responsive embed-responsive-4by3" data-toggle="modal" data-target="#youtube">
+                    <img src="http://img.youtube.com/vi/<?php echo $item->video?>/0.jpg" height="300" wid>
                 </div>
             </div>
             <div class="col-sm-8">
@@ -277,3 +276,21 @@ $totalreviews=  Products::reviews($item->id,1);
         </div></div>
 
     </div>
+
+
+    <div class="modal fade" id="youtube" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                </div>
+                <div class="modal-body">
+                    <iframe width="550" height="315"
+                            src="http://www.youtube.com/embed/<?php echo $item->video?>?autoplay=1">
+                    </iframe>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
