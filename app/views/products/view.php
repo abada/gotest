@@ -286,7 +286,7 @@ $totalreviews=  Products::reviews($item->id,1);
                 </div>
                 <div class="modal-body">
                     <iframe width="550" height="315"
-                            src="http://www.youtube.com/embed/<?php echo $item->video?>?autoplay=1">
+                            src="http://www.youtube.com/embed/<?php echo $item->video?>?autoplay=0">
                     </iframe>
 
                 </div>
