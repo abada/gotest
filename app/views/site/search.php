@@ -101,7 +101,7 @@ if(strpos($pageAwarness->title ,$text) !== false or strpos($pageAwarness->text ,
                 $i=1;
                 ?>
                 <p class="search-result">
-                    <?= Html::a($pageAbout->title, ['contact'],['class' => '']) ?>
+                    <?= Html::a($pageAbout->title, ['/contact'],['class' => '']) ?>
                     <br/>
                     <?= $pageAbout->text?>
                     .</p>
@@ -116,14 +116,14 @@ if(strpos($pageAwarness->title ,$text) !== false or strpos($pageAwarness->text ,
                 $i=1;
                 ?>
                 <p class="search-result">
-                    <?= Html::a($pageAbout->title, ['stores'],['class' => '']) ?>
+                    <?= Html::a($pageAbout->title, ['/stores'],['class' => '']) ?>
                     <br/>
                     <?= $pageAbout->text?>
                     .</p>
             <?  }  ?>
 
 
-            
+
 
 
             <p> <?php
