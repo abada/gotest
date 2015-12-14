@@ -42,7 +42,7 @@ $goodsCount = count(Shopcart::goods());
                 <li class="dropdown">
                   <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><?= Yii::t('easyii', 'About Dry');?>  <span class="caret"></span></a>
                   <ul class="dropdown-menu" role="menu">
-                    <li><a href="/site/about-dry"><?= Yii::t('easyii', 'whose dry');?></a></li>
+                    <li><a href="/site/about-dry"><?= Yii::t('easyii', 'Who’s Dry');?></a></li>
                     <li><a href="/site/awarness"><?= Yii::t('easyii', 'awareness program');?></a></li>
                   </ul>
                 </li>

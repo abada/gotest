@@ -23,7 +23,7 @@ $totalreviews=  Products::reviews($item->id,1);
                         <div class="col-md-8"  style="padding-left:0"><div class="media">
                                 <div class="media-left">
 <!--                                    <img class="img-responsive center-block" src="--><?php //echo Yii::$app->getUrlManager()->getBaseUrl()?><!--/theme/images/offer-1.jpg">-->
-                                    <?= Html::img($item->thumb(300, 370)) ?>
+                                    <?= Html::img($item->thumb(300, 300)) ?>
 
 
                                 </div>
@@ -43,7 +43,7 @@ $totalreviews=  Products::reviews($item->id,1);
                                         </div>
 
                                     </form>
-                                    <a class="" href="#"><?= Yii::t('easyii','check reviews')?></a>
+                                   <!-- <a class="" href="#"><?= Yii::t('easyii','check reviews')?></a>-->
 
 
                                     <?php if(Yii::$app->request->get(AddToCartForm::SUCCESS_VAR)) {
@@ -58,10 +58,11 @@ $totalreviews=  Products::reviews($item->id,1);
                                         'options' => ['class' => 'form-inline']
                                     ]); ?>
 
-                                    <div class="form-group">
+                                    <div class="form-group" style="float: left;width: 50%;">
                                         <?= $form->field($addToCartForm, 'count')->textInput(['class' => 'form-control'])->label(Yii::t('easyii','Quantity')) ?>
+                                        	
                                     </div>
-                                    <?= Html::submitButton(Yii::t('easyii','Add to Cart').' <i class="fa fa-cart-arrow-down fa-lg"></i>' , ['class' => 'btn dry-btn']) ?>
+                                    <?= Html::submitButton(Yii::t('easyii','Add to Cart').' <i class="fa fa-cart-arrow-down fa-lg"></i>' , ['class' => 'btn dry-btn','style' => 'float:right']) ?>
                                     <?php ActiveForm::end();
                                     }
                                     ?>
@@ -76,7 +77,7 @@ $totalreviews=  Products::reviews($item->id,1);
                         </div>
                     </div>
                     <footer>
-                        <a class="btn dry-btn-2 shopping" href="/products/online">
+                        <a class="btn dry-btn-2 shopping" href="/products/online" style="line-height:normal">
                             <?= Yii::t('easyii','Continue Shopping'); ?></a>
 
                         <?php

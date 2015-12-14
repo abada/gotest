@@ -58,8 +58,8 @@ use yii\widgets\ActiveForm;
 
             <?php echo $form->field($model, 'name')->textInput(['class' => 'form-control',' placeholder'=>Yii::t('easyii', 'Name') ])->label(false);  ?>
             <?php echo $form->field($model, 'phone')->textInput(['class' => 'form-control',' placeholder'=>Yii::t('easyii', 'Phone') ])->label(false);  ?>
-            <?php echo $form->field($model, 'email')->textInput(['class' => 'form-control',' placeholder'=>Yii::t('easyii', 'Your Mail') ])->label(false);  ?>
-            <?php echo $form->field($model, 'text')->textarea(['class' => 'form-control msg',' placeholder'=>Yii::t('easyii', 'your message') ])->label(false);  ?>
+            <?php echo $form->field($model, 'email')->textInput(['class' => 'form-control',' placeholder'=>Yii::t('easyii', 'EMail') ])->label(false);  ?>
+            <?php echo $form->field($model, 'text')->textarea(['class' => 'form-control msg',' placeholder'=>Yii::t('easyii', 'The Message') ])->label(false);  ?>
 
             <button type="submit" class="btn dry-btn-3 center-block"><?php echo Yii::t('easyii', 'Send Request') ?></button>
         </div>

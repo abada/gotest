@@ -67,3 +67,6 @@
 [12-Dec-2015 08:41:36 UTC] PHP Fatal error:  Allowed memory size of 67108864 bytes exhausted (tried to allocate 21700 bytes) in /home/dryarabia/public_html/demo/vendor/noumo/easyii/helpers/GD.php on line 24
 [12-Dec-2015 08:42:19 UTC] PHP Fatal error:  Allowed memory size of 67108864 bytes exhausted (tried to allocate 21700 bytes) in /home/dryarabia/public_html/demo/vendor/noumo/easyii/helpers/GD.php on line 24
 [12-Dec-2015 08:43:49 UTC] PHP Fatal error:  Allowed memory size of 67108864 bytes exhausted (tried to allocate 21700 bytes) in /home/dryarabia/public_html/demo/vendor/noumo/easyii/helpers/GD.php on line 24
+[14-Dec-2015 17:30:19 UTC] PHP Fatal error:  Class 'app\controllers\ActiveForm' not found in /home/dryarabia/public_html/demo/app/controllers/ProductsController.php on line 91
+[14-Dec-2015 17:35:08 UTC] PHP Fatal error:  Class 'app\controllers\ActiveForm' not found in /home/dryarabia/public_html/demo/app/controllers/ProductsController.php on line 91
+[14-Dec-2015 17:35:10 UTC] PHP Fatal error:  Class 'app\controllers\ActiveForm' not found in /home/dryarabia/public_html/demo/app/controllers/ProductsController.php on line 91

@@ -31,12 +31,12 @@ $page = Page::get('offerpage');
 
 
         <div class="row">
-
+			<div class="col-md-12">
             <?php foreach($items as $item) : ?>
                 <?= $this->render('_itemOffer', ['item' => $item ,'addToCartForm' => new \app\models\AddToCartForm(),
                 ]) ?>
             <?php endforeach; ?>
-
+			</div>
 
         </div>
     </div>

@@ -254,8 +254,8 @@ $this->title = $page->seo('title', $page->model->title);
     </div>
 
     <div class="container-fluid">
-        <div class="row">
-            <ul class="col-md-12 col-centered features-group">
+        <div class="row ">
+            <ul class="col-md-12 col-centered features-group wow fadeIn" data-wow-duration="3s">
                 <?php
 
                 $adv1 = \app\modules\advertise\models\Page::findOne(2);
@@ -263,18 +263,18 @@ $this->title = $page->seo('title', $page->model->title);
                 $adv3 = \app\modules\advertise\models\Page::findOne(4);
                 ?>
 
-                <li class="wow slideInLeft" data-wow-duration="1s" data-wow-delay="0s">
+                <li class="" >
                 <a href="<?= $adv1->url?>">
                     <img src="<?=Yii::$app->language =='en' ? $adv1->image :$adv1->image_ar ?>" class="img-responsive center-block"/>
                     </a>
                 </li>
-                <li class="wow slideInLeft" data-wow-duration="1.5s" data-wow-delay=".5s">
+                <li class="">
                   <a href="<?= $adv2->url?>">
                     <img src="<?=Yii::$app->language =='en' ? $adv2->image :$adv2->image_ar ?>" class="img-responsive center-block"/>
                     <button class="btn pink-btn btn-block"> <?= Yii::t('easyii', 'Sign Up Now!');?></button>
                     </a>
                 </li>
-                <li class="wow slideInLeft" data-wow-duration="1.5s" data-wow-delay="1s">
+                <li class="">
                <a href="<?= $adv3->url?>">
                     <img src="<?=Yii::$app->language =='en' ? $adv3->image :$adv3->image_ar ?>" class="img-responsive center-block"/>
                     <button class="btn pink-btn btn-block"> <?= Yii::t('easyii', 'Try it now!');?></button>

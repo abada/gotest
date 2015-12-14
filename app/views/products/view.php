@@ -23,7 +23,7 @@ $totalreviews=  Products::reviews($item->id,1);
 
                         <?php foreach($item->photos as $photo) : ?>
                             <?//= $photo->box(110, 100) ?>
-                          <li><img src="<?= $photo->image?>" width="370" height="300" class="center-block"></li>
+                          <li><img src="<?= $photo->image?>" width="300" height="300" class="center-block"></li>
 
                         <?php endforeach;?>
 
@@ -225,7 +225,7 @@ $totalreviews=  Products::reviews($item->id,1);
                             <span class="margin-left10"><i class="fa fa-calendar"></i>
                             <?= $review->date?>
                             </span></p>
-                        <p class="product-star">
+                        <p class="product-star testimon">
                             <?php
                             for($i=0;$i<$review->no_of_review;$i++){
                                 ?>
@@ -238,7 +238,7 @@ $totalreviews=  Products::reviews($item->id,1);
                         </p>
                         <h3><?= $review->title?></h3>
                         <p><?= $review->text?></p>
-                        <h4><i class="fa fa-thumbs-up fa-lg"></i> Yes, I recommend this product.</h4>
+                        <!--<h4><i class="fa fa-thumbs-up fa-lg"></i> Yes, I recommend this product.</h4>-->
                         <ul class="product-details">
                            <li>Share
                                 <?php $reviewUrl=Url::to(['products/review'], true).'/?slug='.$item->slug .'&review='.$review->slug;?>
@@ -282,15 +282,22 @@ $totalreviews=  Products::reviews($item->id,1);
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
+                <h4 class="modal-title" id="myModalLabel"><?= $item->title ;?></h4>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
                 </div>
-                <div class="modal-body">
-                    <iframe width="550" height="315"
-                            src="http://www.youtube.com/embed/<?php echo $item->video?>?autoplay=0">
-                    </iframe>
+                <div class="modal-body" id="yt-player">
+                    <iframe width="100%" height="315" src="http://www.youtube.com/embed/<?php echo $item->video?>?autoplay=0"></iframe>
 
                 </div>
             </div>
         </div>
     </div>
 
+
+<script>
+
+$('#youtube').on('hidden.bs.modal', function () {
+    $("#yt-player iframe").attr("src", $("#yt-player iframe").attr("src"));
+});
+
+</script>

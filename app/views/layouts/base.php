@@ -35,6 +35,8 @@ use yii\helpers\Html;
         <link rel="icon" href="<?php echo Yii::$app->getUrlManager()->getBaseUrl()?>/theme/images/favicon.ico" type="image/x-icon">
         <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
         <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+        <script type="text/javascript" src="<?php echo Yii::$app->getUrlManager()->getBaseUrl()?>/theme/js/jquery-1.11.3.min.js"></script>
+	    <script type="text/javascript" src="<?php echo Yii::$app->getUrlManager()->getBaseUrl()?>/theme/js/bootstrap.min.js"></script>
 
         <?php $this->head() ?>
     </head>
@@ -51,8 +53,7 @@ use yii\helpers\Html;
         <?php $this->endBody() ?>
     </body>
 
-    <script type="text/javascript" src="<?php echo Yii::$app->getUrlManager()->getBaseUrl()?>/theme/js/jquery-1.11.3.min.js"></script>
-    <script type="text/javascript" src="<?php echo Yii::$app->getUrlManager()->getBaseUrl()?>/theme/js/bootstrap.min.js"></script>
+    
     <script src="<?php echo Yii::$app->getUrlManager()->getBaseUrl()?>/theme/js/easing.js"></script>
     <script src="<?php echo Yii::$app->getUrlManager()->getBaseUrl()?>/theme/js/jquery-ui.js"></script>
     <script src="<?php echo Yii::$app->getUrlManager()->getBaseUrl()?>/theme/js/jquery.ui.totop.min.js"></script>
@@ -86,7 +87,13 @@ window.onload=function(){
 	$('.circleGraphic3').circleGraphic({'color':'#fc8abe'});
 	$('.circleGraphic4').circleGraphic({'color':'#fc8abe'});
     }
-$("#owl-example").owlCarousel();
+$("#owl-example").owlCarousel(
+{
+items : 5,
+autoPlay : true,
+    stopOnHover : true	
+}
+);
 
     function myFunction() {
         document.getElementById("left").style.textAlign = "left";

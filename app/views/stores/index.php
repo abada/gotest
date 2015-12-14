@@ -8,7 +8,7 @@ use yii\easyii\modules\page\api\Page;
 <div class="content gray-color">
     <div class="container">
         <div class="row">
-            <div class="col-md-12" style="padding-left:0">
+            <div class="col-md-12" style="">
                 <div class="find-bg">
                     <h1><?= Yii::t('easyii', 'Find Nearest Shop');?>  </h1>
         <?php
@@ -17,22 +17,22 @@ use yii\easyii\modules\page\api\Page;
         ?>
 
 
-                    <div class="col-md-4 col-centered ">
-                        <div class="dropdown" style="margin-right:5px">
+                    <div class="col-md-4 col-md-offset-4">
+                       
                            <?= $form->field($filterForm, 'product_id')->dropDownList($allProducts,['prompt'=>Yii::t('easyii', 'Product'),'class'=>'btn btn-findUs  dropdown-toggle'] )->label('');?>
-                        </div>
+                     
                     </div>
-
+					<div class="clearfix"></div>
                     <div class="col-md-4">
-                        <div class="dropdown">
+                        
                           <?= $form->field($filterForm, 'country')->dropDownList(\app\models\Stores::FetchCountries(),['prompt'=>Yii::t('easyii', 'Country') ,'class'=>'btn btn-findUs dropdown-toggle'] )->label('');?>
-                        </div></div>
-                    <div class="col-md-4"><div class="dropdown">
+                    </div>
+                    <div class="col-md-4">
                             <?= $form->field($filterForm, 'government')->dropDownList(\app\models\Stores::FetchGovernment(),['prompt'=>Yii::t('easyii', 'Government'),'class'=>'btn btn-findUs dropdown-toggle'] )->label('');?>
-                        </div></div>
-                    <div class="col-md-4"><div class="dropdown">
+                    </div>
+                    <div class="col-md-4">
                            <?= $form->field($filterForm, 'district')->dropDownList(\app\models\Stores::FetchDistrict() ,['prompt'=>Yii::t('easyii', 'District'),'class'=>'btn btn-findUs dropdown-toggle'])->label('');?>
-                        </div></div>
+                    </div>
 
                     <div class="row">
                         <div class="col-md-12">
@@ -47,21 +47,26 @@ use yii\easyii\modules\page\api\Page;
                 </div>
             </div>
         </div>
-
+	</div>
+    
+    <div class="closebg">
+    <div class="container">
+    <div class="row">
         <div class="title"> <?= Yii::t('easyii', 'closest to you');?>  </div>
 
 
-        <div class="row margin-top20">
+        <div class="col-md-12 margin-top20">
+        <div class="row">
             <?php
 
-            echo Yii::t('easyii','Please Use the filter to find the nearest store')."<br/>";
+            echo "<div class='col-md-12'><div class='alert alert-warning'>". Yii::t('easyii','Please Use the filter to find the nearest store')."</div></div><br/>";
 
             if($filters['product_id']== ''){
-                echo   Yii::t('easyii','Please choose the product  first')."<br/>";
+                echo  "<div class='col-md-12'><div class='alert alert-danger'>".Yii::t('easyii','Please choose the product  first')."</div></div><br/>";
             }else if($filters['country']== ''){
-                echo   Yii::t('easyii','Please Enter the country')."<br/>";
+                echo   "<div class='col-md-12'><div class='alert alert-danger'>".Yii::t('easyii','Please Enter the country')."</div></div><br/>";
             }else if($filters['government']== ''){
-                echo "<br/>".Yii::t('easyii','Please Enter the government');
+                echo "<div class='col-md-12'><div class='alert alert-danger'>".Yii::t('easyii','Please Enter the government');
 
             }
 
@@ -90,19 +95,24 @@ use yii\easyii\modules\page\api\Page;
           endif
 
             ?>
-
+		</div>
         </div>
 
+<div class="clearfix"></div>
 
 
-
-
-        <div class="row">
+		<div class="col-md-12">
+        
             <div class="online-method">
-                <?php  $page = Page::get('find-store'); ?>
+            	<div class="left">
+					<?php  $page = Page::get('find-store'); ?>
                     <?php echo $page->text?>
-                <a href="/products/online" class="btn dry-btn">Online Method</a>
+                    <a href="/products/online" class="btn dry-btn">Online Method</a>
+                </div>
             </div>
         </div>
+        </div>
+    
+    </div>
     </div>
 </div>
