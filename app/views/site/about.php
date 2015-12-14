@@ -67,7 +67,7 @@ $this->title = $page->seo('title', $page->model->title);
 
 
             <div class="testimonials">
-                <div class="title">testimonials</div>
+                <div class="title"><?= Yii::t('easyii', 'testimonials');?> </div>
             </div>
             <?php
               $testmonials= PageModel::find()->where("homepage=0")->desc()->all();

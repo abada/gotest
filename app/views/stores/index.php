@@ -107,7 +107,7 @@ use yii\easyii\modules\page\api\Page;
             	<div class="left">
 					<?php  $page = Page::get('find-store'); ?>
                     <?php echo $page->text?>
-                    <a href="/products/online" class="btn dry-btn">Online Method</a>
+                    <a href="/products/online" class="btn dry-btn"><?= Yii::t('easyii', 'Online Method');?></a>
                 </div>
             </div>
         </div>
