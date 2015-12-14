@@ -264,11 +264,11 @@ $totalreviews=  Products::reviews($item->id,1);
 
 
                 <a href="<?= $item->adv1_url?>">
-                    <img src="<?=Yii::$app->language =='en' ? $item->adv_1 :$adv1->adv_1_ar ?>" class="margin-bottom30 img-responsive center-block"/>
+                    <img src="<?=Yii::$app->language =='en' ? $item->adv_1 :$item->adv_1_ar ?>" class="margin-bottom30 img-responsive center-block"/>
                 </a>
 
                 <a href="<?= $item->adv2_url?>">
-                    <img src="<?=Yii::$app->language =='en' ? $item->adv_2 : $adv1->adv_2_ar ?>"  class="margin-bottom30 img-responsive center-block"/>
+                    <img src="<?=Yii::$app->language =='en' ? $item->adv_2 : $item->adv_2_ar ?>"  class="margin-bottom30 img-responsive center-block"/>
                 </a>
 
 
