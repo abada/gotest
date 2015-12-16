@@ -188,22 +188,26 @@ autoPlay : true,
 //      $('.chartcontent').hide().removeAttr('style');
 //    }
 // });
-// 
+//
 // $('.circleGraphic1').circleGraphic({'color':'#fc8abe'});
 //	$('.circleGraphic2').circleGraphic({'color':'#fc8abe'});
 //	$('.circleGraphic3').circleGraphic({'color':'#fc8abe'});
 //	$('.circleGraphic4').circleGraphic({'color':'#fc8abe'});
-
+var count=0;
 
 element = $(".chartcontent").offset().top;
  $(window).scroll(function(){
    y = $(window).scrollTop();
    $('.result').html(y);
     if (y = element){
-       $('.circleGraphic1').circleGraphic({'color':'#fc8abe'});
+        if(count == 0){
+    $('.circleGraphic1').circleGraphic({'color':'#fc8abe'});
 	$('.circleGraphic2').circleGraphic({'color':'#fc8abe'});
 	$('.circleGraphic3').circleGraphic({'color':'#fc8abe'});
 	$('.circleGraphic4').circleGraphic({'color':'#fc8abe'});
+        }
+        count=5;
+
     }
 	else{
 
