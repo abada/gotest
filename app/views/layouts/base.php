@@ -25,6 +25,7 @@ use yii\helpers\Html;
         <link type="text/css" href="<?php echo Yii::$app->getUrlManager()->getBaseUrl()?>/theme/css/en/ihover.css" rel="stylesheet">
         <link rel="stylesheet" type="text/css" media="all" href="<?php echo Yii::$app->getUrlManager()->getBaseUrl()?>/theme/css/en/jquery.circliful.css">
         <link href="<?php echo Yii::$app->getUrlManager()->getBaseUrl()?>/theme/css/en/ui.totop.css" rel="stylesheet">
+        <link rel="stylesheet" href="<?php echo Yii::$app->getUrlManager()->getBaseUrl()?>/theme/css/en/perfect-scrollbar.css" />
         <link rel="stylesheet" href="<?php echo Yii::$app->getUrlManager()->getBaseUrl()?>/theme/css/en/style.css" />
         <link href="<?php echo Yii::$app->getUrlManager()->getBaseUrl()?>/theme/css/en/slider.css" rel="stylesheet">
         <link href="<?php echo Yii::$app->getUrlManager()->getBaseUrl()?>/theme/css/en/jquery.bxslider.css" rel="stylesheet" type="text/css" />
@@ -61,6 +62,7 @@ use yii\helpers\Html;
     <script type="text/javascript" src="<?php echo Yii::$app->getUrlManager()->getBaseUrl()?>/theme/js/jquery.circliful.min.js"></script>
     <script src="<?php echo Yii::$app->getUrlManager()->getBaseUrl()?>/theme/js/owl.carousel.js"></script>
 	<script src="<?php echo Yii::$app->getUrlManager()->getBaseUrl()?>/theme/js/wow.js"></script>
+    <script src="<?php echo Yii::$app->getUrlManager()->getBaseUrl()?>/theme/js/perfect-scrollbar.js"></script>
 
     <?php
     //var_dump( $data['sliderFilters'] );
@@ -77,15 +79,19 @@ use yii\helpers\Html;
     ?>
     <script type="text/javascript">
         $(document).ready(function(){
+			
+			
+		"use strict";
+        $('#Default').perfectScrollbar();
+		$('#Default').perfectScrollbar({suppressScrollY: true});
+		
+		
             $().UItoTop({ easingType: 'easeOutQuart' });
 
 window.onload=function(){
 	
 	
-	$('.circleGraphic1').circleGraphic({'color':'#fc8abe'});
-	$('.circleGraphic2').circleGraphic({'color':'#fc8abe'});
-	$('.circleGraphic3').circleGraphic({'color':'#fc8abe'});
-	$('.circleGraphic4').circleGraphic({'color':'#fc8abe'});
+	
     }
 $("#owl-example").owlCarousel(
 {
@@ -163,7 +169,48 @@ autoPlay : true,
   $(this).toggleClass("on");
   $('.navbar-fixed-top').toggleClass("on");
  
+ 
+ 
+ 
+ 
+	  
+	  
 });
+
+
+//element = $(".chartcontent").offset().top;
+// $(window).scroll(function(){
+//   y = $(window).scrollTop();
+//   $('.result').html(y);
+//    if (y >= element){
+//      $('.chartcontent').show();
+//    }else{
+//      $('.chartcontent').hide().removeAttr('style');
+//    }
+// });
+// 
+// $('.circleGraphic1').circleGraphic({'color':'#fc8abe'});
+//	$('.circleGraphic2').circleGraphic({'color':'#fc8abe'});
+//	$('.circleGraphic3').circleGraphic({'color':'#fc8abe'});
+//	$('.circleGraphic4').circleGraphic({'color':'#fc8abe'});
+
+
+element = $(".chartcontent").offset().top;
+ $(window).scroll(function(){
+   y = $(window).scrollTop();
+   $('.result').html(y);
+    if (y = element){
+       $('.circleGraphic1').circleGraphic({'color':'#fc8abe'});
+	$('.circleGraphic2').circleGraphic({'color':'#fc8abe'});
+	$('.circleGraphic3').circleGraphic({'color':'#fc8abe'});
+	$('.circleGraphic4').circleGraphic({'color':'#fc8abe'});
+    }
+	else{
+
+	}
+ });
+ 
+
 </script>
 
 

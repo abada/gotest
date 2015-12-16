@@ -47,7 +47,7 @@ $this->title = $page->seo('title', $page->model->title);
         <span class="sr-only"><?= Yii::t('easyii', 'Next');?></span>
     </a>
 </div>
-
+<div class="chartcontent" style="position: fixed;top: 400px;"></div>
 <?php  $page = Page::get('dry-feature'); ?>
 <div class="container">
     <div class="row">
@@ -63,9 +63,8 @@ $this->title = $page->seo('title', $page->model->title);
         <div class="row">
             <div class="col-md-offset-1 col-md-10"><p class="text-center text-justify"><?= $page->text ;?></p></div>
             <div class="row">
-            
-            
-            
+            <div class="overall">
+   <div class="">
             
             
             	<div class="col-md-3 col-sm-6">
@@ -85,6 +84,10 @@ $this->title = $page->seo('title', $page->model->title);
                     <div class="circletitle"><?= Yii::t('easyii', 'fitting clothes');?></div>
                 </div>
                  
+            </div>
+            </div>
+            
+            
             </div>
       
             <div class="col-md-12">
@@ -299,6 +302,8 @@ $this->title = $page->seo('title', $page->model->title);
                 ?>
                 </p>
             </div>
+            
+            
             <div class="row">
                 <div class="col-md-12">
                     <div id="carousel-example-generic-testimonials" class="carousel slide wow flipInY" data-wow-duration="2s" data-ride="carousel">

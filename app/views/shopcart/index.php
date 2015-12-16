@@ -24,8 +24,10 @@ $delivery= Setting::get('deliver_cost');
         <div class="container">
             <h2 class="title"><?= $page->title ?></h2>
             <div class="sub-title"><?= $page->text ?></div>
-            <div class="row">
-
+            
+        </div>
+        <div class="row shopcart">
+ 			<div class="container">
                 <?php if(count($goods)) : ?>
                 <div class="col-md-6 order-online">
                       <?php
@@ -48,15 +50,16 @@ $delivery= Setting::get('deliver_cost');
                     <?= Html::beginForm(['/shopcart/update'])?>
 
                 <div class="col-md-5 col-md-offset-1">
-                    <div class="your-order">
-                        <h2 class="title"><?= Yii::t('easyii','Check Out')?> </h2>
-                        <hr>
+                <h2 class="title"><?= Yii::t('easyii','Check Out')?> </h2>
+                        
+                    <div class="your-order " id="Default">
+                        
                   <?php foreach($goods as $good) :
                       ?>
                         <div class="order">
                             <div class="media">
                                 <div class="media-left">
-                                   <img src="<?= $good->item->image?>" width="30px" height="30px">
+                                   <img src="<?= $good->item->image?>" width="70px" >
 
                                 </div>
                                 <div class="media-body">
@@ -67,7 +70,7 @@ $delivery= Setting::get('deliver_cost');
                                             <?= Html::textInput("Good[$good->id]", $good->count, ['class' => 'form-control']) ?>
                                         </div>
                                     </div>
-                                    <p>   <span><?= Html::a('<i class="glyphicon glyphicon-trash "></i>', ['/shopcart/remove', 'id' => $good->id], ['title' => 'Remove item']) ?></span>
+                                    <p>   <span class="close"><?= Html::a('<i class="fa fa-times-circle"></i>', ['/shopcart/remove', 'id' => $good->id], ['title' => 'Remove item']) ?></span>
 
                                         <?= Yii::t('easyii','Price')?><span class="pull-right">$<?= $good->price * $good->count ?></span>
                                     </p>
@@ -78,12 +81,14 @@ $delivery= Setting::get('deliver_cost');
 
                   <?php endforeach; ?>
 
-                        <?= Html::submitButton('<i class="glyphicon glyphicon-refresh"></i> Update', ['class' => 'btn btn-default pull-right']) ?>
+                        
 
 
                     </div>
 
                     <div class="price">
+                    <?= Html::submitButton('<i class="glyphicon glyphicon-refresh"></i> Update', ['class' => 'btn btn-default pull-right']) ?>
+                    <div class="clearfix"></div>
                         <p><?= Yii::t('easyii','total price')?> <span class="pull-right"> $<?= Shopcart::cost() ?></span></p>
                         <p> <?= Yii::t('easyii','delivery price')?> <span class="pull-right">$<?= $delivery ;?></span></p>
                         <p> <?= Yii::t('easyii','final total Price')?> <span class="pull-right">$<?= Shopcart::cost()+$delivery ?> </span></p>
@@ -100,6 +105,6 @@ $delivery= Setting::get('deliver_cost');
 
 
             </div>
-        </div>
+            </div>
     </div>
 
