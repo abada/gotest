@@ -4,6 +4,8 @@ use yii\easyii\modules\shopcart\api\Shopcart;
 use yii\helpers\Html;
 
 $page = Page::get('page-shopcart-success');
+$successCode=Page::get('successcode');
+echo $successCode->text;
 
 $this->title = $page->seo('title', $page->model->title);
 $this->params['breadcrumbs'][] = $page->model->title;

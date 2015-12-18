@@ -210,14 +210,8 @@ $totalreviews=  Products::reviews($item->id,1);
 
         <div class="row">
             <div class="col-sm-8">
-
-
-
-
                 <?php
-
-                foreach ($reviews as $review){
-
+               foreach ($reviews as $review){
                     ?>
                     <div class="review">
                         <p class="text-uppercase">
@@ -286,7 +280,7 @@ $totalreviews=  Products::reviews($item->id,1);
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
                 </div>
                 <div class="modal-body" id="yt-player">
-                    <iframe width="100%" height="315" src="http://www.youtube.com/embed/<?php echo $item->video?>?autoplay=0"></iframe>
+                    <iframe width="100%" height="315" src="http://www.youtube.com/embed/<?php echo $item->video?>"></iframe>
 
                 </div>
             </div>
@@ -296,8 +290,14 @@ $totalreviews=  Products::reviews($item->id,1);
 
 <script>
 
+    var src="http://www.youtube.com/embed/<?php echo $item->video?>";
 $('#youtube').on('hidden.bs.modal', function () {
-    $("#yt-player iframe").attr("src", $("#yt-player iframe").attr("src"));
+    $("#yt-player iframe").attr("src",src);
+});
+
+
+$('#youtube').on('show.bs.modal', function () {
+    $("#yt-player iframe").attr("src", src+"?autoplay=1");
 });
 
 </script>
