@@ -44,8 +44,10 @@ margin:0;
 .navbar{
 	background-color:#fff;
 	
-	    -webkit-box-shadow: 0 6px 12px rgba(0,0,0,.175);
-    box-shadow: 0 6px 12px rgba(0,0,0,.175);}
+	    /*-webkit-box-shadow: 0 6px 12px rgba(0,0,0,.175);
+    box-shadow: 0 6px 12px rgba(0,0,0,.175);*/
+	
+	}
 .navbar-nav{
 	margin-left:101px;
 }
@@ -195,11 +197,12 @@ display: table;
 	    border-radius: 0;
 		    border-top: 2px solid #FFD5E4;
 }
-.dropdown-menu>li {     display: inline-block;     color: #616060;}
+.dropdown-menu>li {     display: inline-block;     color: #616060;margin:3px 0;}
 .dropdown-menu>li>a:focus, .dropdown-menu>li>a:hover {
-    color: #000;
+        color: #fff;
+    background: #FC8ABE;
     text-decoration: none;
-    background-color: transparent;
+  
 }
 
 
@@ -460,6 +463,10 @@ footer .form-control{
 	border-bottom-left-radius:2em; 
 	text-align:center;
 	}
+footer .form-control:focus{
+outline:none !important;
+    border-color: #fff;	
+}
 footer .input-group{
 	width:80%;
 	margin-top:20px;
@@ -576,7 +583,7 @@ nav .dropdown-menu{
 	    box-shadow: 0 0 6px 0px #ccc;
 	}
 .testimonial .item{
-text-align: center;
+text-align: right;
     margin-top: 45px;
     padding-left: 90px;
     padding-right: 90px;
@@ -588,6 +595,7 @@ text-align: center;
 	}
 .testimonial .item p{
 	font-weight:normal;
+	text-align:center !important;
 }
 						/*-------------------- carousel fade ------------------------- */
 .carousel-fade .carousel-inner .item {
@@ -657,6 +665,7 @@ box-shadow:0 0 6px 1px #7F7E7E;
 .pharmacy h2{
 	font-weight:lighter;
 	padding-left: 15px;
+	margin-top:0;
 	}
 .pharmacy i{
 /*border-radius: 50%; */
@@ -677,9 +686,13 @@ box-shadow:0 0 6px 1px #7F7E7E;
     height: 60px;
 overflow:hidden;
 	}
+	.pharmacy .dl-horizontal dd:last-child{
+height:30px;	
+}
 .pharmacy .dl-horizontal{
 	margin-left:3%;
 	margin-top:20px;
+	margin-bottom:0;
 	}
 .readMore{
 	text-align:center;
@@ -787,7 +800,7 @@ text-transform: capitalize;
     /* background-image: url(../../images/view-arrow-hover.png); */
     /* background-repeat: no-repeat; */
     /* background-position: 90% 18px; */
-    background-color: #D46095;
+    background-color: #FB53A0;
     border: 0;
 	}
 .dry-btn-2{
@@ -859,6 +872,7 @@ color:#7e2e89;
 	margin-top:0;
 	margin-bottom:20px;
 	}
+
 .online-method{
 	background-image: none;
 	height: auto;
@@ -1050,7 +1064,7 @@ background-image:none;
 	background-image:url(../../images/awarness-bg.jpg);
 	background-repeat:no-repeat;
 	background-size:cover;
-	height:515px;
+	height:535px;
 	margin-top:55px;
 	padding-top:35px;
 }
@@ -1254,7 +1268,7 @@ margin-top: 0;
 }
 .online-product .dry-btn:hover{
 	background-image:none;
-	border:1px solid #D46095;
+	border:1px solid #FB53A0;
 }
 .online-product footer{
 	background-color:#f3f3f3;
@@ -1335,7 +1349,7 @@ padding:0 25px;
 	    padding: 0 75px;
 }
 .order-online .dry-btn:hover{
-border:1px solid #D46095;	
+border:1px solid #FB53A0;	
 }
 .order-online .form-control{
 	background-color:#fff;
@@ -1550,12 +1564,12 @@ ul.products-page li .dry-btn img{
 ul.products-page li .thumb{
     margin-bottom: 10px;
     margin-top: 10px;
-    height: 125px;
-	width:125px;
+    height: 180px;
+	width:180px;
 	}
 ul.products-page li:hover {
   box-shadow: 0 0 8px rgba(0, 0, 0, 0.6);
-  border:1px solid #D46095;
+  border:1px solid #FB53A0;
 }
 .dry-btn:hover{
 
@@ -1665,7 +1679,7 @@ ul.absorpation-filter li a.active{
 	}
 .single-product .dry-btn:hover{
 padding: 0 25px;
-border:1px solid #D46095;
+border:1px solid #FB53A0;
 }
 .single-product .embed-responsive-item{
 	border:4px solid #fc8abe;
@@ -1801,14 +1815,14 @@ ul.contact-us {
 ul.contact-us li{									
 	display:list-item !important;
 	font-size:1.2em;
-	font-weight:bold;
+	font-weight:normal;
 	text-transform: uppercase;
 	margin-top:10px;
 	list-style-type:none;
 	}
 ul.contact-us li p{
 	font-weight:normal;
-	padding-left:10px;
+	padding-left:0px;
 	text-transform:lowercase;
 	display: inline-block;
 	}
@@ -1832,7 +1846,7 @@ ul.contact-us li p{
 .contact-us .dry-btn:hover{
 	text-align: center;
     padding: 0 25px;
-	    border: 1px solid #D46095;
+	    border: 1px solid #FB53A0;
 }
 .contact-us .msg{
 	height:auto !important;
@@ -1950,6 +1964,7 @@ text-align:center;
 text-transform:uppercase;
 margin-top:20px;
     font-weight: bold;
+	color: #FC8ABE;
 }
 .features-group li .pink-btn:focus, .features-group li .pink-btn:hover {
     color: #fff;
@@ -1959,7 +1974,7 @@ margin-top:20px;
 div.search{
     height: 60px;
     border-bottom: 1px solid #E8E8E8;
-    background: #F3F3F3;
+    background: #F8F8F8;
 }
 .searchclick{
 cursor:pointer;	
@@ -1968,7 +1983,7 @@ margin-left: 30px;
 .search .form-control{
     width: 100%;
     margin-top: 13px;
-    border: 2px solid #FC8ABE;
+    border: 1px solid #FC8ABE;
     border-radius: 40px;
 background:url(../../images/search-purple-icon.png) no-repeat 99%;
     background-size: 16px;
@@ -2178,15 +2193,15 @@ margin-left:15px;
     border-bottom-right-radius: 0px;
 }
 .pagination>li>a, .pagination>li>span{
-	color: #D46095;
+	color: #FB53A0;
 	border:0px;
 }
 .pagination>li>a:focus, .pagination>li>a:hover, .pagination>li>span:focus, .pagination>li>span:hover {
     color: #FC8ABE;
 }
 .pagination>.active>a, .pagination>.active>a:focus, .pagination>.active>a:hover, .pagination>.active>span, .pagination>.active>span:focus, .pagination>.active>span:hover{
-	    background-color: #D46095;
-    border-color: #D46095;
+	    background-color: #FB53A0;
+    border-color: #FB53A0;
 }
 
 .bx-wrapper{
@@ -2221,9 +2236,9 @@ color:#fff;
 border:1px solid #fc8abe;
 }
 .btn-primary:hover{
-	background:#D46095;
+	background:#FB53A0;
 color:#fff;	
-border:1px solid #D46095;
+border:1px solid #FB53A0;
 }
 .embed-responsive{
 border:5px solid #fc8abe;
@@ -2237,7 +2252,7 @@ cursor:pointer;
     height: auto;
 }
 .product .dry-btn:hover{
-	border:1px solid #D46095;
+	border:1px solid #FB53A0;
 	color:#fff;	
 }
 .shopcart{
@@ -2249,5 +2264,11 @@ display:none !important;
 }
 .shopcart .title{
 	text-align:left;
-	padding:0 0 0 50px;
+	padding:0 0 0 50px;j
+}
+.circle canvas{
+font-weight:normal !important;	
+}
+.awwarenece{
+height:475px;	
 }
