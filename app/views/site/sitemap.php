@@ -29,7 +29,7 @@ $this->title = $page->seo('title', $page->model->title);
                 <a href="/products/offers"><i class="fa fa-circle"></i> Offers</a>
                 <a href="/stores"><i class="fa fa-circle"></i> Find a store</a>
                 <a href="/site/about-dry"><i class="fa fa-circle"></i> About Dry</a>
-                <a href="/site/about-dry"><span><i class="fa fa-circle-o"></i> whos dry</span></a>
+                <a href="/site/about-dry"><span><i class="fa fa-circle-o"></i> who's dry</span></a>
                 <a href="/site/awarness"><span><i class="fa fa-circle-o"></i> awareness program</span></a>
                 
                 <a href="/contact"><i class="fa fa-circle"></i> contact us</a>

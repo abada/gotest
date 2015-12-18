@@ -17,7 +17,7 @@ $ListActive =['1'=>'Sleep','2'=>'Normal','3'=>'Active',''=>'Sleep'];
         <div class="container-fluid">
             <div class="row">
                 <div class="product-filter">
-                    <div class="title"><?= Yii::t('easyii', 'products filter');?> </div>
+                    <div class="title"><?= Yii::t('easyii', 'Product Choice Tool');?> </div>
                     <div class="container">
                         <?php $form = ActiveForm::begin(['method' => 'get','id'=>'FilterForm', 'action' => Url::to(['/products/index#SeResult', 'slug' => 'products'])]); ?>
                         <input type="hidden"   value="<?= $this->params['sliderFilters']['product_cat']?>"  name="GadgetsFilterForm[product_cat]" id="gadgetsfilterform-product_cat" >

@@ -31,7 +31,7 @@ $goodsCount = count(Shopcart::goods());
     </div>
     <nav id="bs-navbar" class="collapse navbar-collapse">
       <ul class="nav navbar-nav cl-effect-21">
-                <li class="active"><a href="<?= Url::home() ?>">
+                <li class=""><a href="<?= Url::home() ?>">
                         <span class="sr-only">(current)</span><?= Yii::t('easyii', 'home');?></a>
                 </li>
                 <li><a href="/products"><?= Yii::t('easyii', 'Products');?></a></li>
