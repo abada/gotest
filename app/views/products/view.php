@@ -13,6 +13,8 @@ use  \app\models\Products;
 
 $this->title = $item->seo('title', $item->model->title);
 $totalreviews=  Products::reviews($item->id,1);
+
+//echo count($reviews).'DDD'.$totalreviews;die;
 ?>
 <div class="content single-product">
     <div class="container-fluid bg">
@@ -204,7 +206,14 @@ $totalreviews=  Products::reviews($item->id,1);
     </div>
 
 <div style="al">
-    <?php    echo Yii::$app->session->getFlash('success');   ?>
+    <?php
+if(Yii::$app->session->getFlash('success') != ''){
+    if(\Yii::$app->language =='en'){$dir= 'ltr';}else{$dir='rtl';}
+    echo "<div class='col-md-12'  dir='".$dir."' align='center'>
+      <div class='alert alert-danger'>". Yii::$app->session->getFlash('success')."
+      </div></div><br/>";
+    }
+  ?>
 
     <div class="container margin-top20">
 

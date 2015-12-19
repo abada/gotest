@@ -8,6 +8,8 @@ use webvimark\behaviors\multilanguage\MultiLanguageHelper;
 use Yii;
 use yii\easyii\modules\catalog\api\Catalog;
 use yii\web\NotFoundHttpException;
+use yii\widgets\ActiveForm;
+
 
 class ProductsController extends \yii\web\Controller
 {
