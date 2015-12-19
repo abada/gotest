@@ -70,8 +70,16 @@ $this->title = $page->seo('title', $page->model->title);
                 <div class="title"><?= Yii::t('easyii', 'testimonials');?> </div>
             </div>
             <?php
-              $testmonials= PageModel::find()->where("homepage=0")->desc()->all();
-                    $num = 0;
+             // $testmonials= PageModel::find()->where("homepage=0")->desc()->all();
+
+            $query = PageModel::find()->where(['homepage' => 0]);
+            $countQuery = clone $query;
+            $pages = new \yii\data\Pagination(['totalCount' => $countQuery->count(),'pageSize'=>5]);
+           // $pages->offset=2;
+            $testmonials = $query->offset($pages->offset)
+                ->limit($pages->limit)
+                ->all();
+               $num = 0;
                 foreach($testmonials as $item){
                     $num++;
                     if($num&1) {
@@ -94,14 +102,17 @@ $this->title = $page->seo('title', $page->model->title);
                         echo ' </div> </div>';
 
                     }
-
-
-
                 }
             ?>
+            <div align="center">
+            <?
 
-
-
+            // display pagination
+            echo \yii\widgets\LinkPager::widget([
+                'pagination' => $pages,
+            ]);
+            ?>
+            </div>
 
 <!--            <button class="btn dry-btn-2 center-block margin-bottom10">More Testimonials</button> -->
         </div>

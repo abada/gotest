@@ -1,6 +1,7 @@
 <?php
 
 namespace app\controllers;
+use app\models\City;
 use webvimark\behaviors\multilanguage\MultiLanguageHelper;
 
 use app\models\AddToCartForm;
@@ -17,6 +18,26 @@ class ShopcartController extends \yii\web\Controller
     {
         MultiLanguageHelper::catchLanguage();
         parent::init();
+    }
+
+
+
+    public function actionCities($code){
+        $cities= City::find()
+                      ->where('CountryCode="'.$code.'" ')
+                      ->all();
+
+
+
+        if(count($cities)>0){
+            foreach($cities as $city){
+                echo "<option value='".$city->Name."'>".$city->Name."</option>";
+            }
+        }
+        else{
+            echo "<option>--</option>";
+        }
+
     }
 
 

@@ -117,7 +117,7 @@ $totalreviews=  Products::reviews($item->id,1);
 
 
     <div class="container-fluid review-bg">
-        <div class="title"> <?= $totalreviews.' '.Yii::t('easyii','reviews')?> </div>
+        <div class="title"> <?= Products::reviews($item->id,2).' '.Yii::t('easyii','reviews')?> </div>
         <p class="product-star text-center">
 
             <?php

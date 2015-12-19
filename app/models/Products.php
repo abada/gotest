@@ -37,9 +37,14 @@ class Products extends \yii\easyii\components\ActiveRecord
             $avg_rate=0;
         }
 
-        if($flag){
+        if($flag==1){
             return $avg_rate  ;
         }
+
+        if($flag==2){
+            return count($reviews)  ;
+        }
+
         return   $avg_rate."/5 | ".count($reviews)." ". Yii::t('easyii','reviews');
 
     }

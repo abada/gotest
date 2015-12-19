@@ -7,6 +7,10 @@ $page = Page::get('page-shopcart-success');
 $successCode=Page::get('successcode');
 echo $successCode->text;
 
+
+$pay=Page::get('paydetails');
+
+
 $this->title = $page->seo('title', $page->model->title);
 $this->params['breadcrumbs'][] = $page->model->title;
 ?>
@@ -18,7 +22,9 @@ $this->params['breadcrumbs'][] = $page->model->title;
         <br/><br/><br/><br/><br/>
 
          <?= $page->text ?>
-        <br/><br/><br/><br/><br/>
+        <br/><br/>
+        <h1><?= $pay->title?></h1>
+        <p><?= $pay->text ?></p>
 
 
     </div>

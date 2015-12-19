@@ -29,8 +29,12 @@ $totalreviews=  Products::reviews($item->id,1);
                                 </div>
                                 <div class="media-body">
                                     <h3 class="media-heading"><?= $item->title ;?> </h3>
-                                    <p>$<?= $item->price?></p>
+                                    <p><?= $item->price ;?>
+                                        <? if(\Yii::$app->language == 'ar') echo "ج.م" ;?>
+                                        <? if(\Yii::$app->language == 'en') echo "LE" ;?> </p>
                                     <form id="ratingsForm">
+                                        <?= Products::reviews($item->id)?>
+
                                         <div class="stars">
                                             <?php
                                             for($i=0; $i<$totalreviews;$i++){
