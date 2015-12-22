@@ -26,7 +26,7 @@ $delivery= Setting::get('deliver_cost');
         <div class="row shopcart">
  			<div class="container">
                 <?php if(count($goods)) : ?>
-                <div class="col-md-6 order-online">
+                <div class="col-md-5 col-md-offset-1 order-online">
                       <?php
                       if($error){
                           $data =explode('.',$error);

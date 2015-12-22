@@ -20,7 +20,7 @@ $totalreviews=  Products::reviews($item->id,1);
             <div class="col-md-12">
                 <div class="online-product">
                     <div class="row">
-                        <div class="col-md-8"  style="padding-left:0"><div class="media">
+                        <div class="col-md-7"  style="padding-left:0"><div class="media">
                                 <div class="media-left">
 <!--                                    <img class="img-responsive center-block" src="--><?php //echo Yii::$app->getUrlManager()->getBaseUrl()?><!--/theme/images/offer-1.jpg">-->
                                     <?= Html::img($item->thumb(300, 300)) ?>
@@ -62,11 +62,11 @@ $totalreviews=  Products::reviews($item->id,1);
                                         'options' => ['class' => 'form-inline']
                                     ]); ?>
 
-                                    <div class="form-group" style="float: left;width: 50%;">
+                                    <div class="form-group" style="float: left;width: 100%;">
                                         <?= $form->field($addToCartForm, 'count')->textInput(['class' => 'form-control'])->label(Yii::t('easyii','Quantity')) ?>
                                         	
                                     </div>
-                                    <?= Html::submitButton(Yii::t('easyii','Add to Cart').' <i class="fa fa-cart-arrow-down fa-lg"></i>' , ['class' => 'btn dry-btn','style' => 'float:right']) ?>
+                                    <?= Html::submitButton(Yii::t('easyii','Add to Cart').' <i class="fa fa-cart-arrow-down fa-lg"></i>' , ['class' => 'btn dry-btn','style' => 'float:left']) ?>
                                     <?php ActiveForm::end();
                                     }
                                     ?>
@@ -74,7 +74,7 @@ $totalreviews=  Products::reviews($item->id,1);
 
                                 </div>
                             </div></div>
-                        <div class="col-md-4">
+                        <div class="col-md-5">
                             <h3><?= Yii::t('easyii','Product details');?></h3>
                             <hr>
                             <p><?= $item->description ?></p>

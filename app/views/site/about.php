@@ -90,9 +90,11 @@ $this->title = $page->seo('title', $page->model->title);
                     }
 
                     ?>
+                    <div class="testim">
                     <h4><?= $item->owner?> </h4>
                     <h3><?= $item->title ?></h3>
                     <p><?= $item->text ?></p>
+                    </div>
 <!--                    <a href="#">Read More <i class="fa fa-caret-right"></i></a> -->
 
                 <?php
