@@ -5,19 +5,16 @@ use yii\helpers\Html;
 use yii\helpers\Url;
 use  \yii\easyii\models\Setting;
 
-
-
-
 $page = Page::get('page-shopcart');
 
 $this->title = $page->seo('title', $page->model->title);
 $this->params['breadcrumbs'][] = $page->model->title;
 $delivery= Setting::get('deliver_cost');
 ?>
-
 <?php
     $page = Page::get('shopcartpage');
 ?>
+
 
 
     <div class="content">
@@ -108,3 +105,29 @@ $delivery= Setting::get('deliver_cost');
             </div>
     </div>
 
+<link rel="stylesheet" href="/theme/build/css/intlTelInput.css">
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+
+<script src="/theme/build/js/intlTelInput.js"></script>
+<script>
+    $("#order-phone").intlTelInput({
+        // allowExtensions: true,
+       // autoFormat: false,
+        // autoHideDialCode: false,
+        // autoPlaceholder: false,
+        // dropdownContainer: $("body"),
+        // excludeCountries: ["us"],
+        // geoIpLookup: function(callback) {
+        //   $.get('http://ipinfo.io', function() {}, "jsonp").always(function(resp) {
+        //     var countryCode = (resp && resp.country) ? resp.country : "";
+        //     callback(countryCode);
+        //   });
+        // },
+        // initialCountry: "auto",
+        // nationalMode: false,
+        // numberType: "MOBILE",
+        // onlyCountries: ['us', 'gb', 'ch', 'ca', 'do'],
+        preferredCountries: ['eg','sa'],
+        utilsScript: "/theme/lib/libphonenumber/build/utils.js"
+    });
+</script>

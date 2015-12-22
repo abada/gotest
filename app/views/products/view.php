@@ -110,9 +110,9 @@ $totalreviews=  Products::reviews($item->id,1);
                 </div>
             </div>
             <div class="col-md-6 col-md-offset-1">
-            	<h3 class="">MAKE THE RIGHT CHOICE</h3>
                <?php echo $item->video_text?>
-               <a href="#" class="btn btn-video">Watch Now</a>
+               <a href="#" class="btn btn-video" data-toggle="modal" data-target="#youtube" >
+                   <?= Yii::t('easyii','Watch Now')?></a>
 
             </div>
         </div>
