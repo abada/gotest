@@ -50,10 +50,10 @@ $goodsCount = count(Shopcart::goods());
             
       <ul class="social">
 
-        <li><a href=" <?= Setting::get('facebook')?>"><i class="fa fa-facebook  fb"></i></a></li>
-        <li><a href=" <?= Setting::get('twitter')?>"><i class="fa fa-tumblr  twe"></i></a></li>
-        <li><a href=" <?= Setting::get('instagram')?>"><i class="fa fa-instagram  in"></i></a></li>
-        <li><a href=" <?= Setting::get('youtube')?>"><i class="fa fa-youtube uTube"></i></a></li>
+        <li><a href=" <?= Setting::get('facebook')?>" target="_blank"><i class="fa fa-facebook  fb"></i></a></li>
+        <li><a href=" <?= Setting::get('twitter')?>" target="_blank"><i class="fa fa-tumblr  twe"></i></a></li>
+        <li><a href=" <?= Setting::get('instagram')?>" target="_blank"><i class="fa fa-instagram  in"></i></a></li>
+        <li><a href=" <?= Setting::get('youtube')?>" target="_blank"><i class="fa fa-youtube uTube"></i></a></li>
       </ul>   
       <ul class="heder-r">
         <li>
@@ -125,10 +125,10 @@ $goodsCount = count(Shopcart::goods());
             <div class="col-sm-6">
                 <h3><?= Yii::t('easyii', 'Follow Us');?></h3>
                 <ul class="social list-inline center-block">
-                    <li><a href="<?= Setting::get('facebook')?>"><i class="fa fa-facebook fa-2x"></i></a></li>
-                    <li><a href=" <?= Setting::get('twitter')?>"><i class="fa fa-tumblr fa-2x"></i></a></li>
-                    <li><a href="<?= Setting::get('instagram')?>"><i class="fa fa-instagram fa-2x"></i></a></li>
-                    <li><a href="<?= Setting::get('youtube')?>"><i class="fa fa-youtube fa-2x"></i></a></li>
+                    <li><a href="<?= Setting::get('facebook')?>" target="_blank"><i class="fa fa-facebook fa-2x"></i></a></li>
+                    <li><a href=" <?= Setting::get('twitter')?>" target="_blank"><i class="fa fa-tumblr fa-2x"></i></a></li>
+                    <li><a href="<?= Setting::get('instagram')?>" target="_blank"><i class="fa fa-instagram fa-2x"></i></a></li>
+                    <li><a href="<?= Setting::get('youtube')?>" target="_blank"><i class="fa fa-youtube fa-2x"></i></a></li>
                 </ul>
             </div>
         </div>

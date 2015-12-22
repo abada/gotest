@@ -92,8 +92,7 @@ $totalreviews=  Products::reviews($item->id,1);
 
                 </div>
                 <div class="col-md-4 feature">
-<!--                    <img src=" --> <?php //echo Yii::$app->getUrlManager()->getBaseUrl()?>
-                    <!-- /theme/images/thin-flex.png"/>   -->
+		
                     <img src="<?php echo(Yii::$app->language =='en') ? $item->slider_img_3 : $item->slider_img_3_ar ;?>"">
 
                     <?php echo $item->slider_text_3 ;?>
@@ -104,14 +103,16 @@ $totalreviews=  Products::reviews($item->id,1);
         </div>
     </div>
     <div class="container">
-        <div class="row margin-top30">
-            <div class="col-sm-4">
+        <div class="row margin-top30 video-title">
+            <div class="col-md-4">
                 <div class="embed-responsive embed-responsive-4by3" data-toggle="modal" data-target="#youtube">
                     <img src="http://img.youtube.com/vi/<?php echo $item->video?>/0.jpg" height="300" wid>
                 </div>
             </div>
-            <div class="col-sm-8">
+            <div class="col-md-6 col-md-offset-1">
+            	<h3 class="">MAKE THE RIGHT CHOICE</h3>
                <?php echo $item->video_text?>
+               <a href="#" class="btn btn-video">Watch Now</a>
 
             </div>
         </div>
@@ -282,14 +283,14 @@ if(Yii::$app->session->getFlash('success') != ''){
 
 
     <div class="modal fade" id="youtube" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-        <div class="modal-dialog" role="document">
+        <div class="modal-dialog modal-lg" role="document">
             <div class="modal-content">
-                <div class="modal-header">
-                <h4 class="modal-title" id="myModalLabel"><?= $item->title ;?></h4>
+                
+                
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                </div>
+                
                 <div class="modal-body" id="yt-player">
-                    <iframe width="100%" height="315" src="http://www.youtube.com/embed/<?php echo $item->video?>"></iframe>
+                    <iframe width="100%" height="500" src="http://www.youtube.com/embed/<?php echo $item->video?>"></iframe>
 
                 </div>
             </div>

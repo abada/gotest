@@ -6,10 +6,12 @@ use yii\easyii\modules\page\api\Page;
 
 ?>
 <div class="content gray-color">
+<div class="find-bg">
     <div class="container">
         <div class="row">
+        
             <div class="col-md-12" style="">
-                <div class="find-bg">
+                
                     <h1><?= Yii::t('easyii', 'Find Nearest Shop');?>  </h1>
         <?php
             $allProducts=\app\models\Products::FetchProducts();

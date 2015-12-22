@@ -102,7 +102,7 @@ $totalreviews=  Products::reviews($item->id,1);
 
 
 
-        <div class="title"><?= Yii::t('easyii','you may like also');?> </div>
+        <div class="title like-title"><?= Yii::t('easyii','you may like also');?> </div>
         <div class="col-md-12">
             <div id="owl-example" class="owl-carousel">
 
