@@ -14,8 +14,17 @@ $this->params['breadcrumbs'][] = $page->model->title;
 
     <div class="container">
         <div class="row">
-            <div class="title"><?= $page->title ;?></div>
-            <div class="lineHeight contact-us-p"><?= $page->text ?></div>
+        
+        <div class="row">
+            <div class="col-md-12">
+                <h2 class="title"><?= $page->title ;?></h2>
+                
+            </div>
+            <div class="sub-title">
+                <p style="text-align: center;"><?= $page->text ?></p>                </div>
+        </div>
+            
+            
         </div>
     </div>
     <div class="container-fluid bg margin-top50">
@@ -23,10 +32,14 @@ $this->params['breadcrumbs'][] = $page->model->title;
             <div class="row contact-us">
                 <div class="col-sm-5 col-sm-offset-1">
 
+           
+                
+        
                     <?php
                     $page= Page::get("contact-address");
                     echo $page->text;
                     ?>
+                    
                 </div>
                 <div class="col-sm-4 col-sm-offset-1 order-online">
 

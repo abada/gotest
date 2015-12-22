@@ -105,8 +105,8 @@ $totalreviews=  Products::reviews($item->id,1);
     <div class="container">
         <div class="row margin-top30 video-title">
             <div class="col-md-4">
-                <div class="embed-responsive embed-responsive-4by3" data-toggle="modal" data-target="#youtube">
-                    <img src="http://img.youtube.com/vi/<?php echo $item->video?>/0.jpg" height="300" wid>
+                <div class="embed" data-toggle="modal" data-target="#youtube">
+                    <img src="http://img.youtube.com/vi/<?php echo $item->video?>/0.jpg" height="250" width="100%">
                 </div>
             </div>
             <div class="col-md-6 col-md-offset-1">

@@ -289,21 +289,21 @@ $this->title = $page->seo('title', $page->model->title);
     </div>
 
     <div class="container-fluid gray-color margin-top50">
-        <div class="container">
-            <div class="row margin-top20">
-
+        
+            <div class="row margin-top20 ">
+<div class="about-dry">
                 <?php  $page = Page::get('about'); ?>
 
 
                 <div class="title"><?= $page->title ;?></div>
-                <p class="lineHeight">
+                
                 <?php //= substr($page->text,0,450)." ...";
                 echo $page->text;
                 ?>
-                </p>
+               
             </div>
-            
-            
+            </div>
+            <div class="container">
             <div class="row">
                 <div class="col-md-12">
                     <div id="carousel-example-generic-testimonials" class="carousel slide wow flipInY" data-wow-duration="2s" data-ride="carousel">
