@@ -940,10 +940,11 @@ padding-top:30px;
 	padding-right:10px;
 	}
 .inner-offer img{
-    /* padding-left: 60px; */
-    /* padding-right: 60px; */
+margin-left: 5px;
+    /* padding-right: 10px; */
     margin-bottom: 20px;
     display: inline-block;
+    margin-top: 5px;
 	}
 .inner-offer footer{
 	background-color:#f3f3f3;
@@ -1009,7 +1010,7 @@ padding-top:30px;
 .about-dry p{
 	color:#464646;
 	line-height:1.7em;
-	font-size:1.4em;
+	font-size:1.2em;
 	text-align:center;
 	margin-top:30px;
 	}
@@ -1568,7 +1569,7 @@ border-radius: 0;
     display: block;
     width: 100%;
     text-transform: uppercase;
-    padding: 7px 25px;
+    padding: 14px 25px;
 	}
 ul.products-page li .dry-btn img{
 	padding:0;
@@ -2373,3 +2374,7 @@ margin-right:15px;
     background-position: -25px !important;
 } 
 
+
+.order-online .margin-top30{
+margin-top:0 !important;	
+}

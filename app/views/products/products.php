@@ -30,7 +30,7 @@ $ListActive =['1'=>'Sleep','2'=>'Normal','3'=>'Active',''=>'Sleep'];
                                    
                                     <div class="filterdiv">
                                     
-                                         <input type="text" readonly="readonly" name="GadgetsFilterForm[absorptionrate]" id="gadgetsfilterform-absorptionrate" >
+                                         <input type="text"  name="GadgetsFilterForm[absorptionrate]" id="gadgetsfilterform-absorptionrate" >
                                       
                                   </div>
                                     <div id="slider-range-max"></div>
@@ -42,7 +42,7 @@ $ListActive =['1'=>'Sleep','2'=>'Normal','3'=>'Active',''=>'Sleep'];
                                     
                                     <div class="filterdiv">
                                     
-                                         <input type="text" readonly="readonly" name="GadgetsFilterForm[speed]" id="gadgetsfilterform-speed" value="5" >
+                                         <input type="text"  name="GadgetsFilterForm[speed]" id="gadgetsfilterform-speed" value="5" >
                                       
                                   </div>
                                     <div id="slider-range-max2"></div>
