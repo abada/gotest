@@ -52,7 +52,8 @@ class ShopcartController extends \yii\web\Controller
 
     public function actionSuccess()
     {
-        return $this->render('success');
+        $cat = Catalog::cat('products');
+        return $this->render('success',array( 'products'=>$cat->items() ));
     }
 
     public function actionAdd($id)
