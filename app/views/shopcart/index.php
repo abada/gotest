@@ -69,7 +69,10 @@ $delivery= Setting::get('deliver_cost');
                                     </div>
                                     <p>   <span class="close"><?= Html::a('<i class="fa fa-times-circle"></i>', ['/shopcart/remove', 'id' => $good->id], ['title' => 'Remove item']) ?></span>
 
-                                        <?= Yii::t('easyii','Price')?><span class="pull-right">$<?= $good->price * $good->count ?></span>
+                                        <?= Yii::t('easyii','Price')?><span class="pull-right">
+                                            <? if(\Yii::$app->language == 'ar') echo "ج.م" ;?>
+                                            <? if(\Yii::$app->language == 'en') echo "LE" ;?>
+                                            <?= $good->price * $good->count ?></span>
                                     </p>
                                 </div>
                             </div>
