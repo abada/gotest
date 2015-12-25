@@ -24,7 +24,7 @@ class Products extends \yii\easyii\components\ActiveRecord
 
     public static  function reviews($id ,$flag=""){
 
-      $reviews= \app\modules\reviews\models\News::find('product_id='.$id)->all();
+      $reviews= \app\modules\reviews\models\News::find()->where('product_id='.$id)->all();
 
         //return count($reviews);
 

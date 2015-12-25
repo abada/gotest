@@ -19,21 +19,30 @@ use yii\helpers\Html;
         <meta property="og:description" content="<?php echo $this->params['metadesc']; ?>" />
         <?php } ?>
 
+<?php
 
-        <link href="<?php echo Yii::$app->getUrlManager()->getBaseUrl()?>/theme/css/en/bootstrap.min.css" rel="stylesheet" type="text/css">
-        <link rel="stylesheet" href="<?php echo Yii::$app->getUrlManager()->getBaseUrl()?>/theme/css/en/font-awesome.min.css" />
-        <link type="text/css" href="<?php echo Yii::$app->getUrlManager()->getBaseUrl()?>/theme/css/en/ihover.css" rel="stylesheet">
-        <link rel="stylesheet" type="text/css" media="all" href="<?php echo Yii::$app->getUrlManager()->getBaseUrl()?>/theme/css/en/jquery.circliful.css">
-        <link href="<?php echo Yii::$app->getUrlManager()->getBaseUrl()?>/theme/css/en/ui.totop.css" rel="stylesheet">
-        <link rel="stylesheet" href="<?php echo Yii::$app->getUrlManager()->getBaseUrl()?>/theme/css/en/perfect-scrollbar.css" />
-        <link rel="stylesheet" href="<?php echo Yii::$app->getUrlManager()->getBaseUrl()?>/theme/css/en/style.css" />
-        <link href="<?php echo Yii::$app->getUrlManager()->getBaseUrl()?>/theme/css/en/slider.css" rel="stylesheet">
-        <link href="<?php echo Yii::$app->getUrlManager()->getBaseUrl()?>/theme/css/en/jquery.bxslider.css" rel="stylesheet" type="text/css" />
-        <link href="<?php echo Yii::$app->getUrlManager()->getBaseUrl()?>/theme/css/en/owl.theme.css" rel="stylesheet">
-        <link href="<?php echo Yii::$app->getUrlManager()->getBaseUrl()?>/theme/css/en/owl.carousel.css" rel="stylesheet">
-        <link href="<?php echo Yii::$app->getUrlManager()->getBaseUrl()?>/theme/css/en/animate.css" rel="stylesheet">
+if(\Yii::$app->language == "en") {
+    $bath='en';
+}else{
+    $bath='ar';
+
+}
+?>
+        <link href="<?php echo Yii::$app->getUrlManager()->getBaseUrl()?>/theme/css/<?= $bath?>/bootstrap.min.css" rel="stylesheet" type="text/css">
+        <link rel="stylesheet" href="<?php echo Yii::$app->getUrlManager()->getBaseUrl()?>/theme/css/<?= $bath?>/font-awesome.min.css" />
+        <link type="text/css" href="<?php echo Yii::$app->getUrlManager()->getBaseUrl()?>/theme/css/<?= $bath?>/ihover.css" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" media="all" href="<?php echo Yii::$app->getUrlManager()->getBaseUrl()?>/theme/css/<?= $bath?>/jquery.circliful.css">
+        <link href="<?php echo Yii::$app->getUrlManager()->getBaseUrl()?>/theme/css/<?= $bath?>/ui.totop.css" rel="stylesheet">
+        <link rel="stylesheet" href="<?php echo Yii::$app->getUrlManager()->getBaseUrl()?>/theme/css/<?= $bath?>/perfect-scrollbar.css" />
+        <link rel="stylesheet" href="<?php echo Yii::$app->getUrlManager()->getBaseUrl()?>/theme/css/<?= $bath?>/style.css" />
+        <link href="<?php echo Yii::$app->getUrlManager()->getBaseUrl()?>/theme/css/<?= $bath?>/slider.css" rel="stylesheet">
+        <link href="<?php echo Yii::$app->getUrlManager()->getBaseUrl()?>/theme/css/<?= $bath?>/jquery.bxslider.css" rel="stylesheet" type="text/css" />
+        <link href="<?php echo Yii::$app->getUrlManager()->getBaseUrl()?>/theme/css/<?= $bath?>/owl.theme.css" rel="stylesheet">
+        <link href="<?php echo Yii::$app->getUrlManager()->getBaseUrl()?>/theme/css/<?= $bath?>/owl.carousel.css" rel="stylesheet">
+        <link href="<?php echo Yii::$app->getUrlManager()->getBaseUrl()?>/theme/css/<?= $bath?>/animate.css" rel="stylesheet">
         <link rel="shortcut icon" href="<?php echo Yii::$app->getUrlManager()->getBaseUrl()?>/theme/images/favicon.ico" type="image/x-icon">
         <link rel="icon" href="<?php echo Yii::$app->getUrlManager()->getBaseUrl()?>/theme/images/favicon.ico" type="image/x-icon">
+
         <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
         <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
         <script type="text/javascript" src="<?php echo Yii::$app->getUrlManager()->getBaseUrl()?>/theme/js/jquery-1.11.3.min.js"></script>

@@ -26,14 +26,31 @@ use yii\easyii\modules\page\api\Page;
                     </div>
 					<div class="clearfix"></div>
                     <div class="col-md-4">
-                        
-                          <?= $form->field($filterForm, 'country')->dropDownList(\app\models\Stores::FetchCountries(),['prompt'=>Yii::t('easyii', 'Country') ,'class'=>'btn btn-findUs dropdown-toggle'] )->label('');?>
+
+                        <?= $form->field($filterForm, 'country')->dropDownList(\app\models\Stores::FetchCountries(),
+                            ['prompt'=>Yii::t('easyii', 'Country') ,'class'=>'btn btn-findUs dropdown-toggle' , 'onchange'=>'
+                $.post( "'.Yii::$app->urlManager->createUrl('stores/government?code=').'"+$(this).val(), function( data ) {
+                  $( "select#gadgetsstoresfilterform-government" ).html( data );
+                })'] )->label('');?>
+
+
+
+
+
                     </div>
                     <div class="col-md-4">
-                            <?= $form->field($filterForm, 'government')->dropDownList(\app\models\Stores::FetchGovernment(),['prompt'=>Yii::t('easyii', 'Government'),'class'=>'btn btn-findUs dropdown-toggle'] )->label('');?>
+                            <?= $form->field($filterForm, 'government')->dropDownList(['dd'=>'dd'],
+                                ['prompt'=>Yii::t('easyii', 'City') ,'class'=>'btn btn-findUs dropdown-toggle' , 'onchange'=>'
+                $.post( "'.Yii::$app->urlManager->createUrl('stores/cities?code=').'"+$(this).val(), function( data ) {
+                  $( "select#gadgetsstoresfilterform-district" ).html( data );
+                })'] )->label('');?>
+
+
+
+
                     </div>
                     <div class="col-md-4">
-                           <?= $form->field($filterForm, 'district')->dropDownList(\app\models\Stores::FetchDistrict() ,['prompt'=>Yii::t('easyii', 'District'),'class'=>'btn btn-findUs dropdown-toggle'])->label('');?>
+                           <?= $form->field($filterForm, 'district')->dropDownList([] ,['prompt'=>Yii::t('easyii', 'District'),'class'=>'btn btn-findUs dropdown-toggle'])->label('');?>
                     </div>
 
                     <div class="row">

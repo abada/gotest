@@ -45,17 +45,7 @@ $totalreviews=  Products::reviews($item->id,1);
                         endforeach;?>
                     </div>
                     <p class="product-star">
-                        <?php
-                        for($i=0; $i<$totalreviews;$i++){
-                            ?>
-                            <img src="<?php echo Yii::$app->getUrlManager()->getBaseUrl()?>/theme/images/product-stars.png" class="star-img">
-
-                        <?
-                        }
-                        ?>
-
-
-
+                        <input type="text" name="prating" value="<?= $totalreviews ;?>">
                         <?php echo Products::reviews($item->id);?>
                     </p>
                 </div>
@@ -122,20 +112,9 @@ $totalreviews=  Products::reviews($item->id,1);
     <div class="container-fluid review-bg">
         <div class="title"> <?= Products::reviews($item->id,2).' '.Yii::t('easyii','reviews')?> </div>
         <p class="product-star text-center">
+            <input type="text" name="prating" value="<?= $totalreviews ;?>">
+          <?php    echo Products::reviews($item->id); ?>
 
-            <?php
-            for($i=0; $i<$totalreviews;$i++){
-                ?>
-                <img src="<?php echo Yii::$app->getUrlManager()->getBaseUrl()?>/theme/images/product-stars.png" class="star-img">
-
-            <?
-            }
-            ?>
-
-        <?php
-
-
-            echo Products::reviews($item->id);?>
         </p>
         <button class="btn dry-btn center-block" data-toggle="modal" data-target="#writeReview"><i class="fa fa-pencil fa-lg"></i> Write a review</button>
         <!-- Modal -->

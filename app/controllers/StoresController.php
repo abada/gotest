@@ -1,6 +1,8 @@
 <?php
 
 namespace app\controllers;
+use app\models\Cities;
+use app\models\Govenment;
 use app\models\Products;
 use app\modules\customers\models\Category;
 use app\modules\customers\api\Catalog;
@@ -40,10 +42,6 @@ class StoresController extends FrontController
             'filters'=>$filters
         ]);
     }
-
-
-
-
     public function actionIndexOLD()
     {
         $slug='products';
@@ -68,8 +66,6 @@ class StoresController extends FrontController
 
         ]);
     }
-
-
     public function actionSearch($text)
     {
         $text = filter_var($text, FILTER_SANITIZE_STRING);
@@ -81,7 +77,6 @@ class StoresController extends FrontController
             ])
         ]);
     }
-
     public function actionView($slug)
     {
         $item = Catalog::get($slug);
@@ -94,9 +89,6 @@ class StoresController extends FrontController
             'addToCartForm' => new \app\models\AddToCartForm()
         ]);
     }
-
-
-
     public function actionProducts($slug='products')
     {
         $filterForm = new GadgetsFilterForm();
@@ -119,6 +111,56 @@ class StoresController extends FrontController
             'filterForm' => $filterForm
         ]);
     }
+
+
+    public function actionGovernment(){
+         $code=$_REQUEST['code'];
+        if(\Yii::$app->language == "en"){
+            $field= 'title';
+        }else{
+            $field='title_ar';
+        }
+      $governments = Govenment::find()->where('country_code="'.$code.'"')->all();
+       if(count($governments)>0){
+           echo "<option value=''>".Yii::t('easyii', 'City')."</option>";
+
+           foreach($governments as $govern){
+                echo "<option value='".$govern->government_code."'>".$govern->$field."</option>";
+            }
+        }
+        else{
+            echo "<option>--</option>";
+        }
+
+    }
+
+
+    public function actionCities(){
+        $code=$_REQUEST['code'];
+
+        if(\Yii::$app->language == "en"){
+            $field= 'title';
+        }else{
+            $field='title_ar';
+        }
+        $cities= Cities::find()
+            ->where('government_code="'.$code.'"')
+            ->all();
+
+
+
+        if(count($cities)>0){
+            echo "<option value=''>".Yii::t('easyii', 'District')."</option>";
+            foreach($cities as $city){
+                echo "<option value='".$city->id."'>".$city->$field."</option>";
+            }
+        }
+        else{
+            echo "<option>--</option>";
+        }
+
+    }
+
 
 
 }
