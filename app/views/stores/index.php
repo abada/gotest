@@ -40,7 +40,7 @@ use yii\easyii\modules\page\api\Page;
                     </div>
                     <div class="col-md-4">
                             <?= $form->field($filterForm, 'government')->dropDownList(['dd'=>'dd'],
-                                ['prompt'=>Yii::t('easyii', 'City') ,'class'=>'btn btn-findUs dropdown-toggle' , 'onchange'=>'
+                                ['prompt'=>Yii::t('easyii', 'Governorate') ,'class'=>'btn btn-findUs dropdown-toggle' , 'onchange'=>'
                 $.post( "'.Yii::$app->urlManager->createUrl('stores/cities?code=').'"+$(this).val(), function( data ) {
                   $( "select#gadgetsstoresfilterform-district" ).html( data );
                 })'] )->label('');?>
@@ -86,6 +86,9 @@ if(\Yii::$app->language =='en'){$dir= 'ltr';}else{$dir='rtl';}
                 echo   "<div class='col-md-12' dir='".$dir."' ><div class='alert alert-danger'>".Yii::t('easyii','Please Enter the country')."</div></div><br/>";
             }else if($filters['government']== ''){
                 echo "<div class='col-md-12' dir='".$dir."' ><div class='alert alert-danger'>".Yii::t('easyii','Please Enter the government');
+
+            }else if($filters['district']== ''){
+                echo "<div class='col-md-12' dir='".$dir."' ><div class='alert alert-danger'>".Yii::t('easyii','Please Enter the District');
 
             }
 
