@@ -315,7 +315,9 @@ $this->title = $page->seo('title', $page->model->title);
 
                                ?>
                                <div class="item <?= ($i == 0) ? 'active' : ''; ?>">
-                                  <p><?= $item->text?></p> <?=$item->owner?>
+                                  <p><?= $item->text?></p>
+                                   <?=$item->title?><br/>
+                                   <?=$item->owner?>
                                </div>
                                <?
                                $i++;

@@ -64,7 +64,7 @@ $delivery= Setting::get('deliver_cost');
                                     <div class="form-inline">
                                         <div class="form-group">
                                             <label for="exampleInputName2"><?= Yii::t('easyii','Quantity')?></label>
-                                            <?= Html::textInput("Good[$good->id]", $good->count, ['class' => 'form-control']) ?>
+                                            <?= Html::textInput("Good[$good->id]", $good->count, ['class' => 'form-control','onChange'=>'this.form.submit();']) ?>
                                         </div>
                                     </div>
                                     <p>   <span class="close"><?= Html::a('<i class="fa fa-times-circle"></i>', ['/shopcart/remove', 'id' => $good->id], ['title' => 'Remove item']) ?></span>
@@ -87,7 +87,7 @@ $delivery= Setting::get('deliver_cost');
                     </div>
 
                     <div class="price">
-                    <?= Html::submitButton('<i class="glyphicon glyphicon-refresh"></i> Update', ['class' => 'btn btn-default pull-right']) ?>
+                    <?//= Html::submitButton('<i class="glyphicon glyphicon-refresh"></i> Update', ['class' => 'btn btn-default pull-right']) ?>
                     <div class="clearfix"></div>
                         <p><?= Yii::t('easyii','total price')?> <span class="pull-right"> $<?= Shopcart::cost() ?></span></p>
                         <p> <?= Yii::t('easyii','delivery price')?> <span class="pull-right">$<?= $delivery ;?></span></p>
