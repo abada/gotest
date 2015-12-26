@@ -1,8 +1,10 @@
 <?php
 namespace app\modules\customers\controllers;
 
+use app\models\Cities;
 use app\models\CsvForm;
 use app\models\CustomerItems;
+use app\models\Govenment;
 use app\models\XlsxFile;
 use Yii;
 use yii\easyii\behaviors\StatusController;
@@ -288,52 +290,48 @@ class ItemsController extends Controller
                 //foreach($rowData[0] as $k=>$v)
                 //echo "Row: ".$row."- Col: ".($k+1)." = ".$v."<br />";
                 //echo  $v."<br/>";
-                $oCustomer= new Item();
-                $oCustomer->title=$fillData[0][1];
-                $oCustomer->address=$fillData[0][2];
-                $oCustomer->phone=$fillData[0][3];
-                $oCustomer->country=$fillData[0][7];
-                $oCustomer->government=$fillData[0][6];
-                $oCustomer->city=$fillData[0][5];
-                $oCustomer->district=$fillData[0][4];
-                $oCustomer->category_id=1;
-                $oCustomer->status=1;
-                //$oCustomer->title=$data[0];
-                $oCustomer->save();
 
-                if (strpos($fillData[0][8],',') !== false) {
-                    $products = explode(",", $fillData[0][8]);
-                    if (!empty($products)) {
-                        foreach ($products as $item) {
+                if($fillData[0][0]!= "customer_code") {
+                    $oCustomer = new Item();
+                    $oCustomer->title = $fillData[0][1];
+                    $oCustomer->address = $fillData[0][2];
+                    $oCustomer->phone = $fillData[0][3];
+                    //$oCustomer->country=$fillData[0][9];
+                    $oCustomer->country = 'EGY';
+                    $oCustomer->government = $fillData[0][8];
+                    $oCustomer->city = $fillData[0][5];
+                    $oCustomer->district = $fillData[0][5];
+                    $oCustomer->category_id = 1;
+                    $oCustomer->status = 1;
+                    //$oCustomer->title=$data[0];
+                    $oCustomer->save(false);
+
+                    if (strpos($fillData[0][10], ',') !== false) {
+                        $products = explode(",", $fillData[0][10]);
+                        if (!empty($products)) {
+                            foreach ($products as $item) {
+                                $oProduct = new CustomerItems();
+                                $oProduct->customer_id = $oCustomer->item_id;
+                                $oProduct->item_id = $item;
+                                $oProduct->save();
+                            }
+
+                        }
+                    } else {
+                        if ($fillData[0][8] != '') {
                             $oProduct = new CustomerItems();
                             $oProduct->customer_id = $oCustomer->item_id;
-                            $oProduct->item_id = $item;
+                            $oProduct->item_id = $fillData[0][8];
                             $oProduct->save();
                         }
-
-                    }
-                }else{
-                    if(  $fillData[0][8] != ''){
-                        $oProduct= new CustomerItems();
-                        $oProduct->customer_id=$oCustomer->item_id;
-                        $oProduct->item_id=$fillData[0][8];
-                        $oProduct->save();
                     }
                 }
-
-
-
-
-
-
-
-
 
             }
 
             unlink('uploads/csv/'.$filename);
             $this->flash('success', Yii::t('easyii/customers', 'Data Imported successfully'));
-            return $this->redirect(['/admin/customers/items/1']);
+          return $this->redirect(['/admin/customers/items/1']);
 
 
         }else{
@@ -421,6 +419,133 @@ class ItemsController extends Controller
                 return $this->redirect(['/admin/customers/items/1']);
      
      }
+
+    public function actionUploadGovernrate(){
+        $model = new XlsxFile();
+        $filecsv='';
+        if($model->load(Yii::$app->request->post())) {
+            $file = UploadedFile::getInstance($model, 'file');
+            $filename = 'Data.' . $file->extension;
+            $upload = $file->saveAs('uploads/csv/' . $filename);
+            define('CSV_PATH', 'uploads/csv/');
+            $inputFileName = CSV_PATH . $filename;
+            try {
+                $inputFileType = \PHPExcel_IOFactory::identify($inputFileName);
+                $objReader = \PHPExcel_IOFactory::createReader($inputFileType);
+                $objPHPExcel = $objReader->load($inputFileName);
+            } catch (Exception $e) {
+                die('Error loading file "' . pathinfo($inputFileName, PATHINFO_BASENAME)
+                    . '": ' . $e->getMessage());
+            }
+
+            //  Get worksheet dimensions
+            $sheet = $objPHPExcel->getSheet(0);
+            $highestRow = $sheet->getHighestRow();
+            $highestColumn = $sheet->getHighestColumn();
+            //Delet old governrates
+
+            $goverObj= new Govenment();
+            $goverObj->deleteAll();
+
+            //  Loop through each row of the worksheet in turn
+            for ($row = 1; $row <= $highestRow; $row++) {
+                //  Read a row of data into an array
+                $fillData = $sheet->rangeToArray('A' . $row . ':' . $highestColumn . $row,
+                    NULL, TRUE, FALSE);
+
+                 echo $fillData[0][0].'----'.$fillData[0][1]."<br/>";
+
+                if($fillData[0][0] != "gov_code"){
+                    $goverObj = new Govenment();
+                    $goverObj->title =$goverObj->title_ar =$fillData[0][1];
+                    $goverObj->country_code='EGY';
+                    $goverObj->government_code=$fillData[0][0];
+                    $goverObj->save();
+
+                }
+//                foreach($fillData[0] as $k=>$v)
+//                echo "Row: ".$row."- Col: ".($k+1)." = ".$v."<br />";
+//                echo  $v."<br/>";
+//                $oCustomer= new Item();
+//                $oCustomer->title=$fillData[0][1];
+//                $oCustomer->save();
+
+              }
+
+            unlink('uploads/csv/'.$filename);
+            $this->flash('success', Yii::t('easyii/customers', 'Data Imported successfully'));
+           return $this->redirect(['/admin/customers/items/1']);
+
+
+        }else{
+            return $this->render('uploadcsv',['model'=>$model ,'filecsv'=>$filecsv]);
+
+
+        }
+    }
+    public function actionUploadCities(){
+        $model = new XlsxFile();
+        $filecsv='';
+        if($model->load(Yii::$app->request->post())) {
+            $file = UploadedFile::getInstance($model, 'file');
+            $filename = 'Data.' . $file->extension;
+            $upload = $file->saveAs('uploads/csv/' . $filename);
+            define('CSV_PATH', 'uploads/csv/');
+            $inputFileName = CSV_PATH . $filename;
+            try {
+                $inputFileType = \PHPExcel_IOFactory::identify($inputFileName);
+                $objReader = \PHPExcel_IOFactory::createReader($inputFileType);
+                $objPHPExcel = $objReader->load($inputFileName);
+            } catch (Exception $e) {
+                die('Error loading file "' . pathinfo($inputFileName, PATHINFO_BASENAME)
+                    . '": ' . $e->getMessage());
+            }
+
+            //  Get worksheet dimensions
+            $sheet = $objPHPExcel->getSheet(0);
+            $highestRow = $sheet->getHighestRow();
+            $highestColumn = $sheet->getHighestColumn();
+            //Delet old governrates
+
+            $cityobj= new Cities();
+            $cityobj->deleteAll();
+
+            //  Loop through each row of the worksheet in turn
+            for ($row = 1; $row <= $highestRow; $row++) {
+                //  Read a row of data into an array
+                $fillData = $sheet->rangeToArray('A' . $row . ':' . $highestColumn . $row,
+                    NULL, TRUE, FALSE);
+
+              //  echo $fillData[0][0].'----'.$fillData[0][1].'-----'.$fillData[0][2]."<br/>";
+
+                if($fillData[0][0] != "gov_code"){
+                    $cityobj = new Cities();
+                    $cityobj->title =$cityobj->title_ar =$fillData[0][2];
+                    $cityobj->government_code=$fillData[0][0];
+                    $cityobj->id=$fillData[0][1];
+                    $cityobj->save();
+
+                }
+//                foreach($fillData[0] as $k=>$v)
+//                echo "Row: ".$row."- Col: ".($k+1)." = ".$v."<br />";
+//                echo  $v."<br/>";
+//                $oCustomer= new Item();
+//                $oCustomer->title=$fillData[0][1];
+//                $oCustomer->save();
+
+            }
+
+            unlink('uploads/csv/'.$filename);
+            $this->flash('success', Yii::t('easyii/customers', 'Data Imported successfully'));
+            return $this->redirect(['/admin/customers/items/1']);
+
+
+        }else{
+            return $this->render('uploadcsv',['model'=>$model ,'filecsv'=>$filecsv]);
+
+
+        }
+    }
     
 
 }

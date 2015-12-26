@@ -15,7 +15,16 @@ $module = $this->context->module->id;
     <li <?= ($action === 'upload-csv') ? 'class="active"' : '' ?>>
         <a href="<?= Url::to(['/admin/'.$module.'/items/upload-csv']) ?>"><?= Yii::t('easyii', 'Import Data') ?></a>
     </li>
-    
+
+
+    <li <?= ($action === 'upload-governrate') ? 'class="active"' : '' ?>>
+        <a href="<?= Url::to(['/admin/'.$module.'/items/upload-governrate']) ?>"><?= Yii::t('easyii', 'Import Governrates') ?></a>
+    </li>
+
+    <li <?= ($action === 'upload-cities') ? 'class="active"' : '' ?>>
+        <a href="<?= Url::to(['/admin/'.$module.'/items/upload-cities']) ?>"><?= Yii::t('easyii', 'Import Cities') ?></a>
+    </li>
+
       <li <?= ($action === 'delete-data') ? 'class="active"' : '' ?>>
         <a href="<?= Url::to(['/admin/'.$module.'/items/delete-data']) ?>"><?= Yii::t('easyii', 'Delete Old Data') ?></a>
     </li>
