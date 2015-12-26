@@ -61,7 +61,7 @@ $this->title = $page->seo('title', $page->model->title);
 
     <div class="container">
         <div class="row">
-            <div class="col-md-offset-1 col-md-10"><p class="text-center text-justify"><?= $page->text ;?></p></div>
+            <div class="col-md-offset-1 col-md-10 expir"><p class="text-center text-justify"><?= $page->text ;?></p></div>
             <div class="row">
             <div class="overall">
    <div class="">
@@ -316,8 +316,8 @@ $this->title = $page->seo('title', $page->model->title);
                                ?>
                                <div class="item <?= ($i == 0) ? 'active' : ''; ?>">
                                   <p><?= $item->text?></p>
-                                   <?=$item->title?><br/>
-                                   <?=$item->owner?>
+                                   <h2><?=$item->owner?></h2>
+                                   <h3><?=$item->title?></h3>
                                </div>
                                <?
                                $i++;

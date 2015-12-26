@@ -45,7 +45,8 @@ $totalreviews=  Products::reviews($item->id,1);
                         endforeach;?>
                     </div>
                     <p class="product-star">
-                        <input type="text" name="prating" value="<?= $totalreviews ;?>">
+                    <input value="<?= $totalreviews ;?>" type="number" class="rating" min=0 max=5 step=0.5 data-size="xs" readonly="readonly">
+                        
                         <?php echo Products::reviews($item->id);?>
                     </p>
                 </div>
@@ -112,7 +113,8 @@ $totalreviews=  Products::reviews($item->id,1);
     <div class="container-fluid review-bg">
         <div class="title"> <?= Products::reviews($item->id,2).' '.Yii::t('easyii','reviews')?> </div>
         <p class="product-star text-center">
-            <input type="text" name="prating" value="<?= $totalreviews ;?>">
+           
+            <input value="<?= $totalreviews ;?>" type="number" class="rating" min=0 max=5 step=0.5 data-size="xs" readonly="readonly">
           <?php    echo Products::reviews($item->id); ?>
 
         </p>

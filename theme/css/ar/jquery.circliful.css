@@ -21,23 +21,26 @@
 */
 .circle{
     background-repeat: no-repeat;
-    height:240px;
-    width:240px;
-	margin-left:4%;
+    height: 225px !important;
+     width: 200px;
+    margin:0 auto;
+    text-indent: 273px;
+    overflow: hidden;
+    text-align: center;
 }
 .circle-1{
-	background-image:  url("../images/absorption-bg.jpg");
-    background-position: 52% 80%;
+	background-image:  url("../../images/absorption-bg.jpg");
+    background-position: 50% 75%;
 }
 .circle-2{
-	background-image:  url("../images/cotton-bg.jpg");
-    background-position: 52% 89%;
+	background-image:  url("../../images/cotton-bg.jpg");
+    background-position: 50% 75%;
 }
 .circle-3{
-	background-image:  url("../images/stickiness-bg.jpg");
-    background-position: 52% 89%;
+	background-image:  url("../../images/stickiness-bg.jpg");
+    background-position: 50% 75%;
 }
 .circle-4{
-	background-image:  url("../images/fitting-bg.jpg");
-    background-position: 52% 89%;
+	background-image:  url("../../images/fitting-bg.jpg");
+    background-position: 50% 75%;
 }
