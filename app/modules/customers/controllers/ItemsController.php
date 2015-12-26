@@ -453,7 +453,7 @@ class ItemsController extends Controller
                 $fillData = $sheet->rangeToArray('A' . $row . ':' . $highestColumn . $row,
                     NULL, TRUE, FALSE);
 
-                 echo $fillData[0][0].'----'.$fillData[0][1]."<br/>";
+               //  echo $fillData[0][0].'----'.$fillData[0][1]."<br/>";
 
                 if($fillData[0][0] != "gov_code"){
                     $goverObj = new Govenment();
