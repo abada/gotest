@@ -79,7 +79,18 @@ $totalreviews=  Products::reviews($item->id,1);
                             <hr>
                             <p><?= $item->description ?></p>
                         </div>
-                    </div>
+                        <div class="clear"></div>
+                        <div class='col-md-12 alert' dir=" " style="display: none">
+                            <div class='alert alert-danger'>
+                                <a class="close" data-hide="alert">×</a>
+                                <strong>!</strong> <?= Yii::t('easyii','please add item to cart first') ?>
+
+                            </div>
+                        </div>
+
+                   </div>
+
+
                     <footer>
                         <a class="btn dry-btn-2 shopping" href="/products/online" style="line-height:normal">
                             <?= Yii::t('easyii','Continue Shopping'); ?></a>
@@ -89,7 +100,7 @@ $totalreviews=  Products::reviews($item->id,1);
 
                             $url='href="/shopcart"';
                         }else{
-                            $url='  href="javascript:void(0)"  onclick="alert(\''.Yii::t('easyii','please add item to cart first').'\')"';
+                            $url='  href="javascript:void(0)"  onclick="'."$('.alert').show()".' "';
                         }
                         ?>
                         <a class="btn dry-btn-2 pull-right" <?= $url?>>
@@ -132,3 +143,24 @@ $totalreviews=  Products::reviews($item->id,1);
     </div>
 </div>
 </div>
+
+
+<script>
+    $(function(){
+        $("[data-hide]").on("click", function(){
+            $("." + $(this).attr("data-hide")).hide();
+            /*
+             * The snippet above will hide all elements with the class specified in data-hide,
+             * i.e: data-hide="alert" will hide all elements with the alert property.
+             *
+             * Xeon06 provided an alternative solution:
+             * $(this).closest("." + $(this).attr("data-hide")).hide();
+             * Use this if are using multiple alerts with the same class since it will only find the closest element
+             *
+             * (From jquery doc: For each element in the set, get the first element that matches the selector by
+             * testing the element itself and traversing up through its ancestors in the DOM tree.)
+             */
+        });
+    });
+
+</script>
