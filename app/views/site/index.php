@@ -314,7 +314,7 @@ $this->title = $page->seo('title', $page->model->title);
                            foreach($testmonials as $item) :
 
                                ?>
-                               <div class="item <?= ($i == 0) ? 'active' : ''; ?>">
+                               <div class="item <?= ($i == 0) ? 'active' : ''; ?>" data-interval="9000">
                                   <p><?= $item->text?></p>
                                    <h2><?=$item->owner?></h2>
                                    <h3><?=$item->title?></h3>
