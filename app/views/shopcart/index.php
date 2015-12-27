@@ -89,9 +89,18 @@ $delivery= Setting::get('deliver_cost');
                     <div class="price">
                     <?//= Html::submitButton('<i class="glyphicon glyphicon-refresh"></i> Update', ['class' => 'btn btn-default pull-right']) ?>
                     <div class="clearfix"></div>
-                        <p><?= Yii::t('easyii','total price')?> <span class="pull-right"> $<?= Shopcart::cost() ?></span></p>
-                        <p> <?= Yii::t('easyii','delivery price')?> <span class="pull-right">$<?= $delivery ;?></span></p>
-                        <p> <?= Yii::t('easyii','final total Price')?> <span class="pull-right">$<?= Shopcart::cost()+$delivery ?> </span></p>
+                        <p><?= Yii::t('easyii','total price')?> <span class="pull-right">
+                                 <? if(\Yii::$app->language == 'ar') echo "ج.م" ;?>
+                                 <? if(\Yii::$app->language == 'en') echo "LE" ;?>
+                                <?= Shopcart::cost() ?></span></p>
+                        <p> <?= Yii::t('easyii','delivery price')?> <span class="pull-right">
+                                 <? if(\Yii::$app->language == 'ar') echo "ج.م" ;?>
+                                 <? if(\Yii::$app->language == 'en') echo "LE" ;?>
+                                 <?= $delivery ;?></span></p>
+                        <p> <?= Yii::t('easyii','final total Price')?> <span class="pull-right">
+                                 <? if(\Yii::$app->language == 'ar') echo "ج.م" ;?>
+                                 <? if(\Yii::$app->language == 'en') echo "LE" ;?>
+                                <?= Shopcart::cost()+$delivery ?> </span></p>
                     </div>
                 </div>
                     <?= Html::endForm()?>
