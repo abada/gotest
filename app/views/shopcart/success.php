@@ -2,6 +2,7 @@
 use yii\easyii\modules\page\api\Page;
 use yii\easyii\modules\shopcart\api\Shopcart;
 use yii\helpers\Html;
+use\yii\easyii\modules\shopcart\models\Order ;
 
 $page = Page::get('page-shopcart-success');
 $successCode=Page::get('successcode');
@@ -13,6 +14,7 @@ $pay=Page::get('paydetails');
 
 $this->title = $page->seo('title', $page->model->title);
 $this->params['breadcrumbs'][] = $page->model->title;
+
 ?>
 
     <div class="content">
@@ -21,13 +23,27 @@ $this->params['breadcrumbs'][] = $page->model->title;
     <!--<?= Yii::t('easyii','order online');?>-->
     <h2 class="title"><?= $page->text ?></h2>
     <div class="row">
-       
-        <div class="panel panel-default">
-  <div class="panel-heading"><?= $pay->title?></div>
-  <div class="panel-body">
-    <?= $pay->text ?>
-  </div>
-</div>
+
+        <?php
+
+if(Yii::$app->session->getFlash('order_id')) {
+        $sql = 'SELECT country FROM easyii_shopcart_orders where order_id='. Yii::$app->session->getFlash('order_id');
+        $order = Order::findBySql($sql)->one();
+        if($order->country != 'EGY'){
+            ?>
+            <div class="panel panel-default">
+                <div class="panel-heading"><?= $pay->title?></div>
+                <div class="panel-body">
+                    <?= $pay->text ?>
+                </div>
+            </div>
+        <?
+
+        }
+        }
+
+        ?>
+
 
 <div class="title like-title"><?= Yii::t('easyii','you may like also');?> </div>
         <div class="col-md-12">
