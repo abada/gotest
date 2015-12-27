@@ -226,7 +226,7 @@ element = $(".chartcontent").offset().top;
 
 	}
  });
- 
+
 
 </script>
 

@@ -1849,7 +1849,7 @@ ul.contact-us li p{
 	font-weight:normal;
 	padding-left:0px;
 	text-transform:lowercase;
-	display: inline-block;
+	display: inline-table;
 	}
 .contact-us .form-control{
 	box-shadow:0 none !important;
@@ -2411,4 +2411,74 @@ color:#E6209C !important;
 }
 .expir{
 font-size:1.2em;	
+}
+
+.order-online .control-label{
+display:none;	
+}
+
+
+/*CREATIVE TEAM section start here*/
+.team{}
+.team-image-sec{ position:relative;margin-bottom:10px; overflow:hidden; height:318px;}
+.team-image-sec ul{ left: 0; margin: 0; z-index:6;  position: absolute;text-align: center;  top: -100%; width: 100%; margin-top:-21px;}
+.team-image-sec ul li{ display: inline-block;margin-left: 2px;}
+.team-image-sec ul li a{ display:block; width:42px; height:42px; background:#fff; border-radius:100%; -moz-border-radius:100%; -webkit-border-radius:100%;}
+.team-image-sec ul li a i{ font-size: 20px;line-height: 44px;    color: #DC4B8D;}
+.team-detail-sec h3{ line-height: 28px; margin:0; padding:0 0 10px 0; border:0;text-align:center;text-transform:uppercase;color:#6a52b4;}
+.team-detail-sec h3 span{ color: #4C4C4C;font-size: 16px;font-style: italic;font-weight: 300;padding-top: 4px;}
+.team-detail-sec p{ margin-bottom:0;text-align:center;}
+.team-image-sec .img-overlay{ position:absolute; left:0; top:0; width:100%; height:100%; z-index:5; display:none;    background: rgba(247, 36, 132, 0.62);}
+.team-image-sec ul li a:hover{ background:#333;}
+.team-image-sec ul li a:hover i{ color:#fff}
+.team-image-sec:hover .img-overlay{ display:block;}
+.team-image-sec:hover ul, .team-image-sec ul{-moz-transition: all 500ms ease;-ms-transition: all 500ms ease;-webkit-transition: all 500ms ease;-o-transition: all 500ms ease;transition: all 500ms ease;}
+.team-image-sec, .team-image-sec img{-moz-transition: all 500ms ease;-ms-transition: all 500ms ease;-webkit-transition: all 500ms ease;-o-transition: all 500ms ease;transition: all 500ms ease; width:100%}
+.team-image-sec:hover img{max-width: 200%;width: 120%;margin-left: -30px;margin-top: -30px; -moz-transition: all 600ms ease;-webkit-transition: all 600ms ease;-ms-transition: all 600ms ease;-o-transition: all 600ms ease;transition: all 6s00ms ease;}
+.team-image-sec:hover ul{ top:50%;}
+.team.bg{ background:#f5f5f5; margin:0}
+.team.bg h1{ background:none}
+.team.bg .team-detail-sec{ padding-bottom:50px;}
+.team-detail-sec{
+margin-bottom:40px;	
+}
+.useDry{
+	background-image: url(../../images/reviews-bg.jpg);
+}
+.col-7{
+	float:left;
+	width: 14.2%;
+	text-align:center;
+	margin-top: 60px;
+	margin-bottom:50px;
+}
+.col-7 .title{
+font-size:18px;
+
+color:#000;
+    padding: 10px;
+}
+.col-7 .title strong{
+    margin-right: 20px;	
+}
+.col1{
+	background:#f9bfcf;
+}
+.col2{
+	background:#f5ed01;
+}
+.col3{
+	background:#8bd5f7;
+}
+.col4{
+	background:#53bc1c;
+}
+.col5{
+	background:#c5d904;
+}
+.col6{
+	background:#f0f4f8;
+}
+.col7{
+	background:#087ac5;
 }
