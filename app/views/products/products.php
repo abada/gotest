@@ -99,7 +99,7 @@ $ListActive =['1'=>'Sleep','2'=>'Normal','3'=>'Active',''=>'Sleep'];
                     <li role="presentation" data-toggle="portfilter" data-target="period" class="hvr-bounce-to-right">
                         <a href="javascript:void(0)"  onclick="SubmitCat('2')" class="<?php if($this->params['sliderFilters']['product_cat']==2)echo 'current'; ?>" ><?= Yii::t('easyii', 'Period Pads');?> </a></li>
                     <li role="presentation" data-toggle="portfilter" data-target="pantilinears" class="hvr-bounce-to-right">
-                        <a href="javascript:void(0)"  onclick="SubmitCat('3')" class="<?php if($this->params['sliderFilters']['product_cat']==3)echo 'current'; ?>" ><?= Yii::t('easyii', 'Daily Pantilinears');?> </a></li>
+                        <a href="javascript:void(0)"  onclick="SubmitCat('3')" class="<?php if($this->params['sliderFilters']['product_cat']==3)echo 'current'; ?>" ><?= Yii::t('easyii', 'Daily Pantiliners');?> </a></li>
                     <li role="presentation" data-toggle="portfilter" data-target="generation" class="hvr-bounce-to-right">
                         <a href="javascript:void(0)"  onclick="SubmitCat('4')" class="<?php if($this->params['sliderFilters']['product_cat']==4)echo 'current'; ?>" ><?= Yii::t('easyii', 'New Generation');?> </a></li>
                 </ul>

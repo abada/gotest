@@ -52,8 +52,8 @@ $totalreviews=  Products::reviews($item->id,1);
                 </div>
                 <div class="col-md-6">
                     <div class="title"><?= $item->title ;?></div>
-                    <a href="/stores">  <button class="btn dry-btn"> <i class="fa fa-map-marker fa-lg"></i> <?= Yii::t('easyii','where to find it')?> </button></a>
-                    <a href="/offers"><button class="btn dry-btn margin-left10"><i class="fa fa-leaf fa-lg"></i> <?= Yii::t('easyii','get the offer')?></button></a>
+                    <a href="<?php echo Yii::$app->getUrlManager()->getBaseUrl()?>/stores" class="details-btn">  <button class="btn dry-btn"> <i class="fa fa-map-marker fa-lg"></i> <?= Yii::t('easyii','where to find it')?> </button></a>
+                    <a href="<?php echo Yii::$app->getUrlManager()->getBaseUrl()?>/products/offers" class="details-btn"><button class="btn dry-btn margin-left10"><i class="fa fa-leaf fa-lg"></i> <?= Yii::t('easyii','get the offer')?></button></a>
 
                     <p class="margin-top20"><?= $item->description ;?></p>
                     <ul class="product-details margin-top30">
@@ -101,6 +101,7 @@ $totalreviews=  Products::reviews($item->id,1);
                 </div>
             </div>
             <div class="col-md-6 col-md-offset-1">
+               <div class="videotitle">video title lipsum</div>
                <?php echo $item->video_text?>
                <a href="#" class="btn btn-video" data-toggle="modal" data-target="#youtube" >
                    <?= Yii::t('easyii','Watch Now')?></a>
@@ -225,31 +226,31 @@ $totalreviews=  Products::reviews($item->id,1);
         </div>
         <div class="col-7 fadeIn wow">
         	<img src="<?php echo Yii::$app->getUrlManager()->getBaseUrl()?>/theme/images/drygo/go1.jpg" />
-            <div class="title col1"><strong>S</strong><span>65-75 CM</span></div>
+            <a href="" class="title col1"><strong>S</strong><span>65-75 CM</span></a>
         </div>
         <div class="col-7 fadeIn wow">
         	<img src="<?php echo Yii::$app->getUrlManager()->getBaseUrl()?>/theme/images/drygo/go1.jpg" />
-            <div class="title col2"><strong>M</strong><span>75-85 CM</span></div>
+            <a href=""  class="title col2"><strong>M</strong><span>75-85 CM</span></a>
         </div>
         <div class="col-7 fadeIn wow">
         	<img src="<?php echo Yii::$app->getUrlManager()->getBaseUrl()?>/theme/images/drygo/go1.jpg" />
-            <div class="title col3"><strong>L</strong><span>85-95 CM</span></div>
+            <a href=""  class="title col3"><strong>L</strong><span>85-95 CM</span></a>
         </div>
         <div class="col-7 fadeIn wow">
         	<img src="<?php echo Yii::$app->getUrlManager()->getBaseUrl()?>/theme/images/drygo/go1.jpg" />
-            <div class="title col4"><strong>XL</strong><span>95-105 CM</span></div>
+            <a href=""  class="title col4"><strong>XL</strong><span>95-105 CM</span></a>
         </div>
         <div class="col-7 fadeIn wow">
         	<img src="<?php echo Yii::$app->getUrlManager()->getBaseUrl()?>/theme/images/drygo/go1.jpg" />
-            <div class="title col5"><strong>XXL</strong><span>105-115 CM</span></div>
+            <a href=""  class="title col5"><strong>XXL</strong><span>105-115 CM</span></a>
         </div>
         <div class="col-7 fadeIn wow">
         	<img src="<?php echo Yii::$app->getUrlManager()->getBaseUrl()?>/theme/images/drygo/go1.jpg" />
-            <div class="title col6"><strong>3XL</strong><span>115-125 CM</span></div>
+            <a href=""  class="title col6"><strong>3XL</strong><span>115-125 CM</span></a>
         </div>
         <div class="col-7 fadeIn wow">
         	<img src="<?php echo Yii::$app->getUrlManager()->getBaseUrl()?>/theme/images/drygo/go1.jpg" />
-            <div class="title col7"><strong>4XL</strong><span>125-135 CM</span></div>
+            <a href=""  class="title col7"><strong>4XL</strong><span>125-135 CM</span></a>
         </div>
         
     </div>

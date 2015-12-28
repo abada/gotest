@@ -44,7 +44,7 @@ use yii\widgets\ActiveForm;
         <h1> <?= Yii::t('easyii', 'request awareness program') ?></h1>
 
         <?php if($Saved) : ?>
-            <h4 class="text-success"><i class="glyphicon glyphicon-ok"></i> <?= Yii::t('easyii', 'Message successfully sent')?> </h4>
+            <h4 class="alert alert-warning col-md-4 col-md-offset-4"><i class="glyphicon glyphicon-ok"></i> <?= Yii::t('easyii', 'Message successfully sent')?> </h4>
         <?php else : ?>
    <?php
             $form = ActiveForm::begin([

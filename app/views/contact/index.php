@@ -44,7 +44,8 @@ $this->params['breadcrumbs'][] = $page->model->title;
                 <div class="col-sm-4 col-sm-offset-1 order-online">
 
                     <?php if($Saved) : ?>
-                        <h4 class="text-success"><i class="glyphicon glyphicon-ok"></i> <?= Yii::t('easyii', 'Message successfully sent')?></h4>
+                    <div class="well"><h4 class="text-success"><i class="glyphicon glyphicon-ok"></i> <?= Yii::t('easyii', 'Message successfully sent')?></h4></div>
+                        
                     <?php else :
 
                         $form = ActiveForm::begin([
