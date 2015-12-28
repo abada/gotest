@@ -14,7 +14,7 @@ $ListActive =['1'=>'Sleep','2'=>'Normal','3'=>'Active',''=>'Sleep'];
 //var_dump($this->params['sliderFilters']);
 //echo $sliderFilters['absorptionrate'].'dd';die;
 
-var_dump($sliderFilters);
+//var_dump($sliderFilters);
 ?>
         <div class="container-fluid">
             <div class="row">
