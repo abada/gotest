@@ -355,14 +355,8 @@ if(Yii::$app->session->getFlash('success') != ''){
                             <?= $review->date?>
                             </span></p>
                         <p class="product-star testimon">
-                            <?php
-                            for($i=0;$i<$review->no_of_review;$i++){
-                                ?>
-                                <img src="<?php echo Yii::$app->getUrlManager()->getBaseUrl()?>/theme/images/product-stars.png" class="star-img">
-                                <?
+                               <input value="<?= $review->no_of_review ;?>" type="number" class="rating" min=0 max=5 step=0.5 data-size="xs" readonly="readonly">
 
-                            }
-                            ?>
 
                         </p>
                         <h3><?= $review->title?></h3>
