@@ -8,12 +8,12 @@ use webvimark\behaviors\multilanguage\input_widget;
     'options' => ['enctype' => 'multipart/form-data', 'class' => 'model-form']
 ]); ?>
 <?php if($model->image) : ?>
-    <img src="<?= $model->image ?>" style="width: 350px">
+    <img src="<?= $model->image ?>" style="width: 200px">
 <?php endif; ?>
 <?= $form->field($model, 'image')->fileInput() ?>
 
 <?php if($model->image_ar) : ?>
-    <img src="<?= $model->image_ar ?>" style="width: 350px">
+    <img src="<?= $model->image_ar ?>" style="width: 200px">
 <?php endif; ?>
 <?= $form->field($model, 'image_ar')->fileInput() ?>
 <?//= $form->field($model, 'link') ?>

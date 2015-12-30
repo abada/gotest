@@ -139,8 +139,8 @@ $totalreviews=  Products::reviews($item->id,1);
                             </ul>
                         </div>
                         <div class="team-detail-sec">
-                            <h3>travel</h3>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.  of Quisque ultricies vestibulum molestie.  Graphic Design the power of Suspendisse potenti.</p>
+                            <h3><?= $data->title ?></h3>
+                            <p><?= $data->text ?></p>
                         </div>
                         <!-- END TEAM -->
                     </div>
@@ -152,14 +152,18 @@ $totalreviews=  Products::reviews($item->id,1);
                 
     </div>
 	</div>
+        <?php
+        $waistPage = Page::get('waist-guid');
 
+        ?>
 
     <div class="container-fluid">
 	<div class="container">
-    	<div class="title">Waist guide</div>
+    	<div class="title"><?=$waistPage->title ?></div>
         <div class="col-md-offset-1 col-md-10 expir text-center">
-        	<p>Choose the sizethat suits your waist from 7 different sizes fit all weights and ages use the color guide speciallized for waist size to deterimin the suitable color for you</p>
+            <?=$waistPage->text ?>
         </div>
+        `
         <div class="col-7 fadeIn wow">
         	<img src="<?php echo Yii::$app->getUrlManager()->getBaseUrl()?>/theme/images/drygo/go1.jpg" />
             <a href="" class="title col1"><strong>S</strong><span>65-75 CM</span></a>
