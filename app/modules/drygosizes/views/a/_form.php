@@ -18,7 +18,7 @@ use webvimark\behaviors\multilanguage\input_widget;
 <?= $form->field($model, 'image_ar')->fileInput() ?>
 <?//= $form->field($model, 'link') ?>
 <?php if($this->context->module->settings['enableTitle']) : ?>
-    <?= $form->field($model, 'title')    ?>
+    <?= $form->field($model, 'title')->widget(\webvimark\behaviors\multilanguage\input_widget\MultiLanguageActiveField::className()) ?>
 <?php endif; ?>
 <?php if($this->context->module->settings['enableText']) : ?>
     <?= $form->field($model, 'text')->textarea()->widget(input_widget\MultiLanguageActiveField::className(),['inputType'=>'textArea', 'inputOptions'=>[
