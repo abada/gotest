@@ -3,6 +3,8 @@
 <script type="text/javascript">stLight.options({publisher: "2222d12e-5607-475a-b5d7-2ba1c0a2c5c0", doNotHash: false, doNotCopy: false, hashAddressBar: false});</script>
 
 <?php
+echo $item->analytic_code ;
+
 use app\models\AddToCartForm;
 use yii\easyii\modules\catalog\api\Catalog;
 use yii\helpers\Html;
@@ -93,6 +95,8 @@ $totalreviews=  Products::reviews($item->id,1);
             </div>
         </div>
     </div>
+
+    <?php if($item->video != ''){?>
     <div class="container">
         <div class="row margin-top30 video-title">
             <div class="col-md-4">
@@ -109,6 +113,8 @@ $totalreviews=  Products::reviews($item->id,1);
             </div>
         </div>
     </div>
+    <?php }?>
+
     <div class="container-fluid useDry">
 	<div class="container">
     	<div class="title">uses for dry go</div>

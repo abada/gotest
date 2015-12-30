@@ -14,7 +14,7 @@ class Page extends \yii\easyii\components\ActiveRecord
     public function rules()
     {
         return [
-            ['title', 'required'],
+           // ['title', 'required'],
             ['owner', 'required'],
             ['homepage','safe'],
             [['title', 'text'], 'trim'],
