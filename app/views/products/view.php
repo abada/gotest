@@ -117,6 +117,12 @@ $totalreviews=  Products::reviews($item->id,1);
 
 
 
+    <?php
+
+    $a = array(17, 18 ,19,20,21,22,23,24,25,26,27);
+
+    if (in_array($item->item_id, $a, true)) {
+        ?>
 
     <div class="container-fluid useDry">
 	   <div class="container">
@@ -209,6 +215,10 @@ $totalreviews=  Products::reviews($item->id,1);
         
     </div>
     </div>
+    <? }?>
+
+
+
     <div class="container-fluid review-bg">
         <div class="title"> <?= Products::reviews($item->id,2).' '.Yii::t('easyii','reviews')?> </div>
         <p class="product-star text-center">
