@@ -166,32 +166,45 @@ $totalreviews=  Products::reviews($item->id,1);
         </div>
         `
         <div class="col-7 fadeIn wow">
-        	<img src="<?php echo Yii::$app->getUrlManager()->getBaseUrl()?>/theme/images/drygo/go1.jpg" />
-            <a href="" class="title col1"><strong>S</strong><span>65-75 CM</span></a>
+            <?php $size = \app\modules\drygosizes\models\Carousel::find(1)->one(); ?>
+
+        	<img src="<?php echo (\Yii::$app->language == "en")? $size->image: $size->image_ar ;?>" />
+            <a href="" class="title col1"><?= $size->title ?></a>
         </div>
         <div class="col-7 fadeIn wow">
-        	<img src="<?php echo Yii::$app->getUrlManager()->getBaseUrl()?>/theme/images/drygo/go1.jpg" />
-            <a href=""  class="title col2"><strong>M</strong><span>75-85 CM</span></a>
+            <?php $size = \app\modules\drygosizes\models\Carousel::find(2)->one(); ?>
+
+            <img src="<?php echo (\Yii::$app->language == "en")? $size->image: $size->image_ar ;?>" />
+            <a href=""  class="title col2"><?= $size->title ?></a>
         </div>
         <div class="col-7 fadeIn wow">
-        	<img src="<?php echo Yii::$app->getUrlManager()->getBaseUrl()?>/theme/images/drygo/go1.jpg" />
-            <a href=""  class="title col3"><strong>L</strong><span>85-95 CM</span></a>
+            <?php $size = \app\modules\drygosizes\models\Carousel::find(3)->one(); ?>
+
+            <img src="<?php echo (\Yii::$app->language == "en")? $size->image: $size->image_ar ;?>" />
+            <a href=""  class="title col3"><?= $size->title ?></a>
         </div>
         <div class="col-7 fadeIn wow">
-        	<img src="<?php echo Yii::$app->getUrlManager()->getBaseUrl()?>/theme/images/drygo/go1.jpg" />
-            <a href=""  class="title col4"><strong>XL</strong><span>95-105 CM</span></a>
+            <?php $size = \app\modules\drygosizes\models\Carousel::find(4)->one(); ?>
+
+            <img src="<?php echo (\Yii::$app->language == "en")? $size->image: $size->image_ar ;?>" />
+            <a href=""  class="title col4"><?= $size->title ?></a>
         </div>
         <div class="col-7 fadeIn wow">
-        	<img src="<?php echo Yii::$app->getUrlManager()->getBaseUrl()?>/theme/images/drygo/go1.jpg" />
-            <a href=""  class="title col5"><strong>XXL</strong><span>105-115 CM</span></a>
+            <?php $size = \app\modules\drygosizes\models\Carousel::find(5)->one(); ?>
+            <img src="<?php echo (\Yii::$app->language == "en")? $size->image: $size->image_ar ;?>" />
+            <a href=""  class="title col5"><?= $size->title ?></a>
         </div>
         <div class="col-7 fadeIn wow">
-        	<img src="<?php echo Yii::$app->getUrlManager()->getBaseUrl()?>/theme/images/drygo/go1.jpg" />
-            <a href=""  class="title col6"><strong>3XL</strong><span>115-125 CM</span></a>
+            <?php $size = \app\modules\drygosizes\models\Carousel::find(6)->one(); ?>
+
+            <img src="<?php echo (\Yii::$app->language == "en")? $size->image: $size->image_ar ;?>" />
+            <a href=""  class="title col6"><?= $size->title ?></a>
         </div>
         <div class="col-7 fadeIn wow">
-        	<img src="<?php echo Yii::$app->getUrlManager()->getBaseUrl()?>/theme/images/drygo/go1.jpg" />
-            <a href=""  class="title col7"><strong>4XL</strong><span>125-135 CM</span></a>
+            <?php $size = \app\modules\drygosizes\models\Carousel::find(7)->one(); ?>
+
+            <img src="<?php echo (\Yii::$app->language == "en")? $size->image: $size->image_ar ;?>" />
+            <a href=""  class="title col7"><?= $size->title ?></a>
         </div>
         
     </div>
