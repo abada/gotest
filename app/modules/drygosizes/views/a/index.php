@@ -17,6 +17,7 @@ $module = $this->context->module->id;
                 <?php if(IS_ROOT) : ?>
                     <th width="50">#</th>
                 <?php endif; ?>
+                <th><?= Yii::t('easyii', 'Title') ?></th>
                 <th><?= Yii::t('easyii', 'Image') ?></th>
                 <th><?= Yii::t('easyii', 'Arabic Image') ?></th>
                 <th width="100"><?= Yii::t('easyii', 'Status') ?></th>
@@ -29,6 +30,8 @@ $module = $this->context->module->id;
                 <?php if(IS_ROOT) : ?>
                     <td><?= $item->primaryKey ?></td>
                 <?php endif; ?>
+                <td> <?= $item->title?></td>
+
                 <td><a href="<?= Url::to(['/admin/'.$module.'/a/edit', 'id' => $item->primaryKey]) ?>">
                         <img src="<?= $item->image ?>" style="width: 100px;"></a>
                 </td>
