@@ -34,11 +34,11 @@ $module = $this->context->module->id;
 
 
                 <td><a href="<?= Url::to(['/admin/'.$module.'/a/edit', 'id' => $item->primaryKey]) ?>">
-                        <img src="<?= $item->image ?>" style="width: 300px;"></a>
+                        <img src="<?= $item->image ?>" style="width: 150px;"></a>
                 </td>
 
                 <td><a href="<?= Url::to(['/admin/'.$module.'/a/edit', 'id' => $item->primaryKey]) ?>">
-                        <img src="<?= $item->image_ar ?>" style="width: 300px;"></a>
+                        <img src="<?= $item->image_ar ?>" style="width: 150px;"></a>
                 </td>
 
                 <td class="status vtop">
