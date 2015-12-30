@@ -115,115 +115,45 @@ $totalreviews=  Products::reviews($item->id,1);
     </div>
     <?php }?>
 
+
+
+
     <div class="container-fluid useDry">
-	<div class="container">
+	   <div class="container">
     	<div class="title">uses for dry go</div>
-    			<div class="col-md-4 bounceIn wow">
-                	<!-- BEGIN TEAM -->
-                    <div class="team-image-sec">
-                        <div class="img-overlay"></div>
-                        <figure><img title="Image" alt="image" src="<?php echo Yii::$app->getUrlManager()->getBaseUrl()?>/theme/images/drygo/1.jpg"></figure>
-                        <ul>
-                            <li><a href="#."><i class="fa fa-google-plus"></i></a></li>
-                            <li><a href="#."><i class="fa fa-twitter"></i></a></li>
-                            <li><a href="#."><i class="fa fa-facebook"></i></a></li>
-                        </ul>
-                   </div>
-                    <div class="team-detail-sec">
-                        <h3>travel</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.  of Quisque ultricies vestibulum molestie.  Graphic Design the power of Suspendisse potenti.</p>
+    			<?php
+                $listData = \app\modules\drygomoduleupdated\api\Carousel::itemlist(1306,460);
+
+                foreach ($listData as $data){
+                    ?>
+
+                    <div class="col-md-4 bounceIn wow">
+                        <!-- BEGIN TEAM -->
+                        <div class="team-image-sec">
+                            <div class="img-overlay"></div>
+                            <figure><img title="Image" alt="image" src="<?php echo Yii::$app->getUrlManager()->getBaseUrl()?>/theme/images/drygo/1.jpg"></figure>
+                            <ul>
+                                <li><a href="#."><i class="fa fa-google-plus"></i></a></li>
+                                <li><a href="#."><i class="fa fa-twitter"></i></a></li>
+                                <li><a href="#."><i class="fa fa-facebook"></i></a></li>
+                            </ul>
+                        </div>
+                        <div class="team-detail-sec">
+                            <h3>travel</h3>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.  of Quisque ultricies vestibulum molestie.  Graphic Design the power of Suspendisse potenti.</p>
+                        </div>
+                        <!-- END TEAM -->
                     </div>
-                	<!-- END TEAM -->
-                </div>
-                <div class="col-md-4 bounceIn wow" data-delay="400">
-                	<!-- BEGIN TEAM -->
-                    <div class="team-image-sec">
-                        <div class="img-overlay"></div>
-                        <figure><img title="Image" alt="image" src="<?php echo Yii::$app->getUrlManager()->getBaseUrl()?>/theme/images/drygo/2.jpg"></figure>
-                        <ul>
-                            <li><a href="#."><i class="fa fa-google-plus"></i></a></li>
-                            <li><a href="#."><i class="fa fa-twitter"></i></a></li>
-                            <li><a href="#."><i class="fa fa-facebook"></i></a></li>
-                        </ul>
-                   </div>
-                    <div class="team-detail-sec">
-                        <h3>travel</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.  of Quisque ultricies vestibulum molestie.  Graphic Design the power of Suspendisse potenti.</p>
-                    </div>
-                	<!-- END TEAM -->
-                </div>
-                <div class="col-md-4 bounceIn wow" data-delay="900">
-                	<!-- BEGIN TEAM -->
-                    <div class="team-image-sec">
-                        <div class="img-overlay"></div>
-                        <figure><img title="Image" alt="image" src="<?php echo Yii::$app->getUrlManager()->getBaseUrl()?>/theme/images/drygo/3.jpg"></figure>
-                        <ul>
-                            <li><a href="#."><i class="fa fa-google-plus"></i></a></li>
-                            <li><a href="#."><i class="fa fa-twitter"></i></a></li>
-                            <li><a href="#."><i class="fa fa-facebook"></i></a></li>
-                        </ul>
-                   </div>
-                    <div class="team-detail-sec">
-                        <h3>travel</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.  of Quisque ultricies vestibulum molestie.  Graphic Design the power of Suspendisse potenti.</p>
-                    </div>
-                	<!-- END TEAM -->
-                </div>
-                <div class="col-md-4 bounceIn wow" data-delay="100">
-                	<!-- BEGIN TEAM -->
-                    <div class="team-image-sec">
-                        <div class="img-overlay"></div>
-                        <figure><img title="Image" alt="image" src="<?php echo Yii::$app->getUrlManager()->getBaseUrl()?>/theme/images/drygo/4.jpg"></figure>
-                        <ul>
-                            <li><a href="#."><i class="fa fa-google-plus"></i></a></li>
-                            <li><a href="#."><i class="fa fa-twitter"></i></a></li>
-                            <li><a href="#."><i class="fa fa-facebook"></i></a></li>
-                        </ul>
-                   </div>
-                    <div class="team-detail-sec">
-                        <h3>travel</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.  of Quisque ultricies vestibulum molestie.  Graphic Design the power of Suspendisse potenti.</p>
-                    </div>
-                	<!-- END TEAM -->
-                </div>
-                <div class="col-md-4 bounceIn wow" data-delay="400">
-                	<!-- BEGIN TEAM -->
-                    <div class="team-image-sec">
-                        <div class="img-overlay"></div>
-                        <figure><img title="Image" alt="image" src="<?php echo Yii::$app->getUrlManager()->getBaseUrl()?>/theme/images/drygo/5.jpg"></figure>
-                        <ul>
-                            <li><a href="#."><i class="fa fa-google-plus"></i></a></li>
-                            <li><a href="#."><i class="fa fa-twitter"></i></a></li>
-                            <li><a href="#."><i class="fa fa-facebook"></i></a></li>
-                        </ul>
-                   </div>
-                    <div class="team-detail-sec">
-                        <h3>travel</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.  of Quisque ultricies vestibulum molestie.  Graphic Design the power of Suspendisse potenti.</p>
-                    </div>
-                	<!-- END TEAM -->
-                </div>
-                <div class="col-md-4 bounceIn wow" data-delay="900">
-                	<!-- BEGIN TEAM -->
-                    <div class="team-image-sec">
-                        <div class="img-overlay"></div>
-                        <figure><img title="Image" alt="image" src="<?php echo Yii::$app->getUrlManager()->getBaseUrl()?>/theme/images/drygo/6.jpg"></figure>
-                        <ul>
-                            <li><a href="#."><i class="fa fa-google-plus"></i></a></li>
-                            <li><a href="#."><i class="fa fa-twitter"></i></a></li>
-                            <li><a href="#."><i class="fa fa-facebook"></i></a></li>
-                        </ul>
-                   </div>
-                    <div class="team-detail-sec">
-                        <h3>travel</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.  of Quisque ultricies vestibulum molestie.  Graphic Design the power of Suspendisse potenti.</p>
-                    </div>
-                	<!-- END TEAM -->
-                </div>
+                <?
+
+                }
+                ?>
                 
                 
     </div>
 	</div>
+
+
     <div class="container-fluid">
 	<div class="container">
     	<div class="title">Waist guide</div>
