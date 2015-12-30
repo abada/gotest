@@ -166,42 +166,42 @@ $totalreviews=  Products::reviews($item->id,1);
         </div>
         `
         <div class="col-7 fadeIn wow">
-            <?php $size = \app\modules\drygosizes\models\Carousel::find()->where(['id' => 1])->one(); ?>
+            <?php $size = \app\modules\drygosizes\models\Carousel::find()->where(['carousel_id' => 1])->one(); ?>
 
         	<img src="<?php echo (\Yii::$app->language == "en")? $size->image: $size->image_ar ;?>" />
             <a href="" class="title col1"><?= $size->title ?></a>
         </div>
         <div class="col-7 fadeIn wow">
-            <?php $size = \app\modules\drygosizes\models\Carousel::find()->where(['id' => 2])->one(); ?>
+            <?php $size = \app\modules\drygosizes\models\Carousel::find()->where(['carousel_id' => 2])->one(); ?>
 
             <img src="<?php echo (\Yii::$app->language == "en")? $size->image: $size->image_ar ;?>" />
             <a href=""  class="title col2"><?= $size->title ?></a>
         </div>
         <div class="col-7 fadeIn wow">
-            <?php $size = \app\modules\drygosizes\models\Carousel::find()->where(['id' => 3])->one(); ?>
+            <?php $size = \app\modules\drygosizes\models\Carousel::find()->where(['carousel_id' => 3])->one(); ?>
 
             <img src="<?php echo (\Yii::$app->language == "en")? $size->image: $size->image_ar ;?>" />
             <a href=""  class="title col3"><?= $size->title ?></a>
         </div>
         <div class="col-7 fadeIn wow">
-            <?php $size = \app\modules\drygosizes\models\Carousel::find()->where(['id' => 4])->one(); ?>
+            <?php $size = \app\modules\drygosizes\models\Carousel::find()->where(['carousel_id' => 4])->one(); ?>
 
             <img src="<?php echo (\Yii::$app->language == "en")? $size->image: $size->image_ar ;?>" />
             <a href=""  class="title col4"><?= $size->title ?></a>
         </div>
         <div class="col-7 fadeIn wow">
-            <?php $size = \app\modules\drygosizes\models\Carousel::find()->where(['id' => 5])->one(); ?>
+            <?php $size = \app\modules\drygosizes\models\Carousel::find()->where(['carousel_id' => 5])->one(); ?>
             <img src="<?php echo (\Yii::$app->language == "en")? $size->image: $size->image_ar ;?>" />
             <a href=""  class="title col5"><?= $size->title ?></a>
         </div>
         <div class="col-7 fadeIn wow">
-            <?php $size = \app\modules\drygosizes\models\Carousel::find()->where(['id' => 6])->one(); ?>
+            <?php $size = \app\modules\drygosizes\models\Carousel::find()->where(['carousel_id' => 6])->one(); ?>
 
             <img src="<?php echo (\Yii::$app->language == "en")? $size->image: $size->image_ar ;?>" />
             <a href=""  class="title col6"><?= $size->title ?></a>
         </div>
         <div class="col-7 fadeIn wow">
-            <?php $size7 = \app\modules\drygosizes\models\Carousel::find()->where(['id' => 7])->one(); ?>
+            <?php $size7 = \app\modules\drygosizes\models\Carousel::find()->where(['carousel_id' => 7])->one(); ?>
 
             <img src="<?php echo (\Yii::$app->language == "en")? $size7->image: $size7->image_ar ;?>" />
             <a href=""  class="title col7"><?= $size7->title ?></a>
