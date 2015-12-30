@@ -201,10 +201,10 @@ $totalreviews=  Products::reviews($item->id,1);
             <a href=""  class="title col6"><?= $size->title ?></a>
         </div>
         <div class="col-7 fadeIn wow">
-            <?php $size = \app\modules\drygosizes\models\Carousel::find(7)->one(); ?>
+            <?php $size7 = \app\modules\drygosizes\models\Carousel::find(7)->one(); ?>
 
-            <img src="<?php echo (\Yii::$app->language == "en")? $size->image: $size->image_ar ;?>" />
-            <a href=""  class="title col7"><?= $size->title ?></a>
+            <img src="<?php echo (\Yii::$app->language == "en")? $size7->image: $size7->image_ar ;?>" />
+            <a href=""  class="title col7"><?= $size7->title ?></a>
         </div>
         
     </div>
