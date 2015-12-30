@@ -122,7 +122,7 @@ $totalreviews=  Products::reviews($item->id,1);
 	   <div class="container">
     	<div class="title">uses for dry go</div>
     			<?php
-                $listData = \app\modules\drygomoduleupdated\api\Carousel::itemlist(1306,460);
+                $listData = \app\modules\drygomoduleupdated\models\Carousel::find()->all();
 
                 foreach ($listData as $data){
                     ?>
@@ -131,7 +131,8 @@ $totalreviews=  Products::reviews($item->id,1);
                         <!-- BEGIN TEAM -->
                         <div class="team-image-sec">
                             <div class="img-overlay"></div>
-                            <figure><img title="Image" alt="image" src="<?php echo Yii::$app->getUrlManager()->getBaseUrl()?>/theme/images/drygo/1.jpg"></figure>
+                            <figure>
+                                <img title="Image" alt="image" src="<?php echo $data->image?>"></figure>
                             <ul>
                                 <li><a href="#."><i class="fa fa-google-plus"></i></a></li>
                                 <li><a href="#."><i class="fa fa-twitter"></i></a></li>
