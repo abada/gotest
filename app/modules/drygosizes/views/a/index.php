@@ -30,11 +30,11 @@ $module = $this->context->module->id;
                     <td><?= $item->primaryKey ?></td>
                 <?php endif; ?>
                 <td><a href="<?= Url::to(['/admin/'.$module.'/a/edit', 'id' => $item->primaryKey]) ?>">
-                        <img src="<?= $item->image ?>" style="width: 300px;"></a>
+                        <img src="<?= $item->image ?>" style="width: 100px;"></a>
                 </td>
 
                 <td><a href="<?= Url::to(['/admin/'.$module.'/a/edit', 'id' => $item->primaryKey]) ?>">
-                        <img src="<?= $item->image_ar ?>" style="width: 300px;"></a>
+                        <img src="<?= $item->image_ar ?>" style="width: 100px;"></a>
                 </td>
 
                 <td class="status vtop">
