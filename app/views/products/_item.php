@@ -17,7 +17,7 @@
     <div class="product-name"><?= $item->title ?></div>
     <?php if($item->no_of_drops == ''){$no=1;}else{$no=$item->no_of_drops ;}?>
 
-     <img class="center-block img-responsive" src="<?php echo Yii::$app->getUrlManager()->getBaseUrl()."/theme/images/drops/".$no.".png" ;?>">
+     <img class="center-block img-responsive dropsimg" src="<?php echo Yii::$app->getUrlManager()->getBaseUrl()."/theme/images/drops/".$no.".png" ;?>">
 
 
 	
