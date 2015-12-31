@@ -67,7 +67,7 @@ class ProductsController extends \yii\web\Controller
         ]);
     }
 
-    public function actionView($slug=null)
+    public function actionView($slug=null,$drygo=null)
     {
         $oReview = new \app\modules\reviews\models\News();
         $oReview->time = time();
@@ -80,7 +80,15 @@ class ProductsController extends \yii\web\Controller
             $this->view->params['metatitle'] = $item->title;
             $this->view->params['metaimage'] = "http://".$_SERVER['SERVER_NAME'].'/'.$item->image;
             $this->view->params['metadesc'] =strip_tags($item->description);
-
+        //if for drygo item share
+        if($drygo != ''){
+            $dryGoData=\app\modules\drygomoduleupdated\models\Carousel::find('carousel_id='.$drygo)->one();
+            if($dryGoData){
+                $this->view->params['metatitle'] = $dryGoData->title;
+                $this->view->params['metaimage'] = "http://".$_SERVER['SERVER_NAME'].'/'.$dryGoData->image;
+                $this->view->params['metadesc'] = $dryGoData->text;
+            }
+        }
 
         if ($oReview->load(Yii::$app->request->post())) {
             $oReview->product_id=$item->id;
@@ -99,7 +107,7 @@ class ProductsController extends \yii\web\Controller
 
                 }
                 else{
-                    var_dump($oReview->formatErrors());
+                   // var_dump($oReview->formatErrors());
                     return $this->refresh();
                 }
             }
@@ -148,7 +156,6 @@ class ProductsController extends \yii\web\Controller
         }
 
 
-
         $reviews= News::items(['tags' => '','pagination' => ['pageSize' => 5]],"product_id = ".$item->id);
         $count=0;
         foreach($reviews as $review){
@@ -156,7 +163,11 @@ class ProductsController extends \yii\web\Controller
         }
 
 
-        $avg_rate = count($reviews) / $count;
+       if($count >0 ){
+           $avg_rate = count($reviews) / $count;
+       }else{
+           $avg_rate =0;
+       }
         $avg_rate = round($avg_rate);
         //var_dump($reviews);die;
         return $this->render('view', [

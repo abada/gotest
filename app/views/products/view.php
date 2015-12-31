@@ -129,9 +129,9 @@ $totalreviews=  Products::reviews($item->id,1);
     	<div class="title">uses for dry go</div>
     			<?php
                 $listData = \app\modules\drygomoduleupdated\models\Carousel::find()->all();
-
                 foreach ($listData as $data){
-                    ?>
+                $itemdataUrl=Url::to(['products/view'], true).'/?slug='.$item->slug .'&drygo='.$data->carousel_id;
+                   ?>
 
                     <div class="col-md-4 bounceIn wow">
                         <!-- BEGIN TEAM -->
@@ -140,9 +140,12 @@ $totalreviews=  Products::reviews($item->id,1);
                             <figure>
                                 <img title="Image" alt="image" src="<?php echo (\Yii::$app->language == "en")? $data->image: $data->image_ar ;?>"></figure>
                             <ul>
-                                <li><a href="#."><i class="fa fa-google-plus"></i></a></li>
-                                <li><a href="#."><i class="fa fa-twitter"></i></a></li>
-                                <li><a href="#."><i class="fa fa-facebook"></i></a></li>
+
+                                <li> <span class='st_facebook_large' displayText='' st_url="<?= $itemdataUrl ;?>" st_title="<?= $data->title?>" ></span></li>
+                                <li>  <span class='st_twitter_large' displayText='' st_url="<?= $itemdataUrl ;?>" st_title="<?= $data->title?>"></span></li>
+                                <li><span class='st_googleplus_large' displayText='' st_url="<?= $itemdataUrl ;?>" st_title="<?= $data->title?>"></span></li>
+
+
                             </ul>
                         </div>
                         <div class="team-detail-sec">
