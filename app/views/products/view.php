@@ -141,12 +141,17 @@ $totalreviews=  Products::reviews($item->id,1);
                                 <img title="Image" alt="image" src="<?php echo (\Yii::$app->language == "en")? $data->image: $data->image_ar ;?>"></figure>
                             <ul>
 
-                                <li> <span class='st_facebook_large' displayText='' st_url="<?= $itemdataUrl ;?>" st_title="<?= $data->title?>" ></span></li>
-                                <li>  <span class='st_twitter_large' displayText='' st_url="<?= $itemdataUrl ;?>" st_title="<?= $data->title?>"></span></li>
-                                <li><span class='st_googleplus_large' displayText='' st_url="<?= $itemdataUrl ;?>" st_title="<?= $data->title?>"></span></li>
+                                <li> <span class='st_facebook_large fa' displayText='' st_url="<?= $itemdataUrl ;?>" st_title="<?= $data->title?>" ></span></li>
+                                <li>  <span class='st_twitter_large fa'  displayText='' st_url="<?= $itemdataUrl ;?>" st_title="<?= $data->title?>"></span></li>
+                                <li><span class='st_googleplus_large fa' displayText='' st_url="<?= $itemdataUrl ;?>" st_title="<?= $data->title?>"></span></li>
+                             </ul>
 
+<!--                            <ul>-->
+<!--                                <li><a href="#."><i class="fa fa-google-plus"></i></a></li>-->
+<!--                                <li><a href="#."><i class="fa fa-twitter"></i></a></li>-->
+<!--                                <li><a href="#."><i class="fa fa-facebook"></i></a></li>-->
+<!--                            </ul>-->
 
-                            </ul>
                         </div>
                         <div class="team-detail-sec">
                             <h3><?= $data->title ?></h3>
