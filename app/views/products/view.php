@@ -105,7 +105,7 @@ $totalreviews=  Products::reviews($item->id,1);
                 </div>
             </div>
             <div class="col-md-6 col-md-offset-1">
-               <div class="videotitle">video title lipsum</div>
+<!--               <div class="videotitle">video title lipsum</div>-->
                <?php echo $item->video_text?>
                <a href="#" class="btn btn-video" data-toggle="modal" data-target="#youtube" >
                    <?= Yii::t('easyii','Watch Now')?></a>
@@ -119,7 +119,7 @@ $totalreviews=  Products::reviews($item->id,1);
 
     <?php
 
-    $a = array(17, 18 ,19,20,21,22,23,24,25,26,27);
+    $a = array(17, 18 ,19,20,21,22,23,24);
 
     if (in_array($item->item_id, $a, true)) {
         ?>
@@ -138,7 +138,7 @@ $totalreviews=  Products::reviews($item->id,1);
                         <div class="team-image-sec">
                             <div class="img-overlay"></div>
                             <figure>
-                                <img title="Image" alt="image" src="<?php echo $data->image?>"></figure>
+                                <img title="Image" alt="image" src="<?php echo (\Yii::$app->language == "en")? $data->image: $data->image_ar ;?>"></figure>
                             <ul>
                                 <li><a href="#."><i class="fa fa-google-plus"></i></a></li>
                                 <li><a href="#."><i class="fa fa-twitter"></i></a></li>
