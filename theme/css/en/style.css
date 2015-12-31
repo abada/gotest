@@ -14,6 +14,8 @@ body{
   color:#464646 !important;
   font-weight: lighter !important;
   padding-top:80px;
+    width:100%;
+  overflow-x:hidden;
 }
 .btn{
 -webkit-transition: all .3s ease-in-out;
@@ -609,7 +611,7 @@ font-size: 16px;
 .testimonial .item h3{
 font-size: 14px;
     font-weight: normal;
-    margin-top: 0;
+    margin-top: 5px;
 }
 						/*-------------------- carousel fade ------------------------- */
 .carousel-fade .carousel-inner .item {
@@ -782,6 +784,11 @@ select {
 .online-method .left{
 	    width: 40%;
     text-align: center;
+}
+.online-method .left h2{
+font-family: 'Source Sans Pro', sans-serif;
+text-transform: uppercase;
+    font-weight: lighter;
 }
 .online-method .dry-btn{
 font-size: 24px;
@@ -1530,7 +1537,7 @@ ul.products-page li{
   transition-property: box-shadow;
   width:19%;
 	}
-	
+
 ul.products-page{
 	margin-bottom:20px;}
 ul.products-page li .dry-btn{
@@ -1858,6 +1865,8 @@ p.search-result{
 	}
 .gray-color{
 	background-color:#f6f6f6;
+	width:100%;
+	overflow:hidden;
 	}
 .margin-top20{
 	margin-top:20px;
@@ -2593,4 +2602,14 @@ height:auto;
 .find-bg .form-group {
     margin-bottom: 0;
 }
+}
+
+#order-city,#order-country{
+text-indent:42%;	
+}
+#order-ttl{
+	    text-indent: 30%;
+}
+.intl-tel-input .flag-container:hover .selected-flag {
+    background-color: transparent !important;
 }

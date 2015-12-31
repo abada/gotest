@@ -15,6 +15,8 @@ font-family: 'Noto Kufi Arabic', sans-serif;
   font-weight: lighter !important;
   padding-top:80px;
   direction:rtl;
+  width:100%;
+  overflow-x:hidden;
 }
 .btn{
 -webkit-transition: all .3s ease-in-out;
@@ -210,6 +212,9 @@ h2.lined-heading span{
 	color:#6a52b4;
 	text-transform:uppercase;
 }
+.features-group{
+direction:ltr;
+}
 .features-group li{
 	padding:15px 0;
 	margin-top:50px;
@@ -222,7 +227,7 @@ h2.lined-heading span{
 .features-group li .pink-btn{
 	margin-top:0;
 	background:#f34a98;
-	height:53px;
+	height:55px;
 	font-weight:lighter;
 	font-size:2em;
 	position: absolute;
@@ -374,7 +379,7 @@ transition: all 0.3s ease-in-out;
 	color:#FFF !important;
 	font-weight:bold;
 	border-radius:4px;
-	padding:5px !important;
+	padding:0 5px !important;
 	margin-left:20px;
 	line-height:24px;
 	}
@@ -571,7 +576,7 @@ nav .dropdown-menu{
 .testimonial .item h3{
 	font-size: 14px;
     font-weight: normal;
-    margin-top: 0;
+    margin-top: 10px;
 }
 						/*-------------------- carousel fade ------------------------- */
 .carousel-fade .carousel-inner .item {
@@ -1477,7 +1482,14 @@ ul.products-page li{
   transition-property: box-shadow;
   width:19%;
 	}
-	
+	ul.products-page li .dropsimg{
+			
+			-moz-transform:rotateY(180deg);
+-webkit-transform:rotateY(180deg);
+-o-transform: rotateY(180deg);
+-ms-transform:rotateY(180deg);
+transform: rotateY(180deg);
+	}	
 ul.products-page{
 	margin-bottom:20px;}
 ul.products-page li .dry-btn{
@@ -1485,7 +1497,8 @@ border-radius: 0;
     display: block;
     width: 100%;
     text-transform: uppercase;
-    padding: 14px 25px;
+    padding: 8px 25px;
+	    height: 40px !important;
 	}
 ul.products-page li .dry-btn img{
 	padding:0;
@@ -1799,6 +1812,8 @@ p.search-result{
 	}
 .gray-color{
 	background-color:#f6f6f6;
+	width: 100%;
+    overflow: hidden;
 	}
 .margin-top20{
 	margin-top:20px;
@@ -1898,6 +1913,9 @@ transition: all .3s ease-in-out;
 }
 .navbar-fixed-top.on{
 	top:0;
+}
+.overall{
+direction:ltr;	
 }
 
 @media (max-width: 768px) {
@@ -2168,7 +2186,7 @@ display:none !important;
 	padding:0 50px 0 0 ;
 }
 .circle{
-direction:rtl;	
+direction:ltr;	
 }
 .circle canvas{
 font-weight:normal !important;	
@@ -2541,4 +2559,14 @@ direction:rtl;
 
 .intl-tel-input .selected-flag .iti-flag {
     right: 18px;
+}
+
+#order-city,#order-country{
+text-indent:42%;	
+}
+#order-ttl{
+	    text-indent: 30%;
+}
+.intl-tel-input .flag-container:hover .selected-flag {
+    background-color: transparent !important;
 }
