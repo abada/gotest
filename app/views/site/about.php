@@ -70,51 +70,29 @@ $this->title = $page->seo('title', $page->model->title);
                 <div class="title"><?= Yii::t('easyii', 'testimonials');?> </div>
             </div>
             <?php
-             // $testmonials= PageModel::find()->where("homepage=0")->desc()->all();
-
-            $query = PageModel::find()->where(['homepage' => 0]);
-            $countQuery = clone $query;
-            $pages = new \yii\data\Pagination(['totalCount' => $countQuery->count(),'pageSize'=>5]);
-           // $pages->offset=2;
-            $testmonials = $query->offset($pages->offset)
-                ->limit($pages->limit)
-                ->all();
-               $num = 0;
-                foreach($testmonials as $item){
-                    $num++;
-                    if($num&1) {
-                       echo ' <div class="about-review container">';
-                    } else {
-                        echo '<div class="gray-review about-review ">
-                                        <div class="container">';
-                    }
-
-                    ?>
-                    <div class="testim">
-                    <h4><?= $item->owner?> </h4>
-                    <h3><?= $item->title ?></h3>
-                    <p><?= $item->text ?></p>
-                    </div>
-<!--                    <a href="#">Read More <i class="fa fa-caret-right"></i></a> -->
-
-                <?php
-                    if($num&1) {
-                        echo ' </div>';
-                    } else {
-                        echo ' </div> </div>';
-
-                    }
-                }
-            ?>
-            <div align="center">
-            <?
-
-            // display pagination
-            echo \yii\widgets\LinkPager::widget([
-                'pagination' => $pages,
+             /* A dataprovider with all articles */
+            $dataProvider = new \yii\data\ActiveDataProvider([
+                'query' => PageModel::find()->where(['homepage' => 0]),
+                'pagination' => [
+                    'pagesize' => 5 ,
+                ],
             ]);
-            ?>
-            </div>
+
+
+            echo \yii\widgets\ListView::widget([
+                'dataProvider' => $dataProvider,
+                'summary'=>'',
+                'itemOptions' => ['class' => 'item'],
+                'itemView' => '_reviewnew',
+                'pager' => ['class' => \kop\y2sp\ScrollPager::className(),
+                    'noneLeftText'=>yii::t('easyii','No More'),
+                    'triggerText'=>'<button class="btn dry-btn-2 center-block margin-bottom10">'.yii::t('easyii','More Testimonials').'</button>'],
+
+
+            ]);
+
+
+     ?>
 
 <!--            <button class="btn dry-btn-2 center-block margin-bottom10">More Testimonials</button> -->
         </div>

@@ -12,6 +12,8 @@ use yii\helpers\Url;
 use yii\widgets\ActiveForm;
 use yii\easyii\modules\page\api\Page;
 use  \app\models\Products;
+use app\modules\reviews\models\News as NewsModel;
+
 
 $this->title = $item->seo('title', $item->model->title);
 $totalreviews=  Products::reviews($item->id,1);
@@ -126,7 +128,7 @@ $totalreviews=  Products::reviews($item->id,1);
 
     <div class="container-fluid useDry">
 	   <div class="container">
-    	<div class="title">uses for dry go</div>
+    	<div class="title"><?= yii::t('easyii','Uses for dry go')?></div>
     			<?php
                 $listData = \app\modules\drygomoduleupdated\models\Carousel::find()->all();
                 foreach ($listData as $data){
@@ -256,14 +258,14 @@ $totalreviews=  Products::reviews($item->id,1);
 
 
   <div class="form-group">
-    <label>Your Name/Nick Name</label>
+    <label><?= yii::t('easyii','Your Name/Nick Name')?> </label>
       <?php echo $form->field($oReview, 'owner')->textInput(['class' => 'form-control',' placeholder'=>Yii::t('easyii', 'Name') ])->label(false);  ?>
-      <label>Title</label>
+      <label><?= yii::t('easyii','Title')?></label>
       <?php echo $form->field($oReview, 'title')->textInput(['class' => 'form-control',' placeholder'=>Yii::t('easyii', 'Title') ])->label(false);  ?>
 
   </div>
   <div class="form-group">
-    <label>Please Rate Our Product</label>
+    <label><?= yii::t('easyii','Please Rate Our Product')?></label>
     <label class="radio-inline">
   <input type="radio" name="News[no_of_review]" id="inlineRadio1" value="1"> 1
 </label>
@@ -286,12 +288,12 @@ $totalreviews=  Products::reviews($item->id,1);
       <?= $form->field($oReview, 'text')->textarea([ 'class' => 'form-control','rows'=>3])->label(false); ?>
 
 
-      <p class="help-block">We Appreciate Your Review, Thanks For Your Time</p>
+      <p class="help-block"><?= yii::t('easyii','We Appreciate Your Review, Thanks For Your Time')?></p>
   </div>
 
             <div class="modal-footer">
                 <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                <button type="submit" class="btn btn-primary">Add Review</button>
+                <button type="submit" class="btn btn-primary"><?= yii::t('easyii','Add Review')?></button>
             </div>
             <?php ActiveForm::end(); ?>
       </div>
@@ -319,16 +321,35 @@ if(Yii::$app->session->getFlash('success') != ''){
         <div class="row">
             <div class="col-sm-8">
                 <?php
-               foreach ($reviews as $review){
+
+            /*    $query = NewsModel::find()->status(NewsModel::STATUS_ON);
+               $query->andFilterWhere(['product_id'=>$item->item_id]);
+                $dataProvider = new \yii\data\ActiveDataProvider([
+                    'query' => $query,
+                    'pagination' => [
+                        'pagesize' => 5 ,
+                    ],
+                ]);
+                echo \yii\widgets\ListView::widget([
+                    'dataProvider' => $dataProvider,
+                    'summary'=>'',
+                    'itemOptions' => ['class' => 'item'],
+                    'itemView' => '_reviewnew',
+                    'pager' => ['class' => \kop\y2sp\ScrollPager::className(),
+                        'noneLeftText'=>yii::t('easyii','No More'),
+                        'triggerText'=>'<button class="btn dry-btn-2 center-block margin-bottom10">'.yii::t('easyii','More Testimonials').'</button>'],
+                ]);*/
+
+                foreach ($reviews as $review){
                     ?>
                     <div class="review">
                         <p class="text-uppercase">
                             <?= $review->getOwner() ;?>
                             <span class="margin-left10"><i class="fa fa-calendar"></i>
-                            <?= $review->date?>
+                                <?= $review->date?>
                             </span></p>
                         <p class="product-star testimon">
-                               <input value="<?= $review->no_of_review ;?>" type="number" class="rating" min=0 max=5 step=0.5 data-size="xs" readonly="readonly">
+                            <input value="<?= $review->no_of_review ;?>" type="number" class="rating" min=0 max=5 step=0.5 data-size="xs" readonly="readonly">
 
 
                         </p>
@@ -336,14 +357,14 @@ if(Yii::$app->session->getFlash('success') != ''){
                         <p><?= $review->text?></p>
                         <!--<h4><i class="fa fa-thumbs-up fa-lg"></i> Yes, I recommend this product.</h4>-->
                         <ul class="product-details">
-                           <li>Share
+                            <li>Share
                                 <?php $reviewUrl=Url::to(['products/review'], true).'/?slug='.$item->slug .'&review='.$review->slug;?>
-                               <span class='st_facebook_large' displayText='' st_url="<?= $reviewUrl ;?>" st_title="<?= $review->title?>" ></span>
-                               <span class='st_twitter_large' displayText='' st_url="<?= $reviewUrl ;?>" st_title="<?= $review->title?>"></span>
-                               <span class='st_googleplus_large' displayText='' st_url="<?= $reviewUrl ;?>" st_title="<?= $review->title?>"></span>
+                                <span class='st_facebook_large' displayText='' st_url="<?= $reviewUrl ;?>" st_title="<?= $review->title?>" ></span>
+                                <span class='st_twitter_large' displayText='' st_url="<?= $reviewUrl ;?>" st_title="<?= $review->title?>"></span>
+                                <span class='st_googleplus_large' displayText='' st_url="<?= $reviewUrl ;?>" st_title="<?= $review->title?>"></span>
 
 
-                           </li>
+                            </li>
                         </ul>                    </div>
                     <hr>
 
@@ -352,7 +373,7 @@ if(Yii::$app->session->getFlash('success') != ''){
                 }
                 ?>
 
-                <?= \app\modules\reviews\api\News::pages() ?>
+                <?= \app\modules\reviews\api\News::pages() ; ?>
 
 <!--                <a class="readMore">read more</a> -->
             </div>
