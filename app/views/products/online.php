@@ -2,7 +2,7 @@
     <div class="container-fluid">
         <div class="row">
             <div class="col-lg-12 gray-color postpartum">
-                <div class="title">postpartum pads</div>
+                <div class="title"> <?= yii::t('easyii','postpartum pads')?></div>
 
                  <ul class="col-md-12 col-centered product">
 
@@ -25,7 +25,7 @@
 
 
             <div class="col-lg-12 maxi">
-                <h2 class="title">maxi pads</h2>
+                <h2 class="title"><?= yii::t('easyii','maxi pads')?></h2>
                 <ul class="col-md-12 col-centered product">
 
                     <?php if(count($PeriodPads)) : ?>
@@ -47,7 +47,7 @@
 
 
             <div class="col-lg-12 ultra">
-                <h2 class="title">Ultra pads</h2>
+                <h2 class="title"><?= yii::t('easyii','Ultra pads')?></h2>
                 <ul class="col-md-12 col-centered product">
 
                     <?php if(count($PeriodPads)) : ?>
@@ -67,7 +67,7 @@
                 </ul>
             </div>
             <div class="col-lg-12 daily">
-                <h2 class="title">daily pantilinears</h2>
+                <h2 class="title"><?= yii::t('easyii','daily pantilinears')?></h2>
                 <ul class="col-md-12 col-centered product">
                     <?php if(count($DailyPantilinears)) : ?>
                         <?php foreach($DailyPantilinears as $item) : ?>
@@ -82,7 +82,7 @@
                 </ul>
             </div>
             <div class="col-lg-12 generation">
-                <h2 class="title">new generation</h2>
+                <h2 class="title"><?= yii::t('easyii','new generation')?></h2>
                 <ul class="col-md-12 col-centered product">
                     <?php if(count($NewGeneration)) : ?>
                         <?php foreach($NewGeneration as $item) : ?>

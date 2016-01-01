@@ -12,7 +12,7 @@ use  \yii\easyii\models\Setting;
 
 $page = Page::get('page-index');
 
-$this->title = $page->seo('title', $page->model->title);
+$this->title = $page->seo('title', 'Dry Soft');
 ?>
 
 

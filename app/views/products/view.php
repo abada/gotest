@@ -237,7 +237,8 @@ $totalreviews=  Products::reviews($item->id,1);
           <?php    echo Products::reviews($item->id); ?>
 
         </p>
-        <button class="btn dry-btn center-block" data-toggle="modal" data-target="#writeReview"><i class="fa fa-pencil fa-lg"></i> Write a review</button>
+        <button class="btn dry-btn center-block" data-toggle="modal" data-target="#writeReview">
+            <i class="fa fa-pencil fa-lg"></i> <?= Yii::t('easyii','Write a review')?></button>
         <!-- Modal -->
 
 <div class="modal fade" id="writeReview" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
@@ -321,7 +322,7 @@ if(Yii::$app->session->getFlash('success') != ''){
         <div class="row">
             <div class="col-sm-8">
                 <?php
-
+/*
                $query = NewsModel::find()->status(NewsModel::STATUS_ON);
                $query->andFilterWhere(['product_id'=>$item->item_id]);
                 $dataProvider = new \yii\data\ActiveDataProvider([
@@ -339,8 +340,8 @@ if(Yii::$app->session->getFlash('success') != ''){
                         'noneLeftText'=>'',//yii::t('easyii','No More'),
                         'triggerText'=>'<button class="btn dry-btn-2 center-block margin-bottom10">'.yii::t('easyii','More Reviews').'</button>'],
                 ]);
-
-                /*foreach ($reviews as $review){
+*/
+                foreach ($reviews as $review){
                     ?>
                     <div class="review">
                         <p class="text-uppercase">
@@ -372,7 +373,7 @@ if(Yii::$app->session->getFlash('success') != ''){
 
                 }
                 echo  \app\modules\reviews\api\News::pages() ;
-                */
+
                 ?>
 
 <!--                <a class="readMore">read more</a> -->

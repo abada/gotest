@@ -56,7 +56,10 @@ $ListActive =['1'=>'Sleep','2'=>'Normal','3'=>'Active',''=>'Sleep'];
                                     <h4><?= Yii::t('easyii', 'Clothes');?>  </h4>
                                     
                                     <div class="filterdiv">
-                                    	<p class="col-md-6 text-left" style="margin-bottom: 7px;margin-top: 5px;    padding: 0;">Wide</p><p class="col-md-6 text-right" style="margin-bottom: 7px;margin-top: 5px;    padding: 0;">Tight</p>
+                                    	<p class="col-md-6 text-left" style="margin-bottom: 7px;margin-top: 5px;    padding: 0;">
+                                            <?= Yii::t('easyii', 'Wide');?> </p><p class="col-md-6 text-right" style="margin-bottom: 7px;margin-top: 5px;    padding: 0;">
+                                            <?= Yii::t('easyii', 'Tight');?>
+                                            </p>
                                         <div class="clearfix"></div>
                                          <input type="hidden"  name="GadgetsFilterForm[clothes]" id="gadgetsfilterform-clothes" >
                                          <input type="text"  readonly="readonly"  id="gadgetsfilterform-clothes-text"  value="<?= $ListCloth [$sliderFilters['clothes']] ?>" style="display:none">
@@ -70,7 +73,10 @@ $ListActive =['1'=>'Sleep','2'=>'Normal','3'=>'Active',''=>'Sleep'];
                                 <div class="activity center-block filters">
                                     <h4><?= Yii::t('easyii', 'Activity');?>  </h4>
                                     <div class="filterdiv">
-                                    	<p class="col-md-4 text-left" style="margin-bottom: 7px;margin-top: 5px;    padding: 0;">Sleep</p><p class="col-md-4 text-center" style="margin-bottom: 7px;margin-top: 5px;    padding: 0;">Normal</p><p class="col-md-4 text-right" style="margin-bottom: 7px;margin-top: 5px;    padding: 0;">Active</p>
+                                    	<p class="col-md-4 text-left" style="margin-bottom: 7px;margin-top: 5px;    padding: 0;">
+                                            <?= Yii::t('easyii', 'Sleep');?>  </p><p class="col-md-4 text-center" style="margin-bottom: 7px;margin-top: 5px;    padding: 0;">
+                                            <?= Yii::t('easyii', 'Normal');?>  </p><p class="col-md-4 text-right" style="margin-bottom: 7px;margin-top: 5px;    padding: 0;">
+                                            <?= Yii::t('easyii', 'Active');?> </p>
                                         <div class="clearfix"></div>
                                          <input type="hidden"   name="GadgetsFilterForm[activity]" id="gadgetsfilterform-activity">
                                          <input  id="gadgetsfilterform-activity-text" value="<?= $ListActive [$sliderFilters['activity']] ?>" style="display:none">
