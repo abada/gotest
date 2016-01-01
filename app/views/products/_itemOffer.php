@@ -5,13 +5,13 @@ use yii\widgets\ActiveForm;
 use app\models\AddToCartForm;
 use yii\easyii\modules\catalog\api\Catalog;
 ?>
+<a name="<?= $item->slug ?>"></a>
 
 <div class="col-md-12 offer">
     <div class="inner-offer">
         <div class="media">
             <div class="media-left">
                 <?//= Html::img($item->thumb(302, 241),['class'=>'img-responsive']) ?>
-
     <?php
     if(Yii::$app->language =='en' ){
         $image= $item->image;
@@ -28,7 +28,7 @@ use yii\easyii\modules\catalog\api\Catalog;
 
 
                 <?php if(Yii::$app->request->get(AddToCartForm::SUCCESS_VAR) and Yii::$app->request->get('id')== $item->id) { ?>
-                    <h4 class="text-success"><i class="glyphicon glyphicon-ok"></i> Added to cart</h4>
+                    <h4 class="text-success"><i class="glyphicon glyphicon-ok"></i><?= Yii::t('easyii','Added to cart'); ?>  </h4>
                 <?php } else { ?>
 
 

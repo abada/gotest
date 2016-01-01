@@ -100,7 +100,7 @@ class News extends \yii\easyii\components\ActiveRecord
 
     public function getServices()
     {
-        $model = \yii\easyii\modules\catalog\models\Item::find()->all();
+        $model = \yii\easyii\modules\catalog\models\Item::find()->where('category_id =2')->all();
         $listData=ArrayHelper::map($model,'item_id','title');
         return $listData;
     }
