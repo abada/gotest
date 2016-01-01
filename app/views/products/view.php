@@ -336,7 +336,7 @@ if(Yii::$app->session->getFlash('success') != ''){
                     'itemOptions' => ['class' => 'item'],
                     'itemView' => '_reviewnew',
                     'pager' => ['class' => \kop\y2sp\ScrollPager::className(),
-                        'noneLeftText'=>yii::t('easyii','No More'),
+                        'noneLeftText'=>'',//yii::t('easyii','No More'),
                         'triggerText'=>'<button class="btn dry-btn-2 center-block margin-bottom10">'.yii::t('easyii','More Testimonials').'</button>'],
                 ]);
 
