@@ -140,22 +140,22 @@ class Catalog extends \yii\easyii\components\API
             if(!empty($filters['country'])){
                 $query->andFilterWhere(['=', 'country',$filters['country'] ]);
 
-                unset($filters['country']);
+              //  unset($filters['country']);
             }
             if(!empty($filters['government'])){
                 $query->andFilterWhere(['=', 'government',$filters['government'] ]);
 
-                unset($filters['government']);
+               // unset($filters['government']);
             }
             if(!empty($filters['city'])){
                 $query->andFilterWhere(['=', 'city',$filters['city'] ]);
 
-                unset($filters['city']);
+               // unset($filters['city']);
             }
             if(!empty($filters['district'])){
                 $query->andFilterWhere(['=', 'district',$filters['district'] ]);
 
-                unset($filters['district']);
+              //  unset($filters['district']);
             }
             if(!empty($filters['product_id'])){
                 //get all pharmacies for this product

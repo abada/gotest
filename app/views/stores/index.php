@@ -39,7 +39,17 @@ use yii\easyii\modules\page\api\Page;
 
                     </div>
                     <div class="col-md-4">
-                            <?= $form->field($filterForm, 'government')->dropDownList(['dd'=>'dd'],
+                        <?php
+
+                         if(isset($filterForm->country) and  $filterForm->country != '' ){
+                            $government = \app\models\Govenment::find()->where('country_code="'.$filterForm->country.'"')->all();
+                            $listData=\yii\helpers\ArrayHelper::map($government,'government_code','title');
+                        }else{
+                             $listData =[];
+                         }
+                        ?>
+
+                            <?= $form->field($filterForm, 'government')->dropDownList($listData,
                                 ['prompt'=>Yii::t('easyii', 'Governorate') ,'class'=>'btn btn-findUs dropdown-toggle' , 'onchange'=>'
                 $.post( "'.Yii::$app->urlManager->createUrl('stores/cities?code=').'"+$(this).val(), function( data ) {
                   $( "select#gadgetsstoresfilterform-district" ).html( data );
@@ -50,7 +60,23 @@ use yii\easyii\modules\page\api\Page;
 
                     </div>
                     <div class="col-md-4">
-                           <?= $form->field($filterForm, 'district')->dropDownList([] ,['prompt'=>Yii::t('easyii', 'District'),'class'=>'btn btn-findUs dropdown-toggle'])->label('');?>
+                        <?php
+                        if(isset($filterForm->government) and  $filterForm->government != '' ) {
+
+                            $cities= \app\models\Cities::find()
+                                ->where('government_code="'. $filterForm->government.'"')
+                                ->all();
+
+                           $listData=\yii\helpers\ArrayHelper::map($cities,'id','title');
+
+                        }else{
+                            $listData=[];
+                        }
+
+                        ?>
+
+
+                           <?= $form->field($filterForm, 'district')->dropDownList($listData ,['prompt'=>Yii::t('easyii', 'District'),'class'=>'btn btn-findUs dropdown-toggle'])->label('');?>
                     </div>
 
                     <div class="row">
