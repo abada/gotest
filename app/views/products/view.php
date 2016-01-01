@@ -322,7 +322,7 @@ if(Yii::$app->session->getFlash('success') != ''){
             <div class="col-sm-8">
                 <?php
 
-            /*    $query = NewsModel::find()->status(NewsModel::STATUS_ON);
+               $query = NewsModel::find()->status(NewsModel::STATUS_ON);
                $query->andFilterWhere(['product_id'=>$item->item_id]);
                 $dataProvider = new \yii\data\ActiveDataProvider([
                     'query' => $query,
@@ -338,9 +338,9 @@ if(Yii::$app->session->getFlash('success') != ''){
                     'pager' => ['class' => \kop\y2sp\ScrollPager::className(),
                         'noneLeftText'=>yii::t('easyii','No More'),
                         'triggerText'=>'<button class="btn dry-btn-2 center-block margin-bottom10">'.yii::t('easyii','More Testimonials').'</button>'],
-                ]);*/
+                ]);
 
-                foreach ($reviews as $review){
+                /*foreach ($reviews as $review){
                     ?>
                     <div class="review">
                         <p class="text-uppercase">
@@ -371,9 +371,9 @@ if(Yii::$app->session->getFlash('success') != ''){
                 <?
 
                 }
+                echo  \app\modules\reviews\api\News::pages() ;
+                */
                 ?>
-
-                <?= \app\modules\reviews\api\News::pages() ; ?>
 
 <!--                <a class="readMore">read more</a> -->
             </div>
