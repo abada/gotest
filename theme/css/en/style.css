@@ -2005,6 +2005,7 @@ footer .input-group {
     margin-top: 20px;
     margin: 20px auto 0;
 }
+
 }
 
 
@@ -2248,11 +2249,14 @@ font-weight:normal !important;
 .awwarenece{
 height:475px;	
 }
+.video-title .col-md-6{
+text-align:center;	
+}
 .video-title h3{
 margin-top:60px;	
 }
 .video-title p{
-text-align:left !important;	
+	
 }
 .video-title .btn{
 	    border: 1px solid #FB8ABE;
@@ -2462,7 +2466,35 @@ width:24%;
 }
 }
 @media screen and (max-width:768px){
-
+.about-vision article {
+    float: none;
+    height: auto;
+    padding: 0 50px 50px;
+    width: 70%;
+    background: rgba(170, 92, 144, 0.82);
+    margin: 120px 15%;
+    display: inline-block;
+}
+.about-mission article {
+    float: none;
+    height: auto;
+    padding: 0 50px 50px;
+    width: 70%;
+    background: rgba(170, 92, 144, 0.82);
+    margin: 120px 15%;
+    display: inline-block;
+}
+.about-mission article .title {
+    color: #FFFFFF;
+    font-size: 4em;
+    text-align: center;
+}
+.about-mission article p {
+    color: #fff;
+    line-height: 1.7em;
+    font-size: 1.5em;
+    text-align: center;
+}
 #FilterForm .col-md-3{
     width: 50%;
     /* display: inline-block; */
@@ -2514,8 +2546,67 @@ width:40%;
 footer{
 background-image:none;	
 }
+.about-vision {
+    background-image: url(../../images/abou-us-1.jpg);
+    background-repeat: no-repeat;
+    height: 530px;
+    background-size: 200%;
+}
+.about-mission {
+    background-image: url(../../images/abou-us-2.jpg);
+    background-repeat: no-repeat;
+    height: 530px;
+    background-size: cover;
+    background-size: 200%;
+}
 }
 @media screen and (max-width:480px){   /*Mobile*/
+.about-vision {
+    background-image: url(../../images/abou-us-1.jpg);
+    background-repeat: no-repeat;
+    height: 530px;
+    background-size: auto;
+}
+.about-mission {
+    background-image: url(../../images/abou-us-2.jpg);
+    background-repeat: no-repeat;
+    height: 530px;
+    background-size: cover;
+    background-size: auto;
+}
+.about-vision article .title {
+    color: #FFF;
+    border-bottom: 1px solid #FFF;
+    font-size: 2em;
+}
+.about-vision article p {
+    color: #FFF;
+    line-height: 1.5em;
+    font-size: 1.2em;
+    text-align: center;
+}
+.about-mission article .title {
+    color: #FFFFFF;
+    font-size: 2em;
+    text-align: center;
+}
+.about-mission article p {
+    color: #fff;
+    line-height: 1.7em;
+    font-size: 1em;
+    text-align: center;
+}
+.about-mission article {
+    float: none;
+    height: auto;
+    padding: 0 50px 50px;
+    width: 70%;
+    background: rgba(170, 92, 144, 0.82);
+    margin: 35px 15%;
+    display: inline-block;
+}
+
+
 .testimonial{
 background-size:30px;	
 }

@@ -78,3 +78,4 @@
 [26-Dec-2015 09:58:56 UTC] PHP Fatal error:  Allowed memory size of 67108864 bytes exhausted (tried to allocate 49000000 bytes) in /home/dryarabia/public_html/demo/vendor/noumo/easyii/helpers/GD.php on line 24
 [26-Dec-2015 11:17:20 UTC] PHP Fatal error:  Allowed memory size of 67108864 bytes exhausted (tried to allocate 49000000 bytes) in /home/dryarabia/public_html/demo/vendor/noumo/easyii/helpers/GD.php on line 24
 [26-Dec-2015 11:20:12 UTC] PHP Fatal error:  Allowed memory size of 67108864 bytes exhausted (tried to allocate 14000 bytes) in /home/dryarabia/public_html/demo/vendor/noumo/easyii/helpers/GD.php on line 24
+[01-Jan-2016 10:12:17 UTC] PHP Fatal error:  Class 'kop\y2sp\ScrollPager' not found in /home/dryarabia/public_html/demo/app/views/site/about.php on line 87
