@@ -52,7 +52,9 @@ $totalreviews=  Products::reviews($item->id,1);
 
                                     <?php if(Yii::$app->request->get(AddToCartForm::SUCCESS_VAR)) {
                                      ?>
-                                        <h4 class="text-success"><i class="glyphicon glyphicon-ok"></i> Added to cart</h4>
+                                        <h4 class="text-success"><i class="glyphicon glyphicon-ok"></i>
+                                            <?= Yii::t('easyii','Added to cart')?>
+                                            </h4>
 
                                     <?
                                     }else{

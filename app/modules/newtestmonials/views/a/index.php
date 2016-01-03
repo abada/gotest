@@ -16,6 +16,7 @@ $module = $this->context->module->id;
                     <th width="50">#</th>
                 <?php endif; ?>
                 <th><?= Yii::t('easyii', 'Title')?></th>
+                <th><?= Yii::t('easyii', 'owner')?></th>
                 <th><?= Yii::t('easyii', 'Appears in home page')?></th>
                 <?php if(IS_ROOT) : ?>
                     <th><?= Yii::t('easyii', 'Slug')?></th>
@@ -31,6 +32,7 @@ $module = $this->context->module->id;
                 <?php endif; ?>
 
                 <td><a href="<?= Url::to(['/admin/'.$module.'/a/edit', 'id' => $item->primaryKey]) ?>"><?= $item->title ?></a></td>
+                <td><a href="<?= Url::to(['/admin/'.$module.'/a/edit', 'id' => $item->primaryKey]) ?>"><?= $item->owner ?></a></td>
                 <td><?= ($item->homepage)? 'yes':'No' ?></td>
 
                 <?php if(IS_ROOT) : ?>
