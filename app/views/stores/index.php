@@ -19,7 +19,6 @@ use yii\easyii\modules\page\api\Page;
            if(isset($_REQUEST['productCode'])){
 
            }
-            $filterForm->product_id=$_REQUEST['productCode'];
         ?>
 
 
