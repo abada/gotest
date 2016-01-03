@@ -74,7 +74,7 @@ $this->title = $page->seo('title', $page->model->title);
             $dataProvider = new \yii\data\ActiveDataProvider([
                 'query' => PageModel::find()->where(['homepage' => 0]),
                 'pagination' => [
-                    'pagesize' => 5 ,
+                    'pagesize' => 4 ,
                 ],
             ]);
 

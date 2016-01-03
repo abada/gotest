@@ -15,7 +15,7 @@ class Page extends \yii\easyii\components\ActiveRecord
     {
         return [
            // ['title', 'required'],
-            ['owner', 'required'],
+           // ['owner', 'required'],
             ['homepage','safe'],
             [['title', 'text'], 'trim'],
             ['title', 'string', 'max' => 400],

@@ -16,6 +16,10 @@ use yii\easyii\modules\page\api\Page;
         <?php
             $allProducts=\app\models\Products::FetchProducts();
             $form = ActiveForm::begin(['method' => 'get', 'action' => Url::to(['/stores/index', 'slug' => $cat->slug])]);
+           if(isset($_REQUEST['productCode'])){
+
+           }
+            $filterForm->product_id=$_REQUEST['productCode'];
         ?>
 
 
