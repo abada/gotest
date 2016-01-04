@@ -12,7 +12,7 @@ use app\modules\newtestmonials\models\Page as PageModel;
 
 $page = Page::get('about');
 
-$this->title = $page->seo('title', $page->model->title);
+$this->title = $page->seo('title',yii::t('easyii',"Who’s Dry"));
 ?>
 
 <div class="content">

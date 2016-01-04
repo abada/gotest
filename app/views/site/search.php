@@ -4,6 +4,7 @@ use yii\easyii\modules\page\api\Page;
 $pageAwarness = Page::get('know-more-about-us');
 $pageAbout = Page::get('about');
 
+$this->title ='Search';
 
 $count=0;
 if(strpos($pageAbout->title ,$text) !== false or strpos($pageAbout->text ,$text) !== false) $count++;
@@ -39,7 +40,7 @@ if(strpos($pageAwarness->title ,$text) !== false or strpos($pageAwarness->text ,
                 $i=1;
                 ?>
                 <p class="search-result">
-                    <?= Html::a($pageAbout->title, ['site/about-dry'],['class' => '']) ?>
+                    <?= Html::a($pageAbout->title, ['who’s-Dry'],['class' => '']) ?>
                     <br/>
                     <?= $pageAbout->text?>
                     .</p>
@@ -50,7 +51,7 @@ if(strpos($pageAwarness->title ,$text) !== false or strpos($pageAwarness->text ,
                 $i=1;
                 ?>
                 <p class="search-result">
-                    <?= Html::a($pageAwarness->title, ['site/about-dry'],['class' => '']) ?>
+                    <?= Html::a($pageAwarness->title, ['who’s-Dry'],['class' => '']) ?>
                     <br/>
                     <?= $pageAwarness->text?>
                     .</p>
@@ -62,7 +63,7 @@ if(strpos($pageAwarness->title ,$text) !== false or strpos($pageAwarness->text ,
                 $i=1;
                 ?>
                 <p class="search-result">
-                    <?= Html::a($pageAbout->title, ['site/about-dry'],['class' => '']) ?>
+                    <?= Html::a($pageAbout->title, ['who’s-Dry'],['class' => '']) ?>
                     <br/>
                     <?= $pageAbout->text?>
                     .</p>
@@ -75,7 +76,7 @@ if(strpos($pageAwarness->title ,$text) !== false or strpos($pageAwarness->text ,
                 $i=1;
                 ?>
                 <p class="search-result">
-                    <?= Html::a($pageAbout->title, ['site/about-dry'],['class' => '']) ?>
+                    <?= Html::a($pageAbout->title, ['who’s-Dry'],['class' => '']) ?>
                     <br/>
                     <?= $pageAbout->text?>
                     .</p>
@@ -101,7 +102,7 @@ if(strpos($pageAwarness->title ,$text) !== false or strpos($pageAwarness->text ,
                 $i=1;
                 ?>
                 <p class="search-result">
-                    <?= Html::a($pageAbout->title, ['/contact'],['class' => '']) ?>
+                    <?= Html::a($pageAbout->title, ['/contact-us'],['class' => '']) ?>
                     <br/>
                     <?= $pageAbout->text?>
                     .</p>

@@ -3,7 +3,7 @@ use yii\helpers\Html;
 use yii\helpers\Url;
 use yii\widgets\ActiveForm;
 use yii\easyii\modules\page\api\Page;
-
+$this->title= yii::t('easyii','Find a store');
 ?>
 <div class="content gray-color">
 <div class="find-bg">

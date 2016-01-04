@@ -4,7 +4,7 @@ use yii\easyii\modules\page\api\Page;
 
 $page = Page::get('page-shop-search');
 
-$this->title = $page->seo('title', $page->model->title);
+$this->title ='Search';
 $this->params['breadcrumbs'][] = ['label' => 'Shop', 'url' => ['shop/index']];
 $this->params['breadcrumbs'][] = $page->model->title;
 

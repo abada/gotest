@@ -13,7 +13,7 @@ use \app\modules\awarness\api\Feedback as Awarness;
 
 $page = Page::get('about');
 
-$this->title = $page->seo('title', $page->model->title);
+$this->title = $page->seo('title', yii::t('easyii','awareness program'));
 use yii\widgets\ActiveForm;
 
 ?>

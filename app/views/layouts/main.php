@@ -16,7 +16,7 @@ $goodsCount = count(Shopcart::goods());
 <header class="navbar navbar-fixed-top bs-docs-nav" id="top" role="banner">
 <div class="search">
   <div class="container">
- <?= Html::beginForm(Url::to(['/site/search']), 'get') ?>
+ <?= Html::beginForm(Url::to(['/search']), 'get') ?>
                         <?= Html::textInput('text', $text, ['class' => 'form-control', 'placeholder' => '']) ?>
                         
 <?= Html::endForm() ?>
@@ -42,8 +42,8 @@ $goodsCount = count(Shopcart::goods());
                 <li class="dropdown">
                   <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><?= Yii::t('easyii', 'About Dry');?>  <span class="caret"></span></a>
                   <ul class="dropdown-menu" role="menu">
-                    <li><a href="/site/about-dry"><?= Yii::t('easyii', 'Who’s Dry');?></a></li>
-                    <li><a href="/site/awarness"><?= Yii::t('easyii', 'awareness program');?></a></li>
+                    <li><a href="/who’s-Dry"><?= Yii::t('easyii', 'Who’s Dry');?></a></li>
+                    <li><a href="/awareness-program"><?= Yii::t('easyii', 'awareness program');?></a></li>
                   </ul>
                 </li>
             </ul>
@@ -138,9 +138,9 @@ $goodsCount = count(Shopcart::goods());
                 <li><a href="/products"><?= Yii::t('easyii', 'Products');?></a></li>|
                 <li><a href="/offers"><?= Yii::t('easyii', 'Offers');?></a></li>|
                 <li><a href="/stores"><?= Yii::t('easyii', 'Find a store');?></a></li>|
-                <li><a href="/site/about-dry"><?= Yii::t('easyii', 'About Dry');?> </a></li>|
-                <li><a href="/contact"><?= Yii::t('easyii', 'contact us');?></a></li>|
-                <li><a href="/site/site-map"><?= Yii::t('easyii', 'site map');?></a></li>
+                <li><a href="/who’s-Dry"><?= Yii::t('easyii', 'About Dry');?> </a></li>|
+                <li><a href="/contact-us"><?= Yii::t('easyii', 'contact us');?></a></li>|
+                <li><a href="/site-map"><?= Yii::t('easyii', 'site map');?></a></li>
             </ul>
         </div>
         <div class="row">

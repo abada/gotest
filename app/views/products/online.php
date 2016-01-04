@@ -1,3 +1,6 @@
+<?php  $this->title ='Online Dry Products';
+ ?>
+
 <div class="content">
     <div class="container-fluid">
         <div class="row">

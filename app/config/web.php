@@ -34,6 +34,12 @@ $config = [
                 'offers' => 'products/offers',
                 'products-online' => 'products/online',
                 'products-online/checkout' => 'shopcart',
+                'checkout/thank-you' => 'shopcart/success',
+                'who’s-Dry' => 'site/about-dry',
+                'awareness-program' => 'site/awarness',
+                'contact-us' => 'contact',
+                'site-map' => 'site/site-map',
+                'search' => 'site/search',
             ],
         ],
         'assetManager' => [

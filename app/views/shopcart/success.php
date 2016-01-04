@@ -12,7 +12,7 @@ echo $successCode->text;
 $pay=Page::get('paydetails');
 
 
-$this->title = $page->seo('title', $page->model->title);
+$this->title = 'Thank you ';
 $this->params['breadcrumbs'][] = $page->model->title;
 
 ?>

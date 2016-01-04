@@ -37,7 +37,7 @@ $delivery= Setting::get('deliver_cost');
                       }
                       ?>
 
-                    <?= Shopcart::form(['successUrl' => Url::to('/shopcart/success') ],$model)?>
+                    <?= Shopcart::form(['successUrl' => Url::to('/checkout/thank-you') ],$model)?>
 
 
                 </div>

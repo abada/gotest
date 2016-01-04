@@ -12,7 +12,7 @@ use  \yii\easyii\models\Setting;
 
 $page = Page::get('about');
 
-$this->title = $page->seo('title', $page->model->title);
+$this->title = 'Dry Site Map';
 ?>
 
 <div class="content">
@@ -28,11 +28,11 @@ $this->title = $page->seo('title', $page->model->title);
                 <a href="/products"><i class="fa fa-circle"></i><?= yii::t('easyii','Products')?> </a>
                 <a href="/offers"><i class="fa fa-circle"></i> <?= yii::t('easyii','Offers')?></a>
                 <a href="/stores"><i class="fa fa-circle"></i><?= yii::t('easyii','Find a store')?> </a>
-                <a href="/site/about-dry"><i class="fa fa-circle"></i> <?= yii::t('easyii','About Dry')?></a>
-                <a href="/site/about-dry"><span><i class="fa fa-circle-o"></i><?= yii::t('easyii',"Who’s Dry")?> </span></a>
-                <a href="/site/awarness"><span><i class="fa fa-circle-o"></i><?= yii::t('easyii','awareness program')?> </span></a>
+                <a href="/who’s-Dry"><i class="fa fa-circle"></i> <?= yii::t('easyii','About Dry')?></a>
+                <a href="/who’s-Dry"><span><i class="fa fa-circle-o"></i><?= yii::t('easyii',"Who’s Dry")?> </span></a>
+                <a href="/awareness-program"><span><i class="fa fa-circle-o"></i><?= yii::t('easyii','awareness program')?> </span></a>
                 
-                <a href="/contact"><i class="fa fa-circle"></i><?= yii::t('easyii','contact us')?> </a>
+                <a href="/contact-us"><i class="fa fa-circle"></i><?= yii::t('easyii','contact us')?> </a>
                 <a href="/products-online"><i class="fa fa-circle"></i> <?= yii::t('easyii','order online')?></a>
                 
                 

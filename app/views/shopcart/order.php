@@ -1,7 +1,7 @@
 <?php
 use yii\helpers\Html;
 
-$this->title = 'Order details';
+$this->title = 'Checkout';
 ?>
 <h1>Order #<?= $order->id ?></h1>
 
