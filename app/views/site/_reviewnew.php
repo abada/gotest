@@ -2,8 +2,8 @@
 if($index % 2) {
     echo ' <div class="about-review container">';
 } else {
-    echo '<div class="gray-review about-review ">
-                                        <div class="container">';
+    echo '<div class="gray-review  ">
+                                        <div class="about-review container">';
 }
 ?>
 
