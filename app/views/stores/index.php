@@ -160,7 +160,7 @@ if(\Yii::$app->language =='en'){$dir= 'ltr';}else{$dir='rtl';}
             	<div class="left">
 					<?php  $page = Page::get('find-store'); ?>
                     <?php echo $page->text?>
-                    <a href="/products/online" class="btn dry-btn"><?= Yii::t('easyii', 'Online Method');?></a>
+                    <a href="/products-online" class="btn dry-btn"><?= Yii::t('easyii', 'Online Method');?></a>
                 </div>
             </div>
         </div>

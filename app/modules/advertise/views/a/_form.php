@@ -14,7 +14,7 @@ use yii\easyii\widgets\SeoForm;
 ]); ?>
 
 <?= $form->field($model, 'title')->widget(input_widget\MultiLanguageActiveField::className()) ?>
-<?= $form->field($model, 'url'); ?>
+<?= $form->field($model, 'url')->widget(input_widget\MultiLanguageActiveField::className()) ?>
 <?//= $form->field($model, 'catpage');?>
 
 

@@ -35,7 +35,7 @@ $goodsCount = count(Shopcart::goods());
                         <span class="sr-only">(current)</span><?= Yii::t('easyii', 'home');?></a>
                 </li>
                 <li><a href="/products"><?= Yii::t('easyii', 'Products');?></a></li>
-                <li><a href="/products/offers"><?= Yii::t('easyii', 'Offers');?></a></li>
+                <li><a href="/offers"><?= Yii::t('easyii', 'Offers');?></a></li>
                 <li><a href="/stores"><?= Yii::t('easyii', 'Find a store');?></a></li>
                 
                 
@@ -136,7 +136,7 @@ $goodsCount = count(Shopcart::goods());
             <ul class="footer-menu list-inline text-center">
                 <li><a href="<?= Url::home() ?>"><?= Yii::t('easyii', 'home');?></a></li>|
                 <li><a href="/products"><?= Yii::t('easyii', 'Products');?></a></li>|
-                <li><a href="/products/offers"><?= Yii::t('easyii', 'Offers');?></a></li>|
+                <li><a href="/offers"><?= Yii::t('easyii', 'Offers');?></a></li>|
                 <li><a href="/stores"><?= Yii::t('easyii', 'Find a store');?></a></li>|
                 <li><a href="/site/about-dry"><?= Yii::t('easyii', 'About Dry');?> </a></li>|
                 <li><a href="/contact"><?= Yii::t('easyii', 'contact us');?></a></li>|

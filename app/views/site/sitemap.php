@@ -26,14 +26,14 @@ $this->title = $page->seo('title', $page->model->title);
             <div class="site-map center-block">
                 <a href="/"><i class="fa fa-circle"></i> <?= yii::t('easyii','home')?></a>
                 <a href="/products"><i class="fa fa-circle"></i><?= yii::t('easyii','Products')?> </a>
-                <a href="/products/offers"><i class="fa fa-circle"></i> <?= yii::t('easyii','Offers')?></a>
+                <a href="/offers"><i class="fa fa-circle"></i> <?= yii::t('easyii','Offers')?></a>
                 <a href="/stores"><i class="fa fa-circle"></i><?= yii::t('easyii','Find a store')?> </a>
                 <a href="/site/about-dry"><i class="fa fa-circle"></i> <?= yii::t('easyii','About Dry')?></a>
                 <a href="/site/about-dry"><span><i class="fa fa-circle-o"></i><?= yii::t('easyii',"Who’s Dry")?> </span></a>
                 <a href="/site/awarness"><span><i class="fa fa-circle-o"></i><?= yii::t('easyii','awareness program')?> </span></a>
                 
                 <a href="/contact"><i class="fa fa-circle"></i><?= yii::t('easyii','contact us')?> </a>
-                <a href="/products/online"><i class="fa fa-circle"></i> <?= yii::t('easyii','order online')?></a>
+                <a href="/products-online"><i class="fa fa-circle"></i> <?= yii::t('easyii','order online')?></a>
                 
                 
             </div>

@@ -88,7 +88,7 @@ if(strpos($pageAwarness->title ,$text) !== false or strpos($pageAwarness->text ,
                 $i=1;
                 ?>
                 <p class="search-result">
-                    <?= Html::a($pageAbout->title, ['products/offers'],['class' => '']) ?>
+                    <?= Html::a($pageAbout->title, ['offers'],['class' => '']) ?>
                     <br/>
                     <?= $pageAbout->text?>
                     .</p>

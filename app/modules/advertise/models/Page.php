@@ -17,6 +17,7 @@ class Page extends \yii\easyii\components\ActiveRecord
             ['title', 'required'],
             ['image', 'image'],
             ['image_ar', 'image'],
+            ['url', 'safe'],
 
             [['title', 'text'], 'trim'],
             ['title', 'string', 'max' => 400],
