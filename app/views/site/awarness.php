@@ -44,7 +44,35 @@ use yii\widgets\ActiveForm;
         <h1> <?= Yii::t('easyii', 'request awareness program') ?></h1>
 
         <?php if($Saved) : ?>
-            <h4 class="alert alert-warning col-md-4 col-md-offset-4"><i class="glyphicon glyphicon-ok"></i> <?= Yii::t('easyii', 'Message successfully sent')?> </h4>
+            <!--<h4 class="alert alert-warning col-md-4 col-md-offset-4 msgpop"><i class="glyphicon glyphicon-ok"></i> <?= Yii::t('easyii', 'Message successfully sent')?> </h4>-->
+            <h4 class="alert alert-warning col-md-4 col-md-offset-4 msgpop" style="    position: absolute;top: 120px;"><i class="glyphicon glyphicon-ok"></i> <?= Yii::t('easyii', 'Message successfully sent')?> <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+  <span aria-hidden="true">&times;</span>
+</button> </h4>
+            
+            <div class="clearfix"></div>
+            
+           <?php
+            $form = ActiveForm::begin([
+                'enableClientValidation' => true,
+               'options'=>['class'=>'col-md-offset-4']
+
+            ]);
+            ?>
+
+        <div class="form-group center-block col-md-6">
+
+            <?php echo $form->field($model, 'name')->textInput(['class' => 'form-control',' placeholder'=>Yii::t('easyii', 'Name') ])->label(false);  ?>
+            <?php echo $form->field($model, 'phone')->textInput(['class' => 'form-control',' placeholder'=>Yii::t('easyii', 'Phone') ])->label(false);  ?>
+            <?php echo $form->field($model, 'email')->textInput(['class' => 'form-control',' placeholder'=>Yii::t('easyii', 'E-Mail') ])->label(false);  ?>
+            <?php echo $form->field($model, 'text')->textarea(['class' => 'form-control msg',' placeholder'=>Yii::t('easyii', 'The Message') ])->label(false);  ?>
+
+            <button type="submit" class="btn dry-btn-3 center-block"><?php echo Yii::t('easyii', 'Send Request') ?></button>
+        </div>
+
+
+        <?php ActiveForm::end() ; ?>  
+
+
         <?php else : ?>
    <?php
             $form = ActiveForm::begin([
