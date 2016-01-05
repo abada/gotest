@@ -5,7 +5,7 @@ return [
         'default_language' => 'en',
         'languages' => [
             'en' => 'EN',
-            'ar' => 'AR',
+            'ar' => 'ع',
         ],
     ],
 ];
