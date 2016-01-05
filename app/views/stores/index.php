@@ -109,20 +109,20 @@ $this->title= yii::t('easyii','Find a store');
         <div class="row">
             <?php
 if(\Yii::$app->language =='en'){$dir= 'ltr';}else{$dir='rtl';}
-            echo "<div class='col-md-12'  dir='".$dir."'><div class='alert alert-warning'>". Yii::t('easyii','Please Use the filter to find the nearest store')."</div></div><br/>";
+           // echo "<div class='col-md-12'  dir='".$dir."'><div class='alert alert-warning'>". Yii::t('easyii','Please Use the filter to find the nearest store')."</div></div><br/>";
 
             if($filters['product_id']== ''){
-                echo  "<div class='col-md-12' dir='".$dir."' ><div class='alert alert-danger'>".Yii::t('easyii','Please choose the product  first')."</div></div><br/>";
+                echo  "<div class='col-md-12' dir='".$dir."' ><div class='alert alert-danger'>".Yii::t('easyii','Please choose the product first')."</div></div><br/>";
             }else if($filters['country']== ''){
                 echo   "<div class='col-md-12' dir='".$dir."' ><div class='alert alert-danger'>".Yii::t('easyii','Please Enter the country')."</div></div><br/>";
             }else if($filters['government']== ''){
-                echo "<div class='col-md-12' dir='".$dir."' ><div class='alert alert-danger'>".Yii::t('easyii','Please Enter the government');
+                echo "<div class='col-md-12' dir='".$dir."' ><div class='alert alert-danger'>".Yii::t('easyii','Please Enter the government')."</div></div><br/>";
 
             }else if($filters['district']== ''){
-                echo "<div class='col-md-12' dir='".$dir."' ><div class='alert alert-danger'>".Yii::t('easyii','Please Enter the District');
+                echo "<div class='col-md-12' dir='".$dir."' ><div class='alert alert-danger'>".Yii::t('easyii','Please Enter the District')."</div></div><br/>";
 
             }
-
+        echo "<div class='clear'></div>";
             if(count($items)) :
 
                 if($filters['product_id'] != "" && $filters['country'] != "" &&$filters['government'] != "" ){
