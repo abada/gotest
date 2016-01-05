@@ -30,6 +30,9 @@ outline:none !important;
 p{
 margin:0;	
 }
+a:hover, a:focus {
+    text-decoration: none;
+}
 .content{
 
 }
@@ -776,7 +779,7 @@ select {
 	background-image:url(../../images/online-method.jpg);
 	background-repeat:no-repeat;
 	height:270px;
-	padding-top:63px;
+	padding-top:40px;
 	padding-left:95px;
 	margin-bottom:40px;
 	color:#464646;
@@ -789,6 +792,9 @@ select {
 font-family: 'Source Sans Pro', sans-serif;
 text-transform: uppercase;
     font-weight: lighter;
+}
+.online-method .left p{
+	font-size: 18px;
 }
 .online-method .dry-btn{
 font-size: 24px;
@@ -1657,9 +1663,11 @@ border:1px solid #A91FAD;
 }
 .bg{
 	background-image:url(../../images/single-product-bg.jpg);
-	background-repeat:repeat-y;
-
-	padding-top:90px;
+    background-repeat: repeat-y;
+    padding-top: 90px;
+    background-size: cover;
+    display: inline-block;
+    width: 100%;
 	}
 .review-bg{
 	background-image: url(../../images/reviews-bg.jpg);
@@ -2367,6 +2375,9 @@ font-size:1.2em;
 
 .order-online .control-label{
 display:none;	
+}
+.product-star.testimon .rating-container {
+    color: #E2DEDE !important;
 }
 
 
