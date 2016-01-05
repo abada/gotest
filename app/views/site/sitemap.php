@@ -13,6 +13,8 @@ use  \yii\easyii\models\Setting;
 $page = Page::get('about');
 
 $this->title = 'Dry Site Map';
+
+$products = \yii\easyii\modules\catalog\models\Item::find()->where('category_id =2')->all();
 ?>
 
 <div class="content">
@@ -26,6 +28,15 @@ $this->title = 'Dry Site Map';
             <div class="site-map center-block">
                 <a href="/"><i class="fa fa-circle"></i> <?= yii::t('easyii','home')?></a>
                 <a href="/products"><i class="fa fa-circle"></i><?= yii::t('easyii','Products')?> </a>
+                <?php
+                foreach($products as $product){
+
+                    echo "<a href='products/view/".$product->slug."'>$product->title </a>";
+                }
+                ?>
+
+
+
                 <a href="/offers"><i class="fa fa-circle"></i> <?= yii::t('easyii','Offers')?></a>
                 <a href="/stores"><i class="fa fa-circle"></i><?= yii::t('easyii','Find a store')?> </a>
                 <a href="/who’s-Dry"><i class="fa fa-circle"></i> <?= yii::t('easyii','About Dry')?></a>
