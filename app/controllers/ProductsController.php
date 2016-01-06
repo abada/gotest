@@ -149,7 +149,7 @@ class ProductsController extends \yii\web\Controller
             throw new NotFoundHttpException('Item not found.');
         }
 
-        $Creview=\app\modules\reviews\models\News::find('news_id='.$review)->one();
+        $Creview=\app\modules\reviews\models\News::find()->where('news_id='.$review)->one();
         if($Creview){
             $this->view->params['metatitle'] = $Creview->title;
             $this->view->params['metaimage'] = "http://".$_SERVER['SERVER_NAME'].'/'.$item->image;
