@@ -62,7 +62,9 @@ use yii\easyii\modules\catalog\api\Catalog;
             </div>
         </div>
         <footer>
-            <button class="btn dry-btn-2 shopping"> <?= Yii::t('easyii','Continue Shopping'); ?></button>
+
+            <a class="btn dry-btn-2 shopping" href="/products/online" style="line-height:normal">
+                <?= Yii::t('easyii','Continue Shopping'); ?></a>
 
             <?php
             if(\yii\easyii\modules\shopcart\api\Shopcart::goods()){
