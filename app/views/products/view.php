@@ -6,7 +6,7 @@
 $a = array(15,17, 18 ,19,20,21,22,23,24);
 
 if (in_array($item->item_id, $a, true)) {
-    $scroll=2000;
+    $scroll=2500;
 }else{
     $scroll=1000;
 }
