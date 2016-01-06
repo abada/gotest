@@ -67,7 +67,7 @@ class ProductsController extends \yii\web\Controller
         ]);
     }
 
-    public function actionView($slug=null,$drygo=null)
+    public function actionView($slug=null,$drygo=null,$review=null)
     {
         $oReview = new \app\modules\reviews\models\News();
         $oReview->time = time();
@@ -90,6 +90,17 @@ class ProductsController extends \yii\web\Controller
                 $this->view->params['metadesc'] = $dryGoData->text;
             }
         }
+        if($review != null){
+            $Creview=\app\modules\reviews\models\News::find()->where('news_id='.$review)->one();
+            if($Creview){
+                $this->view->params['metatitle'] = $Creview->title;
+                $this->view->params['metaimage'] = "http://".$_SERVER['SERVER_NAME'].'/'.$item->image;
+                $this->view->params['metadesc'] = $Creview->short;
+            }
+        }
+
+
+
 
         if ($oReview->load(Yii::$app->request->post())) {
             $oReview->product_id=$item->id;
