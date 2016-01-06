@@ -64,6 +64,9 @@ class News extends \yii\easyii\components\ActiveRecord
                 'ensureUnique' => true
             ],
         ]);
+
+
+
     }
 
     public function getPhotos()
