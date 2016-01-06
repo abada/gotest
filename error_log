@@ -79,3 +79,16 @@
 [26-Dec-2015 11:17:20 UTC] PHP Fatal error:  Allowed memory size of 67108864 bytes exhausted (tried to allocate 49000000 bytes) in /home/dryarabia/public_html/demo/vendor/noumo/easyii/helpers/GD.php on line 24
 [26-Dec-2015 11:20:12 UTC] PHP Fatal error:  Allowed memory size of 67108864 bytes exhausted (tried to allocate 14000 bytes) in /home/dryarabia/public_html/demo/vendor/noumo/easyii/helpers/GD.php on line 24
 [01-Jan-2016 10:12:17 UTC] PHP Fatal error:  Class 'kop\y2sp\ScrollPager' not found in /home/dryarabia/public_html/demo/app/views/site/about.php on line 87
+[06-Jan-2016 09:51:53 UTC] PHP Fatal error:  Call to a member function formName() on a non-object in /home/dryarabia/public_html/demo/vendor/yiisoft/yii2/helpers/BaseHtml.php on line 2074
+[06-Jan-2016 09:51:58 UTC] PHP Fatal error:  Call to a member function formName() on a non-object in /home/dryarabia/public_html/demo/vendor/yiisoft/yii2/helpers/BaseHtml.php on line 2074
+[06-Jan-2016 10:49:31 UTC] PHP Fatal error:  Call to a member function formName() on a non-object in /home/dryarabia/public_html/demo/vendor/yiisoft/yii2/helpers/BaseHtml.php on line 2074
+[06-Jan-2016 10:49:34 UTC] PHP Fatal error:  Call to a member function formName() on a non-object in /home/dryarabia/public_html/demo/vendor/yiisoft/yii2/helpers/BaseHtml.php on line 2074
+[06-Jan-2016 10:50:30 UTC] PHP Fatal error:  Call to a member function formName() on a non-object in /home/dryarabia/public_html/demo/vendor/yiisoft/yii2/helpers/BaseHtml.php on line 2074
+[06-Jan-2016 10:50:33 UTC] PHP Fatal error:  Call to a member function formName() on a non-object in /home/dryarabia/public_html/demo/vendor/yiisoft/yii2/helpers/BaseHtml.php on line 2074
+[06-Jan-2016 10:50:54 UTC] PHP Fatal error:  Call to a member function formName() on a non-object in /home/dryarabia/public_html/demo/vendor/yiisoft/yii2/helpers/BaseHtml.php on line 2074
+[06-Jan-2016 10:50:58 UTC] PHP Fatal error:  Call to a member function formName() on a non-object in /home/dryarabia/public_html/demo/vendor/yiisoft/yii2/helpers/BaseHtml.php on line 2074
+[06-Jan-2016 10:51:03 UTC] PHP Fatal error:  Call to a member function formName() on a non-object in /home/dryarabia/public_html/demo/vendor/yiisoft/yii2/helpers/BaseHtml.php on line 2074
+[06-Jan-2016 10:51:11 UTC] PHP Fatal error:  Call to a member function formName() on a non-object in /home/dryarabia/public_html/demo/vendor/yiisoft/yii2/helpers/BaseHtml.php on line 2074
+[06-Jan-2016 10:51:12 UTC] PHP Fatal error:  Call to a member function formName() on a non-object in /home/dryarabia/public_html/demo/vendor/yiisoft/yii2/helpers/BaseHtml.php on line 2074
+[06-Jan-2016 15:12:17 UTC] PHP Fatal error:  Call to a member function formName() on a non-object in /home/dryarabia/public_html/demo/vendor/yiisoft/yii2/helpers/BaseHtml.php on line 2074
+[06-Jan-2016 15:12:21 UTC] PHP Fatal error:  Call to a member function formName() on a non-object in /home/dryarabia/public_html/demo/vendor/yiisoft/yii2/helpers/BaseHtml.php on line 2074
