@@ -31,7 +31,7 @@ $products = \yii\easyii\modules\catalog\models\Item::find()->where('category_id 
                 <?php
                 foreach($products as $product){
 
-                    echo "<a href='products/view/".$product->slug."'>$product->title </a>";
+                    echo "<a href='products/view/".$product->slug."'><span><i class='fa fa-circle-o'></i>$product->title </span></a>";
                 }
                 ?>
 

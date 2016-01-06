@@ -1054,7 +1054,6 @@ background:none;
 }
 .site-map a{
   color:#fc8abe;
-  text-decoration:underline;
   display:block;
   margin-bottom:15px;
   margin-top:15px;
@@ -2307,7 +2306,7 @@ display:none !important;
 	margin-left:10px;
 }
 .rating-container{
-color:#fff !important;	
+color:#B1B1B1  !important;	
 }
 .rating-container .rating-stars{
 color:#E6209C !important;	
@@ -2319,9 +2318,7 @@ font-size:1.2em;
 .order-online .control-label{
 display:none;	
 }
-.product-star.testimon .rating-container {
-    color: #E2DEDE !important;
-}
+
 
 /*CREATIVE TEAM section start here*/
 .team{}
@@ -2358,11 +2355,11 @@ margin-bottom:40px;
 	margin-bottom:50px;
 }
 .col-7 .title{
-font-size:18px;
+    font-size: 16px;
     margin-top: 35px;
     display: block;
-color:#000;
-    padding: 10px;
+    color: #000;
+    padding: 10px 0;
 }
 .col-7 .title strong{
     margin-left: 20px;	
@@ -2399,7 +2396,11 @@ color:#000;
 text-decoration:none;
 color:	#000;
 }
-
+.rating-container .rating-stars {
+    position: absolute;
+    right: 0;
+	left:auto;
+}
 /*************************Responsive*******************************/
 @media screen and (max-width:1024px){   /*Ipad+small screens*/
 	.navbar-nav{
@@ -2515,6 +2516,8 @@ width:40%;
     text-align: center;
     background-size: cover;
     padding-bottom: 60px;
+	background-position: right;
+    padding: 25px;
 }
 .online-method .left {
     width: 100%;
@@ -2522,6 +2525,9 @@ width:40%;
 }
 footer{
 background-image:none;	
+}
+.mini-slider img {
+    height: auto !important;
 }
 }
 @media screen and (max-width:480px){   /*Mobile*/

@@ -414,9 +414,11 @@ transition: all 0.3s ease-in-out;
 	color:#FFF !important;
 	font-weight:bold;
 	border-radius:4px;
-	padding:5px !important;
 	margin-right:20px;
 	line-height:24px;
+	width: 28px;
+    height: 28px;
+    display: inline-block;
 	}
 .languge:hover{
 	text-decoration:none !important;
@@ -1108,7 +1110,6 @@ background:none;
 }
 .site-map a{
   color:#fc8abe;
-  text-decoration:underline;
   display:block;
   margin-bottom:15px;
   margin-top:15px;
@@ -2364,7 +2365,7 @@ display:none !important;
 	margin-right:10px;
 }
 .rating-container{
-color:#fff !important;	
+color:#B1B1B1  !important;	
 }
 .rating-container .rating-stars{
 color:#E6209C !important;	
@@ -2376,9 +2377,7 @@ font-size:1.2em;
 .order-online .control-label{
 display:none;	
 }
-.product-star.testimon .rating-container {
-    color: #E2DEDE !important;
-}
+
 
 
 /*CREATIVE TEAM section start here*/
@@ -2416,11 +2415,11 @@ margin-bottom:40px;
 	margin-bottom:50px;
 }
 .col-7 .title{
-font-size:18px;
+    font-size: 16px;
     margin-top: 35px;
     display: block;
-color:#000;
-    padding: 10px;
+    color: #000;
+    padding: 10px 0;
 }
 .col-7 .title strong{
     margin-right: 20px;	
@@ -2566,6 +2565,10 @@ width:40%;
     text-align: center;
     background-size: cover;
     padding-bottom: 60px;
+	background-position: left;
+    padding: 25px;
+	
+    
 }
 .online-method .left {
     width: 100%;
@@ -2586,6 +2589,9 @@ background-image:none;
     height: 530px;
     background-size: cover;
     background-size: 200%;
+}
+.mini-slider img {
+    height: auto !important;
 }
 }
 @media screen and (max-width:480px){   /*Mobile*/
