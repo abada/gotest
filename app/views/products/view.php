@@ -388,7 +388,7 @@ if(Yii::$app->session->getFlash('success') != ''){
                         <!--<h4><i class="fa fa-thumbs-up fa-lg"></i> Yes, I recommend this product.</h4>-->
                         <ul class="product-details">
                             <li>Share
-                                <?php $reviewUrl=Url::to(['products/view'], true).'/?slug='.$item->slug .'&review='.$review->news_id;?>
+                                <?php $reviewUrl=Url::to(['products/view'], true).'/?slug='.$item->slug .'&review='.$review->news_id.'&lang='.\Yii::$app->language;?>
                                 <span class='st_facebook_large' displayText='' st_url="<?= $reviewUrl ;?>" st_title="<?= $review->title?>" ></span>
                                 <span class='st_twitter_large' displayText='' st_url="<?= $reviewUrl ;?>" st_title="<?= $review->title?>"></span>
                                 <span class='st_googleplus_large' displayText='' st_url="<?= $reviewUrl ;?>" st_title="<?= $review->title?>"></span>

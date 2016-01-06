@@ -67,7 +67,7 @@ class ProductsController extends \yii\web\Controller
         ]);
     }
 
-    public function actionView($slug=null,$drygo=null,$review=null)
+    public function actionView($slug=null,$drygo=null,$review=null,$lang=null)
     {
         $oReview = new \app\modules\reviews\models\News();
         $oReview->time = time();
@@ -82,6 +82,9 @@ class ProductsController extends \yii\web\Controller
             $this->view->params['metadesc'] =strip_tags($item->description);
         //if for drygo item share
         if($drygo != ''){
+            if($lang!= 'en'){
+                \Yii::$app->language="ar";          
+            }
             $dryGoData=\app\modules\drygomoduleupdated\models\Carousel::find()->where('carousel_id='.$drygo)->one();
 
             if($dryGoData){
