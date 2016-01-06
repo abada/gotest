@@ -15,8 +15,11 @@ use yii\easyii\modules\catalog\api\Catalog;
     <?php
     if(Yii::$app->language =='en' ){
         $image= $item->image;
+        $dir='ltr';
     }else{
         $image=$item->image_ar;
+        $dir='rtl';
+
     }
     ?>
         <img class="img-responsive" src="<?php echo $image?>">
@@ -37,7 +40,7 @@ use yii\easyii\modules\catalog\api\Catalog;
                     <?= Html::submitButton(Yii::t('easyii','Add to Cart').' <i class="fa fa-cart-arrow-down fa-lg"></i>' , ['class' => 'btn dry-btn']) ?>
 
                    <div class="clear"></div>
-                    <div class='col-md-12 alert' dir=" " style="display: none">
+                    <div class='col-md-12 alert' dir=" " style="display: none; direction: <?=$dir?>" >
                         <div class='alert alert-danger'>
                             <a class="close" data-hide="alert">×</a>
                             <strong>!</strong> <?= Yii::t('easyii','please add item to cart first') ?>

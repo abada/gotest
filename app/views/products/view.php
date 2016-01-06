@@ -139,7 +139,7 @@ $totalreviews=  Products::reviews($item->id,1);
 
     <?php
 
-    $a = array(17, 18 ,19,20,21,22,23,24);
+    $a = array(15,17, 18 ,19,20,21,22,23,24);
 
     if (in_array($item->item_id, $a, true)) {
         ?>
