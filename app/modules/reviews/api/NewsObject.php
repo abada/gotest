@@ -16,6 +16,8 @@ class NewsObject extends \yii\easyii\components\ApiObject
     public $no_of_review;
     public $owner;
     public $product_id;
+    public $news_id;
+
 
     private $_photos;
 

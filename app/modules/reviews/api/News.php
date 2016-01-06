@@ -27,7 +27,6 @@ class News extends \yii\easyii\components\API
     private $_last;
     private $_items;
     private $_item = [];
-    public $news_id;
 
     public function api_items($options = [],$product_id=0)
     {
