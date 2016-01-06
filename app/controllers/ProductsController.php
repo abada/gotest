@@ -83,7 +83,7 @@ class ProductsController extends \yii\web\Controller
         //if for drygo item share
         if($drygo != ''){
             if($lang!= 'en'){
-                \Yii::$app->language="ar";          
+                \Yii::$app->language="ar";
             }
             $dryGoData=\app\modules\drygomoduleupdated\models\Carousel::find()->where('carousel_id='.$drygo)->one();
 

@@ -83,7 +83,9 @@ $totalreviews=  Products::reviews($item->id,1);
                             <?= Yii::t('easyii','where to find it')?>
                         </button>
                     </a>
-                    <a href="<?php echo Yii::$app->getUrlManager()->getBaseUrl()?>/offers#<?=$item->slug ?>" class="details-btn"><button class="btn dry-btn margin-left10"><i class="fa fa-leaf fa-lg"></i> <?= Yii::t('easyii','get the offer')?></button></a>
+                    <a href="<?php echo Yii::$app->getUrlManager()->getBaseUrl()?>/offers#<?=$item->slug ?>" class="details-btn">
+                        <button class="btn dry-btn margin-left10"><i class="fa fa-leaf fa-lg"></i> <?= Yii::t('easyii','get the offer')?></button>
+                    </a>
 
                     <p class="margin-top20"><?= $item->description ;?></p>
                     <ul class="product-details margin-top30">
