@@ -82,7 +82,8 @@ class ProductsController extends \yii\web\Controller
             $this->view->params['metadesc'] =strip_tags($item->description);
         //if for drygo item share
         if($drygo != ''){
-            $dryGoData=\app\modules\drygomoduleupdated\models\Carousel::find('carousel_id='.$drygo)->one();
+            $dryGoData=\app\modules\drygomoduleupdated\models\Carousel::find()->where('carousel_id='.$drygo)->one();
+
             if($dryGoData){
                 $this->view->params['metatitle'] = $dryGoData->title;
                 $this->view->params['metaimage'] = "http://".$_SERVER['SERVER_NAME'].'/'.$dryGoData->image;
