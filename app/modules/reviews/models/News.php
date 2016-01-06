@@ -22,7 +22,10 @@ class News extends \yii\easyii\components\ActiveRecord
     public function rules()
     {
         return [
-            [['text', 'title','owner','product_id','no_of_review'], 'required'],
+            [[ 'title','product_id','no_of_review'], 'required'],
+            [['owner'],'required' ,'message'=>Yii::t('easyii', 'Enter your name')],
+            [['text'],'required' ,'message'=>Yii::t('easyii', 'Enter your Comment')],
+
             [['title', 'short', 'text'], 'trim'],
             ['title', 'string', 'max' => 128],
             ['image', 'image'],

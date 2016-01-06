@@ -3,10 +3,18 @@
 <script type="text/javascript">stLight.options({publisher: "2222d12e-5607-475a-b5d7-2ba1c0a2c5c0", doNotHash: false, doNotCopy: false, hashAddressBar: false});</script>
 
 <?php if(isset($_REQUEST['page'])){
+$a = array(15,17, 18 ,19,20,21,22,23,24);
+
+if (in_array($item->item_id, $a, true)) {
+    $scroll=1000;
+}else{
+    $scroll=2000;
+}
+
     ?>
     <script>
         $(document).ready(function(){
-            window.scrollBy(0,1000);
+            window.scrollBy(0,<?= $scroll?>);
             // alert('test')
         });
     </script>
@@ -303,7 +311,7 @@ $totalreviews=  Products::reviews($item->id,1);
 </label>
   </div>
   <div class="form-group">
-    <label>Your Review</label>
+    <label><?= yii::t('easyii','Your Review')?></label>
       <?= $form->field($oReview, 'text')->textarea([ 'class' => 'form-control','rows'=>3])->label(false); ?>
 
 
@@ -311,7 +319,7 @@ $totalreviews=  Products::reviews($item->id,1);
   </div>
 
             <div class="modal-footer">
-                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-default" data-dismiss="modal"><?= yii::t('easyii','Close')?></button>
                 <button type="submit" class="btn btn-primary"><?= yii::t('easyii','Add Review')?></button>
             </div>
             <?php ActiveForm::end(); ?>
