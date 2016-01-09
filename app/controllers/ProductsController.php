@@ -108,7 +108,7 @@ class ProductsController extends \yii\web\Controller
             $Creview=\app\modules\reviews\models\News::find()->where('news_id='.$review)->one();
             if($Creview){
                 $this->view->params['metatitle'] = $Creview->title;
-                $this->view->params['metaimage'] = "http://".$_SERVER['SERVER_NAME'].'/'.$item->image;
+                $this->view->params['metaimage'] = "http://".$_SERVER['SERVER_NAME'].'/'.$image;
                 $this->view->params['metadesc'] = $Creview->short;
             }
         }
