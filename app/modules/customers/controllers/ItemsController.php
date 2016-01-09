@@ -454,7 +454,8 @@ class ItemsController extends Controller
                     NULL, TRUE, FALSE);
 
 
-                if($fillData[0][0] != "gov_code"){
+                if($fillData[0][0] != "gov_code" and $fillData[0][0] != ''){
+
                    // echo $fillData[0][0].'----'.$fillData[0][1]."<br/>";
 
                     $goverObj = new Govenment();
