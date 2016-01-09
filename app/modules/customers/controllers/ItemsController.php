@@ -453,14 +453,17 @@ class ItemsController extends Controller
                 $fillData = $sheet->rangeToArray('A' . $row . ':' . $highestColumn . $row,
                     NULL, TRUE, FALSE);
 
-               //  echo $fillData[0][0].'----'.$fillData[0][1]."<br/>";
 
                 if($fillData[0][0] != "gov_code"){
+                   // echo $fillData[0][0].'----'.$fillData[0][1]."<br/>";
+
                     $goverObj = new Govenment();
                     $goverObj->title =$goverObj->title_ar =$fillData[0][1];
                     $goverObj->country_code='EGY';
                     $goverObj->government_code=$fillData[0][0];
-                    $goverObj->save();
+                   if(!$goverObj->save()){
+                       //var_dump($goverObj->getErrors());
+                   }
 
                 }
 //                foreach($fillData[0] as $k=>$v)
@@ -474,7 +477,7 @@ class ItemsController extends Controller
 
             unlink('uploads/csv/'.$filename);
             $this->flash('success', Yii::t('easyii/customers', 'Data Imported successfully'));
-           return $this->redirect(['/admin/customers/items/1']);
+          return $this->redirect(['/admin/customers/items/1']);
 
 
         }else{
@@ -516,14 +519,17 @@ class ItemsController extends Controller
                 $fillData = $sheet->rangeToArray('A' . $row . ':' . $highestColumn . $row,
                     NULL, TRUE, FALSE);
 
-              //  echo $fillData[0][0].'----'.$fillData[0][1].'-----'.$fillData[0][2]."<br/>";
+             // echo $fillData[0][0].'----'.$fillData[0][1].'-----'.$fillData[0][2]."<br/>";
 
-                if($fillData[0][0] != "gov_code"){
+                if($fillData[0][0] != "gov_code" and $fillData[0][0] != ''){
                     $cityobj = new Cities();
                     $cityobj->title =$cityobj->title_ar =$fillData[0][2];
                     $cityobj->government_code=$fillData[0][0];
                     $cityobj->id=$fillData[0][1];
-                    $cityobj->save();
+                   if(!$cityobj->save()){
+
+                      // var_dump($cityobj->getErrors());
+                   }
 
                 }
 //                foreach($fillData[0] as $k=>$v)
@@ -537,7 +543,7 @@ class ItemsController extends Controller
 
             unlink('uploads/csv/'.$filename);
             $this->flash('success', Yii::t('easyii/customers', 'Data Imported successfully'));
-            return $this->redirect(['/admin/customers/items/1']);
+          return $this->redirect(['/admin/customers/items/1']);
 
 
         }else{

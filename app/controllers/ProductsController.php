@@ -77,8 +77,14 @@ class ProductsController extends \yii\web\Controller
             throw new NotFoundHttpException('Item not found.');
         }
 
+        if( \Yii::$app->language == 'en'){
+            $product_image=$item->image;
+        }else{
+            $product_image=$item->image_ar;
+
+        }
             $this->view->params['metatitle'] = $item->title;
-            $this->view->params['metaimage'] = "http://".$_SERVER['SERVER_NAME'].'/'.$item->image;
+            $this->view->params['metaimage'] = "http://".$_SERVER['SERVER_NAME'].'/'.$product_image;
             $this->view->params['metadesc'] =strip_tags($item->description);
         //if for drygo item share
         if($drygo != ''){

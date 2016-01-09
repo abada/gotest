@@ -29,7 +29,8 @@ class Govenment extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['country_code', 'government_code', 'title', 'title_ar'], 'string', 'max' => 255],
+            [['country_code', 'title', 'title_ar'], 'string', 'max' => 255],
+            [['government_code'],'safe']
         ];
     }
 
