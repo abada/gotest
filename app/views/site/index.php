@@ -47,7 +47,7 @@ $this->title = $page->seo('title', 'Dry');
         <span class="sr-only"><?= Yii::t('easyii', 'Next');?></span>
     </a>
 </div>
-<div class="chartcontent" style="position: fixed;top: 400px;"></div>
+<!--<div class="chartcontent" style="position: fixed;top:400px;background:#000;z-index:500000000">sssss</div>-->
 <?php  $page = Page::get('dry-feature'); ?>
 <div class="container">
     <div class="row">

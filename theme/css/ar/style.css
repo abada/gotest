@@ -2401,6 +2401,14 @@ color:	#000;
     right: 0;
 	left:auto;
 }
+.intl-tel-input {
+    position: relative;
+    display: inline-block;
+    width: 100% ;
+}
+.intl-tel-input input, .intl-tel-input input[type=text], .intl-tel-input input[type=tel]{
+    width: 100% !important;	
+}
 /*************************Responsive*******************************/
 @media screen and (max-width:1024px){   /*Ipad+small screens*/
 	.navbar-nav{
@@ -2414,7 +2422,7 @@ color:	#000;
 	}
 	ul.products-filter li {
     margin: 2px;
-	height: 57px;
+	height: 72px;
 	}
 	ul.products-page li{
 width:24%;	
@@ -2424,6 +2432,17 @@ width:24%;
 }
 }
 @media screen and (max-width:768px){
+.order-online .col-xs-9 {
+    width: 100%;
+    padding: 0;
+}
+.filter-btn{
+width:100%;	
+}
+.site-map{
+margin-right:auto;	
+}
+
 	.single-product{
 		    width: 100%;
     overflow-y: hidden;
@@ -2534,9 +2553,17 @@ background-image:none;
 .about-vision {
     background-image: url(../../images/abou-us-1ar.jpg);
     background-repeat: no-repeat;
-    height: 530px;
-    background-position: right;
-    background-size: auto;
+    height: auto;
+	    background-size: cover;
+}
+.about-vision article {
+    float: none;
+    height: auto;
+    padding: 0 50px 50px;
+    width: 70%;
+    background: rgba(170, 92, 144, 0.82);
+    margin: 20px 15%;
+    display: inline-block;
 }
 .about-vision article .title {
     color: #FFF;

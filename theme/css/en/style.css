@@ -2456,6 +2456,14 @@ margin-bottom:40px;
 text-decoration:none;
 color:	#000;
 }
+.intl-tel-input {
+    position: relative;
+    display: inline-block;
+    width: 100% ;
+}
+.intl-tel-input input, .intl-tel-input input[type=text], .intl-tel-input input[type=tel]{
+    width: 100% !important;	
+}
 
 /*************************Responsive*******************************/
 @media screen and (max-width:1024px){   /*Ipad+small screens*/
@@ -2480,6 +2488,17 @@ width:24%;
 }
 }
 @media screen and (max-width:768px){
+	
+	.order-online .col-xs-9 {
+    width: 100%;
+    padding: 0;
+}
+.filter-btn{
+width:100%;	
+}
+.site-map{
+margin-left:auto;	
+}
 	.single-product{
 		    width: 100%;
     overflow-y: hidden;
@@ -2598,8 +2617,16 @@ background-image:none;
 .about-vision {
     background-image: url(../../images/abou-us-1.jpg);
     background-repeat: no-repeat;
-    height: 530px;
-    background-size: auto;
+    height: auto;
+}
+.about-vision article {
+    float: none;
+    height: auto;
+    padding: 0 50px 50px;
+    width: 70%;
+    background: rgba(170, 92, 144, 0.82);
+    margin: 20px 15%;
+    display: inline-block;
 }
 .about-mission {
     background-image: url(../../images/abou-us-2.jpg);

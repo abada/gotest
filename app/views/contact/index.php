@@ -20,7 +20,7 @@ $this->params['breadcrumbs'][] = $page->model->title;
                 <h2 class="title"><?= $page->title ;?></h2>
                 
             </div>
-            <div class="sub-title">
+            <div class="sub-title col-md-12">
                 <p style="text-align: center;"><?= $page->text ?></p>                </div>
         </div>
             
