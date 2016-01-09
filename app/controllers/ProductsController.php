@@ -82,18 +82,29 @@ class ProductsController extends \yii\web\Controller
             $this->view->params['metadesc'] =strip_tags($item->description);
         //if for drygo item share
         if($drygo != ''){
+             $dryGoData=\app\modules\drygomoduleupdated\models\Carousel::find()->where('carousel_id='.$drygo)->one();
             if($lang!= 'en'){
                 \Yii::$app->language="ar";
+                $image= $dryGoData->image_ar;
+            }else{
+                \Yii::$app->language="en";
+                $image= $dryGoData->image;
             }
-            $dryGoData=\app\modules\drygomoduleupdated\models\Carousel::find()->where('carousel_id='.$drygo)->one();
 
             if($dryGoData){
                 $this->view->params['metatitle'] = $dryGoData->title;
-                $this->view->params['metaimage'] = "http://".$_SERVER['SERVER_NAME'].'/'.$dryGoData->image;
+                $this->view->params['metaimage'] = "http://".$_SERVER['SERVER_NAME'].'/'.$image;
                 $this->view->params['metadesc'] = $dryGoData->text;
             }
         }
         if($review != null){
+            if($lang!= 'en'){
+                \Yii::$app->language="ar";
+                $image= $item->image_ar;
+            }else{
+                \Yii::$app->language="en";
+                $image= $item->image;
+            }
             $Creview=\app\modules\reviews\models\News::find()->where('news_id='.$review)->one();
             if($Creview){
                 $this->view->params['metatitle'] = $Creview->title;
