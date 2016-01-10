@@ -279,7 +279,7 @@ class ItemsController extends Controller
             $sheet = $objPHPExcel->getSheet(0);
             $highestRow = $sheet->getHighestRow();
             $highestColumn = $sheet->getHighestColumn();
-
+echo "ddd";die;
             //  Loop through each row of the worksheet in turn
             for ($row = 1; $row <= $highestRow; $row++) {
                 //  Read a row of data into an array
