@@ -11,7 +11,7 @@ $module = $this->context->module->id;
 
 //echo count($model->items).'ddd'; die;
 
-$items = Item::find()->limit(100)
+$items = Item::find()->limit(50)
     ->offset(10)
     ->all();
 ?>
