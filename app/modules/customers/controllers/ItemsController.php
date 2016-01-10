@@ -279,7 +279,6 @@ class ItemsController extends Controller
             $sheet = $objPHPExcel->getSheet(0);
             $highestRow = $sheet->getHighestRow();
             $highestColumn = $sheet->getHighestColumn();
-echo "ddd";die;
             //  Loop through each row of the worksheet in turn
             for ($row = 1; $row <= $highestRow; $row++) {
                 //  Read a row of data into an array
@@ -307,25 +306,25 @@ echo "ddd";die;
                     //$oCustomer->title=$data[0];
                     $oCustomer->save(false);
 
-                    if (strpos($fillData[0][10], ',') !== false) {
-                        $products = explode(",", $fillData[0][10]);
-                        if (!empty($products)) {
-                            foreach ($products as $item) {
-                                $oProduct = new CustomerItems();
-                                $oProduct->customer_id = $oCustomer->item_id;
-                                $oProduct->item_id = $item;
-                                $oProduct->save();
-                            }
-
-                        }
-                    } else {
-                        if ($fillData[0][8] != '') {
-                            $oProduct = new CustomerItems();
-                            $oProduct->customer_id = $oCustomer->item_id;
-                            $oProduct->item_id = $fillData[0][8];
-                            $oProduct->save();
-                        }
-                    }
+//                    if (strpos($fillData[0][10], ',') !== false) {
+//                        $products = explode(",", $fillData[0][10]);
+//                        if (!empty($products)) {
+//                            foreach ($products as $item) {
+//                                $oProduct = new CustomerItems();
+//                                $oProduct->customer_id = $oCustomer->item_id;
+//                                $oProduct->item_id = $item;
+//                                $oProduct->save();
+//                            }
+//
+//                        }
+//                    } else {
+//                        if ($fillData[0][8] != '') {
+//                            $oProduct = new CustomerItems();
+//                            $oProduct->customer_id = $oCustomer->item_id;
+//                            $oProduct->item_id = $fillData[0][8];
+//                            $oProduct->save();
+//                        }
+//                    }
                 }
                 $fillData=null;
                 $products=null;
