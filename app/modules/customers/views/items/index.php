@@ -9,11 +9,14 @@ $module = $this->context->module->id;
 ?>
 <?= $this->render('_menu', ['category' => $model]) ;
 
-echo count($model->items).'ddd'; die;
+//echo count($model->items).'ddd'; die;
 
+$items = Item::find()->limit(100)
+    ->offset(10)
+    ->all();
 ?>
 
-<?php if(count($model->items)) : ?>
+<?php if(count($items)) : ?>
     <table class="table table-hover">
         <thead>
         <tr>
@@ -26,7 +29,7 @@ echo count($model->items).'ddd'; die;
         </tr>
         </thead>
         <tbody>
-        <?php foreach($model->items as $item) : ?>
+        <?php foreach($items as $item) : ?>
             <tr data-id="<?= $item->primaryKey ?>">
                 <?php if(IS_ROOT) : ?>
                     <td><?= $item->primaryKey ?></td>
