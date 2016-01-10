@@ -283,6 +283,7 @@ class ItemsController extends Controller
             //  Loop through each row of the worksheet in turn
             for ($row = 1; $row <= $highestRow; $row++) {
                 //  Read a row of data into an array
+                $fillData=null;
                 $fillData = $sheet->rangeToArray('A' . $row . ':' . $highestColumn . $row,
                     NULL, TRUE, FALSE);
 
@@ -326,6 +327,8 @@ class ItemsController extends Controller
                         }
                     }
                 }
+                $oCustomer=null;
+                $oProduct=null;
 
             }
 
