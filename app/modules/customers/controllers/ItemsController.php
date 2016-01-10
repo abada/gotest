@@ -314,6 +314,8 @@ class ItemsController extends Controller
                                 $oProduct->customer_id = $oCustomer->item_id;
                                 $oProduct->item_id = $item;
                                 $oProduct->save();
+                                $products=null;
+                                $oProduct=null;
                             }
 
                         }
@@ -323,6 +325,7 @@ class ItemsController extends Controller
                             $oProduct->customer_id = $oCustomer->item_id;
                             $oProduct->item_id = $fillData[0][8];
                             $oProduct->save();
+                            $oProduct=null;
                         }
                     }
                 }
