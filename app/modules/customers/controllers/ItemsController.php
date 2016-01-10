@@ -327,6 +327,8 @@ class ItemsController extends Controller
                         }
                     }
                 }
+                $fillData=null;
+                $products=null;
                 $oCustomer=null;
                 $oProduct=null;
 
