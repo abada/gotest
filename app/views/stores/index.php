@@ -130,7 +130,7 @@ if(\Yii::$app->language =='en'){$dir= 'ltr';}else{$dir='rtl';}
                         echo $this->render('_item', ['item' => $item]);
                     endforeach ;
 
-                   echo "<div class='clear'></div>";
+                   echo "<div class='clearfix'></div>";
                     echo $cat->pages() ;
 
 
