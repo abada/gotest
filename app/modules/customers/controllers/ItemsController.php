@@ -307,6 +307,8 @@ class ItemsController extends Controller
                     $oCustomer->save(false);
 
                     if (strpos($fillData[0][10], ',') !== false) {
+                        $products=null;
+                        $oProduct=null;
                         $products = explode(",", $fillData[0][10]);
                         if (!empty($products)) {
                             foreach ($products as $item) {
@@ -314,18 +316,17 @@ class ItemsController extends Controller
                                 $oProduct->customer_id = $oCustomer->item_id;
                                 $oProduct->item_id = $item;
                                 $oProduct->save();
-                                $products=null;
-                                $oProduct=null;
+
                             }
 
                         }
                     } else {
-                        if ($fillData[0][8] != '') {
+                        if ($fillData[0][10] != '') {
                             $oProduct = new CustomerItems();
                             $oProduct->customer_id = $oCustomer->item_id;
-                            $oProduct->item_id = $fillData[0][8];
+                            $oProduct->item_id = $fillData[0][10];
                             $oProduct->save();
-                            $oProduct=null;
+
                         }
                     }
                 }
