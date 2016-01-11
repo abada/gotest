@@ -74,7 +74,7 @@ $this->title = $page->seo('title',yii::t('easyii',"Who’s Dry"));
             $dataProvider = new \yii\data\ActiveDataProvider([
                 'query' => PageModel::find()->where(['homepage' => 0]),
                 'pagination' => [
-                    'pagesize' => 1 ,
+                    'pagesize' => 4 ,
                 ],
             ]);
 
