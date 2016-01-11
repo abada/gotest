@@ -5,7 +5,18 @@ use yii\widgets\ActiveForm;
 use app\models\AddToCartForm;
 use yii\easyii\modules\catalog\api\Catalog;
 ?>
-<a name="<?= $item->offer_product_id ?>" class="ancoreTop"></a>
+
+<script>
+    if(window.location.hash) {
+        var hash = window.location.hash.substring(1); //Puts hash in variable, and removes the # character
+        $( "#"+hash ).addClass( "ancoreTop" );
+        // hash found
+    } else {
+        // No hash found
+    }
+</script>
+
+<a name="<?= $item->offer_product_id ?>"  id="<?= $item->offer_product_id ?>"></a>
 
 <div class="col-md-12 offer">
     <div class="inner-offer">
