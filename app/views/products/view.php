@@ -289,8 +289,8 @@ $totalreviews=  Products::reviews($item->id,1);
   <div class="form-group">
     <label><?= yii::t('easyii','Your Name/Nick Name')?> </label>
       <?php echo $form->field($oReview, 'owner')->textInput(['class' => 'form-control',' placeholder'=>Yii::t('easyii', 'Name') ])->label(false);  ?>
-      <label><?= yii::t('easyii','Title')?></label>
-      <?php echo $form->field($oReview, 'title')->textInput(['class' => 'form-control',' placeholder'=>Yii::t('easyii', 'Title') ])->label(false);  ?>
+      <label><?= yii::t('easyii','Review Title')?></label>
+      <?php echo $form->field($oReview, 'title')->textInput(['class' => 'form-control',' placeholder'=>Yii::t('easyii', 'Review Title') ])->label(false);  ?>
 
   </div>
   <div class="form-group">
@@ -389,7 +389,7 @@ if(Yii::$app->session->getFlash('success') != ''){
                         <p><?= $review->text?></p>
                         <!--<h4><i class="fa fa-thumbs-up fa-lg"></i> Yes, I recommend this product.</h4>-->
                         <ul class="product-details">
-                            <li>Share
+                            <li> <?= yii::t('easyii','Share')?>
                                 <?php $reviewUrl=Url::to(['products/view'], true).'/?slug='.$item->slug .'&review='.$review->news_id.'&lang='.\Yii::$app->language;?>
                                 <span class='st_facebook_large' displayText='' st_url="<?= $reviewUrl ;?>" st_title="<?= $review->title?>" ></span>
                                 <span class='st_twitter_large' displayText='' st_url="<?= $reviewUrl ;?>" st_title="<?= $review->title?>"></span>
