@@ -1,9 +1,10 @@
 <?php
 if($index % 2) {
-    echo ' <div class="about-review container">';
-} else {
     echo '<div class="gray-review  ">
                                         <div class="about-review container">';
+} else {
+
+    echo ' <div class="about-review container">';
 }
 ?>
 
@@ -19,9 +20,10 @@ if($index % 2) {
 
 <?php
 if($index % 2) {
-        echo ' </div>';
-} else {
     echo ' </div> </div>';
+} else {
+    echo ' </div>';
+
 
 }
 
