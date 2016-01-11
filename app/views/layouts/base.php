@@ -17,6 +17,15 @@ use yii\helpers\Html;
         <meta property="og:title"  content="<?php echo $this->params['metatitle']; ?>" />
         <meta property="og:image" content="<?php echo $this->params['metaimage'] ; ?>" />
         <meta property="og:description" content="<?php echo $this->params['metadesc']; ?>" />
+
+    <body itemscope itemtype="http://schema.org/Article">
+    <h1 itemprop="name"><?php echo $this->params['metatitle']; ?></h1>
+    <img itemprop="image" src="<?php echo $this->params['metaimage'] ; ?>" />
+    <p itemprop="description"><?php echo $this->params['metadesc']; ?></p>
+    </body>
+
+
+
         <?php } ?>
 
 <?php
