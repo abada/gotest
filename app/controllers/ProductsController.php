@@ -84,7 +84,7 @@ class ProductsController extends \yii\web\Controller
 
         }
             $this->view->params['metatitle'] = $item->title;
-            $this->view->params['metaimage'] = "http://".$_SERVER['SERVER_NAME'].'/'.$product_image;
+            $this->view->params['metaimage'] = "http://".$_SERVER['SERVER_NAME'].$product_image;
             $this->view->params['metadesc'] =strip_tags($item->description);
         //if for drygo item share
         if($drygo != ''){
@@ -99,7 +99,7 @@ class ProductsController extends \yii\web\Controller
 
             if($dryGoData){
                 $this->view->params['metatitle'] = $dryGoData->title;
-                $this->view->params['metaimage'] = "http://".$_SERVER['SERVER_NAME'].'/'.$image;
+                $this->view->params['metaimage'] = "http://".$_SERVER['SERVER_NAME'].$image;
                 $this->view->params['metadesc'] = $dryGoData->text;
             }
         }
@@ -114,7 +114,7 @@ class ProductsController extends \yii\web\Controller
             $Creview=\app\modules\reviews\models\News::find()->where('news_id='.$review)->one();
             if($Creview){
                 $this->view->params['metatitle'] = $Creview->title;
-                $this->view->params['metaimage'] = "http://".$_SERVER['SERVER_NAME'].'/'.$image;
+                $this->view->params['metaimage'] = "http://".$_SERVER['SERVER_NAME'].$image;
                 $this->view->params['metadesc'] = $Creview->short;
             }
         }
