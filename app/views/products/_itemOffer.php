@@ -5,7 +5,7 @@ use yii\widgets\ActiveForm;
 use app\models\AddToCartForm;
 use yii\easyii\modules\catalog\api\Catalog;
 ?>
-<a name="<?= $item->offer_product_id ?>"></a>
+<a name="<?= $item->offer_product_id ?>" class="ancoreTop"></a>
 
 <div class="col-md-12 offer">
     <div class="inner-offer">

@@ -2545,9 +2545,7 @@ width:40%;
 footer{
 background-image:none;	
 }
-.mini-slider img {
-    height: auto !important;
-}
+
 }
 @media screen and (max-width:480px){   /*Mobile*/
 .about-vision {
@@ -2701,4 +2699,16 @@ text-indent:42%;
 }
 .features-group li:last-child{
 	animation-delay: 0.5s !important;
+}
+
+.succesTitle{
+	    font-size: 1.5em;
+    line-height: 37px;
+    color: #FC8ABE;
+    /* border-bottom: 1px solid #ccc; */
+    padding-bottom: 50px;
+}
+.ancoreTop{
+	display:block;
+	margin-top:100px;
 }
