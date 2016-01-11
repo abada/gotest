@@ -19,7 +19,7 @@ use yii\helpers\Html;
         <meta property="og:description" content="<?php echo $this->params['metadesc']; ?>" />
             <meta itemprop="name" content="<?php echo $this->params['metatitle']; ?>">
             <meta itemprop="description" content="<?php echo $this->params['metadesc']; ?>">
-            <meta itemprop="image" content="<?php echo $this->params['metatitle']; ?>">
+            <meta itemprop="image" content="<?php echo $this->params['metaimage']; ?>">
 
         <?php } ?>
 
