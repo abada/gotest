@@ -42,14 +42,14 @@ if(\Yii::$app->language == "en") {
         <link href="<?php echo Yii::$app->getUrlManager()->getBaseUrl()?>/theme/css/<?= $bath?>/animate.css" rel="stylesheet">
         <link href="<?php echo Yii::$app->getUrlManager()->getBaseUrl()?>/theme/css/<?= $bath?>/star-rating.css" media="all" rel="stylesheet" type="text/css"/>
         <link rel="shortcut icon" href="<?php echo Yii::$app->getUrlManager()->getBaseUrl()?>/theme/images/favicon.ico" type="image/x-icon">
-        
+
         <link rel="icon" href="<?php echo Yii::$app->getUrlManager()->getBaseUrl()?>/theme/images/favicon.ico" type="image/x-icon">
 
         <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
         <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
         <script type="text/javascript" src="<?php echo Yii::$app->getUrlManager()->getBaseUrl()?>/theme/js/jquery-1.11.3.min.js"></script>
 	    <script type="text/javascript" src="<?php echo Yii::$app->getUrlManager()->getBaseUrl()?>/theme/js/bootstrap.min.js"></script>
-        
+
     <script src="<?php echo Yii::$app->getUrlManager()->getBaseUrl()?>/theme/js/star-rating.js" type="text/javascript"></script>
 
         <?php $this->head() ?>
@@ -208,6 +208,10 @@ autoPlay : true,
 //	$('.circleGraphic4').circleGraphic({'color':'#fc8abe'});
 var count=0;
 
+        <?php
+
+        if(Yii::$app->controller->id =='site' and ($this->context->action->id =='index') ){
+        ?>
 //element = $(".chartcontent").offset().top;  //673
  $(window).scroll(function(){
    y = $(window).scrollTop();
@@ -227,7 +231,7 @@ var count=0;
  });
 
 
-
+<? } ?>
 
 
 

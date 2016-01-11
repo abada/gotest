@@ -74,7 +74,7 @@ $this->title = $page->seo('title',yii::t('easyii',"Who’s Dry"));
             $dataProvider = new \yii\data\ActiveDataProvider([
                 'query' => PageModel::find()->where(['homepage' => 0]),
                 'pagination' => [
-                    'pagesize' => 4 ,
+                    'pagesize' => 1 ,
                 ],
             ]);
 
@@ -89,12 +89,11 @@ $this->title = $page->seo('title',yii::t('easyii',"Who’s Dry"));
                     'triggerText'=>'<button class="btn dry-btn-2 center-block margin-bottom10">'.yii::t('easyii','More Testimonials').'</button>'],
 
 
-            ]);
+            ]); //btn dry-btn-2 center-block margin-bottom10
 
 
      ?>
 
-<!--            <button class="btn dry-btn-2 center-block margin-bottom10">More Testimonials</button> -->
         </div>
     </div>
 </div>
