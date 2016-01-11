@@ -921,6 +921,7 @@ padding-left:35px;*/
     padding: 0;
     width: 170px;
     text-align: center;
+	margin-bottom:20px;
 	}
 .inner-offer .dry-btn:hover{
 background-image:none;
@@ -1981,6 +1982,9 @@ transition: all .3s ease-in-out;
 	top:0;
 }
 @media (max-width: 768px) {
+	.order-online .help-block{
+		text-align:center;
+	}
 	.navbar-collapse {
 		width:100%;
 		margin:0;
@@ -2567,7 +2571,7 @@ ul.product li{
 width:40%;	
 }
 .col-7 {
-    width: 25%;
+    width: 24%;
 }
 .find-bg {
     height: auto;
@@ -2616,6 +2620,7 @@ background-image:none;
     background-image: url(../../images/abou-us-1.jpg);
     background-repeat: no-repeat;
     height: auto;
+	background-size:cover;
 }
 .about-vision article {
     float: none;

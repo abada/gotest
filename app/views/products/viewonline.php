@@ -20,7 +20,7 @@ $totalreviews=  Products::reviews($item->id,1);
             <div class="col-md-12">
                 <div class="online-product">
                     <div class="row">
-                        <div class="col-md-7"  style="padding-left:0"><div class="media">
+                        <div class="col-md-7"  ><div class="media">
                                 <div class="media-left">
 <!--                                    <img class="img-responsive center-block" src="--><?php //echo Yii::$app->getUrlManager()->getBaseUrl()?><!--/theme/images/offer-1.jpg">-->
                                     <? //= Html::img($item->thumb(300, 300),['class'=>'center-block']) ?>
