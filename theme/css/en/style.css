@@ -2609,9 +2609,7 @@ background-image:none;
     background-size: cover;
     background-size: 200%;
 }
-.mini-slider img {
-    height: auto !important;
-}
+
 }
 @media screen and (max-width:480px){   /*Mobile*/
 .about-vision {
@@ -2764,4 +2762,13 @@ text-indent:42%;
 }
 .intl-tel-input .flag-container:hover .selected-flag {
     background-color: transparent !important;
+}
+.succesTitle{
+	font-size:1.5em;
+	 color: #FC8ABE;
+    text-transform: capitalize;
+}
+.ancoreTop{
+	display:block;
+	margin-top:100px;
 }

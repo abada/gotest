@@ -21,7 +21,7 @@ $this->params['breadcrumbs'][] = $page->model->title;
     <div class="container">
     
     <!--<?= Yii::t('easyii','order online');?>-->
-    <h2 class="title"><?= $page->text ?></h2>
+    <h2 class="title succesTitle"><?= $page->text ?></h2>
     <div class="row">
 
         <?php
