@@ -27,7 +27,7 @@ $this->params['breadcrumbs'][] = $page->model->title;
             
         </div>
     </div>
-    <div class="container-fluid bg margin-top50">
+    <div class="container-fluid bg margin-top50 contactpage">
         <div class="container">
             <div class="row contact-us">
                 <div class="col-sm-5 col-sm-offset-1">

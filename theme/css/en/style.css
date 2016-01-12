@@ -1239,8 +1239,10 @@ ul.product li a{
 	padding-left:80px;
 	padding-top:23px;
 }
-.online-product	.media-body p{
+.online-product .media-body p{
 	font-size:1.6em;
+	direction: rtl;
+    text-align: left;
 }
 .online-product	.media-body a{
 	color:#464646;
@@ -1981,7 +1983,17 @@ transition: all .3s ease-in-out;
 .navbar-fixed-top.on{
 	top:0;
 }
+
+.contactpage{
+display:block;	
+}
 @media (max-width: 768px) {
+	.about-dry {
+    width: 85%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50PX;
+}
 	.order-online .help-block{
 		text-align:center;
 	}
@@ -2590,7 +2602,7 @@ width:40%;
     padding-bottom: 60px;
 	background-position: left;
     padding: 25px;
-	
+	    background: #F7D6E7;
     
 }
 .online-method .left {
@@ -2757,6 +2769,29 @@ height:auto;
 .find-bg .form-group {
     margin-bottom: 0;
 }
+
+.online-product .media-left{
+width:100%;
+text-align:center;	
+display:block;
+}
+.online-product	.media-body {
+    padding-left: 0;
+   
+    width: 100%;
+    display: block;
+    text-align: center;
+}
+.online-product .form-control{
+	    float: none;
+    display: inline-block;
+}
+.online-product .help-block{
+	text-align:center;
+}
+.online-product .dry-btn{
+float:none !important;	
+}
 }
 
 #order-city,#order-country{
@@ -2776,4 +2811,8 @@ text-indent:42%;
 .ancoreTop{
 	display:block;
 	margin-top:100px;
+}
+.panel-default {
+    border-color: #ddd;
+    margin: 0 20px;
 }
