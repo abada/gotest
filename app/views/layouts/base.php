@@ -217,7 +217,7 @@ var count=0;
 //element = $(".chartcontent").offset().top;  //673
  $(window).scroll(function(){
    y = $(window).scrollTop();
-    if (y >= 345){
+    if (y >= 245){
         if(count == 0){
     $('.circleGraphic1').circleGraphic({'color':'#fc8abe'});
 	$('.circleGraphic2').circleGraphic({'color':'#fc8abe'});
