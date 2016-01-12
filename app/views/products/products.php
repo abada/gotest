@@ -3,7 +3,9 @@ use yii\helpers\Html;
 use yii\helpers\Url;
 use yii\widgets\ActiveForm;
 
-$this->title = $cat->seo('title', $cat->model->title);
+//$this->title = $cat->seo('title', $cat->model->title);
+$this->title = yii::t('easyii','Dry Products');
+
 $this->params['breadcrumbs'][] = ['label' => 'Shop', 'url' => ['shop/index']];
 $this->params['breadcrumbs'][] = $cat->model->title;
 

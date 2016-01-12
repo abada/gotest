@@ -1,3 +1,14 @@
+
+<script>
+    if(window.location.hash) {
+        var hash = window.location.hash.substring(1); //Puts hash in variable, and removes the # character
+        $( "#"+hash ).addClass( "ancoreTop" );
+        // hash found
+    } else {
+        // No hash found
+    }
+</script>
+
 <?php
 use yii\helpers\Html;
 use yii\helpers\Url;
@@ -5,7 +16,9 @@ use yii\widgets\ActiveForm;
 use yii\easyii\modules\page\api\Page;
 
 //
-$this->title = $cat->seo('title', $cat->model->title);
+//$this->title = $cat->seo('title', $cat->model->title);
+$this->title = yii::t('easyii','Dry  Offers');
+
 $this->params['breadcrumbs'][] = ['label' => 'Shop', 'url' => ['shop/index']];
 $this->params['breadcrumbs'][] = $cat->model->title;
 
