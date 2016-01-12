@@ -63,7 +63,9 @@ $this->params['breadcrumbs'][] = $page->model->title;
 
                         <div class="row">
                             <div class="col-md-12 margin-top30">
-                                <button class="btn dry-btn center-block" type="submit">Send Request</button>
+                                <button class="btn dry-btn center-block" type="submit">
+                                    <?= yii::t('easyii','Send Request')?>
+                                    </button>
                             </div>
                         </div>
 
