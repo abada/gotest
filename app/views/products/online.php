@@ -1,4 +1,4 @@
-<?php  $this->title ='Online Dry Products';
+<?php  $this->title =yii::t('easyii','Online Dry Products');
  ?>
 
 <div class="content">

@@ -12,7 +12,7 @@ use  \yii\easyii\models\Setting;
 
 $page = Page::get('about');
 
-$this->title = 'Dry Site Map';
+$this->title = yii::t('easyii','Dry Site Map');
 
 $products = \yii\easyii\modules\catalog\models\Item::find()->where('category_id =2')->all();
 ?>
