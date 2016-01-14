@@ -6,8 +6,8 @@ return [
         'sourceLanguage'=>'ar',
 
         'languages' => [
+             'ar' => 'ع',
             'en' => 'EN',
-            'ar' => 'ع',
         ],
     ],
 ];

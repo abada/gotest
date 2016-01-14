@@ -9,7 +9,9 @@ $config = [
     'id' => 'app',
     'basePath' => $basePath,
     'bootstrap' => ['log'],
-    'language' => 'en',
+    'language' => 'ar',
+    'sourceLanguage'=>'ar',
+
     'runtimePath' => $webroot . '/runtime',
     'vendorPath' => $webroot . '/vendor',
     'components' => [
