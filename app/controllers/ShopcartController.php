@@ -14,6 +14,15 @@ use yii\easyii\modules\shopcart\models\Order;
 class ShopcartController extends \yii\web\Controller
 {
 
+    public function beforeAction($event)
+    {
+        if( \Yii::$app->session->has('_language')){
+        }else{
+            \Yii::$app->language='ar';
+        }
+        return parent::beforeAction($event);
+    }
+
     public function init()
     {
         MultiLanguageHelper::catchLanguage();

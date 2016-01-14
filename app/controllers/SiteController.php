@@ -16,6 +16,14 @@ use app\modules\awarness\models\Feedback as FeedbackModel;
 
 class SiteController extends FrontController
 {
+    public function beforeAction($event)
+    {
+        if( \Yii::$app->session->has('_language')){
+        }else{
+            \Yii::$app->language='ar';
+        }
+        return parent::beforeAction($event);
+    }
 
     public function actions()
     {

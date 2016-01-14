@@ -15,6 +15,14 @@ use yii\web\NotFoundHttpException;
 class StoresController extends FrontController
 {
 
+    public function beforeAction($event)
+    {
+        if( \Yii::$app->session->has('_language')){
+        }else{
+            \Yii::$app->language='ar';
+        }
+        return parent::beforeAction($event);
+    }
     public function actionIndex()
     {
         //prepar products
