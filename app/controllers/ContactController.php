@@ -7,6 +7,14 @@ use yii\easyii\modules\feedback\models\Feedback as FeedbackModel;
 
 class ContactController extends FrontController
 {
+    public function beforeAction($event)
+    {
+        if( \Yii::$app->session->has('_language')){
+        }else{
+            \Yii::$app->language='ar';
+        }
+        return parent::beforeAction($event);
+    }
     public function actionIndex()
     {
 
