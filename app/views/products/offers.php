@@ -27,7 +27,11 @@ $this->params['breadcrumbs'][] = $cat->model->title;
 
 $page = Page::get('offerpage');
 ?>
-
+<style>
+.navbar-fixed-top{
+position:absolute !important;	
+}
+</style>
 
 <div class="content">
     <div class="container">

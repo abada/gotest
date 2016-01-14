@@ -2433,6 +2433,19 @@ text-align:right;
 .contactpage{
 display:block;	
 }
+
+.team-image-sec .stButton .stLarge {
+    height:36px !important;
+    width:36px !important;
+}
+.team-image-sec ul li {
+    display: inline-block;
+    margin-left: -6px;
+}
+.stButton .stLarge:hover {
+    opacity: .75;
+    background-position: -36px !important;
+}
 /*************************Responsive*******************************/
 @media screen and (max-width:1024px){   /*Ipad+small screens*/
 	.navbar-nav{
@@ -2531,12 +2544,12 @@ margin-right:auto;
 #FilterForm .col-md-6{
 	    width: 50%;
     /* display: inline-block; */
-    float: right;
+    
 }
 #FilterForm .col-md-4{
 	    width: 33%;
     /* display: inline-block; */
-    float: right;
+    
 }
 .product-filter{
 height:auto;	
