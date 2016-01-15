@@ -153,7 +153,7 @@ $totalreviews=  Products::reviews($item->id,1);
     			<?php
                 $listData = \app\modules\drygomoduleupdated\models\Carousel::find()->all();
                 foreach ($listData as $data){
-                $itemdataUrl=Url::to(['products/view'], true).'/?slug='.$item->slug .'&drygo='.$data->carousel_id;
+                $itemdataUrl=Url::to(['products/view'], true).'/?slug='.$item->slug .'&drygo='.$data->carousel_id.'&lang='.\Yii::$app->language;;
                    ?>
 
                     <div class="col-md-4 bounceIn wow">
