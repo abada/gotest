@@ -3,18 +3,11 @@
 <script type="text/javascript">stLight.options({publisher: "2222d12e-5607-475a-b5d7-2ba1c0a2c5c0", doNotHash: false, doNotCopy: false, hashAddressBar: false});</script>
 
 <?php if(isset($_REQUEST['page'])){
-$a = array(15,17, 18 ,19,20,21,22,23,24);
-
-if (in_array($item->item_id, $a, true)) {
-    $scroll=2500;
-}else{
-    $scroll=1000;
-}
-
     ?>
     <script>
         $(document).ready(function(){
-            window.scrollBy(0,<?= $scroll?>);
+            //window.scrollBy(0,<?= $scroll?>);
+            location.hash = "#page";
             // alert('test')
         });
     </script>
@@ -256,6 +249,7 @@ $totalreviews=  Products::reviews($item->id,1);
     <? }?>
 
 
+    <a href="" id="page"></a>
 
     <div class="container-fluid review-bg">
         <div class="title"> <?= Products::reviews($item->id,2).' '.Yii::t('easyii','reviews')?> </div>
@@ -349,7 +343,6 @@ if(Yii::$app->session->getFlash('success') != ''){
   ?>
 
     <div class="container margin-top20">
-
         <div class="row">
             <div class="col-sm-8">
                 <?php
