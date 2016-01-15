@@ -7,10 +7,11 @@ use  \yii\easyii\models\Setting;
 
 $page = Page::get('page-shopcart');
 
-$this->title = $page->seo('title', $page->model->title);
+ $this->title =yii::t('easyii','Checkout');
 $this->params['breadcrumbs'][] = $page->model->title;
 $delivery= Setting::get('deliver_cost');
 ?>
+
 <?php
     $page = Page::get('shopcartpage');
 ?>
