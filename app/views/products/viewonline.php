@@ -26,9 +26,9 @@ $totalreviews=  Products::reviews($item->id,1);
                                     <? //= Html::img($item->thumb(300, 300),['class'=>'center-block']) ?>
                                     <?php
                                    if (\Yii::$app->language == "en"){
-                                       $image =($item->image_online == "")?  $item->image :$item->image_online ;
+                                       $image =($item->online_image == "")?  $item->image :$item->online_image ;
                                     }else{
-                                       $image =($item->image_online_ar == "")?  $item->image_ar :$item->image_online_ar ;
+                                       $image =($item->online_image_ar == "")?  $item->image_ar :$item->online_image_ar ;
 
 
                                    }
