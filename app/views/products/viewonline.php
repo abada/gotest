@@ -24,7 +24,17 @@ $totalreviews=  Products::reviews($item->id,1);
                                 <div class="media-left">
 <!--                                    <img class="img-responsive center-block" src="--><?php //echo Yii::$app->getUrlManager()->getBaseUrl()?><!--/theme/images/offer-1.jpg">-->
                                     <? //= Html::img($item->thumb(300, 300),['class'=>'center-block']) ?>
-                   <img src="<?= (\Yii::$app->language == "en")? $item->image : $item->image_ar?>" width="300" height="300" class="center-block">
+                                    <?php
+                                   if (\Yii::$app->language == "en"){
+                                       $image =($item->image_online == "")?  $item->image :$item->image_online ;
+                                    }else{
+                                       $image =($item->image_online_ar == "")?  $item->image_ar :$item->image_online_ar ;
+
+
+                                   }
+                                    ?>
+
+                   <img src="<?= $image ?>" width="300" height="300" class="center-block">
 
 
                                 </div>
