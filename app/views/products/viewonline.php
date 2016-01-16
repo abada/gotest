@@ -18,9 +18,16 @@ $totalreviews=  Products::reviews($item->id,1);
     <div class="container">
         <div class="row">
             <div class="col-md-12">
+
                 <div class="online-product">
+
                     <div class="row">
-                        <div class="col-md-7"  ><div class="media">
+
+                        <div class="col-md-7"  >
+                            <div class="clear"><br/></div>
+
+                            <div class="media">
+
                                 <div class="media-left">
 <!--                                    <img class="img-responsive center-block" src="--><?php //echo Yii::$app->getUrlManager()->getBaseUrl()?><!--/theme/images/offer-1.jpg">-->
                                     <? //= Html::img($item->thumb(300, 300),['class'=>'center-block']) ?>
@@ -39,6 +46,7 @@ $totalreviews=  Products::reviews($item->id,1);
 
                                 </div>
                                 <div class="media-body">
+
                                     <h3 class="media-heading"><?= $item->title ;?> </h3>
                                     <p><?= $item->price ;?>
                                         <? if(\Yii::$app->language == 'ar') echo "ج.م" ;?>
@@ -87,6 +95,8 @@ $totalreviews=  Products::reviews($item->id,1);
 
                                 </div>
                             </div></div>
+                        <div class="clear"><br/></div>
+
                         <div class="col-md-5">
                             <h3><?= Yii::t('easyii','Product details');?></h3>
                             <hr>
