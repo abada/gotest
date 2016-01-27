@@ -17,7 +17,7 @@ $goodsCount = count(Shopcart::goods());
 <div class="search">
   <div class="container">
  <?= Html::beginForm(Url::to(['/search']), 'get') ?>
-                        <?= Html::textInput('text', $text, ['class' => 'form-control', 'placeholder' => '']) ?>
+ <?= Html::textInput('text', $text, ['class' => 'form-control', 'placeholder' => '']) ?>
                         
 <?= Html::endForm() ?>
 </div>
