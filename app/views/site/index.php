@@ -12,9 +12,18 @@ use  \yii\easyii\models\Setting;
 
 $page = Page::get('page-index');
 
-$this->title = $page->seo('title', 'Dry ');
-$this->params['metatitle'] = yii::t('easyii','Testing English Title');
+$this->title = yii::t('easyii','Dry');
+
+$this->params['metatitle'] = yii::t('easyii','meta 1');
 ?>
+
+
+
+
+
+
+
+
 
 <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
    
