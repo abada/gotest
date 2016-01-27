@@ -5,8 +5,10 @@ use yii\widgets\ActiveForm;
 
 
 $page = Page::get('page-contact');
-
 $this->title = yii::t('easyii','contact us');//$page->seo('title',yii::t('easyii','contact us'));
+$this->params['metatitle'] = '';
+$this->params['metadesc'] ='';
+
 $this->params['breadcrumbs'][] = $page->model->title;
 ?>
 
