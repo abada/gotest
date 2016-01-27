@@ -9,6 +9,11 @@ $page = Page::get('page-shop');
 $this->title = $page->seo('title', $page->model->title);
 $this->params['breadcrumbs'][] = $page->model->title;
 
+$this->params['metatitle'] = 'ÝæØ ÕÍíÉ ááãÊÒæÌÇÊ,ÇÝÖá ÝæØ ÕÍíÉ ááÈÔÑÉ ÇáÍÓÇÓÉ,ÝæØ ÕÍíÉ ááæáÇÏÉ ';
+
+
+
+
 function renderNode($node){
     if(!count($node->children)){
         $html = '<li>'.Html::a($node->title, ['/shop/cat', 'slug' => $node->slug]).'</li>';

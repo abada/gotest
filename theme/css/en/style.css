@@ -2362,7 +2362,7 @@ margin-right:15px;
 }
 .stButton .stLarge:hover {
     opacity: .75;
-    background-position: -25px !important;
+    background-position: -100% !important;
 } 
 
 
@@ -2491,7 +2491,7 @@ color:	#000;
 }
 .stButton .stLarge:hover {
     opacity: .75;
-    background-position: -36px !important;
+    background-position: -100% !important;
 }
 /*************************Responsive*******************************/
 @media screen and (max-width:1024px){   /*Ipad+small screens*/

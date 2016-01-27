@@ -12,8 +12,14 @@ use  \yii\easyii\models\Setting;
 
 $page = Page::get('page-index');
 
-$this->title = $page->seo('title', 'Dry');
+$this->title = $page->seo('title', 'Dry ');
 ?>
+
+
+
+
+
+
 
 
 <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">

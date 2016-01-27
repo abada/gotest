@@ -3,3 +3,4 @@ app/config/db.php
 Thumbs.db
 composer.lock
 composer.json
+demo/*
