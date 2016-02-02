@@ -16,6 +16,9 @@ $page = Page::get('about');
 $this->title = $page->seo('title', yii::t('easyii','awareness program'));
 use yii\widgets\ActiveForm;
 
+$this->params['meta_keyword'] = yii::t('easyii','meta 2');
+$this->params['meta_description'] = yii::t('easyii','meta 79');
+
 ?>
 
 <div class="content">

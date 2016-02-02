@@ -11,6 +11,8 @@ $this->params['breadcrumbs'][] = $page->model->title;
 
 $this->params['metatitle'] = 'ÝæØ ÕÍíÉ ááãÊÒæÌÇÊ,ÇÝÖá ÝæØ ÕÍíÉ ááÈÔÑÉ ÇáÍÓÇÓÉ,ÝæØ ÕÍíÉ ááæáÇÏÉ ';
 
+$this->params['meta_keyword'] = yii::t('easyii','meta 2');
+$this->params['meta_description'] = yii::t('easyii','DI 1');
 
 
 

@@ -32,9 +32,9 @@
 									//'ProductType'			 => 'PPX',
 									'ProductGroup'             => 'DOM',
 									'ProductType'             => 'OND',
-									'ActualWeight' 			 => array('Value' => 5, 'Unit' => 'KG'),
-									'ChargeableWeight' 	     => array('Value' => 5, 'Unit' => 'KG'),
-									'NumberOfPieces'		 => 5
+									'ActualWeight' 			 => array('Value' => 7.250, 'Unit' => 'KG'),
+									'ChargeableWeight' 	     => array('Value' => 7.250, 'Unit' => 'KG'),
+									'NumberOfPieces'		 => 7
 								)
 	);
 	

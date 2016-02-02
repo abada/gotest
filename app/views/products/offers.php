@@ -19,6 +19,10 @@ use yii\easyii\modules\page\api\Page;
 //$this->title = $cat->seo('title', $cat->model->title);
 $this->title = yii::t('easyii','Dry  Offers');
 
+$this->params['meta_keyword'] = yii::t('easyii','meta 5');
+$this->params['meta_description'] = yii::t('easyii','meta 78');
+
+
 $this->params['breadcrumbs'][] = ['label' => 'Shop', 'url' => ['shop/index']];
 $this->params['breadcrumbs'][] = $cat->model->title;
 

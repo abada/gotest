@@ -35,9 +35,17 @@ use yii\helpers\Html;
         <meta property="og:title"  content="<?php echo $this->params['metatitle']; ?>" />
         <meta property="og:image" content="<?php echo $this->params['metaimage'] ; ?>" />
             <meta property="og:image:width" content="300" />
-
             <meta property="og:description" content="<?php echo $this->params['metadesc']; ?>" />
         <?php } ?>
+
+    <?php if(isset($this->params['meta_keyword'])){?>
+        <meta name="keywords" content="<?php echo $this->params['meta_keyword']; ?>" />
+   <? }?>
+
+        <?php if(isset($this->params['meta_description'])){?>
+            <meta name="description" content="<?php echo $this->params['meta_description']; ?>" />
+        <? }?>
+
 
 <?php
 

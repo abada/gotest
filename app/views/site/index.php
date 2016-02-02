@@ -13,17 +13,10 @@ use  \yii\easyii\models\Setting;
 $page = Page::get('page-index');
 
 $this->title = yii::t('easyii','Dry');
+$this->params['meta_keyword'] = yii::t('easyii','meta 2');
+$this->params['meta_description'] = yii::t('easyii','meta 1');
 
-$this->params['metatitle'] = yii::t('easyii','meta 1');
 ?>
-
-
-
-
-
-
-
-
 
 <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
    

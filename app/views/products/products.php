@@ -6,8 +6,12 @@ use yii\widgets\ActiveForm;
 //$this->title = $cat->seo('title', $cat->model->title);
 $this->title = yii::t('easyii','Dry Products');
 
+
 $this->params['breadcrumbs'][] = ['label' => 'Shop', 'url' => ['shop/index']];
 $this->params['breadcrumbs'][] = $cat->model->title;
+
+$this->params['meta_keyword'] = yii::t('easyii','meta 4');
+$this->params['meta_description'] = yii::t('easyii','meta 77');
 
 $sliderFilters=$this->params['sliderFilters'];
 $ListCloth =['1'=>'Wide','2'=>'Tight',''=>'Wide'];
