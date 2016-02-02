@@ -92,12 +92,14 @@ class ProductsController extends \yii\web\Controller
 
         }
             //og tags
-            $this->view->params['metatitle'] = $item->title;
+            $this->view->params['metatitle'] = $item->og_title;
             $this->view->params['metaimage'] = "http://".$_SERVER['SERVER_NAME'].$product_image;
-            $this->view->params['metadesc'] =strip_tags($item->description);
+            $this->view->params['metadesc'] =$item->og_desc;
+
             //meta tags
-            $this->view->params['meta_keyword']='';
-            $this->view->params['meta_description']=strip_tags($item->description);
+            $this->view->params['meta_title']=$item->meta_title;
+            $this->view->params['meta_keyword']=$item->meta_keyword;
+            $this->view->params['meta_description']=$item->meta_desc;
             
             
             
