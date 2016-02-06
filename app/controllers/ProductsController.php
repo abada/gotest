@@ -333,10 +333,31 @@ class ProductsController extends \yii\web\Controller
 
     public function actionViewOnline($slug=null)
     {
+
         $item = Catalog::get($slug);
         if(!$item){
             throw new NotFoundHttpException('Item not found.');
         }
+
+        if( \Yii::$app->language == 'en'){
+            $product_image=$item->image;
+        }else{
+            $product_image=$item->image_ar;
+
+        }
+        //og tags
+        $this->view->params['metatitle'] = $item->og_title;
+        $this->view->params['metaimage'] = "http://".$_SERVER['SERVER_NAME'].$product_image;
+        $this->view->params['metadesc'] =strip_tags($item->og_desc);
+
+        //meta tags
+        $this->view->params['meta_title']=$item->meta_title;
+        $this->view->params['meta_keyword']=strip_tags($item->meta_keyword);
+        $this->view->params['meta_description']=strip_tags($item->meta_desc);
+
+
+
+
 
         $cat= Catalog::cat('products');
 
