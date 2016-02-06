@@ -1,4 +1,4 @@
-<?php
+	<?php
 use yii\easyii\modules\article\api\Article;
 use yii\easyii\modules\carousel\api\Carousel;
 use yii\easyii\modules\gallery\api\Gallery;
@@ -15,7 +15,11 @@ $page = Page::get('about');
 $this->title = $page->seo('title',yii::t('easyii',"Who’s Dry"));
 ?>
 
+
 <div class="content">
+
+
+
 
     <div class="container-fluid">
         <div class="row about">
