@@ -13,6 +13,9 @@ use app\modules\newtestmonials\models\Page as PageModel;
 $page = Page::get('about');
 
 $this->title = $page->seo('title',yii::t('easyii',"Who’s Dry"));
+
+
+$this->params['meta_keyword'] = yii::t('easyii','meta 2');
 ?>
 
 

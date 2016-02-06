@@ -1,4 +1,5 @@
 <?php  $this->title =yii::t('easyii','Online Dry Products');
+$this->params['meta_keyword'] = yii::t('easyii','meta 2');
  ?>
 
 
