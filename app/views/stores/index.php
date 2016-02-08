@@ -4,6 +4,9 @@ use yii\helpers\Url;
 use yii\widgets\ActiveForm;
 use yii\easyii\modules\page\api\Page;
 $this->title= yii::t('easyii','Find a store');
+
+     $this->params['meta_keyword'] = yii::t('easyii','meta 2');
+  $this->params['meta_description'] = yii::t('easyii','meta 82');
 ?>
 <div class="content gray-color">
 <div class="find-bg">
@@ -13,6 +16,9 @@ $this->title= yii::t('easyii','Find a store');
             <div class="col-md-12" style="">
                 
                     <h1><?= Yii::t('easyii', 'Find Nearest Shop');?>  </h1>
+
+          
+    
         <?php
             $allProducts=\app\models\Products::FetchProducts();
             $form = ActiveForm::begin(['method' => 'get', 'action' => Url::to(['/stores/index', 'slug' => $cat->slug])]);

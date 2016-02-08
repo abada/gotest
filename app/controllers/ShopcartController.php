@@ -88,8 +88,10 @@ class ShopcartController extends \yii\web\Controller
 
                 $url=$url.'?';
             }
+            $fullurl=$url.AddToCartForm::SUCCESS_VAR.'='.$success .'&id='.$id;
+            echo("<script>location.href = '".$fullurl."';</script>");
             
-         return $this->redirect($url.AddToCartForm::SUCCESS_VAR.'='.$success .'&id='.$id);
+        // return $this->redirect($url.AddToCartForm::SUCCESS_VAR.'='.$success .'&id='.$id);
     }
 
     public function actionRemove($id)

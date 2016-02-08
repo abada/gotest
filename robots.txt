@@ -1,0 +1,4 @@
+User-agent: *
+
+
+Sitemap: http://www.dryarabia.com/sitemap.xml
