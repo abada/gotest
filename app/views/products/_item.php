@@ -12,7 +12,7 @@
         $image=$item->image_ar;
     }
     ?>
-        <img class="center-block img-responsive thumb" src="<?php echo $image?>">
+        <img class="center-block img-responsive thumb" src="<?php echo $image?>" alt="<?= $item->title ?>" >
 
     <div class="product-name"><?= $item->title ?></div>
     <?php if($item->no_of_drops == ''){$no=1;}else{$no=$item->no_of_drops ;}?>

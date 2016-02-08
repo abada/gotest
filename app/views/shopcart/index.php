@@ -57,7 +57,7 @@ $delivery= Setting::get('deliver_cost');
                         <div class="order">
                             <div class="media">
                                 <div class="media-left">
-                                   <img src="<?= (\Yii::$app->language == 'ar') ? $good->item->image_ar :$good->item->image ?>" width="70px" >
+                                   <img src="<?= (\Yii::$app->language == 'ar') ? $good->item->image_ar :$good->item->image ?>" width="70px" alt="<?= $good->item->title?>">
 
                                 </div>
                                 <div class="media-body">
