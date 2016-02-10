@@ -15,7 +15,7 @@
 
     <?= Html::a('<img class="center-block img-responsive thumb" src="'.$image.'" alt="'.$item->title. '" >
 '.'
-        ', ['products/view', 'slug' => $item->slug]]) ?>
+        ', ['products/view', 'slug' => $item->slug]) ?>
 
 
     <div class="product-name"><?= $item->title ?></div>
