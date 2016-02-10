@@ -161,7 +161,7 @@ $totalreviews=  Products::reviews($item->id,1);
                         <div class="team-image-sec">
                             <div class="img-overlay"></div>
                             <figure>
-                                <img title="Image" alt="image" src="<?php echo (\Yii::$app->language == "en")? $data->image: $data->image_ar ;?>"></figure>
+                                <img title="Image"  src="<?php echo (\Yii::$app->language == "en")? $data->image: $data->image_ar ;?>" alt="<?= $data->title?>"></figure>
                             <ul>
 
                                 <li> <span class='st_facebook_large fa' displayText='' st_url="<?= $itemdataUrl ;?>" st_title="<?= $data->title?>" ></span></li>
@@ -205,42 +205,42 @@ $totalreviews=  Products::reviews($item->id,1);
         <div class="col-7 fadeIn wow">
             <?php $size = \app\modules\drygosizes\models\Carousel::find()->where(['carousel_id' => 1])->one(); ?>
 
-        	<img src="<?php echo (\Yii::$app->language == "en")? $size->image: $size->image_ar ;?>" />
+        	<img src="<?php echo (\Yii::$app->language == "en")? $size->image: $size->image_ar ;?>"  alt="<?= $size->text?>" />
             <a href="/products/view/dry-go-small" class="title col1"><?= $size->title ?></a>
         </div>
         <div class="col-7 fadeIn wow">
             <?php $size = \app\modules\drygosizes\models\Carousel::find()->where(['carousel_id' => 2])->one(); ?>
 
-            <img src="<?php echo (\Yii::$app->language == "en")? $size->image: $size->image_ar ;?>" />
+            <img src="<?php echo (\Yii::$app->language == "en")? $size->image: $size->image_ar ;?>"  alt="<?= $size->text?>" />
             <a href="/products/view/dry-go-medium"  class="title col2"><?= $size->title ?></a>
         </div>
         <div class="col-7 fadeIn wow">
             <?php $size = \app\modules\drygosizes\models\Carousel::find()->where(['carousel_id' => 3])->one(); ?>
 
-            <img src="<?php echo (\Yii::$app->language == "en")? $size->image: $size->image_ar ;?>" />
+            <img src="<?php echo (\Yii::$app->language == "en")? $size->image: $size->image_ar ;?>" alt="<?= $size->text?>" />
             <a href="/products/view/dry-go-large"  class="title col3"><?= $size->title ?></a>
         </div>
         <div class="col-7 fadeIn wow">
             <?php $size = \app\modules\drygosizes\models\Carousel::find()->where(['carousel_id' => 4])->one(); ?>
 
-            <img src="<?php echo (\Yii::$app->language == "en")? $size->image: $size->image_ar ;?>" />
+            <img src="<?php echo (\Yii::$app->language == "en")? $size->image: $size->image_ar ;?>" alt="<?= $size->text?>"  />
             <a href="/products/view/dry-go-x-large"  class="title col4"><?= $size->title ?></a>
         </div>
         <div class="col-7 fadeIn wow">
             <?php $size = \app\modules\drygosizes\models\Carousel::find()->where(['carousel_id' => 5])->one(); ?>
-            <img src="<?php echo (\Yii::$app->language == "en")? $size->image: $size->image_ar ;?>" />
+            <img src="<?php echo (\Yii::$app->language == "en")? $size->image: $size->image_ar ;?>"  alt="<?= $size->text?>" />
             <a href="/products/view/dry-go-2x-large"  class="title col5"><?= $size->title ?></a>
         </div>
         <div class="col-7 fadeIn wow">
             <?php $size = \app\modules\drygosizes\models\Carousel::find()->where(['carousel_id' => 6])->one(); ?>
 
-            <img src="<?php echo (\Yii::$app->language == "en")? $size->image: $size->image_ar ;?>" />
+            <img src="<?php echo (\Yii::$app->language == "en")? $size->image: $size->image_ar ;?>" alt="<?= $size->text?>"  />
             <a href="/products/view/dry-go-3x-large"  class="title col6"><?= $size->title ?></a>
         </div>
         <div class="col-7 fadeIn wow">
             <?php $size7 = \app\modules\drygosizes\models\Carousel::find()->where(['carousel_id' => 7])->one(); ?>
 
-            <img src="<?php echo (\Yii::$app->language == "en")? $size7->image: $size7->image_ar ;?>" />
+            <img src="<?php echo (\Yii::$app->language == "en")? $size7->image: $size7->image_ar ;?>"  alt="<?= $size7->text?>" />
             <a href="/products/view/dry-go-4x-large"  class="title col7"><?= $size7->title ?></a>
         </div>
         

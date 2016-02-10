@@ -30,7 +30,14 @@ $module = $this->context->module->id;
                 <?php if(IS_ROOT) : ?>
                     <td><?= $item->primaryKey ?></td>
                 <?php endif; ?>
-                <td> <?= $item->title?></td>
+
+
+                <td><a href="<?= Url::to(['/admin/'.$module.'/a/edit', 'id' => $item->primaryKey]) ?>">
+                        <?= $item->title?>
+                    </a>
+                </td>
+
+
 
                 <td><a href="<?= Url::to(['/admin/'.$module.'/a/edit', 'id' => $item->primaryKey]) ?>">
                         <img src="<?= $item->image ?>" style="width: 100px;"></a>

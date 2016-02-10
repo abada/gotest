@@ -34,7 +34,7 @@ class Carousel extends \yii\easyii\components\ActiveRecord
             'image_ar' => Yii::t('easyii', 'Arabic Image'),
             'link' =>  Yii::t('easyii', 'Link'),
             'title' => Yii::t('easyii', 'Title'),
-            'text' => Yii::t('easyii', 'Text'),
+            'text' => Yii::t('easyii', 'Image Title'),
         ];
     }
 
