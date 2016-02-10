@@ -127,7 +127,7 @@ $this->params['meta_description'] = yii::t('easyii','meta 1');
 
                             ?>
                             <div class="item <?= ($i == 0) ? 'active' : ''; ?>">
-                                <img src="<?= $photo->image ;?>" alt="slider-<?$i?>">
+                                <img src="<?= $photo->image ;?>" alt="slider-<?=$photo->description?>">
                             </div>
                             <?
                             $i++;
@@ -147,7 +147,7 @@ $this->params['meta_description'] = yii::t('easyii','meta 1');
 
                             ?>
                             <div class="item <?= ($i == 0) ? 'active' : ''; ?>">
-                                <img src="<?= $photo->image ;?>" alt="slider-<?$i?>">
+                                <img src="<?= $photo->image ;?>" alt="slider-<?=$photo->description?>">
                             </div>
                             <?
                             $i++;
@@ -166,7 +166,7 @@ $this->params['meta_description'] = yii::t('easyii','meta 1');
 
                             ?>
                             <div class="item <?= ($i == 0) ? 'active' : ''; ?>">
-                                <img src="<?= $photo->image ;?>" alt="slider-<?$i?>">
+                                <img src="<?= $photo->image ;?>" alt="slider-<?=$photo->description ?>">
                             </div>
                             <?
                             $i++;
@@ -185,7 +185,7 @@ $this->params['meta_description'] = yii::t('easyii','meta 1');
 
                             ?>
                             <div class="item <?= ($i == 0) ? 'active' : ''; ?>">
-                                <img src="<?= $photo->image ;?>" alt="slider-<?$i?>">
+                                <img src="<?= $photo->image ;?>" alt="slider-<?=$photo->description ?>">
                             </div>
                             <?
                             $i++;
@@ -205,7 +205,7 @@ $this->params['meta_description'] = yii::t('easyii','meta 1');
 
                             ?>
                             <div class="item <?= ($i == 0) ? 'active' : ''; ?>">
-                                <img src="<?= $photo->image ;?>" alt="slider-<?$i?>">
+                                <img src="<?= $photo->image ;?>" alt="slider-<?=$photo->description?>">
                             </div>
                             <?
                             $i++;
@@ -225,7 +225,7 @@ $this->params['meta_description'] = yii::t('easyii','meta 1');
 
                             ?>
                             <div class="item <?= ($i == 0) ? 'active' : ''; ?>">
-                                <img src="<?= $photo->image ;?>" alt="slider-<?$i?>">
+                                <img src="<?= $photo->image ;?>" alt="slider-<?=$photo->description?>">
                             </div>
                             <?
                             $i++;
@@ -244,7 +244,7 @@ $this->params['meta_description'] = yii::t('easyii','meta 1');
 
                             ?>
                             <div class="item <?= ($i == 0) ? 'active' : ''; ?>">
-                                <img src="<?= $photo->image ;?>" alt="slider-<?$i?>">
+                                <img src="<?= $photo->image ;?>" alt="slider-<?=$photo->description?>">
                             </div>
                             <?
                             $i++;
@@ -263,7 +263,7 @@ $this->params['meta_description'] = yii::t('easyii','meta 1');
 
                             ?>
                             <div class="item <?= ($i == 0) ? 'active' : ''; ?>">
-                                <img src="<?= $photo->image ;?>" alt="slider-<?$i?>">
+                                <img src="<?= $photo->image ;?>" alt="slider-<?=$photo->description?>">
                             </div>
                             <?
                             $i++;
