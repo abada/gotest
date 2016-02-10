@@ -328,7 +328,7 @@ var count=0;
             document.onmousedown=clickIE4;
         }
 
-        document.oncontextmenu=new Function("return false")
+      //  document.oncontextmenu=new Function("return false")
 
         // -->
     </script>

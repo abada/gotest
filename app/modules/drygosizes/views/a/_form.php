@@ -7,6 +7,16 @@ use webvimark\behaviors\multilanguage\input_widget;
     'enableClientValidation' => true,
     'options' => ['enctype' => 'multipart/form-data', 'class' => 'model-form']
 ]); ?>
+<?php if($this->context->module->settings['enableTitle']) : ?>
+    <?= $form->field($model, 'title')->widget(\webvimark\behaviors\multilanguage\input_widget\MultiLanguageActiveField::className()) ?>
+<?php endif; ?>
+<?php if($this->context->module->settings['enableText']) : ?>
+    <?= $form->field($model, 'text')->widget(\webvimark\behaviors\multilanguage\input_widget\MultiLanguageActiveField::className()) ?>
+
+
+<?php endif; ?>
+
+
 <?php if($model->image) : ?>
     <img src="<?= $model->image ?>" style="width: 200px">
 <?php endif; ?>
@@ -17,14 +27,6 @@ use webvimark\behaviors\multilanguage\input_widget;
 <?php endif; ?>
 <?= $form->field($model, 'image_ar')->fileInput() ?>
 <?//= $form->field($model, 'link') ?>
-<?php if($this->context->module->settings['enableTitle']) : ?>
-    <?= $form->field($model, 'title')->widget(\webvimark\behaviors\multilanguage\input_widget\MultiLanguageActiveField::className()) ?>
-<?php endif; ?>
-<?php if($this->context->module->settings['enableText']) : ?>
-    <?= $form->field($model, 'text')->textarea()->widget(input_widget\MultiLanguageActiveField::className(),['inputType'=>'textArea', 'inputOptions'=>[
-        'rows'=>3,
-        'class'=>'form-control',
-    ]]) ?>
-<?php endif; ?>
+
 <?= Html::submitButton(Yii::t('easyii', 'Save'), ['class' => 'btn btn-primary']) ?>
 <?php ActiveForm::end(); ?>

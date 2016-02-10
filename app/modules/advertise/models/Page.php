@@ -31,7 +31,7 @@ class Page extends \yii\easyii\components\ActiveRecord
     {
         return [
             'title' => Yii::t('easyii', 'Title'),
-            'text' => Yii::t('easyii', 'Text'),
+            'text' => Yii::t('easyii', 'Image title'),
             'url' => Yii::t('easyii', 'Link to'),
             'catpage' => Yii::t('easyii', 'Location Page'),
             'slug' => Yii::t('easyii', 'Slug'),

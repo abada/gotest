@@ -288,18 +288,18 @@ $this->params['meta_description'] = yii::t('easyii','meta 1');
 
                 <li class="wow fadeIn"  data-wow-duration="3s" data-wow-delay=".5s">
                <?php if($adv1->url ){?> <a href="<?= $adv1->url?>"> <? }?>
-                    <img src="<?=Yii::$app->language =='en' ? $adv1->image :$adv1->image_ar ?>" class="img-responsive center-block"/>
+                    <img src="<?=Yii::$app->language =='en' ? $adv1->image :$adv1->image_ar ?>"  alt="<?= $adv1->text ?>" class="img-responsive center-block"/>
                         <?php if($adv1->url){?>  </a><? }?>
                 </li>
                 <li class="wow fadeIn"  data-wow-duration="3s" data-wow-delay="1.5s">
                     <?php if($adv2->url){?> <a href="<?= $adv2->url?>"> <? }?>
-                    <img src="<?=Yii::$app->language =='en' ? $adv2->image :$adv2->image_ar ?>" class="img-responsive center-block"/>
+                    <img src="<?=Yii::$app->language =='en' ? $adv2->image :$adv2->image_ar ?>"   alt="<?= $adv2->text ?>"class="img-responsive center-block"/>
                     <button class="btn pink-btn btn-block"> <?= Yii::t('easyii', 'Sign Up Now!');?></button>
                         <?php if($adv2->url){?>  </a><? }?>
                 </li>
                 <li class="wow fadeIn"  data-wow-duration="3s" data-wow-delay="2.5s">
                     <?php if($adv3->url){?>  <a href="<?= $adv3->url?>"> <? }?>
-                    <img src="<?=Yii::$app->language =='en' ? $adv3->image :$adv3->image_ar ?>" class="img-responsive center-block"/>
+                    <img src="<?=Yii::$app->language =='en' ? $adv3->image :$adv3->image_ar ?>"   alt="<?= $adv3->text ?>" class="img-responsive center-block"/>
                     <button class="btn pink-btn btn-block"> <?= Yii::t('easyii', 'Try it now!');?></button>
 
                         <?php if($adv3->url){?>  </a> <? }?>
