@@ -12,7 +12,11 @@
         $image=$item->image_ar;
     }
     ?>
-        <img class="center-block img-responsive thumb" src="<?php echo $image?>" alt="<?= $item->title ?>" >
+
+    <?= Html::a('<img class="center-block img-responsive thumb" src="'.$image.'" alt="'.$item->title. '" >
+'.'
+        ', ['products/view', 'slug' => $item->slug],['class' => 'btn dry-btn']) ?>
+
 
     <div class="product-name"><?= $item->title ?></div>
     <?php if($item->no_of_drops == ''){$no=1;}else{$no=$item->no_of_drops ;}?>
