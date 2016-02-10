@@ -9,7 +9,7 @@ $page = Page::get('page-shop');
 $this->title = $page->seo('title', $page->model->title);
 $this->params['breadcrumbs'][] = $page->model->title;
 
-$this->params['metatitle'] = 'ÝæØ ÕÍíÉ ááãÊÒæÌÇÊ,ÇÝÖá ÝæØ ÕÍíÉ ááÈÔÑÉ ÇáÍÓÇÓÉ,ÝæØ ÕÍíÉ ááæáÇÏÉ ';
+$this->params['metatitle'] = 'ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½,ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½,ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ';
 
 $this->params['meta_keyword'] = yii::t('easyii','meta 2');
 $this->params['meta_description'] = yii::t('easyii','DI 1');
@@ -47,7 +47,10 @@ function renderNode($node){
         <h4>Last items</h4>
         <?php foreach(Catalog::last(3) as $item) : ?>
             <p>
-                <?= Html::img($item->thumb(30)) ?>
+                <?//= Html::img($item->thumb(30)) ?>
+                <?= Html::a(Html::img($item->thumb(30)), ['/shop/view', 'slug' => $item->slug]) ?><br/>
+
+
                 <?= Html::a($item->title, ['/shop/view', 'slug' => $item->slug]) ?><br/>
                 <span class="label label-warning"><?= $item->price ?>$</span>
             </p>
