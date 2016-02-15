@@ -53,7 +53,19 @@ class SiteController extends FrontController
 
 
 
-    public function actionAboutDry(){
+    public function actionAboutDry($review=null){
+
+        if(isset($_REQUEST['review']) != ''){
+
+            $testmonials= PageModel::find()
+                ->where("page_id='".$_REQUEST['review']."'")
+                ->one();
+            //og tags
+            $this->view->params['metatitle'] = $testmonials->title;
+            $this->view->params['metadesc'] =strip_tags($testmonials->text);
+
+
+        }
 
         return $this->render("about");
 
