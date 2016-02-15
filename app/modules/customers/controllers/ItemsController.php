@@ -291,7 +291,7 @@ class ItemsController extends Controller
                 //echo "Row: ".$row."- Col: ".($k+1)." = ".$v."<br />";
                 //echo  $v."<br/>";
 
-                if($fillData[0][0]!= "customer_code") {
+                if($fillData[0][0]!= "customer_code" and $fillData[0][1] != '' ) {
                     $oCustomer = new Item();
                     $oCustomer->title = $fillData[0][1];
                     $oCustomer->address = $fillData[0][2];

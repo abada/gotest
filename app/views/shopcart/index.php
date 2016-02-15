@@ -57,7 +57,7 @@ $delivery= Setting::get('deliver_cost');
                         <div class="order">
                             <div class="media">
                                 <div class="media-left">
-                                   <img src="<?= (\Yii::$app->language == 'ar') ? $good->item->image_ar :$good->item->image ?>" width="70px" >
+                                   <img src="<?= (\Yii::$app->language == 'ar') ? $good->item->image_ar :$good->item->image ?>" width="70px" alt="<?= $good->item->title?>">
 
                                 </div>
                                 <div class="media-body">
@@ -106,6 +106,8 @@ $delivery= Setting::get('deliver_cost');
                                 <? if(\Yii::$app->language == 'ar') echo "ج.م" ;?>
                                  <? if(\Yii::$app->language == 'en') echo "LE" ;?>
                                  <?= $delivery ;?>
+                                <span id="DCost"></span>
+
                             </span>
                         </p>
                             <p> <?= Yii::t('easyii','final total Price')?>

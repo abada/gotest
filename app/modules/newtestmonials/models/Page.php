@@ -32,7 +32,7 @@ class Page extends \yii\easyii\components\ActiveRecord
             'owner' => Yii::t('easyii', 'By'),
             'text' => Yii::t('easyii', 'Text'),
             'slug' => Yii::t('easyii', 'Slug'),
-            'homepage' => Yii::t('easyii', 'Show on home page'),
+            'homepage' => Yii::t('easyii', 'Show Location'),
         ];
     }
 

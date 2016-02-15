@@ -6,8 +6,12 @@ use yii\helpers\Html;
 
 $page = Page::get('page-shop');
 
+
+
 $this->title = $page->seo('title', $page->model->title);
 $this->params['breadcrumbs'][] = $page->model->title;
+
+$this->params['meta_keyword'] = yii::t('easyii','meta 2');
 
 function renderNode($node){
     if(!count($node->children)){

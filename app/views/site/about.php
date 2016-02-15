@@ -13,8 +13,13 @@ use app\modules\newtestmonials\models\Page as PageModel;
 $page = Page::get('about');
 
 $this->title = $page->seo('title',yii::t('easyii',"Who’s Dry"));
+
+
+$this->params['meta_keyword'] = yii::t('easyii','meta 2');
+$this->params['meta_description'] = yii::t('easyii','meta 80');
 ?>
 $this->params['meta_keyword'] = yii::t('easyii','meta 2');
+
 
 <div class="content">
 
@@ -76,7 +81,8 @@ $this->params['meta_keyword'] = yii::t('easyii','meta 2');
             <?php
              /* A dataprovider with all articles */
             $dataProvider = new \yii\data\ActiveDataProvider([
-                'query' => PageModel::find()->where(['homepage' => 0]),
+                'query' => PageModel::find()->where("homepage=0  or homepage=2")
+                ,
                 'pagination' => [
                     'pagesize' => 4 ,
                 ],
@@ -101,3 +107,42 @@ $this->params['meta_keyword'] = yii::t('easyii','meta 2');
         </div>
     </div>
 </div>
+
+
+
+    <script>
+
+        function windowPopup(url, width, height) {
+            // Calculate the position of the popup so
+            // it’s centered on the screen.
+            var left = (screen.width / 2) - (width / 2),
+                top = (screen.height / 2) - (height / 2);
+
+            window.open(
+                url,
+                "",
+                "menubar=no,toolbar=no,resizable=yes,scrollbars=yes,width=" + width + ",height=" + height + ",top=" + top + ",left=" + left
+            );
+        }
+
+
+        //jQuery
+        $(".js-social-share").on("click", function(e) {
+            e.preventDefault();
+
+            windowPopup($(this).attr("href"), 500, 300);
+        });
+
+        // Vanilla JavaScript
+        var jsSocialShares = document.querySelectorAll(".js-social-share");
+        if (jsSocialShares) {
+            [].forEach.call(jsSocialShares, function(anchor) {
+                anchor.addEventListener("click", function(e) {
+                    e.preventDefault();
+
+                    windowPopup(this.href, 500, 300);
+                });
+            });
+        }
+
+    </script>

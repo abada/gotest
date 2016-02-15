@@ -49,6 +49,13 @@ class ShopcartController extends \yii\web\Controller
 
     }
 
+ public function actionDeliveryCost($code){
+     //check the api for the returned data
+
+        return "the new cost--".$code;
+
+    }
+
 
     public function actionIndex($error=null)
     {
@@ -88,8 +95,15 @@ class ShopcartController extends \yii\web\Controller
 
                 $url=$url.'?';
             }
+<<<<<<< HEAD
             
          return $this->redirect($url.AddToCartForm::SUCCESS_VAR.'='.$success .'&id='.$id);
+=======
+            $fullurl=$url.AddToCartForm::SUCCESS_VAR.'='.$success .'&id='.$id;
+            echo("<script>location.href = '".$fullurl."';</script>");
+            
+        // return $this->redirect($url.AddToCartForm::SUCCESS_VAR.'='.$success .'&id='.$id);
+>>>>>>> e3e3074afdf6f3c017f464ee4390739d14f70a8b
     }
 
     public function actionRemove($id)

@@ -33,7 +33,15 @@ $module = $this->context->module->id;
 
                 <td><a href="<?= Url::to(['/admin/'.$module.'/a/edit', 'id' => $item->primaryKey]) ?>"><?= $item->title ?></a></td>
                 <td><a href="<?= Url::to(['/admin/'.$module.'/a/edit', 'id' => $item->primaryKey]) ?>"><?= $item->owner ?></a></td>
-                <td><?= ($item->homepage)? 'yes':'No' ?></td>
+                <td><?php
+                    if ($item->homepage==0){
+                      echo "Whose Dry page";
+                    }else if($item->homepage== 1){
+                        echo "Home page";
+                    } else{
+                        echo "All";
+
+                    } ?></td>
 
                 <?php if(IS_ROOT) : ?>
                     <td><?= $item->slug ?></td>

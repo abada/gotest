@@ -9,7 +9,7 @@
         $image=$item->image_ar;
     }
     ?>
-    <img class="center-block img-responsive thumb" src="<?php echo $image?>">
+    <img class="center-block img-responsive thumb" src="<?php echo $image?>" alt="<?= $item->title ?>" >
 
     <?//= Html::img($item->thumb(125, 169),['class'=>'center-block img-responsive']) ?>
 	<div class="product-name"><?= $item->title ?></div>

@@ -41,7 +41,7 @@ $totalreviews=  Products::reviews($item->id,1);
                                    }
                                     ?>
 
-                   <img src="<?= $image ?>" width="300" height="300" class="center-block">
+                   <img src="<?= $image ?>" width="300" height="300" class="center-block" alt="<?= $item->title ?>" >
 
 
                                 </div>

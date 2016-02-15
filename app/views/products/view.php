@@ -1,6 +1,3 @@
-<script type="text/javascript">var switchTo5x=true;</script>
-<script type="text/javascript" src="http://w.sharethis.com/button/buttons.js"></script>
-<script type="text/javascript">stLight.options({publisher: "2222d12e-5607-475a-b5d7-2ba1c0a2c5c0", doNotHash: false, doNotCopy: false, hashAddressBar: false});</script>
 
 <?php if(isset($_REQUEST['page'])){
     ?>
@@ -83,6 +80,19 @@ $totalreviews=  Products::reviews($item->id,1);
                     <p class="margin-top20"><?= $item->description ;?></p>
                     <ul class="product-details margin-top30">
                         <li><?= Yii::t('easyii','Share'); ?>
+                            <?php echo $product_link=Yii::$app->getUrlManager()->getBaseUrl().'/product/view/'.$item->slug;
+                            ?>
+
+                            <a class="js-social-share" href="https://twitter.com/intent/tweet/?text=<?= $item->title?>&url=<?= urlencode($product_link) ;?>&via=Dryarabia" target="_blank">
+                                <img width="30" height="30" src="<?php echo Yii::$app->getUrlManager()->getBaseUrl()?>/theme/images/twitter.png">
+                            </a>
+                            <a  class="js-social-share" href="https://plus.google.com/share?url=<?= urlencode($product_link) ;?>"  target="_blank">
+                                <img width="30" height="30" src="<?php echo Yii::$app->getUrlManager()->getBaseUrl()?>/theme/images/googleplus.png">
+                            </a>
+                            <a class="js-social-share" href="https://www.facebook.com/sharer/sharer.php?u=<?= urlencode($product_link) ;?>" target="_blank">
+                                <img width="30" height="30" src="<?php echo Yii::$app->getUrlManager()->getBaseUrl()?>/theme/images/facebook.png">
+                            </a>
+
                             <span class='st_facebook_large' displayText=''></span>
                             <span class='st_twitter_large' displayText=''></span>
                             <span class='st_googleplus_large' displayText=''></span>
@@ -161,7 +171,7 @@ $totalreviews=  Products::reviews($item->id,1);
                         <div class="team-image-sec">
                             <div class="img-overlay"></div>
                             <figure>
-                                <img title="Image" alt="image" src="<?php echo (\Yii::$app->language == "en")? $data->image: $data->image_ar ;?>"></figure>
+                                <img title="Image"  src="<?php echo (\Yii::$app->language == "en")? $data->image: $data->image_ar ;?>" alt="<?= $data->title?>"></figure>
                             <ul>
 
                                 <li> <span class='st_facebook_large fa' displayText='' st_url="<?= $itemdataUrl ;?>" st_title="<?= $data->title?>" ></span></li>
@@ -205,42 +215,42 @@ $totalreviews=  Products::reviews($item->id,1);
         <div class="col-7 fadeIn wow">
             <?php $size = \app\modules\drygosizes\models\Carousel::find()->where(['carousel_id' => 1])->one(); ?>
 
-        	<img src="<?php echo (\Yii::$app->language == "en")? $size->image: $size->image_ar ;?>" />
+        	<img src="<?php echo (\Yii::$app->language == "en")? $size->image: $size->image_ar ;?>"  alt="<?= $size->text?>" />
             <a href="/products/view/dry-go-small" class="title col1"><?= $size->title ?></a>
         </div>
         <div class="col-7 fadeIn wow">
             <?php $size = \app\modules\drygosizes\models\Carousel::find()->where(['carousel_id' => 2])->one(); ?>
 
-            <img src="<?php echo (\Yii::$app->language == "en")? $size->image: $size->image_ar ;?>" />
+            <img src="<?php echo (\Yii::$app->language == "en")? $size->image: $size->image_ar ;?>"  alt="<?= $size->text?>" />
             <a href="/products/view/dry-go-medium"  class="title col2"><?= $size->title ?></a>
         </div>
         <div class="col-7 fadeIn wow">
             <?php $size = \app\modules\drygosizes\models\Carousel::find()->where(['carousel_id' => 3])->one(); ?>
 
-            <img src="<?php echo (\Yii::$app->language == "en")? $size->image: $size->image_ar ;?>" />
+            <img src="<?php echo (\Yii::$app->language == "en")? $size->image: $size->image_ar ;?>" alt="<?= $size->text?>" />
             <a href="/products/view/dry-go-large"  class="title col3"><?= $size->title ?></a>
         </div>
         <div class="col-7 fadeIn wow">
             <?php $size = \app\modules\drygosizes\models\Carousel::find()->where(['carousel_id' => 4])->one(); ?>
 
-            <img src="<?php echo (\Yii::$app->language == "en")? $size->image: $size->image_ar ;?>" />
+            <img src="<?php echo (\Yii::$app->language == "en")? $size->image: $size->image_ar ;?>" alt="<?= $size->text?>"  />
             <a href="/products/view/dry-go-x-large"  class="title col4"><?= $size->title ?></a>
         </div>
         <div class="col-7 fadeIn wow">
             <?php $size = \app\modules\drygosizes\models\Carousel::find()->where(['carousel_id' => 5])->one(); ?>
-            <img src="<?php echo (\Yii::$app->language == "en")? $size->image: $size->image_ar ;?>" />
+            <img src="<?php echo (\Yii::$app->language == "en")? $size->image: $size->image_ar ;?>"  alt="<?= $size->text?>" />
             <a href="/products/view/dry-go-2x-large"  class="title col5"><?= $size->title ?></a>
         </div>
         <div class="col-7 fadeIn wow">
             <?php $size = \app\modules\drygosizes\models\Carousel::find()->where(['carousel_id' => 6])->one(); ?>
 
-            <img src="<?php echo (\Yii::$app->language == "en")? $size->image: $size->image_ar ;?>" />
+            <img src="<?php echo (\Yii::$app->language == "en")? $size->image: $size->image_ar ;?>" alt="<?= $size->text?>"  />
             <a href="/products/view/dry-go-3x-large"  class="title col6"><?= $size->title ?></a>
         </div>
         <div class="col-7 fadeIn wow">
             <?php $size7 = \app\modules\drygosizes\models\Carousel::find()->where(['carousel_id' => 7])->one(); ?>
 
-            <img src="<?php echo (\Yii::$app->language == "en")? $size7->image: $size7->image_ar ;?>" />
+            <img src="<?php echo (\Yii::$app->language == "en")? $size7->image: $size7->image_ar ;?>"  alt="<?= $size7->text?>" />
             <a href="/products/view/dry-go-4x-large"  class="title col7"><?= $size7->title ?></a>
         </div>
         
@@ -384,9 +394,16 @@ if(Yii::$app->session->getFlash('success') != ''){
                         <ul class="product-details">
                             <li> <?= yii::t('easyii','Share')?>
                                 <?php $reviewUrl=Url::to(['products/view'], true).'/?slug='.$item->slug .'&review='.$review->news_id.'&lang='.\Yii::$app->language;?>
-                                <span class='st_facebook_large' displayText='' st_url="<?= $reviewUrl ;?>" st_title="<?= $review->title?>" ></span>
-                                <span class='st_twitter_large' displayText='' st_url="<?= $reviewUrl ;?>" st_title="<?= $review->title?>"></span>
-                                <span class='st_googleplus_large' displayText='' st_url="<?= $reviewUrl ;?>" st_title="<?= $review->title?>"></span>
+                                <a class="js-social-share" href="https://twitter.com/intent/tweet/?text=<?= $review->title?>&url=<?= urlencode($reviewUrl) ;?>&via=DryArabia" target="_blank">
+                                    <img width="30" height="30" src="<?php echo Yii::$app->getUrlManager()->getBaseUrl()?>/theme/images/twitter.png">
+                                </a>
+                                <a  class="js-social-share" href="https://plus.google.com/share?url=<?= urlencode($reviewUrl) ;?>"  target="_blank">
+                                    <img width="30" height="30" src="<?php echo Yii::$app->getUrlManager()->getBaseUrl()?>/theme/images/googleplus.png">
+                                </a>
+                                <a class="js-social-share" href="https://www.facebook.com/sharer/sharer.php?u=<?= urlencode($reviewUrl) ;?>" target="_blank">
+                                    <img width="30" height="30" src="<?php echo Yii::$app->getUrlManager()->getBaseUrl()?>/theme/images/facebook.png">
+                                </a>
+
 
 
                             </li>

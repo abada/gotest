@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 [05-Feb-2016 04:33:21 UTC] An Error occurred while handling another error:
+=======
+[08-Feb-2016 02:01:48 UTC] An Error occurred while handling another error:
+>>>>>>> e3e3074afdf6f3c017f464ee4390739d14f70a8b
 exception 'PDOException' with message 'SQLSTATE[HY000] [2002] No such file or directory' in /home/dryarabia/public_html/vendor/yiisoft/yii2/db/Connection.php:591
 Stack trace:
 #0 /home/dryarabia/public_html/vendor/yiisoft/yii2/db/Connection.php(591): PDO->__construct('mysql:host=loca...', 'dryaccess', 'pdkvjln@@59eebv...', NULL)
@@ -94,7 +98,10 @@ $_SERVER = [
     'PWD' => '/usr/local/cpanel/cgi-sys',
     'SHLVL' => '0',
     'PHP_FCGI_MAX_REQUESTS' => '5000',
+<<<<<<< HEAD
     'HTTP_CONNECTION' => 'close',
+=======
+>>>>>>> e3e3074afdf6f3c017f464ee4390739d14f70a8b
     'SCRIPT_NAME' => '/index.php',
     'REQUEST_URI' => '/favicon.ico',
     'QUERY_STRING' => '',
@@ -102,20 +109,29 @@ $_SERVER = [
     'SERVER_PROTOCOL' => 'HTTP/1.1',
     'GATEWAY_INTERFACE' => 'CGI/1.1',
     'REDIRECT_URL' => '/favicon.ico',
+<<<<<<< HEAD
     'REMOTE_PORT' => '44398',
+=======
+    'REMOTE_PORT' => '43925',
+>>>>>>> e3e3074afdf6f3c017f464ee4390739d14f70a8b
     'SCRIPT_FILENAME' => '/home/dryarabia/public_html/index.php',
     'SERVER_ADMIN' => 'webmaster@dryarabia.com',
     'CONTEXT_DOCUMENT_ROOT' => '/home/dryarabia/public_html',
     'CONTEXT_PREFIX' => '',
     'REQUEST_SCHEME' => 'http',
     'DOCUMENT_ROOT' => '/home/dryarabia/public_html',
+<<<<<<< HEAD
     'REMOTE_ADDR' => '41.196.73.112',
+=======
+    'REMOTE_ADDR' => '197.192.152.61',
+>>>>>>> e3e3074afdf6f3c017f464ee4390739d14f70a8b
     'SERVER_PORT' => '80',
     'SERVER_ADDR' => '160.153.16.46',
     'SERVER_NAME' => 'dryarabia.com',
     'SERVER_SOFTWARE' => 'Apache/2.4.12',
     'SERVER_SIGNATURE' => '',
     'LD_LIBRARY_PATH' => '/usr/local/apache/lib',
+<<<<<<< HEAD
     'HTTP_VIA' => '1.1 192.168.0.1 (Mikrotik HttpProxy)',
     'HTTP_X_FORWARDED_FOR' => '192.168.0.101',
     'HTTP_X_PROXY_ID' => '396997988',
@@ -134,6 +150,299 @@ $_SERVER = [
     'PHP_SELF' => '/index.php',
     'REQUEST_TIME_FLOAT' => 1454646801.2123239040374755859375,
     'REQUEST_TIME' => 1454646801,
+=======
+    'HTTP_CONNECTION' => 'close',
+    'HTTP_CACHE_CONTROL' => 'max-age=43200',
+    'HTTP_HOST' => 'dryarabia.com',
+    'HTTP_COOKIE' => '_ga=GA1.2.500507414.1454885842; PHPSESSID=5f3afafc5b8c39205a20980678331218',
+    'HTTP_ACCEPT' => '*/*',
+    'HTTP_ACCEPT_CHARSET' => 'utf-8, iso-8859-1, utf-16, *;q=0.7',
+    'HTTP_ACCEPT_LANGUAGE' => 'ar-AE, en-US',
+    'HTTP_ACCEPT_ENCODING' => 'gzip,deflate',
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Linux; U; Android 4.4.4; ar-ae; SM-G530H Build/KTU84P) AppleWebKit/534.30 (KHTML, like Gecko) Version/4.0 Mobile Safari/534.30',
+    'HTTP_REFERER' => 'http://dryarabia.com/offers',
+    'UNIQUE_ID' => 'Vrf3DC78zbEADeS6PeAAAADG',
+    'REDIRECT_STATUS' => '200',
+    'REDIRECT_UNIQUE_ID' => 'Vrf3DC78zbEADeS6PeAAAADG',
+    'FCGI_ROLE' => 'RESPONDER',
+    'PHP_SELF' => '/index.php',
+    'REQUEST_TIME_FLOAT' => 1454896908.6573851108551025390625,
+    'REQUEST_TIME' => 1454896908,
+    'argv' => [],
+    'argc' => 0,
+]
+[09-Feb-2016 05:35:26 UTC] An Error occurred while handling another error:
+exception 'PDOException' with message 'SQLSTATE[HY000] [2002] No such file or directory' in /home/dryarabia/public_html/vendor/yiisoft/yii2/db/Connection.php:591
+Stack trace:
+#0 /home/dryarabia/public_html/vendor/yiisoft/yii2/db/Connection.php(591): PDO->__construct('mysql:host=loca...', 'dryaccess', 'pdkvjln@@59eebv...', NULL)
+#1 /home/dryarabia/public_html/vendor/yiisoft/yii2/db/Connection.php(533): yii\db\Connection->createPdoInstance()
+#2 /home/dryarabia/public_html/vendor/yiisoft/yii2/db/Connection.php(848): yii\db\Connection->open()
+#3 /home/dryarabia/public_html/vendor/yiisoft/yii2/db/Connection.php(835): yii\db\Connection->getMasterPdo()
+#4 /home/dryarabia/public_html/vendor/yiisoft/yii2/db/Command.php(216): yii\db\Connection->getSlavePdo()
+#5 /home/dryarabia/public_html/vendor/yiisoft/yii2/db/Command.php(831): yii\db\Command->prepare(true)
+#6 /home/dryarabia/public_html/vendor/yiisoft/yii2/db/Command.php(359): yii\db\Command->queryInternal('fetchAll', NULL)
+#7 /home/dryarabia/public_html/vendor/yiisoft/yii2/db/mysql/Schema.php(198): yii\db\Command->queryAll()
+#8 /home/dryarabia/public_html/vendor/yiisoft/yii2/db/mysql/Schema.php(97): yii\db\mysql\Schema->findColumns(Object(yii\db\TableSchema))
+#9 /home/dryarabia/public_html/vendor/yiisoft/yii2/db/Schema.php(146): yii\db\mysql\Schema->loadTableSchema('easyii_shopcart...')
+#10 /home/dryarabia/public_html/vendor/yiisoft/yii2/db/ActiveRecord.php(294): yii\db\Schema->getTableSchema('easyii_shopcart...')
+#11 /home/dryarabia/public_html/vendor/yiisoft/yii2/db/ActiveRecord.php(327): yii\db\ActiveRecord::getTableSchema()
+#12 /home/dryarabia/public_html/vendor/webvimark/multilanguage/MultiLanguageTrait.php(22): yii\db\ActiveRecord->attributes()
+#13 /home/dryarabia/public_html/vendor/yiisoft/yii2/db/BaseActiveRecord.php(422): yii\easyii\components\ActiveRecord->attributes()
+#14 /home/dryarabia/public_html/vendor/yiisoft/yii2/db/BaseActiveRecord.php(241): yii\db\BaseActiveRecord->hasAttribute('attributes')
+#15 /home/dryarabia/public_html/vendor/noumo/easyii/components/ApiObject.php(23): yii\db\BaseActiveRecord->__get('attributes')
+#16 /home/dryarabia/public_html/vendor/noumo/easyii/modules/shopcart/api/Shopcart.php(256): yii\easyii\components\ApiObject->__construct(Object(yii\easyii\modules\shopcart\models\Order))
+#17 /home/dryarabia/public_html/vendor/yiisoft/yii2/base/Object.php(134): yii\easyii\modules\shopcart\api\Shopcart->getOrder()
+#18 /home/dryarabia/public_html/vendor/noumo/easyii/modules/shopcart/api/Shopcart.php(50): yii\base\Object->__get('order')
+#19 [internal function]: yii\easyii\modules\shopcart\api\Shopcart->api_goods()
+#20 /home/dryarabia/public_html/vendor/noumo/easyii/components/API.php(31): call_user_func_array(Array, Array)
+#21 /home/dryarabia/public_html/app/views/layouts/main.php(10): yii\easyii\components\API::__callStatic('goods', Array)
+#22 /home/dryarabia/public_html/app/views/layouts/main.php(10): yii\easyii\modules\shopcart\api\Shopcart::goods()
+#23 /home/dryarabia/public_html/vendor/yiisoft/yii2/base/View.php(325): require('/home/dryarabia...')
+#24 /home/dryarabia/public_html/vendor/yiisoft/yii2/base/View.php(247): yii\base\View->renderPhpFile('/home/dryarabia...', Array)
+#25 /home/dryarabia/public_html/vendor/yiisoft/yii2/base/Controller.php(389): yii\base\View->renderFile('/home/dryarabia...', Array, Object(app\controllers\SiteController))
+#26 /home/dryarabia/public_html/vendor/yiisoft/yii2/base/Controller.php(375): yii\base\Controller->renderContent('<h1>Not Found (...')
+#27 /home/dryarabia/public_html/vendor/yiisoft/yii2/web/ErrorAction.php(109): yii\base\Controller->render('error', Array)
+#28 [internal function]: yii\web\ErrorAction->run()
+#29 /home/dryarabia/public_html/vendor/yiisoft/yii2/base/Action.php(92): call_user_func_array(Array, Array)
+#30 /home/dryarabia/public_html/vendor/yiisoft/yii2/base/Controller.php(151): yii\base\Action->runWithParams(Array)
+#31 /home/dryarabia/public_html/vendor/yiisoft/yii2/base/Module.php(455): yii\base\Controller->runAction('error', Array)
+#32 /home/dryarabia/public_html/vendor/yiisoft/yii2/web/ErrorHandler.php(85): yii\base\Module->runAction('site/error')
+#33 /home/dryarabia/public_html/vendor/yiisoft/yii2/base/ErrorHandler.php(109): yii\web\ErrorHandler->renderException(Object(yii\web\NotFoundHttpException))
+#34 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\web\NotFoundHttpException))
+#35 {main}
+
+Next exception 'yii\db\Exception' with message 'SQLSTATE[HY000] [2002] No such file or directory' in /home/dryarabia/public_html/vendor/yiisoft/yii2/db/Connection.php:538
+Stack trace:
+#0 /home/dryarabia/public_html/vendor/yiisoft/yii2/db/Connection.php(848): yii\db\Connection->open()
+#1 /home/dryarabia/public_html/vendor/yiisoft/yii2/db/Connection.php(835): yii\db\Connection->getMasterPdo()
+#2 /home/dryarabia/public_html/vendor/yiisoft/yii2/db/Command.php(216): yii\db\Connection->getSlavePdo()
+#3 /home/dryarabia/public_html/vendor/yiisoft/yii2/db/Command.php(831): yii\db\Command->prepare(true)
+#4 /home/dryarabia/public_html/vendor/yiisoft/yii2/db/Command.php(359): yii\db\Command->queryInternal('fetchAll', NULL)
+#5 /home/dryarabia/public_html/vendor/yiisoft/yii2/db/mysql/Schema.php(198): yii\db\Command->queryAll()
+#6 /home/dryarabia/public_html/vendor/yiisoft/yii2/db/mysql/Schema.php(97): yii\db\mysql\Schema->findColumns(Object(yii\db\TableSchema))
+#7 /home/dryarabia/public_html/vendor/yiisoft/yii2/db/Schema.php(146): yii\db\mysql\Schema->loadTableSchema('easyii_shopcart...')
+#8 /home/dryarabia/public_html/vendor/yiisoft/yii2/db/ActiveRecord.php(294): yii\db\Schema->getTableSchema('easyii_shopcart...')
+#9 /home/dryarabia/public_html/vendor/yiisoft/yii2/db/ActiveRecord.php(327): yii\db\ActiveRecord::getTableSchema()
+#10 /home/dryarabia/public_html/vendor/webvimark/multilanguage/MultiLanguageTrait.php(22): yii\db\ActiveRecord->attributes()
+#11 /home/dryarabia/public_html/vendor/yiisoft/yii2/db/BaseActiveRecord.php(422): yii\easyii\components\ActiveRecord->attributes()
+#12 /home/dryarabia/public_html/vendor/yiisoft/yii2/db/BaseActiveRecord.php(241): yii\db\BaseActiveRecord->hasAttribute('attributes')
+#13 /home/dryarabia/public_html/vendor/noumo/easyii/components/ApiObject.php(23): yii\db\BaseActiveRecord->__get('attributes')
+#14 /home/dryarabia/public_html/vendor/noumo/easyii/modules/shopcart/api/Shopcart.php(256): yii\easyii\components\ApiObject->__construct(Object(yii\easyii\modules\shopcart\models\Order))
+#15 /home/dryarabia/public_html/vendor/yiisoft/yii2/base/Object.php(134): yii\easyii\modules\shopcart\api\Shopcart->getOrder()
+#16 /home/dryarabia/public_html/vendor/noumo/easyii/modules/shopcart/api/Shopcart.php(50): yii\base\Object->__get('order')
+#17 [internal function]: yii\easyii\modules\shopcart\api\Shopcart->api_goods()
+#18 /home/dryarabia/public_html/vendor/noumo/easyii/components/API.php(31): call_user_func_array(Array, Array)
+#19 /home/dryarabia/public_html/app/views/layouts/main.php(10): yii\easyii\components\API::__callStatic('goods', Array)
+#20 /home/dryarabia/public_html/app/views/layouts/main.php(10): yii\easyii\modules\shopcart\api\Shopcart::goods()
+#21 /home/dryarabia/public_html/vendor/yiisoft/yii2/base/View.php(325): require('/home/dryarabia...')
+#22 /home/dryarabia/public_html/vendor/yiisoft/yii2/base/View.php(247): yii\base\View->renderPhpFile('/home/dryarabia...', Array)
+#23 /home/dryarabia/public_html/vendor/yiisoft/yii2/base/Controller.php(389): yii\base\View->renderFile('/home/dryarabia...', Array, Object(app\controllers\SiteController))
+#24 /home/dryarabia/public_html/vendor/yiisoft/yii2/base/Controller.php(375): yii\base\Controller->renderContent('<h1>Not Found (...')
+#25 /home/dryarabia/public_html/vendor/yiisoft/yii2/web/ErrorAction.php(109): yii\base\Controller->render('error', Array)
+#26 [internal function]: yii\web\ErrorAction->run()
+#27 /home/dryarabia/public_html/vendor/yiisoft/yii2/base/Action.php(92): call_user_func_array(Array, Array)
+#28 /home/dryarabia/public_html/vendor/yiisoft/yii2/base/Controller.php(151): yii\base\Action->runWithParams(Array)
+#29 /home/dryarabia/public_html/vendor/yiisoft/yii2/base/Module.php(455): yii\base\Controller->runAction('error', Array)
+#30 /home/dryarabia/public_html/vendor/yiisoft/yii2/web/ErrorHandler.php(85): yii\base\Module->runAction('site/error')
+#31 /home/dryarabia/public_html/vendor/yiisoft/yii2/base/ErrorHandler.php(109): yii\web\ErrorHandler->renderException(Object(yii\web\NotFoundHttpException))
+#32 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\web\NotFoundHttpException))
+#33 {main}
+Additional Information:
+
+Previous exception:
+exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request "favicon.ico".' in /home/dryarabia/public_html/vendor/yiisoft/yii2/base/Module.php:461
+Stack trace:
+#0 /home/dryarabia/public_html/vendor/yiisoft/yii2/web/Application.php(84): yii\base\Module->runAction('favicon.ico', Array)
+#1 /home/dryarabia/public_html/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 /home/dryarabia/public_html/index.php(15): yii\base\Application->run()
+#3 {main}
+
+Next exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in /home/dryarabia/public_html/vendor/yiisoft/yii2/web/Application.php:96
+Stack trace:
+#0 /home/dryarabia/public_html/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 /home/dryarabia/public_html/index.php(15): yii\base\Application->run()
+#2 {main}
+$_SERVER = [
+    'PATH' => '/usr/local/jdk/bin:/usr/kerberos/sbin:/usr/kerberos/bin:/usr/lib/courier-imap/sbin:/usr/lib/courier-imap/bin:/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin:/usr/X11R6/bin:/usr/local/bin:/usr/X11R6/bin:/root/bin:/opt/bin',
+    'PWD' => '/usr/local/cpanel/cgi-sys',
+    'SHLVL' => '0',
+    'PHP_FCGI_MAX_REQUESTS' => '5000',
+    'SCRIPT_NAME' => '/index.php',
+    'REQUEST_URI' => '/favicon.ico',
+    'QUERY_STRING' => '',
+    'REQUEST_METHOD' => 'GET',
+    'SERVER_PROTOCOL' => 'HTTP/1.1',
+    'GATEWAY_INTERFACE' => 'CGI/1.1',
+    'REDIRECT_URL' => '/favicon.ico',
+    'REMOTE_PORT' => '63581',
+    'SCRIPT_FILENAME' => '/home/dryarabia/public_html/index.php',
+    'SERVER_ADMIN' => 'webmaster@dryarabia.com',
+    'CONTEXT_DOCUMENT_ROOT' => '/home/dryarabia/public_html',
+    'CONTEXT_PREFIX' => '',
+    'REQUEST_SCHEME' => 'http',
+    'DOCUMENT_ROOT' => '/home/dryarabia/public_html',
+    'REMOTE_ADDR' => '41.130.106.94',
+    'SERVER_PORT' => '80',
+    'SERVER_ADDR' => '160.153.16.46',
+    'SERVER_NAME' => 'dryarabia.com',
+    'SERVER_SOFTWARE' => 'Apache/2.4.12',
+    'SERVER_SIGNATURE' => '',
+    'LD_LIBRARY_PATH' => '/usr/local/apache/lib',
+    'HTTP_X_REQUESTED_WITH' => 'com.ksmobile.cb',
+    'HTTP_COOKIE' => 'PHPSESSID=bd7c5036ee052b23185fc7d0f5344373',
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US',
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate',
+    'HTTP_REFERER' => 'http://dryarabia.com/products/view/dry-post',
+    'HTTP_ACCEPT' => '*/*',
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Linux; Android 5.1.1; C6903 Build/14.6.A.1.236; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/47.0.2526.100 Mobile Safari/537.36 ACHEETAHI/2100502020',
+    'HTTP_CONNECTION' => 'close',
+    'HTTP_HOST' => 'dryarabia.com',
+    'UNIQUE_ID' => 'Vrl6ni78zbEABVU-tUEAAADT',
+    'REDIRECT_STATUS' => '200',
+    'REDIRECT_UNIQUE_ID' => 'Vrl6ni78zbEABVU-tUEAAADT',
+    'FCGI_ROLE' => 'RESPONDER',
+    'PHP_SELF' => '/index.php',
+    'REQUEST_TIME_FLOAT' => 1454996126.80412006378173828125,
+    'REQUEST_TIME' => 1454996126,
+    'argv' => [],
+    'argc' => 0,
+]
+[09-Feb-2016 15:02:11 UTC] PHP Fatal error:  Allowed memory size of 67108864 bytes exhausted (tried to allocate 65552 bytes) in /home/dryarabia/public_html/vendor/yiisoft/yii2/db/Command.php on line 182
+[09-Feb-2016 15:03:49 UTC] PHP Fatal error:  Allowed memory size of 67108864 bytes exhausted (tried to allocate 72 bytes) in /home/dryarabia/public_html/vendor/yiisoft/yii2-debug/LogTarget.php on line 109
+[09-Feb-2016 15:07:50 UTC] PHP Fatal error:  Allowed memory size of 67108864 bytes exhausted (tried to allocate 65552 bytes) in /home/dryarabia/public_html/vendor/yiisoft/yii2/db/Command.php on line 182
+[10-Feb-2016 07:21:58 UTC] PHP Fatal error:  Allowed memory size of 67108864 bytes exhausted (tried to allocate 72 bytes) in /home/dryarabia/public_html/vendor/yiisoft/yii2-debug/LogTarget.php on line 109
+[10-Feb-2016 22:05:31 UTC] An Error occurred while handling another error:
+exception 'PDOException' with message 'SQLSTATE[HY000] [2002] No such file or directory' in /home/dryarabia/public_html/vendor/yiisoft/yii2/db/Connection.php:591
+Stack trace:
+#0 /home/dryarabia/public_html/vendor/yiisoft/yii2/db/Connection.php(591): PDO->__construct('mysql:host=loca...', 'dryaccess', 'pdkvjln@@59eebv...', NULL)
+#1 /home/dryarabia/public_html/vendor/yiisoft/yii2/db/Connection.php(533): yii\db\Connection->createPdoInstance()
+#2 /home/dryarabia/public_html/vendor/yiisoft/yii2/db/Connection.php(848): yii\db\Connection->open()
+#3 /home/dryarabia/public_html/vendor/yiisoft/yii2/db/Connection.php(835): yii\db\Connection->getMasterPdo()
+#4 /home/dryarabia/public_html/vendor/yiisoft/yii2/db/Command.php(216): yii\db\Connection->getSlavePdo()
+#5 /home/dryarabia/public_html/vendor/yiisoft/yii2/db/Command.php(831): yii\db\Command->prepare(true)
+#6 /home/dryarabia/public_html/vendor/yiisoft/yii2/db/Command.php(359): yii\db\Command->queryInternal('fetchAll', NULL)
+#7 /home/dryarabia/public_html/vendor/yiisoft/yii2/db/mysql/Schema.php(198): yii\db\Command->queryAll()
+#8 /home/dryarabia/public_html/vendor/yiisoft/yii2/db/mysql/Schema.php(97): yii\db\mysql\Schema->findColumns(Object(yii\db\TableSchema))
+#9 /home/dryarabia/public_html/vendor/yiisoft/yii2/db/Schema.php(146): yii\db\mysql\Schema->loadTableSchema('easyii_shopcart...')
+#10 /home/dryarabia/public_html/vendor/yiisoft/yii2/db/ActiveRecord.php(294): yii\db\Schema->getTableSchema('easyii_shopcart...')
+#11 /home/dryarabia/public_html/vendor/yiisoft/yii2/db/ActiveRecord.php(327): yii\db\ActiveRecord::getTableSchema()
+#12 /home/dryarabia/public_html/vendor/webvimark/multilanguage/MultiLanguageTrait.php(22): yii\db\ActiveRecord->attributes()
+#13 /home/dryarabia/public_html/vendor/yiisoft/yii2/db/BaseActiveRecord.php(422): yii\easyii\components\ActiveRecord->attributes()
+#14 /home/dryarabia/public_html/vendor/yiisoft/yii2/db/BaseActiveRecord.php(241): yii\db\BaseActiveRecord->hasAttribute('attributes')
+#15 /home/dryarabia/public_html/vendor/noumo/easyii/components/ApiObject.php(23): yii\db\BaseActiveRecord->__get('attributes')
+#16 /home/dryarabia/public_html/vendor/noumo/easyii/modules/shopcart/api/Shopcart.php(256): yii\easyii\components\ApiObject->__construct(Object(yii\easyii\modules\shopcart\models\Order))
+#17 /home/dryarabia/public_html/vendor/yiisoft/yii2/base/Object.php(134): yii\easyii\modules\shopcart\api\Shopcart->getOrder()
+#18 /home/dryarabia/public_html/vendor/noumo/easyii/modules/shopcart/api/Shopcart.php(50): yii\base\Object->__get('order')
+#19 [internal function]: yii\easyii\modules\shopcart\api\Shopcart->api_goods()
+#20 /home/dryarabia/public_html/vendor/noumo/easyii/components/API.php(31): call_user_func_array(Array, Array)
+#21 /home/dryarabia/public_html/app/views/layouts/main.php(10): yii\easyii\components\API::__callStatic('goods', Array)
+#22 /home/dryarabia/public_html/app/views/layouts/main.php(10): yii\easyii\modules\shopcart\api\Shopcart::goods()
+#23 /home/dryarabia/public_html/vendor/yiisoft/yii2/base/View.php(325): require('/home/dryarabia...')
+#24 /home/dryarabia/public_html/vendor/yiisoft/yii2/base/View.php(247): yii\base\View->renderPhpFile('/home/dryarabia...', Array)
+#25 /home/dryarabia/public_html/vendor/yiisoft/yii2/base/Controller.php(389): yii\base\View->renderFile('/home/dryarabia...', Array, Object(app\controllers\SiteController))
+#26 /home/dryarabia/public_html/vendor/yiisoft/yii2/base/Controller.php(375): yii\base\Controller->renderContent('<h1>Not Found (...')
+#27 /home/dryarabia/public_html/vendor/yiisoft/yii2/web/ErrorAction.php(109): yii\base\Controller->render('error', Array)
+#28 [internal function]: yii\web\ErrorAction->run()
+#29 /home/dryarabia/public_html/vendor/yiisoft/yii2/base/Action.php(92): call_user_func_array(Array, Array)
+#30 /home/dryarabia/public_html/vendor/yiisoft/yii2/base/Controller.php(151): yii\base\Action->runWithParams(Array)
+#31 /home/dryarabia/public_html/vendor/yiisoft/yii2/base/Module.php(455): yii\base\Controller->runAction('error', Array)
+#32 /home/dryarabia/public_html/vendor/yiisoft/yii2/web/ErrorHandler.php(85): yii\base\Module->runAction('site/error')
+#33 /home/dryarabia/public_html/vendor/yiisoft/yii2/base/ErrorHandler.php(109): yii\web\ErrorHandler->renderException(Object(yii\web\NotFoundHttpException))
+#34 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\web\NotFoundHttpException))
+#35 {main}
+
+Next exception 'yii\db\Exception' with message 'SQLSTATE[HY000] [2002] No such file or directory' in /home/dryarabia/public_html/vendor/yiisoft/yii2/db/Connection.php:538
+Stack trace:
+#0 /home/dryarabia/public_html/vendor/yiisoft/yii2/db/Connection.php(848): yii\db\Connection->open()
+#1 /home/dryarabia/public_html/vendor/yiisoft/yii2/db/Connection.php(835): yii\db\Connection->getMasterPdo()
+#2 /home/dryarabia/public_html/vendor/yiisoft/yii2/db/Command.php(216): yii\db\Connection->getSlavePdo()
+#3 /home/dryarabia/public_html/vendor/yiisoft/yii2/db/Command.php(831): yii\db\Command->prepare(true)
+#4 /home/dryarabia/public_html/vendor/yiisoft/yii2/db/Command.php(359): yii\db\Command->queryInternal('fetchAll', NULL)
+#5 /home/dryarabia/public_html/vendor/yiisoft/yii2/db/mysql/Schema.php(198): yii\db\Command->queryAll()
+#6 /home/dryarabia/public_html/vendor/yiisoft/yii2/db/mysql/Schema.php(97): yii\db\mysql\Schema->findColumns(Object(yii\db\TableSchema))
+#7 /home/dryarabia/public_html/vendor/yiisoft/yii2/db/Schema.php(146): yii\db\mysql\Schema->loadTableSchema('easyii_shopcart...')
+#8 /home/dryarabia/public_html/vendor/yiisoft/yii2/db/ActiveRecord.php(294): yii\db\Schema->getTableSchema('easyii_shopcart...')
+#9 /home/dryarabia/public_html/vendor/yiisoft/yii2/db/ActiveRecord.php(327): yii\db\ActiveRecord::getTableSchema()
+#10 /home/dryarabia/public_html/vendor/webvimark/multilanguage/MultiLanguageTrait.php(22): yii\db\ActiveRecord->attributes()
+#11 /home/dryarabia/public_html/vendor/yiisoft/yii2/db/BaseActiveRecord.php(422): yii\easyii\components\ActiveRecord->attributes()
+#12 /home/dryarabia/public_html/vendor/yiisoft/yii2/db/BaseActiveRecord.php(241): yii\db\BaseActiveRecord->hasAttribute('attributes')
+#13 /home/dryarabia/public_html/vendor/noumo/easyii/components/ApiObject.php(23): yii\db\BaseActiveRecord->__get('attributes')
+#14 /home/dryarabia/public_html/vendor/noumo/easyii/modules/shopcart/api/Shopcart.php(256): yii\easyii\components\ApiObject->__construct(Object(yii\easyii\modules\shopcart\models\Order))
+#15 /home/dryarabia/public_html/vendor/yiisoft/yii2/base/Object.php(134): yii\easyii\modules\shopcart\api\Shopcart->getOrder()
+#16 /home/dryarabia/public_html/vendor/noumo/easyii/modules/shopcart/api/Shopcart.php(50): yii\base\Object->__get('order')
+#17 [internal function]: yii\easyii\modules\shopcart\api\Shopcart->api_goods()
+#18 /home/dryarabia/public_html/vendor/noumo/easyii/components/API.php(31): call_user_func_array(Array, Array)
+#19 /home/dryarabia/public_html/app/views/layouts/main.php(10): yii\easyii\components\API::__callStatic('goods', Array)
+#20 /home/dryarabia/public_html/app/views/layouts/main.php(10): yii\easyii\modules\shopcart\api\Shopcart::goods()
+#21 /home/dryarabia/public_html/vendor/yiisoft/yii2/base/View.php(325): require('/home/dryarabia...')
+#22 /home/dryarabia/public_html/vendor/yiisoft/yii2/base/View.php(247): yii\base\View->renderPhpFile('/home/dryarabia...', Array)
+#23 /home/dryarabia/public_html/vendor/yiisoft/yii2/base/Controller.php(389): yii\base\View->renderFile('/home/dryarabia...', Array, Object(app\controllers\SiteController))
+#24 /home/dryarabia/public_html/vendor/yiisoft/yii2/base/Controller.php(375): yii\base\Controller->renderContent('<h1>Not Found (...')
+#25 /home/dryarabia/public_html/vendor/yiisoft/yii2/web/ErrorAction.php(109): yii\base\Controller->render('error', Array)
+#26 [internal function]: yii\web\ErrorAction->run()
+#27 /home/dryarabia/public_html/vendor/yiisoft/yii2/base/Action.php(92): call_user_func_array(Array, Array)
+#28 /home/dryarabia/public_html/vendor/yiisoft/yii2/base/Controller.php(151): yii\base\Action->runWithParams(Array)
+#29 /home/dryarabia/public_html/vendor/yiisoft/yii2/base/Module.php(455): yii\base\Controller->runAction('error', Array)
+#30 /home/dryarabia/public_html/vendor/yiisoft/yii2/web/ErrorHandler.php(85): yii\base\Module->runAction('site/error')
+#31 /home/dryarabia/public_html/vendor/yiisoft/yii2/base/ErrorHandler.php(109): yii\web\ErrorHandler->renderException(Object(yii\web\NotFoundHttpException))
+#32 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\web\NotFoundHttpException))
+#33 {main}
+Additional Information:
+
+Previous exception:
+exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request "favicon.ico".' in /home/dryarabia/public_html/vendor/yiisoft/yii2/base/Module.php:461
+Stack trace:
+#0 /home/dryarabia/public_html/vendor/yiisoft/yii2/web/Application.php(84): yii\base\Module->runAction('favicon.ico', Array)
+#1 /home/dryarabia/public_html/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 /home/dryarabia/public_html/index.php(15): yii\base\Application->run()
+#3 {main}
+
+Next exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in /home/dryarabia/public_html/vendor/yiisoft/yii2/web/Application.php:96
+Stack trace:
+#0 /home/dryarabia/public_html/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 /home/dryarabia/public_html/index.php(15): yii\base\Application->run()
+#2 {main}
+$_SERVER = [
+    'PATH' => '/sbin:/usr/sbin:/bin:/usr/bin',
+    'PWD' => '/usr/local/cpanel/cgi-sys',
+    'SHLVL' => '0',
+    'PHP_FCGI_MAX_REQUESTS' => '5000',
+    'SCRIPT_NAME' => '/index.php',
+    'REQUEST_URI' => '/favicon.ico',
+    'QUERY_STRING' => '',
+    'REQUEST_METHOD' => 'GET',
+    'SERVER_PROTOCOL' => 'HTTP/1.1',
+    'GATEWAY_INTERFACE' => 'CGI/1.1',
+    'REDIRECT_URL' => '/favicon.ico',
+    'REMOTE_PORT' => '45387',
+    'SCRIPT_FILENAME' => '/home/dryarabia/public_html/index.php',
+    'SERVER_ADMIN' => 'webmaster@dryarabia.com',
+    'CONTEXT_DOCUMENT_ROOT' => '/home/dryarabia/public_html',
+    'CONTEXT_PREFIX' => '',
+    'REQUEST_SCHEME' => 'http',
+    'DOCUMENT_ROOT' => '/home/dryarabia/public_html',
+    'REMOTE_ADDR' => '156.199.162.136',
+    'SERVER_PORT' => '80',
+    'SERVER_ADDR' => '160.153.16.46',
+    'SERVER_NAME' => 'dryarabia.com',
+    'SERVER_SOFTWARE' => 'Apache/2.4.12',
+    'SERVER_SIGNATURE' => '',
+    'LD_LIBRARY_PATH' => '/usr/local/apache/lib',
+    'HTTP_ACCEPT_LANGUAGE' => 'ar-AE,ar;q=0.8,en-US;q=0.6,en;q=0.4',
+    'HTTP_COOKIE' => 'PHPSESSID=856be48146ec84e2c3a1b41eab4e2d5c; _ga=GA1.2.2078219184.1454966238; _csrf=3555c296eac1f5dab99153aaa8fafa7314a9176f0050fb62ff1f86e063771d51a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22BiH9LgsVs-_MuLenGxTZvKE2dycwiVZP%22%3B%7D; __unam=7639673-152c2bf6d43-1427d2ae-1',
+    'HTTP_ACCEPT_ENCODING' => 'gzip,deflate,sdch',
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Linux; Android 4.4.2; ar-ae; SAMSUNG SM-G7102 Build/KOT49H) AppleWebKit/537.36 (KHTML, like Gecko) Version/1.5 Chrome/28.0.1500.94 Mobile Safari/537.36',
+    'HTTP_ACCEPT' => '*/*',
+    'HTTP_CONNECTION' => 'close',
+    'HTTP_HOST' => 'dryarabia.com',
+    'UNIQUE_ID' => 'Vru0Ki78zbEABtv3chIAAALI',
+    'REDIRECT_STATUS' => '200',
+    'REDIRECT_UNIQUE_ID' => 'Vru0Ki78zbEABtv3chIAAALI',
+    'FCGI_ROLE' => 'RESPONDER',
+    'PHP_SELF' => '/index.php',
+    'REQUEST_TIME_FLOAT' => 1455141930.976253986358642578125,
+    'REQUEST_TIME' => 1455141930,
+>>>>>>> e3e3074afdf6f3c017f464ee4390739d14f70a8b
     'argv' => [],
     'argc' => 0,
 ]

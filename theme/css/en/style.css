@@ -2807,10 +2807,10 @@ float:none !important;
 }
 
 #order-city,#order-country{
-text-indent:42%;	
+	
 }
 #order-ttl{
-	    text-indent: 30%;
+	 
 }
 .intl-tel-input .flag-container:hover .selected-flag {
     background-color: transparent !important;

@@ -16,7 +16,25 @@ $this->title = yii::t('easyii','Dry');
 $this->params['meta_keyword'] = yii::t('easyii','meta 2');
 $this->params['meta_description'] = yii::t('easyii','meta 1');
 
+
+
 ?>
+
+
+
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-73389583-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+
 
 <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
    
@@ -109,7 +127,7 @@ $this->params['meta_description'] = yii::t('easyii','meta 1');
 
                             ?>
                             <div class="item <?= ($i == 0) ? 'active' : ''; ?>">
-                                <img src="<?= $photo->image ;?>" alt="slider-<?$i?>">
+                                <img src="<?= $photo->image ;?>" alt="slider-<?=$photo->description?>">
                             </div>
                             <?
                             $i++;
@@ -129,7 +147,7 @@ $this->params['meta_description'] = yii::t('easyii','meta 1');
 
                             ?>
                             <div class="item <?= ($i == 0) ? 'active' : ''; ?>">
-                                <img src="<?= $photo->image ;?>" alt="slider-<?$i?>">
+                                <img src="<?= $photo->image ;?>" alt="slider-<?=$photo->description?>">
                             </div>
                             <?
                             $i++;
@@ -148,7 +166,7 @@ $this->params['meta_description'] = yii::t('easyii','meta 1');
 
                             ?>
                             <div class="item <?= ($i == 0) ? 'active' : ''; ?>">
-                                <img src="<?= $photo->image ;?>" alt="slider-<?$i?>">
+                                <img src="<?= $photo->image ;?>" alt="slider-<?=$photo->description ?>">
                             </div>
                             <?
                             $i++;
@@ -167,7 +185,7 @@ $this->params['meta_description'] = yii::t('easyii','meta 1');
 
                             ?>
                             <div class="item <?= ($i == 0) ? 'active' : ''; ?>">
-                                <img src="<?= $photo->image ;?>" alt="slider-<?$i?>">
+                                <img src="<?= $photo->image ;?>" alt="slider-<?=$photo->description ?>">
                             </div>
                             <?
                             $i++;
@@ -187,7 +205,7 @@ $this->params['meta_description'] = yii::t('easyii','meta 1');
 
                             ?>
                             <div class="item <?= ($i == 0) ? 'active' : ''; ?>">
-                                <img src="<?= $photo->image ;?>" alt="slider-<?$i?>">
+                                <img src="<?= $photo->image ;?>" alt="slider-<?=$photo->description?>">
                             </div>
                             <?
                             $i++;
@@ -207,7 +225,7 @@ $this->params['meta_description'] = yii::t('easyii','meta 1');
 
                             ?>
                             <div class="item <?= ($i == 0) ? 'active' : ''; ?>">
-                                <img src="<?= $photo->image ;?>" alt="slider-<?$i?>">
+                                <img src="<?= $photo->image ;?>" alt="slider-<?=$photo->description?>">
                             </div>
                             <?
                             $i++;
@@ -226,7 +244,7 @@ $this->params['meta_description'] = yii::t('easyii','meta 1');
 
                             ?>
                             <div class="item <?= ($i == 0) ? 'active' : ''; ?>">
-                                <img src="<?= $photo->image ;?>" alt="slider-<?$i?>">
+                                <img src="<?= $photo->image ;?>" alt="slider-<?=$photo->description?>">
                             </div>
                             <?
                             $i++;
@@ -245,7 +263,7 @@ $this->params['meta_description'] = yii::t('easyii','meta 1');
 
                             ?>
                             <div class="item <?= ($i == 0) ? 'active' : ''; ?>">
-                                <img src="<?= $photo->image ;?>" alt="slider-<?$i?>">
+                                <img src="<?= $photo->image ;?>" alt="slider-<?=$photo->description?>">
                             </div>
                             <?
                             $i++;
@@ -270,18 +288,18 @@ $this->params['meta_description'] = yii::t('easyii','meta 1');
 
                 <li class="wow fadeIn"  data-wow-duration="3s" data-wow-delay=".5s">
                <?php if($adv1->url ){?> <a href="<?= $adv1->url?>"> <? }?>
-                    <img src="<?=Yii::$app->language =='en' ? $adv1->image :$adv1->image_ar ?>" class="img-responsive center-block"/>
+                    <img src="<?=Yii::$app->language =='en' ? $adv1->image :$adv1->image_ar ?>"  alt="<?= $adv1->text ?>" class="img-responsive center-block"/>
                         <?php if($adv1->url){?>  </a><? }?>
                 </li>
                 <li class="wow fadeIn"  data-wow-duration="3s" data-wow-delay="1.5s">
                     <?php if($adv2->url){?> <a href="<?= $adv2->url?>"> <? }?>
-                    <img src="<?=Yii::$app->language =='en' ? $adv2->image :$adv2->image_ar ?>" class="img-responsive center-block"/>
+                    <img src="<?=Yii::$app->language =='en' ? $adv2->image :$adv2->image_ar ?>"   alt="<?= $adv2->text ?>"class="img-responsive center-block"/>
                     <button class="btn pink-btn btn-block"> <?= Yii::t('easyii', 'Sign Up Now!');?></button>
                         <?php if($adv2->url){?>  </a><? }?>
                 </li>
                 <li class="wow fadeIn"  data-wow-duration="3s" data-wow-delay="2.5s">
                     <?php if($adv3->url){?>  <a href="<?= $adv3->url?>"> <? }?>
-                    <img src="<?=Yii::$app->language =='en' ? $adv3->image :$adv3->image_ar ?>" class="img-responsive center-block"/>
+                    <img src="<?=Yii::$app->language =='en' ? $adv3->image :$adv3->image_ar ?>"   alt="<?= $adv3->text ?>" class="img-responsive center-block"/>
                     <button class="btn pink-btn btn-block"> <?= Yii::t('easyii', 'Try it now!');?></button>
 
                         <?php if($adv3->url){?>  </a> <? }?>
