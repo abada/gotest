@@ -22,7 +22,7 @@
 								),
 								
 		'DestinationAddress' 	=> array(
-									'City'					=> 'Badr city',
+									'City'					=> 'Tanta',
 									'State Or Province Code'                =>'egypt',
 									'CountryCode'			=> 'EG'
 								),
