@@ -18,7 +18,7 @@ if($index % 2) {
     <ul class="product-details">
         <li><?= yii::t('easyii','Share')?>
 
-            <?php $reviewUrl=\yii\helpers\Url::to(['site/about'], true).'/?review='.$model->page_id;?>
+            <?php $reviewUrl=\yii\helpers\Url::to(['site/about-dry'], true).'/?review='.$model->page_id;?>
 
               <a class="js-social-share" href="https://twitter.com/intent/tweet/?text=<?= $model->title ;?>&url=<?= urlencode($reviewUrl) ;?>&via=DryArabia" target="_blank">
                 <img width="30" height="30" src="<?php echo Yii::$app->getUrlManager()->getBaseUrl()?>/theme/images/twitter.png">
