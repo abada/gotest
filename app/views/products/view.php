@@ -80,15 +80,16 @@ $totalreviews=  Products::reviews($item->id,1);
                     <p class="margin-top20"><?= $item->description ;?></p>
                     <ul class="product-details margin-top30">
                         <li><?= Yii::t('easyii','Share'); ?>
-                            <?php $product_link='';?>
+                            <?php echo $product_link=Yii::$app->getUrlManager()->getBaseUrl().'/product/view/'.$item->slug;
+                            ?>
 
-                            <a class="js-social-share" href="https://twitter.com/intent/tweet/?text=<?= $item->title?>&url=<?= urlencode($reviewUrl) ;?>&via=Dryarabia" target="_blank">
+                            <a class="js-social-share" href="https://twitter.com/intent/tweet/?text=<?= $item->title?>&url=<?= urlencode($product_link) ;?>&via=Dryarabia" target="_blank">
                                 <img width="30" height="30" src="<?php echo Yii::$app->getUrlManager()->getBaseUrl()?>/theme/images/twitter.png">
                             </a>
-                            <a  class="js-social-share" href="https://plus.google.com/share?url=<?= urlencode($reviewUrl) ;?>"  target="_blank">
+                            <a  class="js-social-share" href="https://plus.google.com/share?url=<?= urlencode($product_link) ;?>"  target="_blank">
                                 <img width="30" height="30" src="<?php echo Yii::$app->getUrlManager()->getBaseUrl()?>/theme/images/googleplus.png">
                             </a>
-                            <a class="js-social-share" href="https://www.facebook.com/sharer/sharer.php?u=<?= urlencode($reviewUrl) ;?>" target="_blank">
+                            <a class="js-social-share" href="https://www.facebook.com/sharer/sharer.php?u=<?= urlencode($product_link) ;?>" target="_blank">
                                 <img width="30" height="30" src="<?php echo Yii::$app->getUrlManager()->getBaseUrl()?>/theme/images/facebook.png">
                             </a>
 
