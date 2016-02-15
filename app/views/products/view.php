@@ -80,7 +80,7 @@ $totalreviews=  Products::reviews($item->id,1);
                     <p class="margin-top20"><?= $item->description ;?></p>
                     <ul class="product-details margin-top30">
                         <li><?= Yii::t('easyii','Share'); ?>
-                            <?php echo $product_link=$_SERVER['HTTP_HOST'].'/product/view/'.$item->slug;
+                            <?php echo $product_link='http://'. $_SERVER['HTTP_HOST'].'/product/view/'.$item->slug;
                             ?>
 
                             <a class="js-social-share" href="https://twitter.com/intent/tweet/?text=<?= $item->title?>&url=<?= urlencode($product_link) ;?>&via=Dryarabia" target="_blank">
