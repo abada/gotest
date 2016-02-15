@@ -80,7 +80,7 @@ $totalreviews=  Products::reviews($item->id,1);
                     <p class="margin-top20"><?= $item->description ;?></p>
                     <ul class="product-details margin-top30">
                         <li><?= Yii::t('easyii','Share'); ?>
-                            <?php echo $product_link='http://'. $_SERVER['HTTP_HOST'].'/product/view/'.$item->slug;
+                            <?php  $product_link='http://'. $_SERVER['HTTP_HOST'].'/product/view/'.$item->slug;
                             ?>
 
                             <a class="js-social-share" href="https://twitter.com/intent/tweet/?text=<?= $item->title?>&url=<?= urlencode($product_link) ;?>&via=Dryarabia" target="_blank">
@@ -92,12 +92,6 @@ $totalreviews=  Products::reviews($item->id,1);
                             <a class="js-social-share" href="https://www.facebook.com/sharer/sharer.php?u=<?= urlencode($product_link) ;?>" target="_blank">
                                 <img width="30" height="30" src="<?php echo Yii::$app->getUrlManager()->getBaseUrl()?>/theme/images/facebook.png">
                             </a>
-
-                            <span class='st_facebook_large' displayText=''></span>
-                            <span class='st_twitter_large' displayText=''></span>
-                            <span class='st_googleplus_large' displayText=''></span>
-                            <span class='st_sharethis_large' displayText=''></span>
-                            <span class='st__large' displayText=''></span>
                        </li>
                     </ul>
                 </div>
@@ -172,18 +166,35 @@ $totalreviews=  Products::reviews($item->id,1);
                             <div class="img-overlay"></div>
                             <figure>
                                 <img title="Image"  src="<?php echo (\Yii::$app->language == "en")? $data->image: $data->image_ar ;?>" alt="<?= $data->title?>"></figure>
+
+
                             <ul>
 
-                                <li> <span class='st_facebook_large fa' displayText='' st_url="<?= $itemdataUrl ;?>" st_title="<?= $data->title?>" ></span></li>
-                                <li>  <span class='st_twitter_large fa'  displayText='' st_url="<?= $itemdataUrl ;?>" st_title="<?= $data->title?>"></span></li>
-                                <li><span class='st_googleplus_large fa' displayText='' st_url="<?= $itemdataUrl ;?>" st_title="<?= $data->title?>"></span></li>
-                             </ul>
+                                <!--                                <li> <span class='st_facebook_large fa' displayText='' st_url="--><?//= $itemdataUrl ;?><!--" st_title="--><?//= $data->title?><!--" ></span></li>-->
+                                <!--                                <li>  <span class='st_twitter_large fa'  displayText='' st_url="--><?//= $itemdataUrl ;?><!--" st_title="--><?//= $data->title?><!--"></span></li>-->
+                                <!--                                <li><span class='st_googleplus_large fa' displayText='' st_url="--><?//= $itemdataUrl ;?><!--" st_title="--><?//= $data->title?><!--"></span></li>-->
+                                <!---->
 
-<!--                            <ul>-->
-<!--                                <li><a href="#."><i class="fa fa-google-plus"></i></a></li>-->
-<!--                                <li><a href="#."><i class="fa fa-twitter"></i></a></li>-->
-<!--                                <li><a href="#."><i class="fa fa-facebook"></i></a></li>-->
-<!--                            </ul>-->
+
+                                <li>
+                                        <a class="js-social-share " href="https://twitter.com/intent/tweet/?text=<?= $data->title?>&url=<?= urlencode($itemdataUrl) ;?>&via=DryArabia" target="_blank">
+                                            <i class="fa fa-twitter"></i>
+                                        </a>
+                                </li>
+                                <li>
+                                        <a  class="js-social-share " href="https://plus.google.com/share?url=<?= urlencode($itemdataUrl) ;?>"  target="_blank">
+                                            <i class="fa fa-google-plus"></i>
+                                        </a>
+                                </li>
+                                <li>
+                                        <a class="js-social-share " href="https://www.facebook.com/sharer/sharer.php?u=<?= urlencode($itemdataUrl) ;?>" target="_blank">
+                                            <i class="fa fa-facebook"></i>
+                                        </a>
+                                </li>
+
+
+                            </ul>
+
 
                         </div>
                         <div class="team-detail-sec">
