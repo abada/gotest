@@ -1,11 +1,15 @@
 <?php  $this->title =yii::t('easyii','Online Dry Products');
  ?>
 
+
+
 <div class="content">
     <div class="container-fluid">
         <div class="row">
             <div class="col-lg-12 gray-color postpartum">
                 <div class="title"> <?= yii::t('easyii','postpartum pads')?></div>
+
+
 
                  <ul class="col-md-12 col-centered product">
 

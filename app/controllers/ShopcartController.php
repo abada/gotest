@@ -67,6 +67,7 @@ class ShopcartController extends \yii\web\Controller
 
     public function actionAdd($id)
     {
+    @ob_start();
         $item = Catalog::get($id);
 
         if(!$item){
@@ -79,6 +80,7 @@ class ShopcartController extends \yii\web\Controller
             $response = Shopcart::add($item->id, $form->count, $form->color);
             $success = $response['result'] == 'success' ? 1 : 0;
         }
+
         $url = Yii::$app->request->referrer ;
             if (strpos($url,'?') !== false) {
              $url=$url.'&';
@@ -86,9 +88,8 @@ class ShopcartController extends \yii\web\Controller
 
                 $url=$url.'?';
             }
-
-      //  $url='/shopcart?';
-        return $this->redirect($url.AddToCartForm::SUCCESS_VAR.'='.$success .'&id='.$id);
+            
+         return $this->redirect($url.AddToCartForm::SUCCESS_VAR.'='.$success .'&id='.$id);
     }
 
     public function actionRemove($id)
