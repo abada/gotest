@@ -106,6 +106,8 @@ $delivery= Setting::get('deliver_cost');
                                 <? if(\Yii::$app->language == 'ar') echo "ج.م" ;?>
                                  <? if(\Yii::$app->language == 'en') echo "LE" ;?>
                                  <?= $delivery ;?>
+                                <span id="DCost"></span>
+
                             </span>
                         </p>
                             <p> <?= Yii::t('easyii','final total Price')?>

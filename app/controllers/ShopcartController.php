@@ -49,6 +49,13 @@ class ShopcartController extends \yii\web\Controller
 
     }
 
+ public function actionDeliveryCost($code){
+     //check the api for the returned data
+
+        return "the new cost--".$code;
+
+    }
+
 
     public function actionIndex($error=null)
     {
