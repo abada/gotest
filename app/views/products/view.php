@@ -53,7 +53,7 @@ $totalreviews=  Products::reviews($item->id,1);
                         foreach($item->photos as $photo) : ?>
                            <?//= $photo->box(110, 100) ?>
                            <a data-slide-index="<?= $i?>" href="">
-                               <img src="<?= $photo->image?>" width="50" height="50">
+                               <img src="<?= $photo->image?>" width="50" height="50" alt="<?= $photo->description?>">
 
                            </a>
                         <?php
@@ -165,7 +165,7 @@ $totalreviews=  Products::reviews($item->id,1);
                         <div class="team-image-sec">
                             <div class="img-overlay"></div>
                             <figure>
-                                <img title="Image"  src="<?php echo (\Yii::$app->language == "en")? $data->image: $data->image_ar ;?>" alt="<?= $data->title?>"></figure>
+                                <img title="Image"  src="<?php echo (\Yii::$app->language == "en")? $data->image: $data->image_ar ;?>" alt="<?= $data->link?>"></figure>
 
 
                             <ul>
