@@ -41,7 +41,7 @@ $totalreviews=  Products::reviews($item->id,1);
 
                         <?php foreach($item->photos as $photo) : ?>
                             <?//= $photo->box(110, 100) ?>
-                          <li><img src="<?= $photo->image?>" width="300" height="300" class="center-block"></li>
+                          <li><img src="<?= $photo->image?>" width="300" height="300" class="center-block" alt="<?= $photo->description?>"> </li>
 
                         <?php endforeach;?>
 
@@ -434,11 +434,11 @@ if(Yii::$app->session->getFlash('success') != ''){
 
 
                 <a href="<?= $item->adv1_url?>">
-                    <img src="<?=Yii::$app->language =='en' ? $item->adv_1 :$item->adv_1_ar ?>" class="margin-bottom30 img-responsive center-block"/>
+                    <img src="<?=Yii::$app->language =='en' ? $item->adv_1 :$item->adv_1_ar ?>" class="margin-bottom30 img-responsive center-block" alt="<?= $item->adv1_alt?>"/>
                 </a>
 
                 <a href="<?= $item->adv2_url?>">
-                    <img src="<?=Yii::$app->language =='en' ? $item->adv_2 : $item->adv_2_ar ?>"  class="margin-bottom30 img-responsive center-block"/>
+                    <img src="<?=Yii::$app->language =='en' ? $item->adv_2 : $item->adv_2_ar ?>"  class="margin-bottom30 img-responsive center-block" alt="<?= $item->adv2_alt?>"/>
                 </a>
 
 
