@@ -23,7 +23,7 @@ use yii\easyii\modules\catalog\api\Catalog;
 
     }
     ?>
-        <img class="img-responsive" src="<?php echo $image?>" alt="<?= $item->title ?>" >
+        <img class="img-responsive" src="<?php echo $image?>" alt="<?= $item->item_image_alt ?>" >
 
             </div>
             <div class="media-body">

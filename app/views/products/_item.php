@@ -13,7 +13,7 @@
     }
     ?>
 
-    <?= Html::a('<img class="center-block img-responsive thumb" src="'.$image.'" alt="'.$item->title. '" >
+    <?= Html::a('<img class="center-block img-responsive thumb" src="'.$image.'" alt="'.$item->item_image_alt. '" >
 '.'
         ', ['products/view', 'slug' => $item->slug]) ?>
 
