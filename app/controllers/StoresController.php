@@ -49,7 +49,9 @@ class StoresController extends FrontController
                 'filters'=>$filters
             ]);
         }else{
-
+            if($filterForm->load(Yii::$app->request->get())){
+                $filters = $filterForm->parse();
+            }
             //var_dump($filters);
             return $this->render('index', [
                 //'sliderFilters'=>$sliderFilters,
