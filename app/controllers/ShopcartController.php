@@ -72,9 +72,10 @@ class ShopcartController extends \yii\web\Controller
         return $this->render('success',array( 'products'=>$cat->items() ));
     }
 
-    public function actionAdd($id)
+    public function actionAdd($id=null)
     {
-    @ob_start();
+       $id=$_POST['AddToCartForm']['id'];
+
         $item = Catalog::get($id);
 
         if(!$item){
@@ -88,22 +89,20 @@ class ShopcartController extends \yii\web\Controller
             $success = $response['result'] == 'success' ? 1 : 0;
         }
 
-        $url = Yii::$app->request->referrer ;
-            if (strpos($url,'?') !== false) {
-             $url=$url.'&';
-            }else{
 
-                $url=$url.'?';
-            }
-<<<<<<< HEAD
-            
-         return $this->redirect($url.AddToCartForm::SUCCESS_VAR.'='.$success .'&id='.$id);
-=======
-            $fullurl=$url.AddToCartForm::SUCCESS_VAR.'='.$success .'&id='.$id;
-            echo("<script>location.href = '".$fullurl."';</script>");
+        echo '<h4 class="text-success"><i class="glyphicon glyphicon-ok"></i>'.Yii::t('easyii','Added to cart').'</h4>';
+
+        die;
+//        $url = Yii::$app->request->referrer ;
+//            if (strpos($url,'?') !== false) {
+//             $url=$url.'&';
+//            }else{
+//                $url=$url.'?';
+//            }
+//            $fullurl=$url.AddToCartForm::SUCCESS_VAR.'='.$success .'&id='.$id;
+          //  echo("<script>location.href = '".$fullurl."';</script>");
             
         // return $this->redirect($url.AddToCartForm::SUCCESS_VAR.'='.$success .'&id='.$id);
->>>>>>> e3e3074afdf6f3c017f464ee4390739d14f70a8b
     }
 
     public function actionRemove($id)

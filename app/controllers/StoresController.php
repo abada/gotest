@@ -50,6 +50,37 @@ class StoresController extends FrontController
             'filters'=>$filters
         ]);
     }
+
+    public function actionSearchCustomers(){
+
+        $slug='pharmacies';
+        $filterForm = new GadgetsStoresFilterForm();
+        $cat = Catalog::cat($slug);
+
+        if(!$cat){
+            throw new NotFoundHttpException('Shop category not found.');
+        }
+        $filters = null;
+        if($filterForm->load(Yii::$app->request->post()) && $filterForm->validate()) {
+
+            $filters = $filterForm->parse();
+        }
+
+
+
+        return $this->renderPartial('searchdata', [
+            //'sliderFilters'=>$sliderFilters,
+            'cat' => $cat,
+            'items' => $cat->items([
+                'pagination' => ['pageSize' => 6],
+                'filters' => $filters
+            ]),
+            'filterForm' => $filterForm,
+            'filters'=>$filters
+        ]);
+    }
+
+
     public function actionIndexOLD()
     {
         $slug='products';

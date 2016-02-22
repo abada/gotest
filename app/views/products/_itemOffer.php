@@ -4,6 +4,8 @@ use yii\helpers\Url;
 use yii\widgets\ActiveForm;
 use app\models\AddToCartForm;
 use yii\easyii\modules\catalog\api\Catalog;
+use demogorgorn\ajax\AjaxSubmitButton;
+
 ?>
 
 <a name="<?= $item->slug ?>" ></a>
@@ -30,18 +32,43 @@ use yii\easyii\modules\catalog\api\Catalog;
                 <h3 class="media-heading"><?= $item->title ?></h3>
                 <p><?= $item->description ;?></p>
 
+                   <span id="output_<?=$item->id?>">
+                    </span>
 
-                <?php if(Yii::$app->request->get(AddToCartForm::SUCCESS_VAR) and Yii::$app->request->get('id')== $item->id) { ?>
-                    <h4 class="text-success"><i class="glyphicon glyphicon-ok"></i><?= Yii::t('easyii','Added to cart'); ?>  </h4>
-                <?php } else { ?>
-
-
-                    <?php $form = ActiveForm::begin(['action' => Url::to(['/shopcart/add', 'id' => $item->id])]); ?>
+                <?php $form = ActiveForm::begin(['action' => Url::to(['', 'id' => $item->id]) ,'class'=>'uk-width-medium-1-1 uk-form uk-form-horizontal']); ?>
+                    <?= $form->field($addToCartForm, 'id')->hiddenInput(['value' =>  $item->id])->label(false) ?>
                     <?= $form->field($addToCartForm, 'count')->hiddenInput(['value' => 1])->label(false) ?>
-                    <?= Html::submitButton(Yii::t('easyii','Add to Cart').' <i class="fa fa-cart-arrow-down fa-lg"></i>' , ['class' => 'btn dry-btn']) ?>
+
+                    <?php //echo Html::beginForm('', 'post', ['class'=>'uk-width-medium-1-1 uk-form uk-form-horizontal']); ?>
+
+                    <?//= Html::submitButton(Yii::t('easyii','Add to Cart').' <i class="fa fa-cart-arrow-down fa-lg"></i>' , ['class' => 'btn dry-btn']) ?>
+                    <?php
+
+                    $label=Yii::t('easyii','Add to Cart');//. '<i class="fa fa-cart-arrow-down fa-lg"></i>';
+                    AjaxSubmitButton::begin([
+                        'label' => $label,
+                        'ajaxOptions' => [
+                            'type'=>'POST',
+                            'url'=>'/shopcart/add',
+                            /*'cache' => false,*/
+                            'success' => new \yii\web\JsExpression('function(html){
+                $("#emptylink_'.$item->id.'").attr("href", "/shopcart");
+                $("#empty_'.$item->id.'").empty();
+                 $("#output_'.$item->id.'").html(html);
+
+
+            }'),
+                        ],
+                        'options' => ['class' => 'btn dry-btn', 'type' => 'submit'],
+                    ]);
+                    AjaxSubmitButton::end();
+                    ?>
+
+
+
 
                    <div class="clear"></div>
-                    <div class='col-md-12 alert' dir=" " style="display: none; direction: <?=$dir?>" >
+                    <div class='col-md-12 alert ' dir=" " style="display: none; direction: <?=$dir?>" id="empty_<?=$item->id?>">
                         <div class='alert alert-danger'>
                             <a class="close" data-hide="alert">×</a>
                             <strong>!</strong> <?= Yii::t('easyii','please add item to cart first') ?>
@@ -51,11 +78,10 @@ use yii\easyii\modules\catalog\api\Catalog;
 
 
 
-                        <?php ActiveForm::end(); ?>
+                        <?php //ActiveForm::end(); ?>
+                    <?php echo Html::endForm(); ?>
 
-                <?php
-                }
-                ?>
+
 
 
 
@@ -75,7 +101,7 @@ use yii\easyii\modules\catalog\api\Catalog;
                 $url='  href="javascript:void(0)"  onclick="'."$('.alert').show()".' "';
             }
             ?>
-            <a <?= $url?> ><button class="btn dry-btn-2 pull-right"> <?= Yii::t('easyii','Check Out'); ?> </button></a>
+            <a <?= $url?>  id="emptylink_<?=$item->id?>" ><button class="btn dry-btn-2 pull-right"> <?= Yii::t('easyii','Check Out'); ?> </button></a>
         </footer>
     </div>
 </div>
