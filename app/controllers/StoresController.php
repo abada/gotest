@@ -34,21 +34,35 @@ class StoresController extends FrontController
             throw new NotFoundHttpException('Shop category not found.');
         }
         $filters = null;
-      if($filterForm->load(Yii::$app->request->get()) && $filterForm->validate()) {
+
+        if($filterForm->load(Yii::$app->request->post()) && $filterForm->validate()) {
 
             $filters = $filterForm->parse();
+            return $this->renderPartial('searchdata', [
+                //'sliderFilters'=>$sliderFilters,
+                'cat' => $cat,
+                'items' => $cat->items([
+                    'pagination' => ['pageSize' => 6],
+                    'filters' => $filters
+                ]),
+                'filterForm' => $filterForm,
+                'filters'=>$filters
+            ]);
+        }else{
+
+            //var_dump($filters);
+            return $this->render('index', [
+                //'sliderFilters'=>$sliderFilters,
+                'cat' => $cat,
+                'items' => $cat->items([
+                    'pagination' => ['pageSize' => 6],
+                    'filters' => $filters
+                ]),
+                'filterForm' => $filterForm,
+                'filters'=>$filters
+            ]);
         }
-       //var_dump($filters);
-        return $this->render('index', [
-            //'sliderFilters'=>$sliderFilters,
-            'cat' => $cat,
-            'items' => $cat->items([
-                'pagination' => ['pageSize' => 6],
-                'filters' => $filters
-            ]),
-            'filterForm' => $filterForm,
-            'filters'=>$filters
-        ]);
+
     }
 
     public function actionSearchCustomers(){

@@ -106,7 +106,7 @@ $this->title= yii::t('easyii','Find a store');
                                 'id'=>'GoSumbmit',
                                 'ajaxOptions' => [
                                     'type'=>'POST',
-                                    'url'=>'/stores/search-customers',
+                                    'url'=>'/stores/index',
                                     /*'cache' => false,*/
                                     'success' => new \yii\web\JsExpression('function(html){
                                    $("#resultData").html(html);
