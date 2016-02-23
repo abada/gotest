@@ -25,6 +25,10 @@ class StoresController extends FrontController
     }
     public function actionIndex()
     {
+        $session = new Session;
+        $session->open();
+
+
         //prepar products
         $slug='pharmacies';
         $filterForm = new GadgetsStoresFilterForm();
@@ -37,7 +41,7 @@ class StoresController extends FrontController
 
         if($filterForm->load(Yii::$app->request->post()) && $filterForm->validate()) {
 
-            $filters = $filterForm->parse();
+            $session['filterFormS'] = $filterForm->parse();
             return $this->renderPartial('searchdata', [
                 //'sliderFilters'=>$sliderFilters,
                 'cat' => $cat,
@@ -51,6 +55,9 @@ class StoresController extends FrontController
         }else{
             if($filterForm->load(Yii::$app->request->get())){
                 $filters = $filterForm->parse();
+            }else{
+                $filters = $session['filterFormS'];
+
             }
             //var_dump($filters);
             return $this->render('index', [
