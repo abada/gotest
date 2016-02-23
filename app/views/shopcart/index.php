@@ -44,8 +44,7 @@ $delivery= Setting::get('deliver_cost');
                 </div>
 
 
-
-                    <?= Html::beginForm(['/shopcart/update'])?>
+                 <?= Html::beginForm(['/shopcart/update'])?>
 
                 <div class="col-md-5 col-md-offset-1">
                 <h2 class="title"><?= Yii::t('easyii','Check Out')?> </h2>
@@ -83,10 +82,6 @@ $delivery= Setting::get('deliver_cost');
                         </div>
 
                   <?php endforeach; ?>
-
-                        
-
-
                     </div>
 
                     <div class="price">
@@ -120,6 +115,8 @@ $delivery= Setting::get('deliver_cost');
                     </div>
                 </div>
                     <?= Html::endForm()?>
+
+
                 <?php else : ?>
                 <div class="col-md-6 order-online">
                     <br/><br/><br/><br/>
