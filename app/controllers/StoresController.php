@@ -11,6 +11,7 @@ use app\modules\customers\models\Item;
 use app\models\GadgetsStoresFilterForm;
 use Yii;
 use yii\web\NotFoundHttpException;
+use yii\web\Session;
 
 class StoresController extends FrontController
 {
@@ -25,7 +26,7 @@ class StoresController extends FrontController
     }
     public function actionIndex()
     {
-        $session = new Session;
+        $session = new Session();
         $session->open();
 
 
