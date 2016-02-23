@@ -11,7 +11,6 @@ use app\modules\customers\models\Item;
 use app\models\GadgetsStoresFilterForm;
 use Yii;
 use yii\web\NotFoundHttpException;
-use yii\web\Session;
 
 class StoresController extends FrontController
 {
@@ -26,10 +25,6 @@ class StoresController extends FrontController
     }
     public function actionIndex()
     {
-        $session = new Session();
-        $session->open();
-
-
         //prepar products
         $slug='pharmacies';
         $filterForm = new GadgetsStoresFilterForm();
@@ -42,7 +37,7 @@ class StoresController extends FrontController
 
         if($filterForm->load(Yii::$app->request->post()) && $filterForm->validate()) {
 
-            $session['filterFormS'] =  serialize($filterForm->parse());
+            $filters = $filterForm->parse();
             return $this->renderPartial('searchdata', [
                 //'sliderFilters'=>$sliderFilters,
                 'cat' => $cat,
@@ -56,9 +51,6 @@ class StoresController extends FrontController
         }else{
             if($filterForm->load(Yii::$app->request->get())){
                 $filters = $filterForm->parse();
-            }else{
-                $filters =unserialize( $session['filterFormS']);
-
             }
             //var_dump($filters);
             return $this->render('index', [
