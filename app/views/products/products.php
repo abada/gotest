@@ -40,7 +40,7 @@ $ListActive =['1'=>'Sleep','2'=>'Normal','3'=>'Active',''=>'Sleep'];
                                    
                                     <div class="filterdiv">
                                     
-                                         <input type="text"  name="GadgetsFilterForm[absorptionrate]" id="gadgetsfilterform-absorptionrate" >
+                                         <input type="text"  name="GadgetsFilterForm[absorptionrate]" id="gadgetsfilterform-absorptionrate"  onchange="upformmax(this.value)" >
                                       
                                   </div>
                                     <div id="slider-range-max"></div>
@@ -52,7 +52,7 @@ $ListActive =['1'=>'Sleep','2'=>'Normal','3'=>'Active',''=>'Sleep'];
                                     
                                     <div class="filterdiv">
                                     
-                                         <input type="text"  name="GadgetsFilterForm[speed]" id="gadgetsfilterform-speed" value="5" >
+                                         <input type="text"  name="GadgetsFilterForm[speed]" id="gadgetsfilterform-speed" value="5" onchange="upformmax2(this.value)" >
                                       
                                   </div>
                                     <div id="slider-range-max2"></div>
@@ -184,6 +184,30 @@ $ListActive =['1'=>'Sleep','2'=>'Normal','3'=>'Active',''=>'Sleep'];
 
 
 <script>
+    function upformmax2(node){
+
+        if(node > 0 && node < 6){
+            $( "#slider-range-max2" ).slider({
+                value: node
+            });
+            $('#GoSumbmitProducts').click();
+        }
+
+
+    }
+
+    function upformmax(node){
+        if(node > 0 && node < 11)
+        {
+            $("#slider-range-max").slider({
+               value: node
+            });
+            $('#GoSumbmitProducts').click();
+        }
+    }
+
+
+
     function SubmitCat(val,node){
         $('#gadgetsfilterform-product_cat').val(val);
         //$('#FilterForm').submit();
