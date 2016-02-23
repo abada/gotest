@@ -42,7 +42,7 @@ class StoresController extends FrontController
 
         if($filterForm->load(Yii::$app->request->post()) && $filterForm->validate()) {
 
-            $session['filterFormS'] = $filterForm->parse();
+            $session['filterFormS'] =  serialize($filterForm->parse());
             return $this->renderPartial('searchdata', [
                 //'sliderFilters'=>$sliderFilters,
                 'cat' => $cat,
@@ -57,7 +57,7 @@ class StoresController extends FrontController
             if($filterForm->load(Yii::$app->request->get())){
                 $filters = $filterForm->parse();
             }else{
-                $filters = $session['filterFormS'];
+                $filters =unserialize( $session['filterFormS']);
 
             }
             //var_dump($filters);
