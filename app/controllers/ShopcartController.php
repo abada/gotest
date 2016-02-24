@@ -123,7 +123,8 @@ class ShopcartController extends \yii\web\Controller
     public function actionRemove($id)
     {
         Shopcart::remove($id);
-        return $this->redirect(Yii::$app->request->referrer);
+        echo("<script>location.href = '".Yii::$app->request->referrer."';</script>");
+        //return $this->redirect(Yii::$app->request->referrer);
     }
 
     public function actionUpdate()
