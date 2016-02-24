@@ -100,8 +100,8 @@ $delivery= Setting::get('deliver_cost');
                             <span class="pull-right">
                                 <? if(\Yii::$app->language == 'ar') echo "ج.م" ;?>
                                  <? if(\Yii::$app->language == 'en') echo "LE" ;?>
-                                 <?= $delivery ;?>
-                                <span id="DCost"></span>
+
+                                <span id="DCost"><?= $delivery ;?></span>
 
                             </span>
                         </p>
