@@ -51,7 +51,7 @@ class StoresController extends FrontController
                 'filters'=>$filters
             ]);
         }else{
-         
+
             if(isset ( $_SESSION['filters'])){
                 $filters=  unserialize( $_SESSION['filters']);
                 $filterForm=  unserialize( $_SESSION['filtersform']);

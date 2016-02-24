@@ -48,7 +48,7 @@ $delivery= Setting::get('deliver_cost');
 
                 <div class="col-md-5 col-md-offset-1">
                 <h2 class="title"><?= Yii::t('easyii','Check Out')?> </h2>
-                        
+
                     <div class="your-order " id="Default">
                         
                   <?php foreach($goods as $good) :
