@@ -167,7 +167,7 @@ class ShopcartController extends \yii\web\Controller
             ),
 
             'DestinationAddress' 	=> array(
-                'City'					=> 'Tanta',
+                'City'					=> $city,
                 'State Or Province Code'                =>'egypt',
                 'CountryCode'			=> 'EG'
             ),
