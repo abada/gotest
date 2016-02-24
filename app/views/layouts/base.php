@@ -340,7 +340,4 @@ var count=0;
 
         // -->
     </script>
-
-
-</html>
-<?php $this->endPage() ?>
+</html><?php $this->endPage() ?>

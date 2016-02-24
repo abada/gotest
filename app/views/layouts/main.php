@@ -151,7 +151,4 @@ $goodsCount = count(Shopcart::goods());
     </div>
 
 </footer>
-
-
-
 <?php $this->endContent(); ?>
