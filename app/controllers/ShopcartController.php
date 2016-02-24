@@ -6,6 +6,7 @@ use webvimark\behaviors\multilanguage\MultiLanguageHelper;
 
 use app\models\AddToCartForm;
 use Yii;
+use yii\easyii\models\Setting;
 use yii\easyii\modules\catalog\api\Catalog;
 use yii\easyii\modules\shopcart\api\Shopcart;
 use yii\web\NotFoundHttpException;
@@ -51,8 +52,23 @@ class ShopcartController extends \yii\web\Controller
 
  public function actionDeliveryCost($code){
      //check the api for the returned data
+     //check country
+     $city= City::find()->where('Name="'.$code.'"')->one();
+     //var_dump($city);
+     if($city->CountryCode == 'EGY'){
+         //calculate weight
+         $sum=0;
+         foreach(Shopcart::goods() as $good) {
+             $sum+= $good->item->product_weight ;
 
-        return "the new cost--".$code;
+         }
+         // return "the new cost--".$city->Name .$city->CountryCode;
+         //$city->CountryCode;
+        return $this->GetCost($city->Name,cd cdc$sum);
+
+     }else{
+         return  Setting::get('deliver_cost');  //.'-99'. $city->CountryCode;
+     }
 
     }
 
@@ -126,5 +142,60 @@ class ShopcartController extends \yii\web\Controller
 
         return $this->render('order', ['order' => $order]);
     }
+
+    public function GetCost($city,$sum){
+
+        $params = array(
+            'ClientInfo'  			=> array(
+                'AccountCountryCode'	=> 'EG',
+                'AccountEntity'		 	=> 'CAI',
+                'AccountNumber'		 	=> '239584',
+                'AccountPin'		 	=> '216216',
+                'UserName'			 	=> 'mohamed.amer2050@gmail.com',
+                'Password'			 	=> 'asd654321',
+                'Version'			 	=> 'v1.0'
+            ),
+
+            'Transaction' 			=> array(
+                'Reference1'			=> '001'
+            ),
+
+            'OriginAddress' 	 	=> array(
+                'City'					=> 'Nasr City',
+                'State Or Province Code'                =>'egypt',
+                'CountryCode'				=> 'EG'
+            ),
+
+            'DestinationAddress' 	=> array(
+                'City'					=> 'Tanta',
+                'State Or Province Code'                =>'egypt',
+                'CountryCode'			=> 'EG'
+            ),
+            'ShipmentDetails'		=> array(
+                'PaymentType'			 => 'P',
+                //'ProductGroup'			 => 'EXP',
+                //'ProductType'			 => 'PPX',
+                'ProductGroup'             => 'DOM',
+                'ProductType'             => 'OND',
+                'ActualWeight' 			 => array('Value' => 7.250, 'Unit' => 'KG'),
+                'ChargeableWeight' 	     => array('Value' => 7.250, 'Unit' => 'KG'),
+                'NumberOfPieces'		 => 7
+            )
+        );
+
+        $soapClient = new SoapClient('http://ws.aramex.net/ShippingAPI/RateCalculator/Service_1_0.svc?wsdl', array('trace' => 1));
+
+        //$soapClient = new SoapClient('http://ws.dev.aramex.net/shippingapi/shipping/service_1_0.svc?wsdl', array('trace' => 1));
+        $results = $soapClient->CalculateRate($params);
+        $array = json_decode(json_encode($results), True);
+
+
+        return  $array['TotalAmount']['Value'];
+
+
+
+
+    }
+
 
 }
