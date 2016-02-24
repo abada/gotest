@@ -129,7 +129,9 @@ class ShopcartController extends \yii\web\Controller
 
     public function actionUpdate()
     {
+        echo Yii::$app->request->referrer ;
         Shopcart::update(Yii::$app->request->post('Good'));
+echo "dddddddd";
 
         return $this->redirect(Yii::$app->request->referrer);
     }
