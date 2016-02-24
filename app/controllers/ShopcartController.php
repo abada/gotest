@@ -133,8 +133,12 @@ class ShopcartController extends \yii\web\Controller
 
        // echo Yii::$app->request->referrer ;
 
-        echo("<script>location.href = '".Yii::$app->request->referrer."';</script>");
-       // return $this->redirect(Yii::$app->request->referrer);
+        //echo("<script>location.href = '".Yii::$app->request->referrer."';</script>");
+        ob_start();
+
+        return $this->redirect(Yii::$app->request->referrer);
+        ob_end_flush();
+
     }
 
     public function actionOrder($id, $token)
