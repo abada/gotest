@@ -64,10 +64,10 @@ class ShopcartController extends \yii\web\Controller
          }
          // return "the new cost--".$city->Name .$city->CountryCode;
          //$city->CountryCode;
-        return $this->GetCost($city->Name,$sum);
+        return 'k'-$this->GetCost($city->Name,$sum);
 
      }else{
-         return  Setting::get('deliver_cost');  //.'-99'. $city->CountryCode;
+         return  'l'-Setting::get('deliver_cost');  //.'-99'. $city->CountryCode;
      }
 
     }
