@@ -183,7 +183,7 @@ class ShopcartController extends \yii\web\Controller
             )
         );
 
-        $soapClient = new SoapClient('http://ws.aramex.net/ShippingAPI/RateCalculator/Service_1_0.svc?wsdl', array('trace' => 1));
+        $soapClient = new \SoapClient('http://ws.aramex.net/ShippingAPI/RateCalculator/Service_1_0.svc?wsdl', array('trace' => 1));
 
         //$soapClient = new SoapClient('http://ws.dev.aramex.net/shippingapi/shipping/service_1_0.svc?wsdl', array('trace' => 1));
         $results = $soapClient->CalculateRate($params);
