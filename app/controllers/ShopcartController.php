@@ -106,9 +106,9 @@ class ShopcartController extends \yii\web\Controller
         }
 
 
-        echo '<h4 class="text-success"><i class="glyphicon glyphicon-ok"></i>'.Yii::t('easyii','Added to cart').'</h4>';
+        return '<h4 class="text-success"><i class="glyphicon glyphicon-ok"></i>'.Yii::t('easyii','Added to cart').'</h4>';
 
-        die;
+
 //        $url = Yii::$app->request->referrer ;
 //            if (strpos($url,'?') !== false) {
 //             $url=$url.'&';
