@@ -112,6 +112,9 @@ $ListActive =['1'=>'Sleep','2'=>'Normal','3'=>'Active',''=>'Sleep'];
                                 /*'cache' => false,*/
                                 'success' => new \yii\web\JsExpression('function(html){
                                    $("#resultData").html(html);
+                                    $("html, body").animate({
+                                     scrollTop: $("#resultData").offset().top
+                                         }, 2000);
 
                                         }'),
                             ],
