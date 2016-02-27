@@ -18,6 +18,7 @@ $this->title = $page->seo('title',yii::t('easyii',"Who’s Dry"));
 $this->params['meta_keyword'] = yii::t('easyii','meta 2');
 $this->params['meta_description'] = yii::t('easyii','meta 80');
 ?>
+$this->params['meta_keyword'] = yii::t('easyii','meta 2');
 
 
 <div class="content">

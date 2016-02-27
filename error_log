@@ -1,4 +1,8 @@
+<<<<<<< HEAD
+[05-Feb-2016 04:33:21 UTC] An Error occurred while handling another error:
+=======
 [08-Feb-2016 02:01:48 UTC] An Error occurred while handling another error:
+>>>>>>> e3e3074afdf6f3c017f464ee4390739d14f70a8b
 exception 'PDOException' with message 'SQLSTATE[HY000] [2002] No such file or directory' in /home/dryarabia/public_html/vendor/yiisoft/yii2/db/Connection.php:591
 Stack trace:
 #0 /home/dryarabia/public_html/vendor/yiisoft/yii2/db/Connection.php(591): PDO->__construct('mysql:host=loca...', 'dryaccess', 'pdkvjln@@59eebv...', NULL)
@@ -94,6 +98,10 @@ $_SERVER = [
     'PWD' => '/usr/local/cpanel/cgi-sys',
     'SHLVL' => '0',
     'PHP_FCGI_MAX_REQUESTS' => '5000',
+<<<<<<< HEAD
+    'HTTP_CONNECTION' => 'close',
+=======
+>>>>>>> e3e3074afdf6f3c017f464ee4390739d14f70a8b
     'SCRIPT_NAME' => '/index.php',
     'REQUEST_URI' => '/favicon.ico',
     'QUERY_STRING' => '',
@@ -101,20 +109,48 @@ $_SERVER = [
     'SERVER_PROTOCOL' => 'HTTP/1.1',
     'GATEWAY_INTERFACE' => 'CGI/1.1',
     'REDIRECT_URL' => '/favicon.ico',
+<<<<<<< HEAD
+    'REMOTE_PORT' => '44398',
+=======
     'REMOTE_PORT' => '43925',
+>>>>>>> e3e3074afdf6f3c017f464ee4390739d14f70a8b
     'SCRIPT_FILENAME' => '/home/dryarabia/public_html/index.php',
     'SERVER_ADMIN' => 'webmaster@dryarabia.com',
     'CONTEXT_DOCUMENT_ROOT' => '/home/dryarabia/public_html',
     'CONTEXT_PREFIX' => '',
     'REQUEST_SCHEME' => 'http',
     'DOCUMENT_ROOT' => '/home/dryarabia/public_html',
+<<<<<<< HEAD
+    'REMOTE_ADDR' => '41.196.73.112',
+=======
     'REMOTE_ADDR' => '197.192.152.61',
+>>>>>>> e3e3074afdf6f3c017f464ee4390739d14f70a8b
     'SERVER_PORT' => '80',
     'SERVER_ADDR' => '160.153.16.46',
     'SERVER_NAME' => 'dryarabia.com',
     'SERVER_SOFTWARE' => 'Apache/2.4.12',
     'SERVER_SIGNATURE' => '',
     'LD_LIBRARY_PATH' => '/usr/local/apache/lib',
+<<<<<<< HEAD
+    'HTTP_VIA' => '1.1 192.168.0.1 (Mikrotik HttpProxy)',
+    'HTTP_X_FORWARDED_FOR' => '192.168.0.101',
+    'HTTP_X_PROXY_ID' => '396997988',
+    'HTTP_COOKIE' => 'PHPSESSID=af123dff9f3e7b874dfabea780ddca48',
+    'HTTP_ACCEPT' => '*/*',
+    'HTTP_ACCEPT_CHARSET' => 'utf-8, iso-8859-1, utf-16, *;q=0.7',
+    'HTTP_ACCEPT_LANGUAGE' => 'en-AU, en-US',
+    'HTTP_ACCEPT_ENCODING' => 'gzip,deflate',
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Linux; U; Android 4.4.2; en-au; SM-G350E Build/KOT49H) AppleWebKit/534.30 (KHTML, like Gecko) Version/4.0 Mobile Safari/534.30',
+    'HTTP_REFERER' => 'http://dryarabia.com/products/view/dry-go-medium',
+    'HTTP_HOST' => 'dryarabia.com',
+    'UNIQUE_ID' => 'VrQmES78zbEABCkFdGgAAAGA',
+    'REDIRECT_STATUS' => '200',
+    'REDIRECT_UNIQUE_ID' => 'VrQmES78zbEABCkFdGgAAAGA',
+    'FCGI_ROLE' => 'RESPONDER',
+    'PHP_SELF' => '/index.php',
+    'REQUEST_TIME_FLOAT' => 1454646801.2123239040374755859375,
+    'REQUEST_TIME' => 1454646801,
+=======
     'HTTP_CONNECTION' => 'close',
     'HTTP_CACHE_CONTROL' => 'max-age=43200',
     'HTTP_HOST' => 'dryarabia.com',
@@ -406,6 +442,7 @@ $_SERVER = [
     'PHP_SELF' => '/index.php',
     'REQUEST_TIME_FLOAT' => 1455141930.976253986358642578125,
     'REQUEST_TIME' => 1455141930,
+>>>>>>> e3e3074afdf6f3c017f464ee4390739d14f70a8b
     'argv' => [],
     'argc' => 0,
 ]
