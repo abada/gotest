@@ -100,20 +100,20 @@ $totalreviews=  Products::reviews($item->id,1);
                 <div class="col-md-4 feature">
 
 <!--                    <img src="--><?php //echo Yii::$app->getUrlManager()->getBaseUrl()?><!--/theme/images/absorb-loc.png"/> -->
-                    <img src="<?php echo(Yii::$app->language =='en') ? $item->slider_img_1 : $item->slider_img_1_ar ;?>"">
+                    <img src="<?php echo(Yii::$app->language =='en') ? $item->slider_img_1 : $item->slider_img_1_ar ;?>"  alt="<?= $item->slide1_alt?>" >
                     <?php echo $item->slider_text_1 ;?>
 
                 </div>
                 <div class="col-md-4 feature">
 <!--                    <img src="--><?php //echo Yii::$app->getUrlManager()->getBaseUrl()?><!--/theme/images/dry-touch.png"/> -->
-                    <img src="<?php echo(Yii::$app->language =='en') ? $item->slider_img_2 : $item->slider_img_2_ar ;?>"">
+                    <img src="<?php echo(Yii::$app->language =='en') ? $item->slider_img_2 : $item->slider_img_2_ar ;?>"  alt="<?= $item->slide1_alt?>" >
 
                     <?php echo $item->slider_text_2 ;?>
 
                 </div>
                 <div class="col-md-4 feature">
 		
-                    <img src="<?php echo(Yii::$app->language =='en') ? $item->slider_img_3 : $item->slider_img_3_ar ;?>"">
+                    <img src="<?php echo(Yii::$app->language =='en') ? $item->slider_img_3 : $item->slider_img_3_ar ;?>"  alt="<?= $item->slide1_alt?>" >
 
                     <?php echo $item->slider_text_3 ;?>
 
