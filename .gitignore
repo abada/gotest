@@ -4,3 +4,5 @@ Thumbs.db
 composer.lock
 composer.json
 demo/*
+demo/
+demo
