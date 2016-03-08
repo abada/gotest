@@ -11,7 +11,13 @@ use yii\easyii\widgets\SeoForm;
     'options' => ['class' => 'model-form']
 ]); ?>
 
-<?= $form->field($model, 'homepage')->checkBox()?>
+<?//= $form->field($model, 'homepage')->checkBox()?>
+<?php echo $form->field($model, 'homepage')->dropDownList(
+    ['1'=>'homepage',
+    '0'=>'who\'s Dry',
+    '2'=>'All'
+
+], [ 'prompt' => 'Select Location']);?>
 
 <?= $form->field($model, 'owner')->widget(input_widget\MultiLanguageActiveField::className()) ?>
 <?= $form->field($model, 'title')->widget(input_widget\MultiLanguageActiveField::className()) ?>

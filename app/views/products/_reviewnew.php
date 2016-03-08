@@ -13,7 +13,8 @@
     <p><?= $model->text?></p>
     <!--<h4><i class="fa fa-thumbs-up fa-lg"></i> Yes, I recommend this product.</h4>-->
     <ul class="product-details">
-        <li>Share
+        <li><?= yii::t('easyii','Share')?>
+
             <?php $reviewUrl=\yii\helpers\Url::to(['products/review'], true).'/?slug='.$item->slug .'&review='.$model->slug;?>
             <span class='st_facebook_large' displayText='' st_url="<?= $reviewUrl ;?>" st_title="<?= $model->title?>" ></span>
             <span class='st_twitter_large' displayText='' st_url="<?= $reviewUrl ;?>" st_title="<?= $model->title?>"></span>

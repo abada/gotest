@@ -34,12 +34,61 @@ class StoresController extends FrontController
             throw new NotFoundHttpException('Shop category not found.');
         }
         $filters = null;
-      if($filterForm->load(Yii::$app->request->get()) && $filterForm->validate()) {
+
+        if($filterForm->load(Yii::$app->request->post()) && $filterForm->validate()) {
+
+            $filters = $filterForm->parse();
+            $_SESSION['filters']= serialize($filters);
+            $_SESSION['filtersform']= serialize($filterForm);
+            return $this->renderPartial('searchdata', [
+                //'sliderFilters'=>$sliderFilters,
+                'cat' => $cat,
+                'items' => $cat->items([
+                    'pagination' => ['pageSize' => 6],
+                    'filters' => $filters
+                ]),
+                'filterForm' => $filterForm,
+                'filters'=>$filters
+            ]);
+        }else{
+
+            if(isset ( $_SESSION['filters'])){
+                $filters=  unserialize( $_SESSION['filters']);
+                $filterForm=  unserialize( $_SESSION['filtersform']);
+            }
+            //var_dump($filters);
+            return $this->render('index', [
+                //'sliderFilters'=>$sliderFilters,
+                'cat' => $cat,
+                'items' => $cat->items([
+                    'pagination' => ['pageSize' => 6],
+                    'filters' => $filters
+                ]),
+                'filterForm' => $filterForm,
+                'filters'=>$filters
+            ]);
+        }
+
+    }
+
+    public function actionSearchCustomers(){
+
+        $slug='pharmacies';
+        $filterForm = new GadgetsStoresFilterForm();
+        $cat = Catalog::cat($slug);
+
+        if(!$cat){
+            throw new NotFoundHttpException('Shop category not found.');
+        }
+        $filters = null;
+        if($filterForm->load(Yii::$app->request->post()) && $filterForm->validate()) {
 
             $filters = $filterForm->parse();
         }
-       //var_dump($filters);
-        return $this->render('index', [
+
+
+
+        return $this->renderPartial('searchdata', [
             //'sliderFilters'=>$sliderFilters,
             'cat' => $cat,
             'items' => $cat->items([
@@ -50,6 +99,8 @@ class StoresController extends FrontController
             'filters'=>$filters
         ]);
     }
+
+
     public function actionIndexOLD()
     {
         $slug='products';

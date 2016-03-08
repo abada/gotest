@@ -2,6 +2,8 @@
 use yii\helpers\Html;
 use yii\helpers\Url;
 use yii\widgets\ActiveForm;
+use demogorgorn\ajax\AjaxSubmitButton;
+
 
 //$this->title = $cat->seo('title', $cat->model->title);
 $this->title = yii::t('easyii','Dry Products');
@@ -38,7 +40,7 @@ $ListActive =['1'=>'Sleep','2'=>'Normal','3'=>'Active',''=>'Sleep'];
                                    
                                     <div class="filterdiv">
                                     
-                                         <input type="text"  name="GadgetsFilterForm[absorptionrate]" id="gadgetsfilterform-absorptionrate" >
+                                         <input type="text"  name="GadgetsFilterForm[absorptionrate]" id="gadgetsfilterform-absorptionrate"  onchange="upformmax(this.value)" >
                                       
                                   </div>
                                     <div id="slider-range-max"></div>
@@ -50,7 +52,7 @@ $ListActive =['1'=>'Sleep','2'=>'Normal','3'=>'Active',''=>'Sleep'];
                                     
                                     <div class="filterdiv">
                                     
-                                         <input type="text"  name="GadgetsFilterForm[speed]" id="gadgetsfilterform-speed" value="5" >
+                                         <input type="text"  name="GadgetsFilterForm[speed]" id="gadgetsfilterform-speed" value="5" onchange="upformmax2(this.value)" >
                                       
                                   </div>
                                     <div id="slider-range-max2"></div>
@@ -97,6 +99,32 @@ $ListActive =['1'=>'Sleep','2'=>'Normal','3'=>'Active',''=>'Sleep'];
                             </div>
                         </div>
                         <?//= Html::submitButton('Submit', ['class' => 'btn btn-primary']) ?>
+                        <input type="hidden" name="slug" value="products">
+                        <?php
+
+                        $label='';
+                        AjaxSubmitButton::begin([
+                            'label' => $label,
+                            'id'=>'GoSumbmitProducts',
+                            'ajaxOptions' => [
+                                'type'=>'POST',
+                                'url'=>'/products/index',
+                                /*'cache' => false,*/
+                                'success' => new \yii\web\JsExpression('function(html){
+                                   $("#resultData").html(html);
+                                    $("html, body").animate({
+                                     scrollTop: $("#resultData").offset().top
+                                         }, 2000);
+
+                                        }'),
+                            ],
+                            'options' => [ 'type' => 'submit','style'=>'display:none'],
+                        ]);
+                        AjaxSubmitButton::end();
+                        ?>
+
+
+
 
                         <?php ActiveForm::end(); ?>
 
@@ -108,15 +136,15 @@ $ListActive =['1'=>'Sleep','2'=>'Normal','3'=>'Active',''=>'Sleep'];
             <div class="row" >
                 <ul class="products-filter">
                     <li role="presentation" data-toggle="portfilter" data-target="all" class="hvr-bounce-to-right">
-                        <a href="javascript:void(0)"  onclick="SubmitCat('0')" class="<?php if($this->params['sliderFilters']['product_cat']==0)echo 'current'; ?>" ><?= Yii::t('easyii', 'All Products');?> </a></li>
+                        <a href="javascript:void(0)"  onclick="SubmitCat('0',this)" class="<?php if($this->params['sliderFilters']['product_cat']==0)echo 'current'; ?>" ><?= Yii::t('easyii', 'All Products');?> </a></li>
                     <li role="presentation" data-toggle="portfilter" data-target="postpartum" class="hvr-bounce-to-right">
-                        <a href="javascript:void(0)"  onclick="SubmitCat('1')"  class="<?php if($this->params['sliderFilters']['product_cat']==1)echo 'current'; ?>" ><?= Yii::t('easyii', 'Postpartum');?> </a></li>
+                        <a href="javascript:void(0)"  onclick="SubmitCat('1',this)"  class="<?php if($this->params['sliderFilters']['product_cat']==1)echo 'current'; ?>" ><?= Yii::t('easyii', 'Postpartum');?> </a></li>
                     <li role="presentation" data-toggle="portfilter" data-target="period" class="hvr-bounce-to-right">
-                        <a href="javascript:void(0)"  onclick="SubmitCat('2')" class="<?php if($this->params['sliderFilters']['product_cat']==2)echo 'current'; ?>" ><?= Yii::t('easyii', 'Period Pads');?> </a></li>
+                        <a href="javascript:void(0)"  onclick="SubmitCat('2',this)" class="<?php if($this->params['sliderFilters']['product_cat']==2)echo 'current'; ?>" ><?= Yii::t('easyii', 'Period Pads');?> </a></li>
                     <li role="presentation" data-toggle="portfilter" data-target="pantilinears" class="hvr-bounce-to-right">
-                        <a href="javascript:void(0)"  onclick="SubmitCat('3')" class="<?php if($this->params['sliderFilters']['product_cat']==3)echo 'current'; ?>" ><?= Yii::t('easyii', 'Daily Pantiliners');?> </a></li>
+                        <a href="javascript:void(0)"  onclick="SubmitCat('3',this)" class="<?php if($this->params['sliderFilters']['product_cat']==3)echo 'current'; ?>" ><?= Yii::t('easyii', 'Daily Pantiliners');?> </a></li>
                     <li role="presentation" data-toggle="portfilter" data-target="generation" class="hvr-bounce-to-right">
-                        <a href="javascript:void(0)"  onclick="SubmitCat('4')" class="<?php if($this->params['sliderFilters']['product_cat']==4)echo 'current'; ?>" ><?= Yii::t('easyii', 'New Generation');?> </a></li>
+                        <a href="javascript:void(0)"  onclick="SubmitCat('4',this)" class="<?php if($this->params['sliderFilters']['product_cat']==4)echo 'current'; ?>" ><?= Yii::t('easyii', 'New Generation');?> </a></li>
                 </ul>
                 <!-- Single button -->
 <!--                <div class="row">-->
@@ -134,7 +162,7 @@ $ListActive =['1'=>'Sleep','2'=>'Normal','3'=>'Active',''=>'Sleep'];
 <!--                    </div>-->
 <!--                </div>-->
 
-
+                <span id="resultData">
                 <ul class="col-md-12 col-centered products-page" >
 
                     <?php if(count($items)) : ?>
@@ -150,15 +178,45 @@ $ListActive =['1'=>'Sleep','2'=>'Normal','3'=>'Active',''=>'Sleep'];
                 </ul>
 
                 <?= $cat->pages() ?>
+
+               </span>
+
             </div>
         </div>
  
 
 
 <script>
-    function SubmitCat(val){
+    function upformmax2(node){
+
+        if(node > 0 && node < 6){
+            $( "#slider-range-max2" ).slider({
+                value: node
+            });
+            $('#GoSumbmitProducts').click();
+        }
+
+
+    }
+
+    function upformmax(node){
+        if(node > 0 && node < 11)
+        {
+            $("#slider-range-max").slider({
+               value: node
+            });
+            $('#GoSumbmitProducts').click();
+        }
+    }
+
+
+
+    function SubmitCat(val,node){
         $('#gadgetsfilterform-product_cat').val(val);
-        $('#FilterForm').submit();
+        //$('#FilterForm').submit();
+        $('.products-filter a').removeClass('current');
+        $( node ).addClass('current');
+        $('#GoSumbmitProducts').click();
     }
 
  </script>

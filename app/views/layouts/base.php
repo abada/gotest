@@ -163,7 +163,9 @@ autoPlay : true,
             value: <?php echo  (isset($sliderFilters)) ? $sliderFilters['absorptionrate'] : 1 ;?>,
             slide: function( event, ui ) {
                 $( "#gadgetsfilterform-absorptionrate" ).val( ui.value );
-                $('#FilterForm').submit();
+               // $('#FilterForm').submit();
+                $('#GoSumbmitProducts').click();
+
             }
         });
         $( "#gadgetsfilterform-absorptionrate" ).val( $( "#slider-range-max" ).slider( "value" ) );
@@ -174,7 +176,9 @@ autoPlay : true,
             value: <?php echo (isset($sliderFilters)) ? $sliderFilters['speed']:1 ;?>,
             slide: function( event, ui ) {
                 $( "#gadgetsfilterform-speed" ).val( ui.value );
-                $('#FilterForm').submit();
+              //  $('#FilterForm').submit();
+                $('#GoSumbmitProducts').click();
+
             }
         });
         $( "#gadgetsfilterform-speed" ).val( $( "#slider-range-max2" ).slider( "value" ) );
@@ -185,7 +189,9 @@ autoPlay : true,
             value: <?php  echo (isset($sliderFilters)) ? $sliderFilters['clothes'] :1 ;?>,
             slide: function( event, ui ) {
                 $( "#gadgetsfilterform-clothes" ).val( ui.value );
-                $('#FilterForm').submit();
+                //$('#FilterForm').submit();
+                $('#GoSumbmitProducts').click();
+
             }
         });
         $( "#gadgetsfilterform-clothes" ).val( $( "#slider-range-max3" ).slider( "value" ) );
@@ -196,7 +202,9 @@ autoPlay : true,
            value: <?php echo (isset($sliderFilters)) ? $sliderFilters['activity'] : 1;?>,
             slide: function( event, ui ) {
                 $( "#gadgetsfilterform-activity" ).val( ui.value );
-                $('#FilterForm').submit();
+               // $('#FilterForm').submit();
+                $('#GoSumbmitProducts').click();
+
             }
         });
         $( "#gadgetsfilterform-activity" ).val( $( "#slider-range-max4" ).slider( "value" ) );
@@ -328,11 +336,8 @@ var count=0;
             document.onmousedown=clickIE4;
         }
 
-        document.oncontextmenu=new Function("return false")
+      //  document.oncontextmenu=new Function("return false")
 
         // -->
     </script>
-
-
-</html>
-<?php $this->endPage() ?>
+</html><?php $this->endPage() ?>

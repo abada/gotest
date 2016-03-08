@@ -3,6 +3,9 @@ use yii\helpers\Html;
 use yii\helpers\Url;
 use yii\widgets\ActiveForm;
 use yii\easyii\modules\page\api\Page;
+use demogorgorn\ajax\AjaxSubmitButton;
+
+
 $this->title= yii::t('easyii','Find a store');
 
      $this->params['meta_keyword'] = yii::t('easyii','meta 2');
@@ -92,9 +95,30 @@ $this->title= yii::t('easyii','Find a store');
 
                     <div class="row">
                         <div class="col-md-12">
-                            <a href="#">
-                                <input type="image" name="submit" src="<?php echo Yii::$app->getUrlManager()->getBaseUrl()?>/theme/images/search-icon.png" border="0" class="center-block margin-top20" />
-                            </a>
+                                <img src="<?php echo Yii::$app->getUrlManager()->getBaseUrl()?>/theme/images/search-icon.png" onclick="$('#GoSumbmit').click()" class="center-block margin-top20" >
+<!--                                <input type="image" name="submit" src="--><?php //echo Yii::$app->getUrlManager()->getBaseUrl()?><!--/theme/images/search-icon.png"-->
+<!--                                       border="0" class="center-block margin-top20" />-->
+                            <?php
+
+                            $label='';
+                            AjaxSubmitButton::begin([
+                                'label' => $label,
+                                'id'=>'GoSumbmit',
+                                'ajaxOptions' => [
+                                    'type'=>'POST',
+                                    'url'=>'/stores/index',
+                                    /*'cache' => false,*/
+                                    'success' => new \yii\web\JsExpression('function(html){
+                                   $("#resultData").html(html);
+
+                                        }'),
+                                ],
+                                'options' => [ 'type' => 'submit','style'=>'display:none'],
+                            ]);
+                            AjaxSubmitButton::end();
+                            ?>
+
+
                         </div>
                     </div>
 
@@ -110,6 +134,7 @@ $this->title= yii::t('easyii','Find a store');
     <div class="row">
         <div class="title"> <?= Yii::t('easyii', 'closest to you');?>  </div>
 
+         <span id="resultData">
 
         <div class="col-md-12 margin-top20">
         <div class="row">
@@ -128,7 +153,13 @@ if(\Yii::$app->language =='en'){$dir= 'ltr';}else{$dir='rtl';}
                 echo "<div class='col-md-12' dir='".$dir."' ><div class='alert alert-danger'>".Yii::t('easyii','Please Enter the District')."</div></div><br/>";
 
             }
-        echo "<div class='clear'></div>";
+
+            echo "<div class='clear'></div>";
+
+              ?>
+
+           <?
+
             if(count($items)) :
 
                 if($filters['product_id'] != "" && $filters['country'] != "" &&$filters['government'] != "" ){
@@ -138,27 +169,23 @@ if(\Yii::$app->language =='en'){$dir= 'ltr';}else{$dir='rtl';}
 
                    echo "<div class='clearfix'></div>";
                     echo $cat->pages() ;
-
-
                 }else{
                     foreach($items as $item) :
                         if($item->data->featured){
                             echo $this->render('_item', ['item' => $item]);
-
                         }
                     endforeach ;
-
                 }
-
-
-
           endif
-
             ?>
+
 		</div>
         </div>
 
-<div class="clearfix"></div>
+   </span>
+
+
+        <div class="clearfix"></div>
 
 
 		<div class="col-md-12">

@@ -1,6 +1,3 @@
-<script type="text/javascript">var switchTo5x=true;</script>
-<script type="text/javascript" src="http://w.sharethis.com/button/buttons.js"></script>
-<script type="text/javascript">stLight.options({publisher: "2222d12e-5607-475a-b5d7-2ba1c0a2c5c0", doNotHash: false, doNotCopy: false, hashAddressBar: false});</script>
 
 <?php if(isset($_REQUEST['page'])){
     ?>
@@ -44,7 +41,7 @@ $totalreviews=  Products::reviews($item->id,1);
 
                         <?php foreach($item->photos as $photo) : ?>
                             <?//= $photo->box(110, 100) ?>
-                          <li><img src="<?= $photo->image?>" width="300" height="300" class="center-block"></li>
+                          <li><img src="<?= $photo->image?>" width="300" height="300" class="center-block" alt="<?= $photo->description?>"> </li>
 
                         <?php endforeach;?>
 
@@ -56,7 +53,7 @@ $totalreviews=  Products::reviews($item->id,1);
                         foreach($item->photos as $photo) : ?>
                            <?//= $photo->box(110, 100) ?>
                            <a data-slide-index="<?= $i?>" href="">
-                               <img src="<?= $photo->image?>" width="50" height="50">
+                               <img src="<?= $photo->image?>" width="50" height="50" alt="<?= $photo->description?>">
 
                            </a>
                         <?php
@@ -83,11 +80,18 @@ $totalreviews=  Products::reviews($item->id,1);
                     <p class="margin-top20"><?= $item->description ;?></p>
                     <ul class="product-details margin-top30">
                         <li><?= Yii::t('easyii','Share'); ?>
-                            <span class='st_facebook_large' displayText=''></span>
-                            <span class='st_twitter_large' displayText=''></span>
-                            <span class='st_googleplus_large' displayText=''></span>
-                            <span class='st_sharethis_large' displayText=''></span>
-                            <span class='st__large' displayText=''></span>
+                            <?php  $product_link='http://'. $_SERVER['HTTP_HOST'].'/product/view/'.$item->slug;
+                            ?>
+
+                            <a class="js-social-share" href="https://twitter.com/intent/tweet/?text=<?= $item->title?>&url=<?= urlencode($product_link) ;?>&via=Dryarabia" target="_blank">
+                                <img width="30" height="30" src="<?php echo Yii::$app->getUrlManager()->getBaseUrl()?>/theme/images/twitter.png">
+                            </a>
+                            <a  class="js-social-share" href="https://plus.google.com/share?url=<?= urlencode($product_link) ;?>"  target="_blank">
+                                <img width="30" height="30" src="<?php echo Yii::$app->getUrlManager()->getBaseUrl()?>/theme/images/googleplus.png">
+                            </a>
+                            <a class="js-social-share" href="https://www.facebook.com/sharer/sharer.php?u=<?= urlencode($product_link) ;?>" target="_blank">
+                                <img width="30" height="30" src="<?php echo Yii::$app->getUrlManager()->getBaseUrl()?>/theme/images/facebook.png">
+                            </a>
                        </li>
                     </ul>
                 </div>
@@ -96,20 +100,20 @@ $totalreviews=  Products::reviews($item->id,1);
                 <div class="col-md-4 feature">
 
 <!--                    <img src="--><?php //echo Yii::$app->getUrlManager()->getBaseUrl()?><!--/theme/images/absorb-loc.png"/> -->
-                    <img src="<?php echo(Yii::$app->language =='en') ? $item->slider_img_1 : $item->slider_img_1_ar ;?>"">
+                    <img src="<?php echo(Yii::$app->language =='en') ? $item->slider_img_1 : $item->slider_img_1_ar ;?>"  alt="<?= $item->slide1_alt?>" >
                     <?php echo $item->slider_text_1 ;?>
 
                 </div>
                 <div class="col-md-4 feature">
 <!--                    <img src="--><?php //echo Yii::$app->getUrlManager()->getBaseUrl()?><!--/theme/images/dry-touch.png"/> -->
-                    <img src="<?php echo(Yii::$app->language =='en') ? $item->slider_img_2 : $item->slider_img_2_ar ;?>"">
+                    <img src="<?php echo(Yii::$app->language =='en') ? $item->slider_img_2 : $item->slider_img_2_ar ;?>"  alt="<?= $item->slide1_alt?>" >
 
                     <?php echo $item->slider_text_2 ;?>
 
                 </div>
                 <div class="col-md-4 feature">
 		
-                    <img src="<?php echo(Yii::$app->language =='en') ? $item->slider_img_3 : $item->slider_img_3_ar ;?>"">
+                    <img src="<?php echo(Yii::$app->language =='en') ? $item->slider_img_3 : $item->slider_img_3_ar ;?>"  alt="<?= $item->slide1_alt?>" >
 
                     <?php echo $item->slider_text_3 ;?>
 
@@ -161,19 +165,36 @@ $totalreviews=  Products::reviews($item->id,1);
                         <div class="team-image-sec">
                             <div class="img-overlay"></div>
                             <figure>
-                                <img title="Image"  src="<?php echo (\Yii::$app->language == "en")? $data->image: $data->image_ar ;?>" alt="<?= $data->title?>"></figure>
+                                <img title="Image"  src="<?php echo (\Yii::$app->language == "en")? $data->image: $data->image_ar ;?>" alt="<?= $data->link?>"></figure>
+
+
                             <ul>
 
-                                <li> <span class='st_facebook_large fa' displayText='' st_url="<?= $itemdataUrl ;?>" st_title="<?= $data->title?>" ></span></li>
-                                <li>  <span class='st_twitter_large fa'  displayText='' st_url="<?= $itemdataUrl ;?>" st_title="<?= $data->title?>"></span></li>
-                                <li><span class='st_googleplus_large fa' displayText='' st_url="<?= $itemdataUrl ;?>" st_title="<?= $data->title?>"></span></li>
-                             </ul>
+                                <!--                                <li> <span class='st_facebook_large fa' displayText='' st_url="--><?//= $itemdataUrl ;?><!--" st_title="--><?//= $data->title?><!--" ></span></li>-->
+                                <!--                                <li>  <span class='st_twitter_large fa'  displayText='' st_url="--><?//= $itemdataUrl ;?><!--" st_title="--><?//= $data->title?><!--"></span></li>-->
+                                <!--                                <li><span class='st_googleplus_large fa' displayText='' st_url="--><?//= $itemdataUrl ;?><!--" st_title="--><?//= $data->title?><!--"></span></li>-->
+                                <!---->
 
-<!--                            <ul>-->
-<!--                                <li><a href="#."><i class="fa fa-google-plus"></i></a></li>-->
-<!--                                <li><a href="#."><i class="fa fa-twitter"></i></a></li>-->
-<!--                                <li><a href="#."><i class="fa fa-facebook"></i></a></li>-->
-<!--                            </ul>-->
+
+                                <li>
+                                        <a class="js-social-share " href="https://twitter.com/intent/tweet/?text=<?= $data->title?>&url=<?= urlencode($itemdataUrl) ;?>&via=DryArabia" target="_blank">
+                                            <i class="fa fa-twitter"></i>
+                                        </a>
+                                </li>
+                                <li>
+                                        <a  class="js-social-share " href="https://plus.google.com/share?url=<?= urlencode($itemdataUrl) ;?>"  target="_blank">
+                                            <i class="fa fa-google-plus"></i>
+                                        </a>
+                                </li>
+                                <li>
+                                        <a class="js-social-share " href="https://www.facebook.com/sharer/sharer.php?u=<?= urlencode($itemdataUrl) ;?>" target="_blank">
+                                            <i class="fa fa-facebook"></i>
+                                        </a>
+                                </li>
+
+
+                            </ul>
+
 
                         </div>
                         <div class="team-detail-sec">
@@ -384,9 +405,16 @@ if(Yii::$app->session->getFlash('success') != ''){
                         <ul class="product-details">
                             <li> <?= yii::t('easyii','Share')?>
                                 <?php $reviewUrl=Url::to(['products/view'], true).'/?slug='.$item->slug .'&review='.$review->news_id.'&lang='.\Yii::$app->language;?>
-                                <span class='st_facebook_large' displayText='' st_url="<?= $reviewUrl ;?>" st_title="<?= $review->title?>" ></span>
-                                <span class='st_twitter_large' displayText='' st_url="<?= $reviewUrl ;?>" st_title="<?= $review->title?>"></span>
-                                <span class='st_googleplus_large' displayText='' st_url="<?= $reviewUrl ;?>" st_title="<?= $review->title?>"></span>
+                                <a class="js-social-share" href="https://twitter.com/intent/tweet/?text=<?= $review->title?>&url=<?= urlencode($reviewUrl) ;?>&via=DryArabia" target="_blank">
+                                    <img width="30" height="30" src="<?php echo Yii::$app->getUrlManager()->getBaseUrl()?>/theme/images/twitter.png">
+                                </a>
+                                <a  class="js-social-share" href="https://plus.google.com/share?url=<?= urlencode($reviewUrl) ;?>"  target="_blank">
+                                    <img width="30" height="30" src="<?php echo Yii::$app->getUrlManager()->getBaseUrl()?>/theme/images/googleplus.png">
+                                </a>
+                                <a class="js-social-share" href="https://www.facebook.com/sharer/sharer.php?u=<?= urlencode($reviewUrl) ;?>" target="_blank">
+                                    <img width="30" height="30" src="<?php echo Yii::$app->getUrlManager()->getBaseUrl()?>/theme/images/facebook.png">
+                                </a>
+
 
 
                             </li>
@@ -406,11 +434,11 @@ if(Yii::$app->session->getFlash('success') != ''){
 
 
                 <a href="<?= $item->adv1_url?>">
-                    <img src="<?=Yii::$app->language =='en' ? $item->adv_1 :$item->adv_1_ar ?>" class="margin-bottom30 img-responsive center-block"/>
+                    <img src="<?=Yii::$app->language =='en' ? $item->adv_1 :$item->adv_1_ar ?>" class="margin-bottom30 img-responsive center-block" alt="<?= $item->adv1_alt?>"/>
                 </a>
 
                 <a href="<?= $item->adv2_url?>">
-                    <img src="<?=Yii::$app->language =='en' ? $item->adv_2 : $item->adv_2_ar ?>"  class="margin-bottom30 img-responsive center-block"/>
+                    <img src="<?=Yii::$app->language =='en' ? $item->adv_2 : $item->adv_2_ar ?>"  class="margin-bottom30 img-responsive center-block" alt="<?= $item->adv2_alt?>"/>
                 </a>
 
 

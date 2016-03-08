@@ -34,32 +34,46 @@ class ProductsController extends \yii\web\Controller
 
     public function actionIndex()
     {
-        $slug='products';
+        $slug = 'products';
         $filterForm = new GadgetsFilterForm();
         $cat = Catalog::cat($slug);
 
-        if(!$cat){
+        if (!$cat) {
             throw new NotFoundHttpException('Shop category not found.');
         }
         $filters = null;
-        if($filterForm->load(Yii::$app->request->get()) && $filterForm->validate()) {
 
+        if($filterForm->load(Yii::$app->request->post()) && $filterForm->validate()) {
             $filters = $filterForm->parse();
+
+            return $this->renderPartial('products_search', [
+                'cat' => $cat,
+                'items' => $cat->items([
+                    'pagination' => ['pageSize' => 20],
+                    'filters' => $filters
+                ]),
+                'filterForm' => $filterForm
+            ]);
+        }else{
+
+            if ($filterForm->load(Yii::$app->request->get()) && $filterForm->validate()) {
+
+                $filters = $filterForm->parse();
+            }
+            //$sliderFilters= $filters ;
+            $this->view->params['sliderFilters'] = $filters;
+
+            return $this->render('products', [
+                'cat' => $cat,
+                'items' => $cat->items([
+                    'pagination' => ['pageSize' => 20],
+                    'filters' => $filters
+                ]),
+                'filterForm' => $filterForm
+            ]);
+
           }
-        //$sliderFilters= $filters ;
-        $this->view->params['sliderFilters'] = $filters;
 
-        //  var_dump($filters['speed']);//die;
-
-        return $this->render('products', [
-            //'sliderFilters'=>$sliderFilters,
-            'cat' => $cat,
-            'items' => $cat->items([
-                'pagination' => ['pageSize' => 20],
-                'filters' => $filters
-            ]),
-            'filterForm' => $filterForm
-        ]);
     }
 
 
