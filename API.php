@@ -45,5 +45,14 @@
 	
 	echo '<pre>';
 	print_r($results);
-	die();
+	echo "</br></br></br></br>";
+	
+	$array = json_decode(json_encode($results), True);
+	
+	echo '<pre>';
+	print_r($array['TotalAmount']['Value']);
+	echo '</pre>';
+	
+	
+	
 ?>

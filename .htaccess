@@ -8,8 +8,3 @@ RewriteCond %{REQUEST_FILENAME} !-d
 
 # otherwise forward it to index.php
 RewriteRule . index.php
-
-
-RewriteEngine On
-RewriteCond %{HTTP_HOST} ^www\.dryarabia\.com [NC]
-RewriteRule ^(.*)$ http://dryarabia.com/$1 [L,R=301]
