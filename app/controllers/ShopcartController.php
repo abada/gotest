@@ -63,7 +63,10 @@ class ShopcartController extends \yii\web\Controller
          }
          // return "the new cost--".$city->Name .$city->CountryCode;
          //$city->CountryCode;
-        return  $this->GetCost($city->Name,$sum);
+        $cost= $this->GetCost($city->Name,$sum);
+         if($cost =='' or $cost ==0){
+             return Setting::get('deliver_cost');
+         }else{return $cost ;}
 
      }else{
          return Setting::get('deliver_cost');  //.'-99'. $city->CountryCode;
@@ -180,8 +183,10 @@ class ShopcartController extends \yii\web\Controller
                 //'ProductType'			 => 'PPX',
                 'ProductGroup'             => 'DOM',
                 'ProductType'             => 'OND',
-                'ActualWeight' 			 => array('Value' => 7.250, 'Unit' => 'KG'),
-                'ChargeableWeight' 	     => array('Value' => 7.250, 'Unit' => 'KG'),
+               // 'ActualWeight' 			 => array('Value' => 7.250, 'Unit' => 'KG'),
+               // 'ChargeableWeight' 	     => array('Value' => 7.250, 'Unit' => 'KG'),
+                'ActualWeight' 			 => array('Value' => $sum, 'Unit' => 'KG'),
+                'ChargeableWeight' 	     => array('Value' => $sum , 'Unit' => 'KG'),
                 'NumberOfPieces'		 => 7
             )
         );
