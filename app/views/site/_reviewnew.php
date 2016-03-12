@@ -19,15 +19,14 @@ if($index % 2) {
         <li><?= yii::t('easyii','Share')?>
 
             <?php $reviewUrl='http://'. $_SERVER['HTTP_HOST'].'/site/about-dry'.'/?review='.$model->page_id;?>
-
-              <a class="js-social-share" href="https://twitter.com/intent/tweet/?text=<?= $model->title ;?>&url=<?= urlencode($reviewUrl) ;?>&via=DryArabia" target="_blank">
+            <a class="js-social-share" href="https://www.facebook.com/sharer/sharer.php?u=<?= urlencode($reviewUrl) ;?>" target="_blank">
+                <img width="30" height="30" src="<?php echo Yii::$app->getUrlManager()->getBaseUrl()?>/theme/images/facebook.png">
+            </a>
+            <a class="js-social-share" href="https://twitter.com/intent/tweet/?text=<?= $model->title ;?>&url=<?= urlencode($reviewUrl) ;?>&via=DryArabia" target="_blank">
                 <img width="30" height="30" src="<?php echo Yii::$app->getUrlManager()->getBaseUrl()?>/theme/images/twitter.png">
             </a>
             <a  class="js-social-share" href="https://plus.google.com/share?url=<?= urlencode($reviewUrl) ;?>"  target="_blank">
                 <img width="30" height="30" src="<?php echo Yii::$app->getUrlManager()->getBaseUrl()?>/theme/images/googleplus.png">
-            </a>
-            <a class="js-social-share" href="https://www.facebook.com/sharer/sharer.php?u=<?= urlencode($reviewUrl) ;?>" target="_blank">
-                <img width="30" height="30" src="<?php echo Yii::$app->getUrlManager()->getBaseUrl()?>/theme/images/facebook.png">
             </a>
 
 
