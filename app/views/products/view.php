@@ -176,19 +176,19 @@ $totalreviews=  Products::reviews($item->id,1);
                                 <!--                                <li><span class='st_googleplus_large fa' displayText='' st_url="--><?//= $itemdataUrl ;?><!--" st_title="--><?//= $data->title?><!--"></span></li>-->
                                 <!---->
 
-                                <li>
-                                    <a class="js-social-share " href="https://www.facebook.com/sharer/sharer.php?u=<?= urlencode($itemdataUrl) ;?>" target="_blank">
-                                        <i class="fa fa-facebook"></i>
+                                <li style="padding-left:10px;">
+                                    <a class="js-social-share " href="https://www.facebook.com/sharer/sharer.php?u=<?= urlencode($itemdataUrl) ;?>" target="_blank" >
+                                        <i class="fa fa-facebook" ></i>
                                     </a>
                                 </li>
 
 
-                                <li>
+                                <li style="padding-left:10px;">
                                         <a class="js-social-share " href="https://twitter.com/intent/tweet/?text=<?= $data->title?>&url=<?= urlencode($itemdataUrl) ;?>&via=DryArabia" target="_blank">
                                             <i class="fa fa-twitter"></i>
                                         </a>
                                 </li>
-                                <li>
+                                <li style="padding-left:10px;">
                                         <a  class="js-social-share " href="https://plus.google.com/share?url=<?= urlencode($itemdataUrl) ;?>"  target="_blank">
                                             <i class="fa fa-google-plus"></i>
                                         </a>
