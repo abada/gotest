@@ -3,7 +3,11 @@
 use yii\helpers\Html;
 //$asset = \app\assets\AppAsset::register($this);
 ?>
-<?php $this->beginPage() ?>
+<?php $this->beginPage();
+if( Yii::$app->controller->id !='stores' ){
+    $_SESSION['filters']=null;
+}
+?>
 <!DOCTYPE html>
 <html lang="<?= Yii::$app->language ?>" prefix="og: http://ogp.me/ns#">
     <head>
@@ -336,7 +340,7 @@ var count=0;
             document.onmousedown=clickIE4;
         }
 
-      //  document.oncontextmenu=new Function("return false")
+       document.oncontextmenu=new Function("return false")
 
         // -->
     </script>

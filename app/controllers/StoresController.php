@@ -34,8 +34,13 @@ class StoresController extends FrontController
             throw new NotFoundHttpException('Shop category not found.');
         }
         $filters = null;
+        if($filterForm->load(Yii::$app->request->get()) ) {
+            $filters = $filterForm->parse();
+            $_SESSION['filters']= serialize($filters);
+            $_SESSION['filtersform']= serialize($filterForm);
+        }
 
-        if($filterForm->load(Yii::$app->request->post()) && $filterForm->validate()) {
+            if($filterForm->load(Yii::$app->request->post()) && $filterForm->validate()) {
 
             $filters = $filterForm->parse();
             $_SESSION['filters']= serialize($filters);
