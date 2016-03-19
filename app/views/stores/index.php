@@ -95,9 +95,9 @@ $this->title= yii::t('easyii','Find a store');
 
                     <div class="row">
                         <div class="col-md-12">
-                                <img src="<?php echo Yii::$app->getUrlManager()->getBaseUrl()?>/theme/images/search-icon.png" onclick="$('#GoSumbmit').click()" class="center-block margin-top20" >
-<!--                                <input type="image" name="submit" src="--><?php //echo Yii::$app->getUrlManager()->getBaseUrl()?><!--/theme/images/search-icon.png"-->
-<!--                                       border="0" class="center-block margin-top20" />-->
+<!--                                <img src="--><?php //echo Yii::$app->getUrlManager()->getBaseUrl()?><!--/theme/images/search-icon.png" onclick="$('#GoSumbmit').click()" class="center-block margin-top20" >-->
+                                <input type="image" name="submit" src="<?php echo Yii::$app->getUrlManager()->getBaseUrl()?>/theme/images/search-icon.png"
+                                       border="0" class="center-block margin-top20" />
                             <?php
 
                             $label='';
