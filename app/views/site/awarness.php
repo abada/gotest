@@ -16,8 +16,8 @@ $page = Page::get('about');
 $this->title = $page->seo('title', yii::t('easyii','awareness program'));
 use yii\widgets\ActiveForm;
 
-$this->params['meta_keyword'] = yii::t('easyii','meta 2');
-$this->params['meta_description'] = yii::t('easyii','meta 79');
+$this->params['meta_keyword'] = yii::t('easyii','Better sanitary napkin after birth, married for sanitary napkin, the best types of sanitary pads, better health towel menstrual cycle');
+$this->params['meta_description'] = yii::t('easyii','Dry awareness program aims to provide care and health education for girls in schools & universities where they are providing the right information by experts');
 
 ?>
 
