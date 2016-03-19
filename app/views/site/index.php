@@ -12,15 +12,13 @@ use  \yii\easyii\models\Setting;
 
 $page = Page::get('page-index');
 
-$this->title = yii::t('easyii','Dry');
-$this->params['meta_keyword'] = yii::t('easyii','meta 2');
-$this->params['meta_description'] = yii::t('easyii','meta 1');
+$this->title = yii::t('easyii','Dry | Sanitary napkins');
+$this->params['meta_keyword'] = yii::t('easyii','Better sanitary napkin after birth, sanitary napkin for married , the best types of sanitary pads, better health towel menstrual cycle');
+$this->params['meta_description'] = yii::t('easyii','Dry better sanitary napkin for married and sensitive skin care sensitive region before marriage is also the best types of sanitary pads for nifaas');
 
 
 
 ?>
-
-
 
 
 <script>
@@ -33,6 +31,7 @@ $this->params['meta_description'] = yii::t('easyii','meta 1');
   ga('send', 'pageview');
 
 </script>
+
 
 
 

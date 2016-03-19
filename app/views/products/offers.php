@@ -19,8 +19,8 @@ use yii\easyii\modules\page\api\Page;
 //$this->title = $cat->seo('title', $cat->model->title);
 $this->title = yii::t('easyii','Dry  Offers');
 
-$this->params['meta_keyword'] = yii::t('easyii','meta 5');
-$this->params['meta_description'] = yii::t('easyii','meta 78');
+$this->params['meta_keyword'] = yii::t('easyii','Sanitary napkin for the married, the Dry trunk of birth, better sanitary napkin for sensitive skin, better sanitary napkin after birth, types of towels PMS');
+$this->params['meta_description'] = yii::t('easyii','DRY Arabia offers best sanitary pads to take care of the sensitive region before marriage and offers the best kinds of towels menstrual cycle ');
 
 
 $this->params['breadcrumbs'][] = ['label' => 'Shop', 'url' => ['shop/index']];

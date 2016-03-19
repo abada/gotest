@@ -8,8 +8,8 @@ use demogorgorn\ajax\AjaxSubmitButton;
 
 $this->title= yii::t('easyii','Find a store');
 
-     $this->params['meta_keyword'] = yii::t('easyii','meta 2');
-  $this->params['meta_description'] = yii::t('easyii','meta 82');
+     $this->params['meta_keyword'] = yii::t('easyii','Better sanitary napkin after birth, sanitary napkin for married , the best types of sanitary pads, better health towel menstrual cycle');
+  $this->params['meta_description'] = yii::t('easyii','Places to buy towels Dry Post, the best types of sanitary pads for married and after the birth and places of distribution in the governorates');
 ?>
 <div class="content gray-color">
 <div class="find-bg">
