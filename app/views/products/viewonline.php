@@ -1,6 +1,3 @@
-<script type="text/javascript">var switchTo5x=true;</script>
-<script type="text/javascript" src="http://w.sharethis.com/button/buttons.js"></script>
-<script type="text/javascript">stLight.options({publisher: "2222d12e-5607-475a-b5d7-2ba1c0a2c5c0", doNotHash: false, doNotCopy: false, hashAddressBar: false});</script>
 <?php
 use app\models\AddToCartForm;
 use yii\easyii\modules\catalog\api\Catalog;
@@ -9,6 +6,8 @@ use yii\helpers\Url;
 use yii\widgets\ActiveForm;
 use yii\easyii\modules\page\api\Page;
 use  \app\models\Products;
+use demogorgorn\ajax\AjaxSubmitButton;
+
 
 $this->title = $item->seo('title', $item->model->title);
 $totalreviews=  Products::reviews($item->id,1);
@@ -68,29 +67,67 @@ $totalreviews=  Products::reviews($item->id,1);
                                     </form>
                                    <!-- <a class="" href="#"><?= Yii::t('easyii','check reviews')?></a>-->
 
+<!---->
+<!--                                    --><?php //if(Yii::$app->request->get(AddToCartForm::SUCCESS_VAR)) {
+//                                     ?>
+<!--                                        <h4 class="text-success"><i class="glyphicon glyphicon-ok"></i>-->
+<!--                                            --><?//= Yii::t('easyii','Added to cart')?>
+<!--                                            </h4>-->
+<!---->
+<!--                                    --><?//
+//                                    }else{
+//                                  $form = ActiveForm::begin([
+//
+//                                        'action' => Url::to(['/shopcart/add', 'id' => $item->id ]),
+//                                        'options' => ['class' => 'form-inline']
+//                                    ]); ?>
+<!---->
+<!--                                    <div class="form-group" style="float: left;width: 100%;">-->
+<!--                                        --><?//= $form->field($addToCartForm, 'count')->textInput(['class' => 'form-control'])->label(Yii::t('easyii','Quantity')) ?>
+<!---->
+<!--                                    </div>-->
+<!--                                    --><?//= Html::submitButton(Yii::t('easyii','Add to Cart').' <i class="fa fa-cart-arrow-down fa-lg"></i>' , ['class' => 'btn dry-btn','style' => 'float:left']) ?>
+<!--                                    --><?php //ActiveForm::end();
+//                                    }
+//                                    ?>
 
-                                    <?php if(Yii::$app->request->get(AddToCartForm::SUCCESS_VAR)) {
-                                     ?>
-                                        <h4 class="text-success"><i class="glyphicon glyphicon-ok"></i>
-                                            <?= Yii::t('easyii','Added to cart')?>
-                                            </h4>
+                                    <span id="output_<?=$item->id?>">
+                    </span>
 
-                                    <?
-                                    }else{
-                                  $form = ActiveForm::begin([
+                                    <?php $form = ActiveForm::begin(['action' => Url::to(['', 'id' => $item->id]) ,'class'=>'uk-width-medium-1-1 uk-form uk-form-horizontal']); ?>
+                                    <?= $form->field($addToCartForm, 'id')->hiddenInput(['value' =>  $item->id])->label(false) ?>
+                                    <?= $form->field($addToCartForm, 'count')->hiddenInput(['value' => 1])->label(false) ?>
 
-                                        'action' => Url::to(['/shopcart/add', 'id' => $item->id ]),
-                                        'options' => ['class' => 'form-inline']
-                                    ]); ?>
+                                    <?php //echo Html::beginForm('', 'post', ['class'=>'uk-width-medium-1-1 uk-form uk-form-horizontal']); ?>
 
-                                    <div class="form-group" style="float: left;width: 100%;">
-                                        <?= $form->field($addToCartForm, 'count')->textInput(['class' => 'form-control'])->label(Yii::t('easyii','Quantity')) ?>
-                                        	
-                                    </div>
-                                    <?= Html::submitButton(Yii::t('easyii','Add to Cart').' <i class="fa fa-cart-arrow-down fa-lg"></i>' , ['class' => 'btn dry-btn','style' => 'float:left']) ?>
-                                    <?php ActiveForm::end();
-                                    }
+                                    <?//= Html::submitButton(Yii::t('easyii','Add to Cart').' <i class="fa fa-cart-arrow-down fa-lg"></i>' , ['class' => 'btn dry-btn']) ?>
+                                    <?php
+
+                                    $label=Yii::t('easyii','Add to Cart');//. '<i class="fa fa-cart-arrow-down fa-lg"></i>';
+                                    AjaxSubmitButton::begin([
+                                        'label' => $label,
+                                        'ajaxOptions' => [
+                                            'type'=>'POST',
+                                            'url'=>'/shopcart/add',
+                                            /*'cache' => false,*/
+                                            'success' => new \yii\web\JsExpression('function(html){
+                $("#emptylink_'.$item->id.'").attr("href", "/shopcart");
+                $("#empty_'.$item->id.'").empty();
+                 $("#output_'.$item->id.'").html(html);
+                 $("#chanStat").attr("href", "/shopcart");
+
+
+            }'),
+                                        ],
+                                        'options' => ['class' => 'btn dry-btn', 'type' => 'submit'],
+                                    ]);
+                                    AjaxSubmitButton::end();
                                     ?>
+
+
+
+
+
 
 
                                 </div>
@@ -126,7 +163,7 @@ $totalreviews=  Products::reviews($item->id,1);
                             $url='  href="javascript:void(0)"  onclick="'."$('.alert').show()".' "';
                         }
                         ?>
-                        <a class="btn dry-btn-2 pull-right" <?= $url?>>
+                        <a class="btn dry-btn-2 pull-right"  id="chanStat"  <?= $url?>>
                             <?= Yii::t('easyii','Check Out'); ?></a>
                     </footer>
                 </div>
