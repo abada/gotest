@@ -126,7 +126,7 @@ $this->params['meta_description'] = yii::t('easyii','Dry better sanitary napkin 
 
                             ?>
                             <div class="item <?= ($i == 0) ? 'active' : ''; ?>">
-                                <img src="<?= $photo->image ;?>" alt="slider-<?=$photo->description?>">
+                                <img src="<?= $photo->image ;?>" alt="<?=$photo->alt()?>">
                             </div>
                             <?
                             $i++;
@@ -146,7 +146,7 @@ $this->params['meta_description'] = yii::t('easyii','Dry better sanitary napkin 
 
                             ?>
                             <div class="item <?= ($i == 0) ? 'active' : ''; ?>">
-                                <img src="<?= $photo->image ;?>" alt="slider-<?=$photo->description?>">
+                                <img src="<?= $photo->image ;?>" alt="<?=$photo->alt()?>">
                             </div>
                             <?
                             $i++;
@@ -165,7 +165,7 @@ $this->params['meta_description'] = yii::t('easyii','Dry better sanitary napkin 
 
                             ?>
                             <div class="item <?= ($i == 0) ? 'active' : ''; ?>">
-                                <img src="<?= $photo->image ;?>" alt="slider-<?=$photo->description ?>">
+                                <img src="<?= $photo->image ;?>" alt="<?=$photo->alt() ?>">
                             </div>
                             <?
                             $i++;
@@ -184,7 +184,7 @@ $this->params['meta_description'] = yii::t('easyii','Dry better sanitary napkin 
 
                             ?>
                             <div class="item <?= ($i == 0) ? 'active' : ''; ?>">
-                                <img src="<?= $photo->image ;?>" alt="slider-<?=$photo->description ?>">
+                                <img src="<?= $photo->image ;?>" alt="<?=$photo->alt() ?>">
                             </div>
                             <?
                             $i++;
@@ -204,7 +204,7 @@ $this->params['meta_description'] = yii::t('easyii','Dry better sanitary napkin 
 
                             ?>
                             <div class="item <?= ($i == 0) ? 'active' : ''; ?>">
-                                <img src="<?= $photo->image ;?>" alt="slider-<?=$photo->description?>">
+                                <img src="<?= $photo->image ;?>" alt="<?=$photo->alt()?>">
                             </div>
                             <?
                             $i++;
@@ -224,7 +224,7 @@ $this->params['meta_description'] = yii::t('easyii','Dry better sanitary napkin 
 
                             ?>
                             <div class="item <?= ($i == 0) ? 'active' : ''; ?>">
-                                <img src="<?= $photo->image ;?>" alt="slider-<?=$photo->description?>">
+                                <img src="<?= $photo->image ;?>" alt="<?=$photo->alt()?>">
                             </div>
                             <?
                             $i++;
@@ -243,7 +243,7 @@ $this->params['meta_description'] = yii::t('easyii','Dry better sanitary napkin 
 
                             ?>
                             <div class="item <?= ($i == 0) ? 'active' : ''; ?>">
-                                <img src="<?= $photo->image ;?>" alt="slider-<?=$photo->description?>">
+                                <img src="<?= $photo->image ;?>" alt="<?=$photo->alt()?>">
                             </div>
                             <?
                             $i++;
@@ -262,7 +262,7 @@ $this->params['meta_description'] = yii::t('easyii','Dry better sanitary napkin 
 
                             ?>
                             <div class="item <?= ($i == 0) ? 'active' : ''; ?>">
-                                <img src="<?= $photo->image ;?>" alt="slider-<?=$photo->description?>">
+                                <img src="<?= $photo->image ;?>" alt="<?=$photo->alt()?>">
                             </div>
                             <?
                             $i++;
