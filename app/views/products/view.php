@@ -41,7 +41,7 @@ $totalreviews=  Products::reviews($item->id,1);
 
                         <?php foreach($item->photos as $photo) : ?>
                             <?//= $photo->box(110, 100) ?>
-                          <li><img src="<?= $photo->image?>" width="300" height="300" class="center-block" alt="<?= $photo->description?>"> </li>
+                          <li><img src="<?= $photo->image?>" width="300" height="300" class="center-block" alt="<?= $photo->alt()?>"> </li>
 
                         <?php endforeach;?>
 
@@ -53,7 +53,7 @@ $totalreviews=  Products::reviews($item->id,1);
                         foreach($item->photos as $photo) : ?>
                            <?//= $photo->box(110, 100) ?>
                            <a data-slide-index="<?= $i?>" href="">
-                               <img src="<?= $photo->image?>" width="50" height="50" alt="<?= $photo->description?>">
+                               <img src="<?= $photo->image?>" width="50" height="50" alt="<?= $photo->alt()?>">
 
                            </a>
                         <?php
