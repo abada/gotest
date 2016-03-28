@@ -15,8 +15,8 @@ $page = Page::get('about');
 $this->title = $page->seo('title',yii::t('easyii',"Who’s Dry"));
 
 
-$this->params['meta_keyword'] = yii::t('easyii','test meta in english');
-$this->params['meta_description'] = yii::t('easyii','meta 80');
+$this->params['meta_keyword'] = yii::t('easyii','Better sanitary napkin after birth, married for sanitary napkin, the best types of sanitary pads, better health towel menstrual cycle');
+$this->params['meta_description'] = yii::t('easyii','Want to feel the life and confidence? Dry Abia provide high quality products to a woman free and modern.');
  ?>
 
 

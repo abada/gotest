@@ -12,8 +12,8 @@ $this->title = yii::t('easyii','Dry Products');
 $this->params['breadcrumbs'][] = ['label' => 'Shop', 'url' => ['shop/index']];
 $this->params['breadcrumbs'][] = $cat->model->title;
 
-$this->params['meta_keyword'] = yii::t('easyii','meta 4');
-$this->params['meta_description'] = yii::t('easyii','meta 77');
+$this->params['meta_keyword'] = yii::t('easyii','Better sanitary napkin after birth, married for sanitary napkin, the best types of sanitary pads, better health towel menstrual cycle');
+$this->params['meta_description'] = yii::t('easyii','Towel Dry Post gives very kind of health Dry Arabia absorbed centrally superior cleanliness and complete. Choose what suits you best from Dry Arabia group ');
 
 $sliderFilters=$this->params['sliderFilters'];
 $ListCloth =['1'=>'Wide','2'=>'Tight',''=>'Wide'];
