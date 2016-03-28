@@ -1,0 +1,5 @@
+[27-Mar-2016 13:48:08 UTC] PHP Fatal error:  Class 'yii\easyii\modules\catalog\api\PhotoObject' not found in /home/dryarabia/public_html/vendor/noumo/easyii/modules/catalog/api/ItemObject.php on line 106
+[27-Mar-2016 13:48:21 UTC] PHP Fatal error:  Class 'yii\easyii\modules\catalog\api\PhotoObject' not found in /home/dryarabia/public_html/vendor/noumo/easyii/modules/catalog/api/ItemObject.php on line 106
+[27-Mar-2016 13:48:26 UTC] PHP Fatal error:  Class 'yii\easyii\modules\catalog\api\PhotoObject' not found in /home/dryarabia/public_html/vendor/noumo/easyii/modules/catalog/api/ItemObject.php on line 106
+[27-Mar-2016 13:48:29 UTC] PHP Fatal error:  Class 'yii\easyii\modules\catalog\api\PhotoObject' not found in /home/dryarabia/public_html/vendor/noumo/easyii/modules/catalog/api/ItemObject.php on line 106
+[27-Mar-2016 13:49:27 UTC] PHP Fatal error:  Class 'yii\easyii\modules\catalog\api\PhotoObject' not found in /home/dryarabia/public_html/vendor/noumo/easyii/modules/catalog/api/ItemObject.php on line 106
