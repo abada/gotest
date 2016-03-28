@@ -11,7 +11,6 @@ if( Yii::$app->controller->id !='stores' ){
 <!DOCTYPE html>
 <html lang="<?= Yii::$app->language ?>" prefix="og: http://ogp.me/ns#">
     <head>
-
         <script>
 
             (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
@@ -89,6 +88,20 @@ if(\Yii::$app->language == "en") {
 
     <script src="<?php echo Yii::$app->getUrlManager()->getBaseUrl()?>/theme/js/star-rating.js" type="text/javascript"></script>
 
+        <style>
+            .noselect {
+                -webkit-touch-callout: none; /* iOS Safari */
+                -webkit-user-select: none;   /* Chrome/Safari/Opera */
+                -khtml-user-select: none;    /* Konqueror */
+                -moz-user-select: none;      /* Firefox */
+                -ms-user-select: none;       /* IE/Edge */
+                user-select: none;           /* non-prefixed version, currently
+                                  not supported by any browser */
+            }
+
+        </style>
+
+
         <?php $this->head() ?>
     </head>
 
@@ -97,7 +110,7 @@ if(\Yii::$app->language == "en") {
 
 
 
-    <body>
+    <body class="noselect">
 
         <?php $this->beginBody() ?>
         <?= $content ?>
