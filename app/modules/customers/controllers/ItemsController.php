@@ -297,7 +297,8 @@ class ItemsController extends Controller
                     $oCustomer->address = $fillData[0][2];
                     $oCustomer->phone = $fillData[0][3];
                     //$oCustomer->country=$fillData[0][9];
-                    $oCustomer->country = 'EGY';
+                   // $oCustomer->country = 'EGY';
+                    $oCustomer->country= (($fillData[0][9]) !="" )? $fillData[0][9] : 'EGY';
                     $oCustomer->government = $fillData[0][8];
                     $oCustomer->city = $fillData[0][5];
                     $oCustomer->district = $fillData[0][5];
@@ -464,7 +465,7 @@ class ItemsController extends Controller
 
                     $goverObj = new Govenment();
                     $goverObj->title =$goverObj->title_ar =$fillData[0][1];
-                    $goverObj->country_code='EGY';
+                    $goverObj->country_code= (isset($fillData[0][3]))? $fillData[0][3] : 'EGY';
                     $goverObj->government_code=$fillData[0][0];
                    if(!$goverObj->save()){
                        //var_dump($goverObj->getErrors());
